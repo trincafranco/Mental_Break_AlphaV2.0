@@ -38,10 +38,12 @@ A/V:    none #line:0e4485f
 <<declare $war_ops_awareness = 0>>
 <<declare $cross_talk_heard = 0>>
 
-// Run 1 specific: did we comply on Day 1?  Which arc set did we see?  Which arc choice?
+// Run 1 specific: did we comply on Day 1?  Which arc set did we see?  Which arc choice?
 <<declare $r1_complied_day1 = false>>
 <<declare $r1_arc_choice_set = "unset">>
 <<declare $r1_arc_choice = "unset">> // "faustian" | "heros_journey" | "icarus" | "anti_hero"
+// Run 1 Day 1: which strategy was chosen for Timmy's night?
+<<declare $r1_d1_strategy = "unset">> // "gentle_landing" | "study_adjacent" | "full_comfort_scroll"
 
 // Run 2: which sacrifice occurred?  "self" or "alice".  Starts unset.
 <<declare $r2_sacrifice = "unset">>
@@ -166,6 +168,8 @@ A/V:    resets UI to normal. #line:03b5803
 <<set $d1_task_ops = false>>
 <<set $d1_task_calls = false>>
 <<set $d1_task_dash = false>>
+// Run 1 Day 1 strategy flag (reset between runs).
+<<set $r1_d1_strategy = "unset">>
 <<set $d2_task_triage = false>>
 <<set $d2_task_copy = false>>
 <<set $d2_task_metrics = false>>
