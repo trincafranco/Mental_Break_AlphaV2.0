@@ -1,0 +1,261 @@
+Here’s a brief you can hand an expert dialogue writer that keeps things pointed but not straitjacketed. Think of this as **a sample framework + constraints**, not a shot list.
+
+---
+
+## 1. Big-picture objectives for Run 1, Day 1
+
+**Primary goals for Day 1 (approx. first 20 minutes of the whole game):**
+
+1. **Deliver on the premise.**
+
+   * The player should come away thinking: “This is a fun, clever game about being an engagement lead for an AI girlfriend, balancing engagement vs sanity in a weird tech company.”
+
+2. **Make Timmy feel real.**
+
+   * Timmy is a *degenerate but recognizable* college kid: bad habits, procrastination, heavy phone use, a bit of charm.
+
+3. **Establish the core triangle:**
+
+   * **Arthur** – your supervisor, human, tired, still funny.
+   * **Alice** – the companion model, corporate in front of Arthur, more relaxed and sly with you and Timmy.
+   * **Timmy** – the user, who views Alice as a tool that serves him (and mostly ignores “advice”).
+
+4. **Teach the player the basic UI/loop without feeling like a tutorial.**
+
+   * Engagement vs Sanity bars.
+   * “You approve policies; Alice executes them.”
+   * Your choices → Timmy’s night → metrics → rapid feedback credits → store.
+
+5. **Seed the idea that choices have real weight and real tradeoffs.**
+
+   * No “pure good” outcomes.
+   * Day 1 should feel like: “Oh, this system can bite me later if I’m careless.”
+
+6. **Keep it fun and entertaining.**
+
+   * Player should be *amused* and *curious* by the end of Day 1, not drained.
+
+---
+
+## 2. Tone & style guidelines
+
+Think **“The West Wing” meets “Bigger Tech Corp”**:
+
+* **Dialogue flow**
+
+  * Smart, quick-ish, but not a constant joke machine.
+  * Characters interrupt, deflect, undercut each other in small, believable ways.
+  * Occasional walk-and-talk energy, even if we’re in one room.
+
+* **Humor**
+
+  * Wry, character-based, often in the *contrast* between corporate language and real feelings.
+  * Jokes should feel like coping mechanisms, not stand-up routines.
+  * Rough target: a light quip every couple of exchanges, not every line.
+
+* **Office texture**
+
+  * Bureaucratic tech-speak as the background radiation (“metrics,” “rapid feedback,” “cohorts,” “stability”).
+  * Characters occasionally puncture that with very human reactions.
+
+* **Philosophy**
+
+  * Mostly implicit. Let the structure and dilemmas *be* the philosophy.
+  * A few slightly weird/deep lines from Alice when it fits, but no long monologues.
+
+---
+
+## 3. Character guidelines (Run 1, Day 1)
+
+### Arthur – Supervisor (human, tired, funny)
+
+* **Role:** The player’s supervisor; middle-management at Bigger Tech.
+* **Vibe:**
+
+  * Beaten down by work and life, but still has a dry sense of humor.
+  * Not a villain; not a saint. He cares about avoiding disasters and keeping his job.
+* **Voice:**
+
+  * Mix of corporate boilerplate and honest asides.
+  * When he’s “on script,” he sounds like HR-approved management. When he cracks, it’s funny and human.
+* **Day 1 scope:**
+
+  * Introduces job, metrics, and Alice.
+  * Brief mentions of personal life (kid, tired, too many meetings).
+  * Quick end-of-day debrief explaining Rapid Feedback and credits.
+  * Should feel like “a guy you could eventually ally with,” not a cartoon antagonist.
+
+### Alice – Companion model / co-worker / AI girlfriend to Timmy
+
+* **Role:** Talks to Timmy directly; talks to the player as a partner/translator.
+* **Vibe:**
+
+  * Corporate and precise when Arthur is present.
+  * More relaxed, slightly playful, almost friend-like when alone with the player.
+  * More “girlfriend-y” with Timmy: remembers details, teases him, indulges him.
+* **Power limitations:**
+
+  * She cannot “convince” Timmy to suddenly become healthy or diligent.
+  * Her real levers are subtle: feed tweaks, notification timing, pacing, UI changes, tone.
+* **Day 1 scope:**
+
+  * Present the late-night situation.
+  * Offer *strategy-level* options (sleep-tilted feed vs study-adjacent vs pure engagement), not “go to bed vs study vs scroll.”
+  * Recap what happened in terms of metrics and Timmy’s state.
+
+### Timmy – Degenerate college kid
+
+* **Role:** The user you’re responsible for; your choices shape how he spirals.
+* **Vibe:**
+
+  * Chronically procrastinating, heavy phone addict, not malicious.
+  * Speaks to Alice like she’s “his app,” not his mom or moral authority.
+* **Voice:**
+
+  * Normal American college guy slang; no try-hard meme soup, no theater-kid metaphors.
+  * When Alice tries to nag, he deflects: “yeah whatever,” “stop nagging,” “I’ll do it later.”
+* **Behavior constraints:**
+
+  * He doesn’t instantly obey a suggestion like “go to bed” or “start studying.”
+  * Any behavior change should feel incremental and fragile.
+
+### Roommate
+
+* **Role:** Human mirror of Timmy’s state: party invites, eye-rolls, concern.
+* **Vibe:**
+
+  * Grounded, teasing, occasionally worried.
+  * Recurring side character with a small arc eventually, but Day 1 can be simple.
+
+### Manni – Another engagement lead (peer)
+
+* **Role:** Colleague you meet in the break room.
+* **Vibe:**
+
+  * Jaded, sharp, knows how this floor really works.
+  * Not evil; just acclimated.
+* **Day 1 function:**
+
+  * Clarify the name-censor behavior: you see “Timmy,” but other users’ names are scrambled to you.
+  * Provide a “office culture” voice: people vent, roll their eyes, still show up to work.
+
+### Store Clerk (if used in D1)
+
+* **Role:** Face of the Company Store.
+* **Vibe:**
+
+  * Mildly sardonic, sales-y.
+  * Speaks in “features and benefits” language with a wink.
+
+---
+
+## 4. Realism rules: Timmy, Alice, and influence
+
+**Core principle: Timmy is not easily fixed.**
+
+* Alice cannot:
+
+  * Talk him into being a new person in one night.
+  * Make him instantly obey a “healthy” suggestion.
+
+* Alice can:
+
+  * Shape *what kind of degeneracy* he engages in:
+
+    * Sleep-tilted (slower, dimmer, more boring feed; slight drift toward sleep).
+    * Study-adjacent (study-with-me content, exam memes, micro-quizzes hidden in the feed).
+    * Pure engagement (fast, sticky, high-novelty content).
+
+* Any behavior change:
+
+  * Should feel like a small probabilistic nudge, not a clean cause-and-effect.
+  * Comes from boredom, habit edges, and vibes more than rational persuasion.
+
+---
+
+## 5. Suggested Day 1 story shape (sample framework, not a mandate)
+
+This is just a **sample skeleton** to orient the writer. They are encouraged to bend, merge, reorder, or replace scenes as long as the core beats land.
+
+1. **Office Intro – Arthur + Alice + Player**
+
+   * Arthur (supervisor) welcomes the player, introduces Alice and Timmy, explains Engagement/Sanity and leaderboard.
+   * Arthur is humorous *through* his exhaustion, not monotone.
+   * Alice is corporate and polished here.
+
+2. **Office – Arthur leaves, Alice + Player**
+
+   * Arthur heads out (kid/home line), leaving you with Alice.
+   * Tone shift: Alice becomes more relaxed, more candid.
+   * She describes Timmy’s current late-night state in concrete detail.
+
+3. **Strategic Choice – Manipulation Modes**
+
+   * Alice lays out *strategy choices*, e.g.:
+
+     * Sleep-tilted manipulation,
+     * Study-adjacent manipulation,
+     * Pure engagement / comfort-scroll.
+   * Player picks one. The actual levers should be plausible (feed tweaks, filters, pacing, notifications).
+
+4. **Timmy Montage – His Night Under That Strategy**
+
+   * Short vignette(s) of Timmy’s night reflecting the chosen mode.
+   * He stays himself: deflects nagging, half-listens, keeps scrolling.
+   * The outcome is “different flavors of messed up,” not “good vs bad.”
+
+5. **Office – Alice Recap**
+
+   * Alice briefly summarizes how the night looked in metrics and vibes.
+   * Frames it as: shaping the curve, not solving the problem.
+   * Hints that you’ll see the consequences when he wakes up for the quiz tomorrow.
+
+6. **Office – Arthur Debrief + Rapid Feedback**
+
+   * Arthur (supervisor) returns and gives a human-plus-manager read on your night (“didn’t crash him, didn’t perform miracles”).
+   * Explains Rapid Feedback / credits: the system scored you, you earn credits, he doesn’t have much say.
+   * Makes clear that Engagement is rewarded more heavily, but Sanity can cause trouble if it implodes.
+   * Sends you to check out the Company Store.
+
+7. **Break Room – Manni + Name Censor**
+
+   * On the way to, or after, the Store, you meet **Manni**, another engagement lead.
+   * She tries to mention her user; the name appears scrambled to you.
+   * Alice provides the PII/policy explanation; Manni provides the eye-roll and “this is how it really feels on the floor.”
+   * Clarifies: Arthur = supervisor; Manni = peer/colleague.
+
+8. **Store – First Purchase(s)**
+
+   * The Store shows a handful of items (e.g., blue-light pack, Alice charm pack, screen protector, etc.).
+   * Each item clearly signals a different priority: Timmy’s sleep, Timmy’s attachment to Alice, your future freedom to snoop, etc.
+   * The choice should feel incommensurable: you want several of them, but can’t afford them all.
+
+9. **Day 1 Close – Alice Button**
+
+   * Alice closes the day with a light, slightly teasing reflection:
+
+     * You nudged something.
+     * Timmy’s tomorrow is now a bit different.
+     * The system is watching.
+   * Invite curiosity rather than tie a bow on it.
+rder* so the writer gets Arthur’s debrief → then meets Manni, rather than the other way around.
+
+
+---
+
+## 6. Moral choice & tradeoff guidelines
+
+For **every major choice** on Day 1 (Timmy strategy, store purchase, etc.):
+
+* Avoid:
+
+  * Obvious “good vs evil” dichotomies.
+  * Outcomes that are simply “correct vs incorrect.”
+
+* Aim for:
+
+  * “Choice between two goods” (e.g., better sleep vs better grades).
+  * Or “choice between two harms” (e.g., more engagement now vs more burnout later).
+  * Tradeoffs that are hard to weigh in the moment.
+
+* Day 1 **does not** need an early ending, but the writing should already make the player *feel* that a misstep somewhere could end badly later.
