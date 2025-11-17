@@ -36,10 +36,16 @@ title: SHOP_Visit
 tags: #scene #shop
 ---
 <<bg bg_companystore>>
-The Company Store hums to life as the rapid-feedback kiosk dispenses your credits. A holographic attendant gestures toward the terminals.
-<<store>>
-You browse the available items and make your selections.
-<<jump SHOP_After>>
+// For Run 1 Day 1, the store dialogue is handled in R1_D1_StoreVisit
+// This node is a fallback for other runs/days
+<<if $current_run == 1 and $current_day == 1>>
+    <<jump R1_D1_StoreVisit>>
+<<else>>
+    The Company Store hums to life as the rapid-feedback kiosk dispenses your credits. A holographic attendant gestures toward the terminals.
+    <<store>>
+    You browse the available items and make your selections.
+    <<jump SHOP_After>>
+<<endif>>
 
 ===
 

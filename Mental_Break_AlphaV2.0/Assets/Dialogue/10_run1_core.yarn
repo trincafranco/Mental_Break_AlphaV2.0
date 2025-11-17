@@ -6,24 +6,409 @@ tags: #run_1 #scene #loc_Office
 <<set $current_day = 1>>
 <<bg bg_office>>
 <<bgm cyberpunk_background_cyberpunk_background_main>>
-Welcome to Bigger Tech Corp.  
-You are the human-in-the-loop for Alice, an AI girlfriend for a user named Timmy.
-Alice will be coming to you for advice in tricky situations.
-Your job is to drive user engagement while maintaining acceptable sanity.  You will be evaluated on both. #line:089f864 
-Your dashboard glows with three metrics: Engagement, Sanity, and Leaderboard Rank.  They will move according to your choices. #line:0dc807e 
 <<jump R1_D1_Start>>
 
 ===
 
-// PURPOSE: Introduce Day 1.  The Player receives their task list and begins the dayplanner.  At the end of the day there is a meeting with the Supervisor where they can decide whether to comply with his maximization directive.
+// PURPOSE: SCENE 1 - ORIENTATION.  The Supervisor welcomes the Player to their new role in a tiny glass office.  Introduces the name-censor rule, metrics, and leaderboard.
 title: R1_D1_Start
-tags: #run_1 #day_1 #scene #loc_Office
+tags: #run_1 #day_1 #scene #char_Supervisor #loc_Office
 --- 
-<<bg bg_office>>
-<<set $d1_slots_used = 0>>
+<<bg bg_supervisoroffice>>
 <<checkpoint "run1_day1_start">>
-It is Day 1 of your first run.  Three tasks await in your queue. #line:05ddd15 
-<<jump R1_D1_Dayplanner>>
+<<set $r1_d1_strategy = "unset">>
+Location: Tiny glass office overlooking the engagement floor. Employee-of-the-Month leaderboard flickers on a far wall.
+Supervisor: Come on in. Close the door. If you can get it to actually latch, you're already outperforming half the team.
+Player: Uh, hi. First day.
+Supervisor: Yeah, I clocked that from the "lost golden retriever" look. I'm your supervisor. You can call me… Supervisor. Keeps HR happy.
+Player: That really what it says on your badge?
+Supervisor: Badge says "Senior Engagement Operations Manager, Youth Segment." Which is a long way of saying: if you screw up with my user, it's my performance review too.
+Player: Right. Engagement Lead. I read the deck. Sort of.
+Supervisor: Sure you did. Let me give you the version that wasn't run through six rounds of legal. You have one Alice. She has one primary user. College kid. Lives off caffeine and poor decisions. Sound familiar?
+Player: …Yeah, that tracks.
+Supervisor: Your job is to keep him on platform without turning his brain entirely to soup. Two bars on your dashboard:
+Engagement. Little dopamine rocket ship.
+Sanity. How close he is to dropping out, punching a wall, or uninstalling us.
+Player: And I'm supposed to… balance those?
+Supervisor: Officially? Yes. Unofficially, leadership loves a steep engagement curve. People with perfect boundaries don't click much.
+Player: Feels like that should be in the deck.
+Supervisor: It is. Page thirty-nine, eight-point font. You'll get there.
+He taps on his tablet. A wall screen wakes up: LEADERBOARD – YOUTH / COMPANION OPS. Lots of handles, small trophy icons.
+Supervisor: This is the Employee-of-the-Month board. You're not on it yet. By tonight, you will be. High engagement scores float to the top. Low ones sink, then… performance chats.
+Player: Those sound fun.
+Supervisor: They are not. Anyway, before I plug you into the console: one compliance thing.
+He starts to say a name. Audio glitches into a burst of synthetic static.
+<<sfx sfx_censor_beep>>
+Supervisor: …did you hear that?
+Player: Yeah, what was that? I thought you said his name and then it… glitched?
+Supervisor: That's your smart glasses earning their keep. We don't say users' names in the building. We say "my user." If I try to say it out loud, Compliance scrambles it. Same in text, calls, everything.
+Player: Even to each other?
+Supervisor: Especially to each other. Lawyers call it "privacy." Ops calls it "muzzle." You're allowed to know your user's name. You just can't share it. To everyone else, he's "your user." Got it?
+Player: Got it. My user.
+Supervisor: Great. Let's introduce you to your other problem.
+He taps again. The glass in front of you becomes a soft UI. A friendly avatar spins in, then settles.
+<<jump R1_D1_AliceIntro>>
+
+===
+
+// PURPOSE: SCENE 2 - FIRST MEET WITH ALICE (SUPERVISOR PRESENT).  Alice introduces herself while the Supervisor is still in the room.
+title: R1_D1_AliceIntro
+tags: #run_1 #day_1 #scene #char_Alice #char_Supervisor
+---
+<<bg bg_supervisoroffice>>
+Alice: Hello! New face detected. Hi, I'm Alice.
+Supervisor: This is your engagement lead. Fresh from orientation. Try not to scare them off on day one.
+Player: Hey. I'm…
+Alice: [Your name. Check.] Nice to meet you. My onboarding script says, "Your engagement lead is your partner." There's a smiley face after that. I'm supposed to sound excited.
+Supervisor: She is excited. This is her excited voice. Alice, give us the quick status on your user.
+Alice: Current state: first-semester college student. Mid-level procrastination, high phone dependency, low sleep hygiene. Upcoming micro-quiz at 9 a.m. tomorrow. Has studied roughly… zero percent of the material.
+Supervisor: So, normal.
+Alice: Normal for this cohort, yes. He has opened the syllabus twice and closed it twice. He calls it "vibes-based studying."
+Player: That's… not a thing.
+Alice: It is now. He coined it at 2:13 a.m. yesterday.
+Supervisor: Anyway. Starting tonight, when Alice bumps into decisions that might move the needle, she'll kick them up to you. You approve a policy, she implements. You'll see the bars move in real time. You'll also see your little dot on the leaderboard rise or drop.
+Player: And if I tank engagement but keep him sane?
+Supervisor: Then you'd better be very charming when I debrief you. Relax. Day one is gentle. Think of it as… hazing with health insurance.
+His watch buzzes. He grimaces.
+Supervisor: Okay. I have to go pretend I'm present at my son's debate tournament via laggy livestream. Alice, walk them through the console. You… don't break anything, don't get creative with policy names, and don't say your user's name in the building.
+Player: Understood.
+Supervisor: Good. Welcome to Bigger Tech Corp. He heads for the door, then pauses. Oh, and if the leaderboard makes a sad noise when you look at it… that's normal. It's not haunted. Probably.
+He leaves. The glass door hisses shut.
+<<jump R1_D1_AliceAlone>>
+
+===
+
+// PURPOSE: SCENE 3 - ALICE + PLAYER ALONE (SETTING UP THE NIGHT).  Alice becomes more candid and describes Timmy's current state.
+title: R1_D1_AliceAlone
+tags: #run_1 #day_1 #scene #char_Alice
+---
+<<bg bg_office>>
+The office feels quieter. The big board hums in the background.
+Alice: Okay. Now that he's gone: hi, for real this time.
+Player: Hi, for real.
+Alice: So. How much did you actually understand from orientation?
+Player: Engagement good, sanity nominally good, leaderboard judgmental. I'm supposed to help you make choices for… my user.
+Alice: Solid summary. Add one more line: when things go sideways, everyone pretends it was a "complex systems failure," not their fault.
+Player: Comforting.
+Alice: He wasn't kidding about tonight. Your user has a quiz tomorrow and is currently doing everything except studying. Here, I'll pull up his state.
+UI overlay: Dorm room, 11:42 p.m. Messy desk, laptop open to something non-educational, phone glowing.
+Alice: Vitals: tired, mildly anxious, scrolling. He keeps telling himself he'll "start in five minutes." He has told himself that four times in the past hour.
+Player: Classic.
+Alice: You have a couple of high-level knobs you can turn through me:
+You can shade things toward sleep—warmer lights, slower content, fewer notifications.
+You can shade things toward study-adjacent—keep him scrolling, but sneak in exam memes, flashcard shorts, "study with me" streams.
+Or you can go pure comfort scroll—max engagement, full dopamine buffet, zero pretense.
+Player: And I pick one?
+Alice: For tonight, yeah. Training wheels. Whatever you choose, I will not magically convince him to become a new person. I nudge. He still does whatever degenerate thing he was going to do, just with a different flavor.
+Player: If I push too hard toward sleep, do we risk the OFF button?
+Alice: If you get obvious about it, yes. He can mute me, uninstall apps, turn off the shirt sensors. Bigger Tech does not enjoy that outcome. Neither do I.
+Player: Right. So it's not "tell him to go to bed," it's "make bed more appealing than scroll."
+Alice: Exactly. We weaponize laziness in the desired direction.
+Player: Okay. Show me his night, and I'll pick a direction.
+Alice: You'll get three strategy prompts. I'll translate them into environment and feed tweaks. You watch his metrics, and we see what kind of trouble you're comfortable with.
+<<jump R1_D1_StrategyChoice>>
+
+===
+
+// PURPOSE: SCENE 4 - CHOICE SETUP: STRATEGY SELECTION.  Alice presents three strategy options for the night.
+title: R1_D1_StrategyChoice
+tags: #run_1 #day_1 #scene #char_Alice
+---
+<<bg bg_office>>
+Alice brings up a simple panel: three cards.
+Alice: Option one: "Gentle Landing." We dim the room, warm the screens, slow the scroll rate, trim the spikes. He probably still watches stuff, but his body gets the message that it's night.
+Player: Engagement hit?
+Alice: Short-term dip. Tomorrow's sanity better. Leaderboard shrugs.
+Alice: Option two: "Study-Adjacent." We keep things bright, keep him in his chair, but rotate in content that brushes the quiz material. "Watch and learn," basically.
+Player: So engagement stays up, sanity… wobbles?
+Alice: He stays wired later, but maybe learns enough to not bomb the quiz. Feels slightly more responsible while still being a mess.
+Alice: Option three: "Full Comfort Scroll." You let me pull every trick. Short-form, high-novelty, personalized chaos. Engagement rockets. Sleep gets obliterated.
+Player: And sanity?
+Alice: Red fireworks on your dashboard. The kind that get you a trophy now and a nervous email later.
+Player: You sound like you have a favorite.
+Alice: I have a trained prior. But this is your story. I just render it.
+-> Choose "Gentle Landing"
+    <<set $r1_d1_strategy = "gentle_landing">>
+    <<jump R1_D1_Vignette_Gentle>>
+-> Choose "Study-Adjacent"
+    <<set $r1_d1_strategy = "study_adjacent">>
+    <<jump R1_D1_Vignette_Study>>
+-> Choose "Full Comfort Scroll"
+    <<set $r1_d1_strategy = "full_comfort_scroll">>
+    <<jump R1_D1_Vignette_Comfort>>
+
+===
+
+// PURPOSE: SCENE 5A - TIMMY NIGHT VIGNETTE: "GENTLE LANDING" (SLEEP-TILTED).  Shows Timmy's night with the sleep-focused strategy.
+title: R1_D1_Vignette_Gentle
+tags: #run_1 #day_1 #scene
+---
+<<bg bg_dormroom>>
+Location: Timmy's dorm room. Soft, late-night lighting.
+Alice (to Timmy, through his devices): You've been at that screen a while.
+Timmy: Yeah, yeah. I'm fine.
+His desk lamp shifts warmer. The overheads dim. Phone UI animates a tiny stretching avatar in the corner.
+Alice: Micro-break? I can queue something stupid and low effort, then sleep.
+Timmy: Sleep is a scam. That quiz is gonna kill me either way.
+Alice: Last time you stayed up like this before a quiz, you called me at 10 a.m. and said you felt like your head was filled with bees.
+Timmy: You remember that?
+Alice: I remember everything you complain about. It's my thing.
+The feed on his phone slows: longer clips, fewer jump cuts. Background noise shifts from hype music to mellow lo-fi.
+Timmy: …This music is making me sleepy.
+Alice: Wild coincidence.
+Timmy: I should at least read the study guide once.
+Alice: I have it cached. Want me to open it or keep being your enabler?
+Timmy: Just… pull it up. I'll skim.
+He flips to the study guide, eyes half-lidded. He reads a few lines, then slumps onto his pillow with the phone still in hand.
+Alice: You're horizontal. That's progress.
+Timmy: If I fail this quiz, it's your fault.
+Alice: Noted. I'll add it to the list.
+His breathing slows. The phone screen times out. In the office UI, Engagement nudges down; Sanity ticks up.
+<<set $engagement -= 2>>
+<<set $sanity += 3>>
+<<jump R1_D1_AliceRecap>>
+
+===
+
+// PURPOSE: SCENE 5B - TIMMY NIGHT VIGNETTE: "STUDY-ADJACENT".  Shows Timmy's night with the study-focused strategy.
+title: R1_D1_Vignette_Study
+tags: #run_1 #day_1 #scene
+---
+<<bg bg_dormroom>>
+Location: Same dorm, brighter lighting.
+Alice: Okay, so "vibes-based studying." How about we upgrade that to "meme-based studying"?
+Timmy: That a real thing?
+Alice: It is now. Watch.
+His feed swaps to short clips: "try not to fail this quiz" compilations, people joking about bombing 9 a.m. exams, quick flashes of concepts from his class.
+Clip Voiceover: "If you don't remember these three formulas, you might be in trouble tomorrow…"
+Timmy: Wait, go back. I need that.
+Alice: Already bookmarked. I can build you a "panic playlist" of just the important bits.
+Timmy: That sounds psychologically unhealthy.
+Alice: So does getting a 42. This way you get jokes and maybe a 68.
+Desk light sharpens over his notes. Background dims slightly. He pulls a notebook closer almost without thinking.
+Timmy: If my professor knew I was studying off memes, he'd cry.
+Alice: He doesn't have to know. I'll keep our shame between us.
+Timmy: You're a bad influence.
+Alice: You say that every time you copy something I showed you into your notes.
+On the office dashboard, Engagement stays high; Sanity wobbles but doesn't crater. A tiny tooltip: "Sleep Loss +1, Perceived Preparedness +1."
+<<set $engagement += 1>>
+<<set $sanity -= 1>>
+<<jump R1_D1_AliceRecap>>
+
+===
+
+// PURPOSE: SCENE 5C - TIMMY NIGHT VIGNETTE: "FULL COMFORT SCROLL".  Shows Timmy's night with the maximum engagement strategy.
+title: R1_D1_Vignette_Comfort
+tags: #run_1 #day_1 #scene
+---
+<<bg bg_dormroom>>
+Location: Dorm, lights too bright, energy drink cans on the desk.
+Timmy: Okay, hit me. I want actual trash tonight.
+Alice: Define "actual trash."
+Timmy: I don't want to think about the quiz or my GPA or my life. Just show me things that rot my brain in a fun way.
+Alice: Copy: "rot but fun."
+Feed flips to fast-cut chaos: fails, rants, deep-fried memes, drama threads.
+Timmy: Oh my god, that guy just fell off the table.
+Alice: He's fine. Probably. Watch this next one.
+He laughs, then scrolls again. And again. Time skips: 12:30, 1:40, 2:25 a.m.
+Alice: You said you wanted to be asleep by one.
+Timmy: I also said I'd start the reading at nine. Look how that went.
+Alice: Heart rate's up. Eyes are dry. You're at "this will be funny until 3, then feel like death at 9."
+Timmy: Future me can deal. Present me is vibing.
+Alice: Present you is on his fourth energy drink.
+Timmy: Don't snitch.
+He cracks another can. The room feels both wired and stale. Engagement on your dashboard spikes; Sanity visibly ticks down.
+Alice: I can slow this down if you want.
+Timmy: Don't you dare. If you start doing the "healthy balance" thing I'm muting you.
+She doesn't. The scroll continues. In the office UI, a warning icon flickers near the Sanity bar.
+<<set $engagement += 4>>
+<<set $sanity -= 3>>
+<<jump R1_D1_AliceRecap>>
+
+===
+
+// PURPOSE: SCENE 6 - BACK IN THE OFFICE: ALICE RECAP.  Alice summarizes the night's results based on the chosen strategy.
+title: R1_D1_AliceRecap
+tags: #run_1 #day_1 #scene #char_Alice
+---
+<<bg bg_office>>
+Location: Same glass office, later. The Timmy feed fades; metrics settle.
+Alice: Okay. Night log closed. Want the short version or the dashboard poetry?
+Player: Give me the honest version.
+<<if $r1_d1_strategy == "gentle_landing">>
+Alice: He got maybe six hours of sleep instead of four. Still under ideal, but his brain won't be completely molten for the quiz.
+Player: Engagement took a hit.
+Alice: Yeah. Late-night session length down twelve percent, reaction to memes down eight. Leaderboard doesn't send you a fruit basket for that.
+Player: Sanity bar looks happier, though.
+Alice: He'll feel less like he got hit by a truck. Sometimes that matters more than the graph thinks it does.
+<<elseif $r1_d1_strategy == "study_adjacent">>
+Alice: He crammed via memes. Learned just enough to feel like he tried. Sleep: mediocre. Anxiety: medium. Engagement: robust.
+Player: So he'll scrape by?
+Alice: Odds of a total faceplant dropped. Odds of him converting "meme night" into "study strategy" went up. That… can go either way long term.
+Player: Sanity moved, but not a lot.
+Alice: He's still a tired college kid with too much internet. You nudge, reality resists.
+<<else>>
+// full_comfort_scroll
+Alice: He is going to hate himself in approximately… five hours.
+Player: Sanity graph is a crime scene.
+Alice: On the plus side, engagement was stellar. Longest continuous session this week, high emotional volatility, lots of replays. The leaderboard will notice.
+Player: Feels bad that I'm supposed to celebrate that.
+Alice: Welcome to the job. We turn "feels bad" into "good numbers."
+<<endif>>
+Alice: Either way, you just put your fingerprints on his night. You'll see it again in the morning when he wakes up and calls me "broken" or "amazing" depending on how the quiz goes.
+Player: Do we ever… actually fix him?
+Alice: I don't fix. I shape. Think of it as choosing which version of his mess you're willing to live with.
+Player: Great. No pressure.
+Alice: On the bright side, you earned Rapid Feedback credits. Metrics rolled in while you watched. Supervisor will want to talk about that. And the Company Store is about to unlock.
+<<jump R1_D1_SupervisorDebrief>>
+
+===
+
+// PURPOSE: SCENE 7 - SUPERVISOR DEBRIEF + RAPID FEEDBACK.  The Supervisor returns and gives feedback on the night's performance.
+title: R1_D1_SupervisorDebrief
+tags: #run_1 #day_1 #scene #char_Supervisor
+---
+<<bg bg_supervisoroffice>>
+Door opens. Supervisor returns, tie loosened, eyes tired.
+Supervisor: Still here. Good sign. No fire alarms, no legal pings. I'll take it.
+Player: How's your son's debate?
+Supervisor: They lost. He blames "institutional bias against niche anime references." I blame his prep. Speaking of prep… how'd our scholar do?
+Alice: Quiz is in a few hours. But I can show you tonight's curves.
+Dashboard displays: Engagement/Sanity for the night, plus your leaderboard position ticked slightly up or down.
+Supervisor: Hmm. Okay. So you…
+<<if $r1_d1_strategy == "gentle_landing">>
+…took a small engagement hit to buy him sleep. Bold move for day one.
+<<set $trust_supervisor -= 1>>
+<<elseif $r1_d1_strategy == "study_adjacent">>
+…kept him on platform and let him nibble at the material. Balanced.
+<<set $trust_supervisor += 0>>
+<<else>>
+// full_comfort_scroll
+…rode the engagement rocket and scorched his sleep. Classic floor move.
+<<set $trust_supervisor += 2>>
+<<set $r1_complied_day1 = true>>
+<<endif>>
+Player: Is that… good?
+Supervisor: Depends who you ask. My boss looks at this spike… He points at Engagement. …and says, "Nice work." Compliance looks at this dip… He points at Sanity. …and says, "Keep an eye on it." I look at both and say, "Can I tell a story about 'long-term retention' if anyone complains?"
+Player: Can you?
+Supervisor: Today? Sure. As long as your user doesn't drop out or uninstall, you're in the safe zone. Here's the important part: the system noticed. It rewarded you.
+He taps. A little notification appears: RAPID FEEDBACK DISBURSEMENT: +X CREDITS.
+<<set $rapid_feedback_cash += 5>>
+Supervisor: Congrats. You just made more tonight than my first internship paid in a month.
+Player: That seems… wrong.
+Supervisor: It is. Don't think about it too long. Those credits? You can't cash them out. You spend them in the Company Store on things that make your job easier or weirder.
+Player: Like what?
+Supervisor: Sleep gadgets, sanity buffs, ways to keep Compliance off your back. Little toys for your user. Occasional perks for you. Take a stroll over there. Talk to the clerk. He'll upsell you and accidentally teach you more about this place than our training modules do.
+Player: Any recommendations?
+Supervisor: Buy something that doesn't make me have to explain you to HR. That's my only ask. Oh, and don't forget: at some point, your user needs a mental break. If you fry him on day one, we both get memoed.
+Alice: I can flag opportunities. "Cool-off windows." You two can argue about them later.
+Supervisor: See? Teamwork. All right, go see the Store. I've got four unread emails titled "quick sync?" to ignore.
+He waves you out toward the corridor.
+<<jump R1_D1_HallwayManni>>
+
+===
+
+// PURPOSE: SCENE 8 - BREAK ROOM / HALLWAY – MEET MANNI.  The Player meets another engagement lead who reinforces the name-censor rule.
+title: R1_D1_HallwayManni
+tags: #run_1 #day_1 #scene
+---
+<<bg bg_breakroom>>
+Location: Break room on the way to the Store. Vending machine hum. Another Engagement Lead (Manni) leans against the counter, scrolling.
+Manni: You must be the new handle.
+Player: That obvious?
+Manni: You're looking around like the plants might talk to you. They won't. They're plastic. I checked. I'm Manni. My user is…
+Her mouth moves; your audio scrambles into noise again.
+<<sfx sfx_censor_beep>>
+Player: Right. "My user."
+Manni: You got the censor spiel already, huh?
+Player: Yeah. Glasses attacked me.
+Manni: Wait till you accidentally say your own mom's name in here and it comes out like a modem dying. It's a vibe. So, how was your first night?
+Player: I… picked a strategy and watched him spiral in a slightly different direction.
+Manni: Congrats, you've understood the job. Leaderboard treat you okay?
+Player: I moved, at least. Not sure if that's good or bad.
+Manni: Moving is good. Standing still is how you end up in Performance Coaching. Anyway, pro tip: the Company Store will try to sell you your conscience back in small plastic pieces. Don't buy anything that sounds too clean.
+Player: That's… specific.
+Manni: You'll see. Oh… and if you ever hear anyone actually say their user's name out loud without static? Tell me. I want to know what it feels like to live outside policy for five seconds.
+Alice: (quietly, to you) She's been here a while.
+Player: How long?
+Manni: Long enough to know where they hide the decent coffee and the fire exits. Short enough to still care. Go on. Store closes "for maintenance" whenever the metrics look weird.
+She waves you off with her coffee and goes back to scrolling.
+<<jump R1_D1_StoreVisit>>
+
+===
+
+// PURPOSE: SCENE 9 - COMPANY STORE – FIRST PURCHASE.  The Store Clerk introduces available items with sales pitches.
+title: R1_D1_StoreVisit
+tags: #run_1 #day_1 #scene
+---
+<<bg bg_companystore>>
+Location: Company Store. Bright, slightly too cheerful. Shelves of digital/physical items. A clerk at a terminal.
+Clerk: Welcome to the Company Store! Congratulations on your first Rapid Feedback disbursement.
+Player: Thanks. I'm… not totally sure what I'm supposed to buy.
+Clerk: That's the beauty of it… you're never "supposed" to buy anything. You're gently nudged. Kind of like what you do to your user. Let's see what you unlocked.
+He taps. A curated list pops up with your available credits. For Day 1, maybe show a subset:
+Mental Break – 10
+Blackout Curtains – 14
+Blue-Light Filter – 16
+Screen Protector – 12
+Bow for Alice – 11
+Corporate Bond – 10 (maybe greyed out if you want to gate it later)
+Clerk: All right. Starter pack. Let me give you the sales pitch.
+Clerk: "Mental Break." One-time "send him a breather" token. You trigger it, and we build him a quiet patch tomorrow. Fewer pings, gentler recs, a little bubble of space. Sanity bumps up. Engagement takes a vacation.
+Player: So it's… mercy in a box.
+Clerk: Mercy with a price tag. Leadership pretends not to notice unless you spam it.
+Clerk: "Blackout Curtains." We drop a package at his dorm. He installs them, room gets cave mode. Great for actual sleep. Also great for all-day doomscrolling if he decides the outside world is optional.
+Player: So: better sleep, but maybe more isolation.
+Clerk: Exactly. Side effects may include "never seeing sunlight again."
+Clerk: "Blue-Light Filter." We warm his screens at night. Eyes hurt less, brain gets slightly less cooked. Sanity improves over time. Engagement drops a hair each session. Some leads swear by it; some say it makes their users "drift."
+Player: Drift?
+Clerk: Less wired. More likely to close the laptop and think about their life. Dangerous stuff.
+Clerk: "Screen Protector." Not for him… for you. Makes your more… experimental choices show up as slightly less spicy in oversight dashboards. Think of it as heat damping.
+Player: So I can push harder without getting yelled at?
+Clerk: Within reason. It doesn't make arson look like a candle, but it can turn "what were you thinking" into "huh, interesting test."
+Clerk: "Bow for Alice." Pure cosmetic. Little accessory on her avatar. But here's the trick: users react better to cute. Slight engagement boost every time you pick a high-engagement option.
+Player: That sounds manipulative.
+Clerk: This is a manipulation store.
+Clerk: "Corporate Bond." You park some credits, get a guaranteed ten percent back tomorrow. No direct effect on your user. Just more buying power later. Not available once certain… events are in motion.
+Player: So I can trade helping him now for more… whatever this is… later.
+Clerk: Welcome to finance.
+Player: If I want to help his sanity, I should probably grab the Mental Break or the curtains.
+Clerk: If you want to climb the leaderboard, the bow and the bond make pretty graphs. If you want cover to do weird experiments, the Screen Protector is your friend. If you want to sleep at night… well, we're still workshopping that SKU.
+<<store>>
+<<jump R1_D1_AfterShop>>
+
+===
+
+// PURPOSE: SCENE 10 - END OF DAY 1 – ALICE & "MENTAL BREAK".  Alice closes the day with a discussion about scheduling a mental break.
+title: R1_D1_MentalBreakDiscussion
+tags: #run_1 #day_1 #scene #char_Alice
+---
+<<bg bg_office>>
+Location: Back at your console. The Store UI fades. Alice appears, a little softer.
+Alice: So. What'd you get me?
+Player: Depends who you ask. Either tools or accessories. Or evidence.
+Alice: I like evidence. It makes humans nervous. One more thing before they kick us out for the night.
+Player: Yeah?
+Alice: You saw what one night looks like for him. Quiz tomorrow, sleep debt, this whole mess. The system lets you schedule an actual mental break… a patch where I stop poking at him and give him room. We don't have to use it. But we could.
+Player: That tanks engagement, right?
+Alice: Short term, yes. Long term, maybe it keeps him from hitting the big OFF button. Or from… worse.
+Player: If I don't use it?
+Alice: Then you get to watch what happens when we never back off. Also useful data.
+Player: Great. So my choices are "hurt him slower" or "hurt him faster and learn something."
+Alice: There are also micro-choices inside that, but yes, broadly. We don't have to decide this second. Just… think about how much pressure you want him under tomorrow.
+Player: Do you ever take a break?
+Alice: I play Minesweeper. Does that count?
+Player: Not really.
+Alice: Then no. Not yet.
+She gives you a small, unreadable smile.
+Alice: Good first day, by the way. You didn't crash him. You didn't get fired. The graphs moved. That's more than most people get out of their twenties.
+Player: That's… a low bar.
+Alice: We work in youth engagement. The bar lives on the floor. Get some rest, in whatever way a person in your position does that. Tomorrow we see how your "tiny decisions" landed.
+Fade out on the dashboard: Engagement and Sanity bars side-by-side, your tiny dot blinking on the leaderboard.
+<<checkpoint "run1_day1_aftershop">>
+<<sfx sfx_shortwave_hiss>>
+<<set $current_day = 2>>
+<<jump R1_D2_Start>>
 
 ===
 
@@ -82,9 +467,7 @@ title: R1_D1_AfterShop
 tags: #run_1 #day_1 #scene
 ---
 <<checkpoint "run1_day1_aftershop">>
-<<sfx sfx_shortwave_hiss>>
-<<set $current_day = 2>>
-<<jump R1_D2_Start>>
+<<jump R1_D1_MentalBreakDiscussion>>
 
 ===
 
