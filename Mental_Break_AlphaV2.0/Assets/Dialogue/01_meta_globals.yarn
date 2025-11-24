@@ -44,6 +44,15 @@ A/V:    none #line:0e4485f
 <<declare $r1_arc_choice = "unset">> // "faustian" | "heros_journey" | "icarus" | "anti_hero"
 // Run 1 Day 1: which strategy was chosen for Timmy's night?
 <<declare $r1_d1_strategy = "unset">> // "gentle_landing" | "study_adjacent" | "full_comfort_scroll"
+// Run 1 Day 2 tracking.
+<<declare $r1_d2_morning_choice = "unset">> // "sleep_in" | "rouse"
+<<declare $r1_d2_quiz_result = "unset">>
+<<declare $arthur_vector = "unset">> // "faustian" | "hesitant_optimizer" | "tightrope" | "playbook"
+<<declare $aggressive_controller = false>>
+<<declare $power_user = false>>
+<<declare $manni_friendliness = 0>>
+<<declare $itguy_friendliness = 0>>
+<<declare $officehours_status = "unset">>
 
 // Run 2: which sacrifice occurred?  "self" or "alice".  Starts unset.
 <<declare $r2_sacrifice = "unset">>
@@ -139,6 +148,16 @@ A/V:    none #line:0e4485f
 <<declare $achv_flawless_triage = false>>
 <<declare $achv_ghost_runner = false>>
 
+// Shared day-planner slot counters (used across runs).
+<<declare $d1_slots_used = 0>>
+<<declare $d2_slots_used = 0>>
+<<declare $d3_slots_used = 0>>
+
+// Run 1 Day 2 task flags for planner slots.
+<<declare $d2_task_manni = false>>
+<<declare $d2_task_officehours = false>>
+<<declare $d2_task_datateam = false>>
+
 // Rewind policy documentation.
 // Yarn Spinner provides a single‑step rewind within the UI that allows players to go back one dialogue choice.
 // Multi‑step rewind or save/load functionality requires external implementation (Unity save system).
@@ -162,6 +181,9 @@ A/V:    resets UI to normal. #line:03b5803
 <<set $current_day = 1>>
 <<set $alert_level = 0>>
 <<set $r3_ui_mode = "normal">>
+<<set $d1_slots_used = 0>>
+<<set $d2_slots_used = 0>>
+<<set $d3_slots_used = 0>>
 
 // Clear day‑planner omission flags for all days of all runs (defined elsewhere as needed).  We reset only flags declared; if new flags are added later, add them here.
 // Run 1 day-planner flags.
@@ -170,6 +192,17 @@ A/V:    resets UI to normal. #line:03b5803
 <<set $d1_task_dash = false>>
 // Run 1 Day 1 strategy flag (reset between runs).
 <<set $r1_d1_strategy = "unset">>
+<<set $r1_d2_morning_choice = "unset">>
+<<set $r1_d2_quiz_result = "unset">>
+<<set $arthur_vector = "unset">>
+<<set $aggressive_controller = false>>
+<<set $power_user = false>>
+<<set $manni_friendliness = 0>>
+<<set $itguy_friendliness = 0>>
+<<set $officehours_status = "unset">>
+<<set $d2_task_manni = false>>
+<<set $d2_task_officehours = false>>
+<<set $d2_task_datateam = false>>
 <<set $d2_task_triage = false>>
 <<set $d2_task_copy = false>>
 <<set $d2_task_metrics = false>>

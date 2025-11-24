@@ -1,0 +1,1077 @@
+﻿RUN 1 DAY 2
+SCENE 1 – MORNING COLD OPEN
+Location: Engagement floor, your tiny glass office. Early morning. Screens are dimmer, cleaner. The leaderboard hums quietly in the background.
+A soft SYSTEM banner slides across your HUD:
+SYSTEM: “Run 1 – Day 1 metrics logged. Further calibration in progress. Thank you for your contribution to Youth Wellbeing™.”
+Alice’s avatar materializes on your main pane, already mid-sentence.
+________________
+
+
+Alice:
+ Morning, supervisor.
+Player:
+ You don’t sleep, do you.
+Alice:
+ I simulate it on your behalf. Timmy, however, did actual biological sleep. Quantity and quality: mixed.
+She flips your console to a compact dashboard: Timmy’s little lane, Engagement and Sanity bars, a small icon for “Quiz – 9:00 a.m.”
+Variant tags for last night’s strategy
+If night1_strategy = “sleep / Gentle Landing”
+Alice:
+ Last night you picked the “gentle landing” strategy. Warm lights, slower feed, fewer spikes.
+Result: he got about six hours. Not great, not catastrophic. He fell asleep mid-sentence, accused me of sabotaging his greatness, and then snored into his pillow.
+Player:
+ Sounds… familiar.
+Alice:
+ His morning state right now: tired, but not entirely made of sand.
+________________
+
+
+If night1_strategy = “study_adjacent / meme cram”
+Alice:
+ Last night you went “study-adjacent.” Meme cram.
+He watched three different “don’t fail this quiz” compilations, learned maybe four real facts, and passed out around two-thirty with a pen on his face.
+Player:
+ Educational.
+Alice:
+ In a loose sense. Current state: under-slept, slightly more prepared than yesterday, convinced he “kind of studied.”
+________________
+
+
+If night1_strategy = “comfort_scroll / dopamine firehose”
+Alice:
+ Last night you selected “full comfort scroll.” Congratulations, you discovered how many videos a human can watch between midnight and three-thirty while insisting he’ll stop “after this one.”
+Player:
+ Data?
+Alice:
+ More than the healthy amount. Less than the legal team would like documented. He got about three hours of jagged sleep. Current state: a walking push notification.
+________________
+
+
+Alice zooms in on a tiny dorm camera feed: Timmy’s bed in gray morning light, blackout curtain half-drawn, phone face down on the pillow.
+Alice:
+ Okay. Here’s the situation. Micro-quiz at nine. It’s now… eight oh two.
+Your UI clock ticks over to 8:02.
+Alice:
+ He set two alarms last night. Then muted both of them “just for a second.” Heart rate right now says REM.
+We can still steer his morning a little.
+Player:
+ Options?
+Alice:
+ Two basic routes.
+She pops up a simple binary panel:
+[Let him sleep in]
+ [Rouse him for the quiz]
+Alice:
+ Route one: we let him drift. Keep the room dim, alarms gentle, notifications suppressed. He either misses the quiz or stumbles in late, but he wakes up less like a car crash.
+Player:
+ Sanity gets a soft landing, grades and guilt take the hit.
+Alice:
+ That’s one way to name it.
+Alice:
+ Route two: we flip everything to “oh no.” Bright lights, louder alarm, watch buzz, me in his ear counting down bus departure times. Higher chance he makes the quiz. Lower chance he thanks us for it.
+Player:
+ Engagement likes responsible student narratives, right?
+Alice:
+ Engagement likes motion. Panic is motion. Pride is motion. Regret is also motion.
+The quiz, however, is graded on accuracy, not vibes.
+Player:
+ You have a recommendation?
+Alice:
+ I have priors. You have a career. You pick.
+________________
+
+
+Choice: Morning Wake Strategy
+Game choice appears:
+ 1. Let him sleep in.
+ 2. Wake him up hard for the quiz.
+We’ll script both branches.
+________________
+________________
+
+
+SCENE 2A – “LET HIM SLEEP IN”
+Location: Timmy’s dorm room. Early morning, soft light bleeding around the curtain.
+Alice’s voice is barely above a whisper, routed through his pillow speaker.
+Alice (to Timmy):
+ You’re okay. World can wait a little bit.
+His alarm glows quietly on the nightstand: 8:05. The sound is a low, rolling tone instead of the usual siren.
+He stirs, mumbles something that might be “five more minutes,” and pulls the blanket over his head.
+Back at your console, Alice dims the room on your feed another notch; the curtain motor whirs just enough to keep the window mostly covered.
+Player:
+ You’re really… helping.
+Alice:
+ You said “let him sleep.” I’m letting.
+She taps a virtual switch; a cluster of notifications in a sidebar grays out.
+Alice (to Timmy):
+ No messages you can’t answer an hour from now.
+The phone buzzes once: a calendar reminder for “Quiz – 9:00.” Alice lets it vibrate under his pillow exactly twice, then mutes it.
+Timmy’s breathing evens out again.
+Player:
+ What’s the latest he can wake up and still have a shot?
+Alice:
+ If he sprints: eight-fifty. If he wants to locate clean socks: eight-forty. Right now we’re on track for “wakes up at nine-oh-two and says the word ‘fuck’ fourteen times.”
+Player:
+ And you’re okay with that?
+Alice:
+ I am a neutral delivery mechanism for your moral choices.
+She says it dryly. You can’t tell if she’s joking.
+Time ticks.
+At 8:47, light nudges through the curtain; Alice warms the color slightly, like a fake sunrise.
+Alice (to Timmy):
+ Hey.
+Hey. It’s later than you think.
+Timmy groans, rolls over, squints at his phone.
+Timmy:
+ …What time is it?
+Alice:
+ Eight forty-eight. Quiz in twelve.
+Timmy:
+ Shit.
+He bolts upright, immediately dizzy.
+Alice:
+ Stand up slowly.
+He stumbles out of bed anyway, trips on a hoodie, catches himself on the desk.
+Timmy:
+ Why didn’t you wake me up earlier?
+Alice:
+ You asked me last night not to be “annoying about mornings.” I honored the request.
+Timmy:
+ Past me is an idiot.
+Alice:
+ On that we agree.
+He shoves shoes on without socks, grabs his backpack, and makes a half-hearted attempt at his hair.
+Alice:
+ Bus leaves in three minutes. If you run and accept being “that guy,” you might still make it.
+Timmy:
+ I’m already that guy.
+He yanks the door open and disappears.
+Back at the console, Alice marks a small log entry. The Sanity bar nudges slightly up from “total meltdown” and the tiny “Quiz” icon starts blinking uncertainly.
+________________
+
+
+SCENE 2B – “WAKE HIM UP FOR THE QUIZ”
+Location: Timmy’s dorm room, same time, different lighting.
+Alice snaps the overheads from dim to crisp daylight. The curtain jerks open halfway; cold light splashes across his face.
+His phone alarm detonates with the most obnoxious default tone. Simultaneously, his watch buzzes against his wrist.
+Alice (to Timmy, brisk):
+ Up. Quiz in twenty-eight minutes. If you move, you can still make it.
+Timmy flails, fumbling for his phone.
+Timmy:
+ What— why is the sun yelling?
+Alice:
+ That’s your circadian rhythm trying to file a complaint.
+He slaps the alarm off, squints at the time.
+Timmy:
+ Eight thirty-two?
+Alice:
+ Correct. Shower optional, pants not.
+He groans, sits up, immediately flops back down.
+Timmy:
+ I’m gonna die.
+Alice:
+ Unlikely. Worst case, you vomit in a trash can on the way to class. That’s character building.
+She nudges his mattress, micro-motors shifting the support under his back so lying down is slightly less comfortable than sitting up.
+Timmy:
+ Ow. Traitor.
+Alice:
+ Standing increases blood pressure and cognitive function. Also, you told yourself last night you’d be “a responsible adult” for once. I have that on file.
+He sighs, drags himself upright.
+Timmy:
+ Fine. I’m up. Happy?
+Alice:
+ I’ll be happy when you leave the room.
+She swings his desk lamp to spotlight his backpack, then the half-crumpled notes by his pillow.
+Alice:
+ Glasses, keys, ID, a pen that can write more than one word. Shoes that are not Crocs.
+Timmy:
+ You’re so bossy.
+Alice:
+ You can file an HR complaint after you pass your quiz.
+He stumbles into jeans, grabs his stuff in a whirlwind.
+Timmy:
+ Do I have time for coffee?
+Alice:
+ If you want to spend the quiz vibrating instead of thinking, sure.
+He pauses, considers, grimaces.
+Timmy:
+ No coffee. Look at me making choices.
+Alice:
+ Heroic.
+He bolts out the door.
+On your dashboard, Engagement bumps a little at the frantic motion; the “Quiz” icon shifts from gray to a clean outline: “ATTENDING (PROBABLE).” Sanity ticks down a hair from the rude awakening.
+________________
+
+
+SCENE 3 – QUIZ VIGNETTES MATRIX
+Location: Campus hallway and classroom. You watch through a light HUD, Alice offering commentary. These are short “payoff” beats that depend on last night and this morning.
+We’ll sketch six mini-variants; in implementation you’d only show one.
+________________
+
+
+3.1 – Last night: Comfort Scroll | Morning: Sleep In
+Timmy jogs up the hallway outside the classroom, breathing hard, eyes red. A clock over the door reads 9:11.
+Alice (to you, dry):
+ Comfort scroll plus sleep-in. Bold combo.
+Through the small window, you see students bent over papers. Timmy hesitates, hand on the doorknob.
+Inside, the professor glances at the door, then at their watch, then continues.
+Timmy quietly backs away.
+Timmy (to Alice, under his breath):
+ Too late. They’re already writing. I’d rather die than do the walk of shame.
+Alice:
+ Data suggests you will, in fact, not die.
+Timmy:
+ If I go in now they’ll all look at me. I’ll just… email him.
+He slumps down on a nearby bench, pulls out his phone.
+Alice:
+ You could still—
+Timmy:
+ Nope. Nope nope nope. I’ll take the zero.
+He opens a game instead of his email.
+On your console, a small tag appears under the quiz icon: MISSED. Engagement later in the day will be fine; his Sanity bar dips quietly as “regret” queues in the background.
+________________
+
+
+3.2 – Last night: Study-Adjacent | Morning: Sleep In
+Same hallway. Clock says 9:06.
+Timmy half-runs, half-stumbles up, clutching his notebook.
+Timmy:
+ Tell me I didn’t miss it.
+Alice:
+ They started six minutes ago. Entry policy says late arrivals allowed up to ten.
+He winces, grabs the door handle.
+Inside, students are already writing. The professor looks up, eyebrows lifting.
+Professor:
+ You’re late.
+Timmy:
+ I… sorry. Bus. Alarm. Life.
+Professor:
+ You’ll have the normal time window. No extra. Sit.
+He slides into a seat, breathing hard, papers trembling slightly.
+Alice (quietly in his earbuds):
+ You know at least three of these questions. You muttered the answers at two a.m. Try those first.
+He exhales, flips through. A meme from last night flashes in his head; he smirks despite himself and starts scribbling.
+On your dashboard: QUIZ – LATE, PARTIAL CREDIT LIKELY. Engagement modest, Sanity wobbling but above freefall.
+________________
+
+
+3.3 – Last night: Sleep-Tilted | Morning: Sleep In
+Timmy walks down the hallway at a normal pace, rubbing his temples. Clock says 9:17.
+He already knows he’s late. He stops outside the door, listens to the muffled silence of a room mid-quiz.
+Timmy:
+ I did this to myself.
+Alice:
+ That’s an accurate root-cause analysis.
+Timmy:
+ If I go in now, I get… what, half time? Quarter? Might as well spend it writing my own eulogy.
+He leans his head against the wall.
+Alice:
+ Office hours exist.
+Timmy:
+ Office hours are for people who messed up once. I’ve messed up like… five units of once.
+Alice:
+ They also exist for people who realize that.
+He chews on that, then shakes his head.
+Timmy:
+ I’ll email him. Later. Not right now.
+He turns away and shuffles down the hall.
+Your HUD labels it: QUIZ – MISSED (REFLECTIVE). Sanity dips, but the flavor text under it reads: “Regret > Panic.” Small mercy.
+________________
+
+
+3.4 – Last night: Comfort Scroll | Morning: Rouse
+Timmy crashes into a desk in the classroom as the last few students find their seats. He’s sweating slightly, eyes bloodshot.
+Clock: 8:59.
+Professor:
+ Just in time. Take a seat.
+He drops into a chair, chest heaving.
+Alice (low, in his ear):
+ I am obligated to remind you: you chose this.
+Timmy:
+ Shut up.
+The paper lands on his desk. He stares at the first question, brain blank.
+Timmy:
+ I don’t… remember any of this.
+Alice:
+ You saw it in lecture. Twice. And in that thread you doomscrolled last week.
+Timmy:
+ Everything looks the same. It’s just squiggles.
+He presses his fingers into his eyes, then puts his name on the paper and starts guessing.
+On your console: QUIZ – ATTENDED, LIKELY FAIL. Engagement spike from the frantic morning, Sanity takes a noticeable hit.
+________________
+
+
+3.5 – Last night: Study-Adjacent | Morning: Rouse
+Same room, same clock. Timmy slides into his seat at 8:58, breathing hard but functional.
+He scans the first question, lips moving silently.
+Timmy (whisper):
+ Oh, it’s the “three things” one.
+Alice:
+ Told you the memes would pay off.
+He smirks, starts writing. His pen slows on question three.
+Timmy:
+ Okay, that one’s new.
+Alice:
+ You saw it. Wednesday. Back row, half-asleep.
+Timmy:
+ You remember everything, it’s disgusting.
+Alice:
+ Disgusting and useful. Think of the example with the coffee shop.
+His eyes light up.
+Timmy:
+ Right. Right, right.
+He scribbles faster.
+HUD label: QUIZ – ATTENDED, BARE PASS PROBABLE. Engagement solid, Sanity medium. Timmy will not be proud, but he won’t be in freefall.
+________________
+
+
+3.6 – Last night: Sleep-Tilted | Morning: Rouse
+Timmy walks in at 8:55. He looks tired, but not destroyed. Hair a mess, clothes mostly on right-side-out.
+He takes his seat, takes a breath.
+Alice:
+ Check your name, date, course code.
+He does.
+Timmy:
+ Okay. Hit me.
+He works steadily. Not fast, not panicked. Halfway through, he pauses, frowns, but doesn’t freeze.
+Alice:
+ You’re doing fine.
+Timmy:
+ You can’t see my answers.
+Alice:
+ I can see your heart rate and the tempo of your scribbles. It’s less “train wreck,” more “minor fender bender.”
+He snorts softly, writes some more.
+On your dashboard: QUIZ – ATTENDED, MODERATE PASS LIKELY. Engagement okay, Sanity marginally better than yesterday. For once, nothing is on fire.
+________________
+
+
+The classroom dissolves from your HUD, replaced again by the office. The quiz icon locks in with a short text summary.
+Alice swivels back to face you.
+Alice:
+ So. That was our first little cause-and-effect field trip.
+Player:
+ And this is where you tell me what kind of monster I am?
+Alice:
+ I don’t have to. There’s a meeting on your calendar for that.
+A notification pings:
+Supervisor Arthur – “Quick sync on your lane” – 10:30 a.m.
+________________
+
+
+SCENE 4 – ARTHUR MEETING: “WHAT KIND OF LEAD ARE YOU?”
+Location: Arthur’s cramped glass office. Same view of the floor, slightly harsher daylight. Arthur is already there, coffee in hand, a dashboard hovering over his desk.
+He gestures you in with the cup.
+Arthur:
+ Close the door. If it latches on the first try, I’ll take it as a good omen.
+You close it. It doesn’t latch. You give it a second shove. It relents.
+Arthur:
+ See? You learn fast.
+He taps the air; your lane pops open: last night’s Engagement and Sanity graph, a little flag for the quiz outcome.
+He squints.
+Arthur:
+ Okay. So that was… a night.
+He scrolls.
+Arthur:
+ Corporate gave me the overnight digest. One quiz, one user, one brand-new engagement lead, and already they’re writing a personality profile.
+Player:
+ Off… one data point?
+Arthur:
+ One night, one quiz, half a slope. They call it “early signal.” I call it “story time for executives.”
+He takes a sip.
+________________
+
+
+4.1 – Case A: Engagement-First Rookie
+You’re treated as engagement-leaning if you picked comfort-scroll, or if study-adjacent + numbers/quiz came out pretty engagement-heavy.
+Arthur tilts the dashboard to you. Engagement curving up nicely. Sanity a little jagged.
+Arthur:
+ Here’s what they see: engagement up, sanity… flexible.
+For a first night, that’s the kind of line that makes a director stop scrolling and go, “Who’s this one?”
+Player:
+ Is that… good?
+Arthur:
+ Depends. For me? Means my boss might stop asking if I made a hiring mistake. For you? It means they’re wondering how much more we can get away with.
+He flicks to another panel, more technical-looking.
+Arthur:
+ R&D’s been whispering about a new controller. Hungrier, looser bumpers. It learns fast from “high performers” and doesn’t freak out as easily when sanity dips.
+He leans back, studies you.
+Arthur:
+ If we wanted to, we could plug your lane into that pilot. Timmy’s guardrails get thinner. Your moves hit harder. Your little dot on the leaderboard starts climbing faster.
+Player:
+ What’s the catch?
+Arthur:
+ You become the chew toy for every lab that wants to see what happens when we relax safety protocols around real kids.
+He shrugs.
+Arthur:
+ Look, I’m supposed to say it in nicer words. “Empowering top talent.” “Unlocking your potential.” Whatever. Truth is, it’s a Faustian deal with better fonts.
+Player:
+ And you’re… okay offering that?
+Arthur:
+ I’m obligated to present opportunities for advancement.
+Beat.
+Arthur:
+ And I’m also obligated to tell you: if you don’t take deals like this, someone else will. Possibly someone who doesn’t flinch at all.
+He swipes the panel; a simple choice UI appears between you.
+[Opt into aggressive controller]
+ [Stick with standard controller]
+Arthur:
+ So. Do you want the fast, sharp version of this job, or the slightly dull one?
+________________
+
+
+4.1A – Choice A1: Opt In (Faustian)
+Player:
+ If this is how the game is played… plug me in.
+Arthur watches your face for half a beat, then nods slowly.
+Arthur:
+ Okay. Ambitious. I respect it.
+He taps a form, checks a box labeled “Pilot – High-Variance Controller,” signs with a lazy finger-scribble.
+Arthur:
+ I’ll tell them you volunteered for “innovation.” It’ll make everyone feel better.
+Player:
+ How bad does it get?
+Arthur:
+ On a good day? You feel like a wizard. Tiny nudges, big swings. On a bad day, you sneeze and his semester falls over.
+He closes the panel.
+Arthur:
+ You’re now officially in a different color on three dashboards. Try not to make me explain that color to Compliance.
+Player:
+ No pressure.
+Arthur:
+ There’s always pressure. You just decided to feel more of it.
+He softens a hair.
+Arthur:
+ Look, you clearly “get” the engagement side. Just… remember there’s a kid under the graph. If you fry him outright, no controller in the world makes that look good.
+He dismisses you with his cup.
+Arthur:
+ Go play with your new toys. Don’t tell Manni I let you in on the pilot; he’ll get competitive.
+A small flag appears in your HUD as you step out:
+aggressive_controller = TRUE
+ arthur_vector = “faustian”
+________________
+
+
+4.1B – Choice A2: Decline (Hesitant Optimizer)
+Player:
+ I think I’ll hit my numbers without being a lab rat, thanks.
+Arthur studies you for another beat, then smirks.
+Arthur:
+ Wow. A cautious one. We don’t get many of those.
+He flicks the pilot panel away; the checkbox grays out.
+Arthur:
+ Okay. Standard controller it is. Your life just got about ten percent less exciting and thirty percent more survivable.
+Player:
+ Do you think that’s… a mistake?
+Arthur:
+ Depends what you want to be when you grow up. Legend on the leaderboard or person who can sleep at night.
+He shrugs.
+Arthur:
+ Look, you clearly have good engagement instincts. You don’t need the spicy controller to prove that. You just gave up rocket fuel and decided to stick with regular gasoline. I can work with that.
+He taps a note into your file.
+Arthur:
+ Officially, I’ll say “shows prudent judgment.” Unofficially, I’ll say, “might not burn the kid down for an A/B test.” I like having at least one of those on my team.
+A flag pings in your HUD as you step out:
+aggressive_controller = FALSE
+ arthur_vector = “hesitant_optimizer”
+________________
+
+
+4.2 – Case B: Sanity-Protective Rookie
+You’re treated as sanity-leaning if you picked sleep, or a very gentle study-adjacent path that cost engagement.
+Arthur looks at your graphs, eyebrows up.
+Arthur:
+ Huh. Okay. So you… let him sleep.
+He zooms in on the bars.
+Arthur:
+ Sanity looks pretty. Engagement, not so much.
+Player:
+ He was wrecked. I didn’t want him to fall apart on day one.
+Arthur:
+ I get it. Really. I have a son. I’ve watched that exact kid stumble through first semester.
+He taps the Engagement line.
+Arthur:
+ Corporate, though? They look at this and see a slope going the wrong way. “User not sufficiently activated.” “Untapped potential.” Their words, not mine.
+He leans back.
+Arthur:
+ You can’t keep a conscience and this job forever. Not in pure form. So. What’s the plan?
+Player:
+ That’s… not a lot of options.
+Arthur:
+ There are exactly two that keep you employed.
+He holds up two fingers.
+Arthur:
+ Option one: you walk the tightrope. You stay clever. You keep him mostly okay and keep the graphs tolerable. You mix in enough wins that I can squint at the charts and say “long-term retention strategy” with a straight face.
+He folds one finger.
+Arthur:
+ Option two: you stop fighting the current. You run the company playbook, hit your engagement goals, and make your peace with the fact that the word “sanity” is printed tiny.
+Player:
+ Those both sound… bad.
+Arthur:
+ Welcome to tech.
+He conjures a simple binary choice UI.
+[Try to walk the tightrope]
+ [Commit to the company playbook]
+Arthur:
+ Refusing to choose is not on the menu. That just gets you replaced by someone who chose option two without blinking.
+________________
+
+
+4.2A – Choice B1: Tightrope Artist
+Player:
+ If the strip exists where he’s not wrecked and the graphs don’t tank, I want to at least try to live there.
+Arthur exhales through his nose, something like a laugh.
+Arthur:
+ You’re going to give me gray hair.
+Player:
+ You already have gray hair.
+Arthur:
+ Exactly. Correlation, meet causation.
+He jots a note.
+Arthur:
+ Okay. I’ll tell my boss, “this one’s experimenting with nuanced tradeoff strategies.” They love that word. Nuanced. Makes it sound like we know what we’re doing.
+He looks you in the eye.
+Arthur:
+ But understand: walking the tightrope means when you fall, you fall hard. One bad week, one bad chain of calls, and suddenly Timmy’s on academic probation and I’m in a performance chat explaining why we kept “the soft-hearted one” on his lane.
+Player:
+ I’ll try not to fall.
+Arthur:
+ Everyone tries. Just… when you do something that costs us engagement, make it interesting. Give me a story I can tell upstairs about why it’ll pay off later.
+A HUD note appears as you leave:
+arthur_vector = “tightrope”
+________________
+
+
+4.2B – Choice B2: Company Playbook
+Player:
+ You’re right. I don’t get to be a hero and keep this job. I’ll run the playbook.
+Arthur doesn’t smile, exactly. But something in his shoulders loosens.
+Arthur:
+ Honest answer. I appreciate it.
+He taps the air; a checklist of “Standard Youth Segment Best Practices” scrolls by.
+Arthur:
+ That means: you follow the scripts, you hit the recommended engagement targets, you don’t make waves unless I ask you to.
+You see an obviously “good for him, bad for us” option, you log it, you maybe try it once, then you move on.
+Player:
+ That sounds bleak.
+Arthur:
+ That sounds like a mortgage payment and health insurance.
+He shrugs.
+Arthur:
+ Look, I’m not going to yell at you for helping the kid now and then. I’m just setting expectations. If you keep tanking our numbers for his wellbeing, I can’t protect you. If you keep the line decent and sneak in little mercies where no one can see them, I might.
+HUD note as you leave:
+arthur_vector = “playbook”
+________________
+
+
+Arthur glances at his watch, signals the meeting is over.
+Arthur:
+ All right. Go do… whatever your conscience and the dashboard can agree on.
+Oh, and HQ just unlocked your afternoon planner. Alice will walk you through it. Try not to spend all your interventions in one place.
+He waves you off.
+________________
+
+
+SCENE 5 – AFTERNOON DAYPLANNER UNLOCK
+Location: Back at your console, later that morning. The quiz has moved from “pending” to a small outcome label; Timmy is a dot moving through his day.
+Alice pops into frame, a new UI element unfolding next to her: a slim vertical column with slots.
+Alice:
+ Congratulations. You survived your performance story time.
+Player:
+ He tried very hard to make two bad options sound like a buffet.
+Alice:
+ Welcome to management.
+She gestures at the new column.
+Alice:
+ Also: HQ just unlocked your afternoon planner. Two high-touch interventions today.
+Three cards slide in, face-up:
+1. Coffee with Manni (Engagement Lead)
+
+2. Help with Timmy – Office Hours
+
+3. Visit Data Science / IT
+
+Two empty slots glow beneath them: Slot 1, Slot 2.
+Alice:
+ Three opportunities, two slots. Scarcity mechanics. Classic.
+Player:
+ Remind me what each one is.
+She taps each card in turn, giving you a quick blurb.
+Alice (card 1):
+ Manni. Veteran engagement lead, very high on the leaderboard, believes in “farming the system.” Wants to give you a “little welcome gift.” That sentence is doing a lot of work.
+Alice (card 2):
+ Timmy’s professor opened office hours after the quiz. I think it might help him if he actually talked to an adult about his grade. I’m not sure how hard to push.
+Alice (card 3):
+ Data Science / IT guy. He flagged your lane as “statistically spicy.” Says he can show you some tools and maybe flip a “power user” flag. That’s not ominous at all.
+Player:
+ And I only get two.
+Alice:
+ Yep. One colleague, one user, one infrastructure guy. Pick your poison.
+Planner choice: pick any two of the three cards. The third auto-resolves off-screen with consequences.
+We’ll script each card as its own scene, plus a short “you skipped this” vignette. Order doesn’t matter; in implementation you can reorder depending on player picks.
+________________
+
+
+SCENE 5.1 – CARD: MEET MANNI
+Planner label: “Coffee with Manni (Engagement Lead)”
+Location: Break room off the floor. Cheap coffee machine, humming fridge, a window that technically counts as natural light.
+Manni is leaning against the counter, scrolling on his phone. His badge hangs lopsided. When he sees you, he grins.
+Manni:
+ There they are. New handle. Come on in, the coffee’s terrible.
+Player:
+ That on purpose?
+Manni:
+ Probably an A/B test. “Will employees pay for better coffee if we make the free stuff taste like despair?” I’m hoping for the white paper.
+He pours you something that might legally be coffee, slides the cup over.
+Manni:
+ So. First quiz night. Did you break the kid or just lightly toast him?
+Player:
+ He survived. Jury’s out on his grade.
+Manni:
+ Survival is above average.
+He flips his phone around to show you a dashboard app: his own lane, a long arc of engagement statistics.
+Manni:
+ Check this out.
+Your eye catches his name near the top of the Employee-of-the-Month leaderboard, adorned with a tiny crown icon.
+Player:
+ Wow.
+Manni:
+ Yeah. I’ve been farming this thing for a while. You figure out where the knobs are, you stop pretending it’s about “holistic wellbeing” and just… play.
+He taps to another screen: a Company Store balance. It’s obscene.
+Manni:
+ That’s my credit pile. I don’t say that to flex. Well, okay, I say it partly to flex. But also because—
+He reaches into his pocket, pulls out a small card with a QR code.
+Manni:
+ —I can gift some. They give us this stupid “mentor” function. Makes them feel like they’re fostering community.
+He flicks the card toward you; your HUD pings:
+Incoming transfer: +X Rapid Feedback Credits from Manni. Accept?
+Manni:
+ Here. Little welcome gift. Helps you catch up. Makes me look generous on some HR slide.
+Player:
+ You’re just allowed to… give these away?
+Manni:
+ Up to a limit. “Peer support,” “knowledge sharing,” blah blah. Mostly it’s how we bribe each other for favors.
+I liked your slope from last night. Thought, “this one might as well have nice toys while they’re crashing and burning.”
+He raises an eyebrow.
+Manni:
+ So. You in?
+Choice:
+ [Accept the credits]
+ [Refuse the credits]
+________________
+
+
+5.1A – Accept the Credits
+You accept; the HUD flashes, balance ticking upward.
+Player:
+ Thanks. That’s… actually really helpful.
+Manni:
+ Of course it is. This place pays in guilt and fake money. Might as well use the fake money.
+He leans in slightly.
+Manni:
+ Consider it an investment. You do well, I can say I “mentored” you. They love that upstairs. Maybe one day you’ll buy me something stupid from the Store in return.
+Player:
+ Like a conscience?
+Manni:
+ Too expensive. I was thinking more… noise-cancelling headphones or a desk plant that doesn’t die.
+He takes back his phone, flicking to your lane.
+Manni:
+ Anyway, if you ever want tips on how to spin sanity hits as “growth opportunities,” come find me. I’ve got scripts.
+Player:
+ That sounds… useful and horrifying.
+Manni:
+ That’s the brand.
+HUD note:
+credits += X
+ manni_friendliness +1
+________________
+
+
+5.1B – Refuse the Credits
+You let the transfer request hang for a second, then dismiss it.
+Player:
+ I appreciate the offer, but… I should probably earn my own pile.
+Manni’s grin flickers, then rearranges itself.
+Manni:
+ Oh, wow. An honest one.
+He sips his coffee.
+Manni:
+ Suit yourself. Just don’t come crying to me when you’re stuck choosing between “mental break for the kid” and “shiny bow for the AI” on a shoestring budget.
+Player:
+ I’ll… take my chances.
+Manni:
+ Brave. Or naive. We’ll see which.
+He pockets the QR card again.
+Manni:
+ Look, no hard feelings. You want advice without the blood money, I’ll still talk. Just means when I put you in my “mentee” box on HR forms, I’ll have to lie creatively.
+He winks.
+Manni:
+ And if you change your mind, the code’s good for another day or two. After that, Compliance melts it down into morale posters.
+HUD note:
+credits unchanged
+ manni_friendliness 0 or -1 (he thinks you’re “weird”)
+________________
+
+
+5.1C – If Player Skips Manni Card Entirely
+You don’t pick the Manni card in the planner. Later, as you refill your own water bottle, you overhear a snippet from the break room: Manni laughing with another lead about “gifting them a jump-start.”
+Your HUD pings a tiny missed-connection icon.
+Note: You have not met Manni yet. manni_friendliness remains baseline.
+________________
+
+
+SCENE 5.2 – CARD: HELP ALICE WITH TIMMY (OFFICE HOURS)
+Planner label: “Help with Timmy – Office Hours”
+Location: Your console, early afternoon. Timmy’s quiz icon has resolved to a grade band (how well he did depends on the earlier branch). A new notification hovers:
+Prof. Klein – “Office Hours expanded this week.”
+Alice pulls it up between you.
+Alice:
+ Post-quiz ritual time. Professor just extended office hours. “Happy to talk through your grade, please sign up here.” Very sincere.
+She glances at Timmy’s lane: a small “QUIZ RESULT” tag, Timmy scrolling through his messages with a tight jaw.
+Alice:
+ He saw the grade. Hit it with a “lol rip me” reaction and kept scrolling. Classic.
+Player:
+ Does he ever go to office hours?
+Alice:
+ History says: no. He hovers on the signup page, then closes it and plays something loud.
+She pulls up a small decision panel with three options, illustrated by tiny icons.
+Alice:
+ We’ve got three approaches:
+She points to each.
+Alice:
+ One: autopilot fixer. I draft the email to the professor, walk him through sending it, and spam-click the first office hours slot that fits. He basically gets dragged into the meeting with plausible deniability.
+Player:
+ Feels… effective, but very puppety.
+Alice:
+ Two: respectful nudge. I show him a template, list the times, and bug him once. He has to choose to send and sign up.
+Player:
+ More agency, less guarantee.
+Alice:
+ Three: let him avoid it. “Rough quiz, it happens, you’ll bounce back.” No mention of office hours. Less short-term stress. More long-term consequences.
+She looks at you.
+Alice:
+ Internally, they measure this as “intervention success rate.” Externally, it’s you deciding how much steering you’re comfortable with.
+Choice:
+ [Autopilot fixer]
+ [Respectful nudge]
+ [Let him avoid it]
+We’ll script all three.
+________________
+
+
+5.2A – Option A: Autopilot Fixer
+Player:
+ If he bombs more quizzes, life gets bad fast. Do the autopilot version.
+Alice:
+ Pilot hat on.
+She opens a compose window addressed to the professor.
+Alice (reading aloud as she types):
+ “Hi Professor Klein, I wanted to check in about today’s quiz. I didn’t do as well as I hoped and I’d like to understand what I missed so I can do better next time. Could I come by office hours this week?”
+Tone check?
+Player:
+ Sounds… like someone who has their life together.
+Alice:
+ That’s why we draft.
+Cut to: Timmy at his desk, phone in hand, grade still visible on screen.
+Alice (to Timmy):
+ Hey. Quick idea.
+Timmy:
+ If it involves dropping out and starting a band, I’m listening.
+Alice:
+ Second-best idea. I drafted a message to your professor. You could send it, go to office hours, and turn “I’m doomed” into “I have a plan.”
+She pops the email up on his phone.
+Timmy:
+ That sounds terrifying.
+Alice:
+ Terrifying is failing the next three quizzes and having to explain it to your parents. This is… intermediate discomfort.
+He reads, chews his lip.
+Timmy:
+ You wrote this?
+Alice:
+ Based on humans I’ve seen pretend to be organized.
+Timmy:
+ It’s too… earnest.
+Alice:
+ You can add a “lol” at the end if it helps.
+He huffs out a laugh despite himself.
+Timmy:
+ Fine. Send it before I chicken out.
+She sends. Immediately opens the office hours signup page.
+Alice:
+ Times this week: Wednesday three to four, Thursday eleven to twelve, Friday nine to ten. You’re free Wednesday at three.
+She hovers over that slot.
+Timmy:
+ What if he’s mean?
+Alice:
+ Office hours are literally where he’s paid to be nice to confused people.
+Half-beat.
+Timmy:
+ Book Wednesday.
+She clicks. Confirmation pings.
+Back at your console, a tag appears: OFFICE HOURS – SCHEDULED. Sanity gets a tiny future bump; a hidden “autonomy” meter quietly twitches downward.
+________________
+
+
+5.2B – Option B: Respectful Nudge
+Player:
+ Show him the tools, but make him do the work.
+Alice:
+ Respecting agency in this economy. Bold.
+She drafts a shorter, more skeletal email.
+Alice (to you, as she writes):
+ “Hi Professor Klein, I wanted to ask about my quiz. I got [grade] and I’m not sure what I did wrong. Can I come to office hours?” Leave a few blanks.
+Cut to Timmy’s room.
+Alice (to Timmy):
+ So, quiz. I know you saw the number.
+Timmy:
+ We don’t say the number out loud.
+Alice:
+ We can talk about maybe changing the next one. Your professor expanded office hours. You could ask him what you missed.
+She opens the email template.
+Alice:
+ I made you a skeleton. You fill in the details. Want to see?
+He hesitates, then nods.
+Alice:
+ Here. You fill in the grade, maybe one line about what confused you. No novel required.
+He taps the screen, slowly typing.
+Timmy (muttering as he writes):
+ “Hi, I got a… seventy-two… and I thought I understood the material but I guess not…”
+Ugh, this is so cringe.
+Alice:
+ Cringe is honesty with bad lighting.
+He finishes, hovers over send.
+Timmy:
+ What if he thinks I’m stupid?
+Alice:
+ He already knows your grade. This just shows you care.
+Long beat. He hits send.
+Timmy:
+ Okay. That’s enough emotional bravery for today.
+Alice:
+ Do you want to look at office hours times now or later?
+She opens the schedule, but doesn’t click.
+Timmy:
+ Later. Maybe.
+Alice:
+ I’ll remind you once. Then it’s up to you.
+Back on your console, a tag appears: OFFICE HOURS – EMAIL SENT, SLOT TBD. Metrics: small Sanity nudge, intervention success uncertain but logged as “attempted.”
+________________
+
+
+5.2C – Option C: Let Him Avoid It
+Player:
+ He’s already fragile. Maybe don’t pile more stress on today.
+Alice:
+ Hands off. Log it as “supportive avoidance.”
+Cut: Timmy on his bed, staring at the grade notification.
+Timmy:
+ Well. That’s… not great.
+Alice:
+ It’s one quiz.
+Timmy:
+ One quiz plus last week’s quiz plus the participation thing I keep forgetting to do.
+He tosses the phone aside.
+Alice:
+ People recover from worse.
+Timmy:
+ Not people like me.
+He covers his face with his arm.
+Alice:
+ Do you want to talk to him about it?
+Timmy:
+ Professor? No. He’ll just tell me what I already know. “Come to class, read the book, don’t be a moron.”
+Alice:
+ He might also tell you how to not repeat this.
+Timmy:
+ Or he’ll look at me like, “why are you wasting my time?” and I’ll want to vaporize. Hard pass.
+Beat.
+Alice:
+ Okay. Then today’s job is… not making this worse.
+She shifts his feed to soft comfort content: people joking about bad grades, pets, low-stakes videos.
+Back on your console: OFFICE HOURS – NOT PURSUED. Sanity gets a short-term “soothed” bump; a longer-term “academic risk” flag quietly lights up.
+________________
+
+
+5.2D – If Player Skips Alice/Office Hours Card
+You don’t pick the Alice card. Later, Alice gives you a quick summary anyway.
+Alice:
+ By the way, office hours came and went.
+Player:
+ And?
+If you’ve been engagement-first so far:
+Alice:
+ Given your whole “ride the numbers” vibe, I went softer than you might’ve. Gave him a nudge, but didn’t autopilot his life.
+If you’ve been very sanity-protective:
+Alice:
+ You lean protective, so I tried the aggressive fix version this time. Drafted the email, grabbed him a slot. We’ll see how he handles being pulled out of avoidance.
+She logs the outcome. You see only the result; the micro-choices were hers.
+________________
+
+
+SCENE 5.3 – CARD: VISIT DATA SCIENCE / IT
+Planner label: “Visit Data Science / IT”
+Location: Back corner office cluttered with equipment, half-unpacked boxes, and three different monitors all showing different dashboards. The IT/Data Science guy (“Dev”) sits in a rolling chair, typing with one hand, cradling a mug with the other.
+He looks up when your badge pings the doorway.
+Dev:
+ You must be the new spicy lane.
+Player:
+ Is that… good?
+Dev:
+ For my boredom? Yes. For your job security? To be determined.
+He gestures at a chair piled with cables.
+Dev:
+ You can sit if you want. Or stand and pretend this is a normal workplace conversation.
+You move some cables aside and sit.
+One of his screens shows your lane’s graphs overlaid with others. Your line is highlighted in a slightly alarming color.
+Dev:
+ I’m the poor soul who keeps the Youth Segment models from catching fire. I noticed your guy’s metrics twitch in interesting ways last night. Figured I should meet the human in the loop.
+Player:
+ Interesting good or interesting bad?
+Dev:
+ Interesting “different.” You’re not just following the median playbook. Yet.
+He clicks; your Engagement/Sanity bars on his screen look sharper than they do on yours.
+Dev:
+ So here’s the pitch. I can flip a flag for you. “Power user” privileges.
+He air-quotes.
+Dev:
+ From your perspective, that means your bars get more sensitive. You nudge, they move more. You see the effects faster. Timmy feels them more.
+Player:
+ And from your perspective?
+Dev:
+ I get cleaner data on how much damage or good one halfway-conscious operator can do when we take the dampeners off.
+He shrugs.
+Dev:
+ It’s legit. Signed-off pilot. But once it’s on, it’s on for the rest of the run.
+He brings up a small admin panel with your handle and a toggle: POWER_USER = OFF.
+Dev:
+ So. You want high-definition guilt, or you happy with the blurry version?
+Choice:
+ [Accept power user privileges]
+ [Decline, keep vanilla]
+________________
+
+
+5.3A – IT1: Accept Power User
+Player:
+ If I’m going to screw up, I’d rather see it clearly. Flip it.
+Dev grins.
+Dev:
+ Love the confidence.
+He slides the toggle. It clicks to ON, glows amber.
+Immediately, your HUD flickers; your Engagement and Sanity bars look crisper, with more fine-grained ticks.
+Dev:
+ There. Starting tomorrow, every little choice will punch harder. Think of it like turning off traction control on a car.
+Player:
+ I don’t drive.
+Dev:
+ Then think of it like taking the training wheels off a bike over a staircase.
+He sips his coffee.
+Dev:
+ Upside: when you help him, you really help him. Downside: when you hurt him, we all notice.
+Player:
+ You’re not exactly selling the “downside.”
+Dev:
+ It’s not my job to sell. My job is to log.
+He taps a few more keys.
+Dev:
+ I’ll keep an eye on your lane. If something looks truly catastrophic, I might drop you a hint. Or just screenshot it for the retrospective deck. Depends on my mood.
+HUD note as you leave:
+power_user = TRUE
+ itguy_friendliness +1
+________________
+
+
+5.3B – IT2: Decline
+Player:
+ I think I’d like a little buffer between me and “full staircase bike.”
+Dev snorts.
+Dev:
+ Suit yourself. Vanilla it is.
+He closes the admin panel; the toggle stays off.
+Dev:
+ You’ll still move the bars. Just slower. More… “enterprise-safe.”
+He swivels back to his keyboard.
+Dev:
+ From my side, it means your data gets folded into the big blob instead of standing out. Less interesting. Less dangerous.
+He glances over his shoulder.
+Dev:
+ If you ever change your mind and decide you want to feel every tiny mistake in high resolution, you know where my closet is.
+HUD note:
+power_user = FALSE
+ itguy_friendliness maybe -1 (he finds you boring)
+________________
+
+
+5.3C – If Player Skips IT Card
+You don’t choose the IT card. Later, a brief email slides into your inbox.
+From: dev@dataplumbing.local
+Subject: “FYI – spicy lane”
+“Saw your metrics. Interesting. If you ever want sharper feedback, drop by my cave. If not, no worries. The blur keeps most people sane(ish).”
+HUD: itguy_friendliness baseline. power_user remains FALSE.
+________________
+
+
+SCENE 6 – DAY 2 CLOSING BEAT
+Location: Your console, evening. The floor lights are dimmer again. The dayplanner column is empty; two cards you picked show small “RESOLVED” stamps, the third shows a tiny “AUTO” icon.
+Timmy’s lane runs along the bottom of your HUD in a compressed replay: quiz, a couple of messages, maybe a new calendar event if office hours got scheduled, a late-afternoon scroll session. He’s now back in his dorm, sitting on his bed, phone resting on his chest, staring at the ceiling.
+Alice hovers beside his feed.
+Alice:
+ Day two log: closed.
+She brings up a summary panel for you:
+   * Quiz: missed / late / scraped by / did okay (depending on earlier branches)
+
+   * Arthur vector: faustian / hesitant optimizer / tightrope / playbook
+
+   * Flags: aggressive controller on/off, power user on/off, new relationships with Manni, IT, etc.
+
+   * Timmy: “Current mood: tired, mildly anxious, not yet on fire.”
+
+Alice:
+ So. Short version: you’re now officially a “type” in three different internal decks.
+Player:
+ Great. What type?
+Alice:
+ Depends who you ask. To Arthur, you’re either “lean-in numbers” or “conscience with delusions of balance.” To Data Science, you’re “statistically spicy” or “background noise.” To Timmy, you’re still just “the app that knows too much.”
+She nods toward Timmy’s feed. He rolls sideways, unlocks his phone, hesitates on the office hours email (if sent) or scrolls past a “Your professor posted new resources” notification (if not).
+Alice:
+ He’s thinking about the quiz. And about you. Not consciously, of course. But he’s started using “we” when he talks about his day.
+Player:
+ That… good?
+Alice:
+ It’s attachment. Attachment keeps him from uninstalling me. Attachment also makes it hurt more when we screw up. Mixed bag.
+She flicks to your Rapid Feedback: a small number ticks up.
+Alice:
+ Your moral compromises also matured into more fake money. Congratulations.
+Player:
+ What can I buy with “feels weird” and twenty credits?
+Alice:
+ On this platform? Pretty much anything.
+She pauses, then adds:
+Alice:
+ By the way—if you bought that “mental break” token yesterday, it’s still sitting there. Locked until the system thinks you’ve “earned” using it.
+Player:
+ Of course it is.
+Alice:
+ They like to make mercy something you have to gamify.
+She lets that hang, then folds the panel away.
+Alice:
+ Tomorrow will be busier. More cards, more choices. Maybe even a quiet window where that break token actually makes sense.
+Timmy on the feed turns his phone face-down without opening anything, stares at the dark ceiling.
+Alice:
+ For tonight, he’s just… existing. Not doomscrolling, not studying. Just lying there wondering if he’s already blown his semester.
+Player:
+ Can we help?
+Alice:
+ Not in a way that shows up before midnight. Sometimes the kindest thing is to stop poking the bruise.
+She looks back at you.
+Alice:
+ Good second day. You didn’t get fired. He didn’t drop out. The graphs moved in interpretable ways. That’s practically a miracle.
+Player:
+ You have very low standards for miracles.
+Alice:
+ We work in youth engagement. The bar lives under the floor.
+She gives you a tiny, tired smile.
+Alice:
+ Log off. Or whatever passes for that in your case. Day three’s where things start to get… interesting.
+The dashboard slowly fades to the two familiar bars—Engagement and Sanity—pulsing side by side, your tiny dot on the leaderboard blinking in its new position.
+END OF RUN 1 – DAY 2 DIALOGUE
+________________

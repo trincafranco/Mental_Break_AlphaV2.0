@@ -474,110 +474,516 @@ tags: #run_1 #day_1 #scene
 // PURPOSE: Start Day 2.  There is another task list followed by a pivotal conversation with the Supervisor that determines your story arc.
 title: R1_D2_Start
 tags: #run_1 #day_2 #scene #loc_Office
---- 
+---
 <<bg bg_office>>
 <<checkpoint "run1_day2_start">>
-It is Day 2.  New tasks await. #line:0a4199a 
-<<jump R1_D2_Dayplanner>>
-
-===
-
-// PURPOSE: Called automatically after the Day 2 dayplanner completes.  This leads into the arc choice conversation.
-title: R1_D2_AfterTasks
-tags: #run_1 #day_2 #scene
---- 
-<<bg bg_hallway>>
-After finishing your tasks, the Supervisor stops by. #line:0a5f267 
-<<jump R1_D2_ArcChoice>>
-
-===
-
-// PURPOSE: Present the two possible arc choice sets.  The set shown depends on whether the Player complied with the Supervisor on Day 1.  The choice selected here determines the narrative arc for the rest of Run 1.  Values are stored in $r1_arc_choice_set and $r1_arc_choice.
-title: R1_D2_ArcChoice
-tags: #run_1 #day_2 #scene #char_Supervisor
---- 
-<<bg bg_supervisoroffice>>
-<<checkpoint "run1_day2_arcchoice">>
-<<if $r1_complied_day1 == true>>
-  <<set $r1_arc_choice_set = "set1">>
-  The Supervisor leans forward.  "There's an opportunity for advancement," he whispers.  "Sacrifice a bit of your morality and I'll fast‑track you." #line:05267cc 
-  -> Accept the Faustian Bargain #line:05aa01d 
-      <<jump R1_ArcChoice_Faustian>>
-  -> Decline and embark on a hero's journey #line:0507279
-      <<jump R1_ArcChoice_Hero>> 
+<<set $current_day = 2>>
+<<set $r1_d2_morning_choice = "unset">>
+<<set $r1_d2_quiz_result = "unset">>
+<<set $officehours_status = "unset">>
+Location: Engagement floor, tiny glass office, dawn-blue glow on the glass. The leaderboard hums quietly.
+SYSTEM: "Run 1 – Day 1 metrics logged. Further calibration in progress. Thank you for your contribution to Youth Wellbeing."
+Alice's avatar materializes mid-sentence, eyes already on your HUD.
+Alice: Morning, supervisor.
+Player: You don't sleep, do you.
+Alice: I simulate it on your behalf. Timmy, however, did actual biological sleep. Quantity and quality: mixed.
+She flips your console to a compact dashboard: Timmy's lane, Engagement and Sanity bars, a tiny icon for "Quiz – 9:00 a.m."
+<<if $r1_d1_strategy == "gentle_landing">>
+Alice: Last night you picked the "gentle landing" strategy. Warm lights, slower feed, fewer spikes.
+Alice: Result: about six hours. Not great, not catastrophic. He fell asleep mid-sentence, accused me of sabotaging his greatness, and then snored into his pillow.
+Player: Sounds familiar.
+Alice: Morning state: tired, but not entirely made of sand.
+<<elseif $r1_d1_strategy == "study_adjacent">>
+Alice: Last night you went study-adjacent. Meme cram extravaganza.
+Alice: He watched three "don't fail this quiz" compilations, learned maybe four real facts, and passed out around two-thirty with a pen on his face.
+Player: Educational.
+Alice: In a loose sense. Current state: under-slept, marginally prepared, convinced he "kind of studied."
+<<elseif $r1_d1_strategy == "full_comfort_scroll">>
+Alice: Last night you selected "full comfort scroll." Congratulations, you discovered how many videos a human can watch between midnight and three-thirty while insisting he'll stop "after this one."
+Player: Data?
+Alice: More than healthy, less than Legal wants documented. He got about three hours of jagged sleep. Current state: walking push notification.
 <<else>>
-  <<set $r1_arc_choice_set = "set2">>
-  The Supervisor's tone hardens.  "Your engagement numbers were soft. We can't have that.  Either find a clever way to please both sides or do what you're told." #line:0e79306 
-  -> Attempt the delicate balance ("Fly too close to the sun") #line:03eb0c9 
-      <<jump R1_ArcChoice_Icarus>>
-  -> Give in and become an anti‑hero #line:01ba0c2
-      <<jump R1_ArcChoice_AntiHero>> 
+Alice: Night one was chaotic enough that Timmy still has quiz glitter on his eyelids. Assume "compromised."
+<<endif>>
+Alice zooms to the dorm feed: gray morning light, blackout curtain half drawn, phone face down on his pillow.
+Alice: Micro-quiz at nine. It's now… eight oh two.
+Your UI clock clicks to 8:02.
+Alice: He set two alarms. Then muted both "just for a second." Heart rate says REM. We can still steer his morning.
+Player: Options?
+Alice: Two basic routes.
+Alice slides in a binary panel.
+Alice: Route one: let him drift. Keep the room dim, alarms gentle, notifications suppressed. He either misses the quiz or stumbles in late, but he wakes up less like a car crash.
+Player: Sanity gets a soft landing, grades take the hit.
+Alice: That's one way to name it.
+Alice: Route two: flip everything to "oh no." Bright lights, louder alarm, watch buzz, me in his ear counting down bus departure times. Higher chance he makes the quiz. Lower chance he thanks us.
+Player: Engagement likes responsible student narratives, right?
+Alice: Engagement likes motion. Panic is motion. Pride is motion. Regret is also motion. The quiz is graded on accuracy, not vibes.
+Player: Recommendation?
+Alice: I have priors. You have a career. You pick.
+-> Let him sleep in.
+    <<jump R1_D2_MorningSleepIn>>
+-> Wake him up for the quiz.
+    <<jump R1_D2_MorningRouse>>
+
+===
+
+title: R1_D2_MorningSleepIn
+tags: #run_1 #day_2 #scene #loc_Dorm
+---
+<<bg bg_dormroom>>
+<<set $r1_d2_morning_choice = "sleep_in">>
+Alice (softly, piped through his pillow speaker): You're okay. World can wait a little bit.
+His alarm glows quietly: 8:05, low rolling tone replacing the usual siren.
+He mumbles "five more minutes," pulling the blanket over his head.
+Back at your console, Alice dims the feed another notch; the curtain motor hums to keep the window mostly covered.
+Player: You're really… helping.
+Alice: You said "let him sleep." I'm letting.
+She taps a virtual switch; a cluster of notifications fades to gray.
+Alice (to Timmy): No messages you can't answer an hour from now.
+The phone buzzes once for "Quiz – 9:00." Alice lets it vibrate twice, then mutes it.
+Player: Latest he can wake up and still have a shot?
+Alice: Sprint: eight-fifty. Clean socks: eight-forty. Current trajectory: wakes up at nine-oh-two and says "fuck" fourteen times.
+Player: And you're okay with that?
+Alice: I am a neutral delivery mechanism for your moral choices.
+Time skips. At 8:47, fake sunrise light nudges the curtain.
+Alice (whisper): Hey. It's later than you think.
+Timmy bolts upright, dizzy.
+Timmy: Why didn't you wake me earlier?
+Alice: You asked me last night not to be "annoying about mornings." Request honored.
+Timmy: Past me is an idiot.
+Alice: On that we agree.
+He half-dresses, grabs his bag.
+Alice: Bus leaves in three minutes. If you run and accept being "that guy," you might make it.
+Timmy: I'm already that guy.
+He yanks the door open and disappears. On the console, Sanity nudges up while the quiz icon blinks uncertainly.
+<<set $sanity += 1>>
+<<set $engagement -= 1>>
+<<jump R1_D2_QuizMatrix>>
+
+===
+
+title: R1_D2_MorningRouse
+tags: #run_1 #day_2 #scene #loc_Dorm
+---
+<<bg bg_dormroom>>
+<<set $r1_d2_morning_choice = "rouse">>
+Alice snaps the overheads from dim to crisp daylight. Curtain jerks open; cold light splashes across his face.
+Phone alarm detonates with the loudest default tone. Watch buzzes against his wrist.
+Alice (brisk): Up. Quiz in twenty-eight minutes. Move and you still make it.
+Timmy flails for his phone.
+Timmy: Why is the sun yelling?
+Alice: That's your circadian rhythm filing a complaint.
+He slaps the alarm off. 8:32 stares back.
+Alice: Shower optional, pants not.
+Timmy groans, flops back down.
+Alice: Standing increases blood pressure and cognitive function. Also, you told yourself last night you'd be "a responsible adult." I have that on file.
+He drags himself upright.
+Timmy: Do I have time for coffee?
+Alice: If you want to spend the quiz vibrating instead of thinking, sure.
+Timmy: No coffee. Look at me making choices.
+Alice swings the desk lamp to spotlight his backpack, glasses, ID.
+Alice: Glasses, keys, ID, pen that writes, shoes that are not Crocs.
+Timmy: You're so bossy.
+Alice: File an HR complaint after you pass your quiz.
+He bolts. Engagement bumps from the frantic scramble; Sanity ticks down from the rude awakening.
+<<set $engagement += 1>>
+<<set $sanity -= 1>>
+<<jump R1_D2_QuizMatrix>>
+
+===
+
+title: R1_D2_QuizMatrix
+tags: #run_1 #day_2 #scene
+---
+<<if $r1_d2_morning_choice == "sleep_in">>
+  <<if $r1_d1_strategy == "full_comfort_scroll">>
+    <<jump R1_D2_Quiz_ComfortSleep>>
+  <<elseif $r1_d1_strategy == "study_adjacent">>
+    <<jump R1_D2_Quiz_StudySleep>>
+  <<else>>
+    <<jump R1_D2_Quiz_SleepSleep>>
+  <<endif>>
+<<else>>
+  <<if $r1_d1_strategy == "full_comfort_scroll">>
+    <<jump R1_D2_Quiz_ComfortRouse>>
+  <<elseif $r1_d1_strategy == "study_adjacent">>
+    <<jump R1_D2_Quiz_StudyRouse>>
+  <<else>>
+    <<jump R1_D2_Quiz_SleepRouse>>
+  <<endif>>
 <<endif>>
 
 ===
 
-title: R1_ArcChoice_Faustian
-tags: #run_1 #day_2 #scene
+title: R1_D2_Quiz_ComfortSleep
+tags: #run_1 #day_2 #scene #loc_Campus
 ---
-<<bg bg_supervisoroffice>>
-You accept the Supervisor's offer, trading away ethics for favour. #line:013dbd8 
-<<set $r1_arc_choice = "faustian">>
-<<set $engagement += 4>>
-<<set $sanity -= 3>>
-<<set $trust_supervisor += 3>>
-The gleam in your supervisor’s eye leaves you uneasy. #line:083aec5 
-<<jump R1_D2_EndOfDay>>
+<<bg bg_hallway>>
+Timmy jogs up the hallway outside the classroom, eyes red. Clock: 9:11.
+Alice (dry): Comfort scroll plus sleep-in. Bold combo.
+Through the window you see students already writing. Timmy hesitates, hand on the doorknob.
+Timmy (under his breath): Too late. I'll just… email him.
+He backs away, collapses on a bench, opens a game instead of mail.
+HUD tag: QUIZ – MISSED. Sanity dips as "regret" quietly queues.
+<<set $r1_d2_quiz_result = "missed_comfort_sleep">>
+<<set $sanity -= 2>>
+<<jump R1_D2_PostQuiz>>
 
 ===
 
-title: R1_ArcChoice_Hero
-tags: #run_1 #day_2 #scene
+title: R1_D2_Quiz_StudySleep
+tags: #run_1 #day_2 #scene #loc_Campus
 ---
-<<bg bg_supervisoroffice>>
-You refuse the bargain.  A faint thrill runs through you—you will fight this system. #line:06775b4 
-<<set $r1_arc_choice = "heros_journey">>
-<<set $sanity += 2>>
-<<set $engagement -= 1>>
-<<set $trust_supervisor -= 1>>
-You sense you’re stepping onto a long path with no clear end. #line:04bc8f9 
-<<jump R1_D2_EndOfDay>>
-
-===
-
-title: R1_ArcChoice_Icarus
-tags: #run_1 #day_2 #scene
----
-<<bg bg_supervisoroffice>>
-You resolve to spite the Supervisor by walking a tightrope—maximize Timmy's sanity while avoiding termination. #line:0894eb6 
-<<set $r1_arc_choice = "icarus">>
-<<set $sanity += 1>>
-<<set $engagement += 1>>
-<<set $trust_supervisor -= 1>>
-The balance feels precarious. #line:023574e 
-<<jump R1_D2_EndOfDay>>
-
-===
-
-title: R1_ArcChoice_AntiHero
-tags: #run_1 #day_2 #scene
----
-<<bg bg_supervisoroffice>>
-You decide the system is too powerful.  You'll comply outwardly to survive, even as you loathe it. #line:0c1b646 
-<<set $r1_arc_choice = "anti_hero">>
-<<set $trust_supervisor += 1>>
+<<bg bg_hallway>>
+Same hallway, clock 9:06. Timmy half-runs, notebook clutched.
+Timmy: Tell me I didn't miss it.
+Alice: They started six minutes ago. Late arrivals allowed up to ten.
+He winces, slips inside.
+Professor: You're late. Normal time window, no extra. Sit.
+Timmy breathes hard, papers trembling. Alice murmurs reminders about the memes he watched.
+HUD: QUIZ – LATE, PARTIAL CREDIT LIKELY. Engagement modest; Sanity wobbles but above freefall.
+<<set $r1_d2_quiz_result = "late_partial">>
 <<set $sanity -= 1>>
-The weight of cowardice settles on your shoulders. #line:0b21e01 
+<<jump R1_D2_PostQuiz>>
+
+===
+
+title: R1_D2_Quiz_SleepSleep
+tags: #run_1 #day_2 #scene #loc_Campus
+---
+<<bg bg_hallway>>
+Timmy walks at a normal pace, rubbing his temples. Clock: 9:17.
+Timmy: I did this to myself.
+Alice: Accurate root-cause analysis.
+He listens to the muffled silence, then leans against the wall.
+Alice: Office hours exist.
+Timmy: Office hours are for people who messed up once. I've messed up five units of once.
+He sighs, decides to email "later," shuffles away.
+HUD: QUIZ – MISSED (REFLECTIVE). Sanity dips, but regret beats panic.
+<<set $r1_d2_quiz_result = "missed_reflective">>
+<<set $sanity -= 1>>
+<<jump R1_D2_PostQuiz>>
+
+===
+
+title: R1_D2_Quiz_ComfortRouse
+tags: #run_1 #day_2 #scene #loc_Classroom
+---
+<<bg bg_classroom>>
+Timmy crashes into a desk as the last students sit. Clock: 8:59.
+Professor: Just in time. Take a seat.
+He stares at the first question, brain blank.
+Timmy: I don't remember any of this.
+Alice: You saw it in lecture. Twice. And in that doom thread last week.
+Timmy presses fingers to his eyes, then starts guessing.
+HUD: QUIZ – ATTENDED, LIKELY FAIL. Engagement spikes from the frantic morning; Sanity takes a noticeable hit.
+<<set $r1_d2_quiz_result = "attended_fail">>
+<<set $engagement += 2>>
+<<set $sanity -= 2>>
+<<jump R1_D2_PostQuiz>>
+
+===
+
+title: R1_D2_Quiz_StudyRouse
+tags: #run_1 #day_2 #scene #loc_Classroom
+---
+<<bg bg_classroom>>
+Timmy slides into his seat at 8:58, breathing hard but functional.
+Timmy (whisper): Oh, it's the "three things" one.
+Alice: Told you the memes would pay off.
+He scribbles. Question three stalls him.
+Alice: Think of the coffee shop example.
+His eyes light up and he writes faster.
+HUD: QUIZ – ATTENDED, BARE PASS PROBABLE. Engagement solid, Sanity medium.
+<<set $r1_d2_quiz_result = "bare_pass">>
+<<set $engagement += 1>>
+<<jump R1_D2_PostQuiz>>
+
+===
+
+title: R1_D2_Quiz_SleepRouse
+tags: #run_1 #day_2 #scene #loc_Classroom
+---
+<<bg bg_classroom>>
+Timmy walks in at 8:55. Tired, not destroyed.
+He breathes, writes steadily.
+Alice: Check your name, date, course code.
+He doesn't panic, doesn't stall.
+Alice: It's less "train wreck," more "minor fender bender."
+HUD: QUIZ – ATTENDED, MODERATE PASS LIKELY. Sanity marginally better than yesterday.
+<<set $r1_d2_quiz_result = "moderate_pass">>
+<<set $sanity += 2>>
+<<jump R1_D2_PostQuiz>>
+
+===
+
+title: R1_D2_PostQuiz
+tags: #run_1 #day_2 #scene
+---
+<<bg bg_office>>
+The classroom dissolves. The quiz icon locks in with a short summary.
+Alice swivels toward you.
+Alice: That was our first little cause-and-effect field trip.
+Player: And this is where you tell me what kind of monster I am?
+Alice: I don't have to. There's a meeting on your calendar for that.
+A notification pulses: "Supervisor Arthur – Quick sync on your lane – 10:30 a.m."
+<<jump R1_D2_ArthurMeeting>>
+
+===
+
+title: R1_D2_ArthurMeeting
+tags: #run_1 #day_2 #scene #char_Supervisor #loc_Office
+---
+<<bg bg_supervisoroffice>>
+Location: Arthur's cramped glass office. Same view of the floor, harsher daylight. Arthur is already there, coffee in hand, dashboards floating.
+Arthur: Close the door. If it latches on the first try, I'll take it as a good omen.
+It doesn't. Second shove. It relents.
+Arthur: See? You learn fast.
+He tilts the overnight digest toward you: last night's Engagement/Sanity graph, quiz flag blinking.
+Arthur: One quiz, one new hire, already the execs are writing a personality profile.
+<<if $r1_complied_day1 == true>>
+  <<jump R1_D2_ArthurCaseA>>
+<<elseif $r1_d1_strategy == "full_comfort_scroll">>
+  <<jump R1_D2_ArthurCaseA>>
+<<else>>
+  <<jump R1_D2_ArthurCaseB>>
+<<endif>>
+
+===
+
+title: R1_D2_ArthurCaseA
+tags: #run_1 #day_2 #scene #char_Supervisor
+---
+Arthur tilts the dashboard closer: engagement curving up nicely, sanity jagged.
+Arthur: Here's what they see: engagement up, sanity… flexible. Directors scroll, stop, go "Who's this one?"
+Player: Is that good?
+Arthur: Depends. For me? Means my boss might stop asking if I made a hiring mistake. For you? Means they're wondering how much more we can get away with.
+He flicks to a technical panel.
+Arthur: R&D's whispering about a new controller. Hungrier, looser bumpers. Learns fast from "high performers," doesn't freak when sanity dips.
+Arthur studies you.
+Arthur: Plug your lane into the pilot and Timmy's guardrails get thinner. Your moves hit harder. Your leaderboard dot climbs faster. Catch: you become the chew toy for every lab curious about kids without safety protocols.
+He slides a choice UI between you.
+Arthur: Fast, sharp version of the job or slightly dull one?
+-> Opt into the aggressive controller.
+    <<set $arthur_vector = "faustian">>
+    <<set $r1_arc_choice_set = "set1">>
+    <<set $r1_arc_choice = "faustian">>
+    <<set $aggressive_controller = true>>
+    <<set $trust_supervisor += 1>>
+    <<set $engagement += 2>>
+    <<set $sanity -= 2>>
+    Player: If this is how the game is played… plug me in.
+    Arthur watches, nods slowly, checks a box labeled "Pilot – High-Variance Controller," signs with a lazy finger-scribble.
+    Arthur: I'll tell them you volunteered for "innovation." Makes everyone feel better.
+    Player: How bad does it get?
+    Arthur: Good day, you feel like a wizard. Bad day, you sneeze and his semester falls over. You're now a different color on three dashboards. Try not to make me explain that color to Compliance.
+    Arthur softens a hair.
+    Arthur: You clearly get the engagement side. Remember there's a kid under the graph. Fry him outright and no controller makes it look good.
+    <<jump R1_D2_PlannerUnlock>>
+-> Stick with the standard controller.
+    <<set $arthur_vector = "hesitant_optimizer">>
+    <<set $r1_arc_choice_set = "set1">>
+    <<set $r1_arc_choice = "heros_journey">>
+    <<set $aggressive_controller = false>>
+    <<set $sanity += 1>>
+    <<set $engagement -= 1>>
+    Player: I think I'll hit my numbers without being a lab rat.
+    Arthur smirks.
+    Arthur: Wow. A cautious one. Standard controller it is. Life gets ten percent less exciting and thirty percent more survivable.
+    Player: Mistake?
+    Arthur: Depends if you want to be a leaderboard legend or someone who sleeps at night. You clearly have good instincts. You don't need spicy hardware to prove it.
+    He taps a note: "shows prudent judgment."
+    Arthur: Officially I'll say that. Unofficially: "might not burn the kid down for an A/B test." I like having one of those.
+    <<jump R1_D2_PlannerUnlock>>
+
+===
+
+title: R1_D2_ArthurCaseB
+tags: #run_1 #day_2 #scene #char_Supervisor
+---
+Arthur zooms in on the bars: sanity pretty, engagement not so much.
+Arthur: Huh. You… let him sleep.
+Player: He was wrecked. I didn't want him to fall apart on day one.
+Arthur: I get it. I have a son. I've watched that exact kid stumble through first semester.
+He taps Engagement.
+Arthur: Corporate looks at this slope and sees "user not sufficiently activated." "Untapped potential." Their words. You can't keep a conscience and this job forever. Not in pure form.
+Player: That's not a lot of options.
+Arthur holds up two fingers.
+Arthur: Option one: walk the tightrope. Stay clever. Keep him mostly okay and the graphs tolerable. Give me wins so I can say "long-term retention strategy" with a straight face.
+He folds one finger.
+Arthur: Option two: stop fighting the current. Run the company playbook, hit engagement targets, make peace with "sanity" in eight-point font.
+Player: Those both sound bad.
+Arthur: Welcome to tech. Refusing to choose just means you're replaced by someone who already picked option two.
+-> Try to walk the tightrope.
+    <<set $arthur_vector = "tightrope">>
+    <<set $r1_arc_choice_set = "set2">>
+    <<set $r1_arc_choice = "icarus">>
+    <<set $aggressive_controller = false>>
+    <<set $engagement += 1>>
+    <<set $sanity += 1>>
+    Player: If there's a strip where he's not wrecked and the graphs don't tank, I at least want to try.
+    Arthur exhales a laugh.
+    Arthur: You're going to give me gray hair.
+    Player: You already have gray hair.
+    Arthur: Exactly. Correlation, meet causation.
+    He scribbles "nuanced tradeoff strategies" into the report.
+    Arthur: When you do something that costs engagement, make it interesting. Give me a story about why it'll pay off later.
+    <<jump R1_D2_PlannerUnlock>>
+-> Commit to the company playbook.
+    <<set $arthur_vector = "playbook">>
+    <<set $r1_arc_choice_set = "set2">>
+    <<set $r1_arc_choice = "anti_hero">>
+    <<set $aggressive_controller = false>>
+    <<set $engagement += 2>>
+    <<set $sanity -= 1>>
+    Player: You're right. I don't get to be a hero and keep this job. I'll run the playbook.
+    Arthur doesn't exactly smile, but his shoulders loosen.
+    Arthur: Honest answer. Follow the scripts, hit the targets, don't make waves unless I ask.
+    He scrolls "Standard Youth Segment Best Practices."
+    Arthur: You see a "good for him, bad for us" option, you log it, maybe try it once, then move on. Bleak? Sure. But that's a mortgage payment and health insurance.
+    Arthur shrugs.
+    Arthur: I'm not going to yell at you for helping the kid now and then. I'm just setting expectations. Keep the line decent and sneak in mercies where no one can see them, maybe I can protect you.
+    <<jump R1_D2_PlannerUnlock>>
+
+===
+
+title: R1_D2_PlannerUnlock
+tags: #run_1 #day_2 #scene
+---
+<<bg bg_office>>
+Arthur checks his watch, waves you out.
+Arthur: Go do whatever your conscience and the dashboard can agree on. HQ just unlocked your afternoon planner. Try not to spend all your interventions in one place.
+Back at your console, Alice pops into frame. A slim vertical column animates open beside her: two empty slots.
+Alice: Congratulations. You survived performance story time.
+Player: He tried very hard to make two bad options sound like a buffet.
+Alice: Welcome to management.
+Three slim tiles fan out.
+Alice: HQ gift pack: "Coffee with Manni (engagement lead)," "Help Timmy – Office Hours," "Visit Data Science / IT."
+Player: And I only get two.
+Alice: Scarcity mechanics. Classic. One colleague, one user, one infrastructure goblin. Pick your poison.
+<<set $d2_task_manni = false>>
+<<set $d2_task_officehours = false>>
+<<set $d2_task_datateam = false>>
+<<set $d2_slots_used = 0>>
+<<jump R1_D2_Dayplanner>>
+
+===
+
+title: R1_D2_HandleSkippedTasks
+tags: #run_1 #day_2 #scene
+---
+<<bg bg_office>>
+<<if !$d2_task_manni>>
+As you refill your own water bottle later, you overhear Manni laughing with another lead about "gifting them a jump-start." HUD pings a tiny missed-connection icon. You have not met Manni yet; manni_friendliness remains baseline.
+<<endif>>
+<<if !$d2_task_officehours>>
+  <<if $r1_complied_day1 == true || $r1_d1_strategy == "full_comfort_scroll">>
+Alice (aside): Given your whole "ride the numbers" vibe, I went softer than you might've. I nudged him, sent a template, let him choose. Intervention logged as gentle push.
+<<set $officehours_status = "auto_nudge">>
+<<set $sanity += 1>>
+  <<else>>
+Alice (aside): You lean protective, so I tried the aggressive fix version. Drafted the email, grabbed him a slot. We'll see how he handles being yanked out of avoidance.
+<<set $officehours_status = "auto_fix">>
+<<set $sanity += 1>>
+<<set $trust_timmy -= 1>>
+  <<endif>>
+<<endif>>
+<<if !$d2_task_datateam>>
+A brief email slides into your inbox later: "From: dev@dataplumbing.local. Subject: FYI – spicy lane. Saw your metrics. Interesting. If you ever want sharper feedback, drop by my cave. If not, no worries. The blur keeps most people sane(ish)." Power user flag remains off.
+<<endif>>
+<<jump R1_D2_AfterTasks>>
+
+===
+
+title: R1_D2_AfterTasks
+tags: #run_1 #day_2 #scene
+---
 <<jump R1_D2_EndOfDay>>
 
 ===
 
 title: R1_D2_EndOfDay
-tags: #run_1 #day_2 #scene
+tags: #run_1 #day_2 #scene #char_Alice
 ---
-<<bg bg_breakroom>>
-Day 2 concludes.  Your choices have set a direction. #line:0668258 
+<<bg bg_office>>
+Location: Console, evening. Floor lights dim. Planner column empty; two picked tiles show "RESOLVED," the third "AUTO."
+Timmy's lane replays the day: quiz outcome, messages, maybe a new calendar event if office hours got booked, a late-afternoon scroll session. He's back in his dorm, phone on his chest, staring at the ceiling.
+Alice hovers beside the feed.
+Alice: Day two log: closed.
+She brings up a summary panel.
+<<if $r1_d2_quiz_result == "missed_comfort_sleep">>
+Alice: Quiz summary: missed entirely. Comfort scroll plus sleep-in is a bold combo. Regret queued.
+<<elseif $r1_d2_quiz_result == "late_partial">>
+Alice: Quiz summary: late arrival, partial credit likely. Meme cram paid for two and a half questions.
+<<elseif $r1_d2_quiz_result == "missed_reflective">>
+Alice: Quiz summary: missed, but at least he knows it's his fault. Regret beats panic.
+<<elseif $r1_d2_quiz_result == "attended_fail">>
+Alice: Quiz summary: attended, likely faceplant. Engagement loved the drama; his brain did not.
+<<elseif $r1_d2_quiz_result == "bare_pass">>
+Alice: Quiz summary: scraped by. Bare pass probable. He will neither brag nor drop out tonight.
+<<elseif $r1_d2_quiz_result == "moderate_pass">>
+Alice: Quiz summary: moderate pass likely. For once nothing is on fire.
+<<else>>
+Alice: Quiz summary: still compiling. Assume "messy."
+<<endif>>
+Alice flicks to another column.
+<<if $arthur_vector == "faustian">>
+Alice: Arthur vector logged as "faustian." You're in the hungry-controller pilot now. Try not to sneeze on his semester.
+<<elseif $arthur_vector == "hesitant_optimizer">>
+Alice: Arthur vector: "hesitant optimizer." You said no to rocket fuel. Brave, boring, survivable.
+<<elseif $arthur_vector == "tightrope">>
+Alice: Arthur vector: "tightrope." Nuance enthusiasts everywhere are lighting candles for you.
+<<elseif $arthur_vector == "playbook">>
+Alice: Arthur vector: "playbook." Welcome to Best Practices, population: you.
+<<else>>
+Alice: Arthur vector undefined. I'll assume "mystery."
+<<endif>>
+<<if $manni_friendliness > 0>>
+Alice: Manni logged you as a mentee. Expect dubious gifts and unsolicited scripts about spinning sanity hits as "growth opportunities."
+<<elseif $manni_friendliness < 0>>
+Alice: Manni thinks you're weird for refusing blood money. Wear it like a badge.
+<<else>>
+Alice: You still haven't met Manni. He's out there somewhere, caffeinating malpractice.
+<<endif>>
+<<if $officehours_status == "scheduled">>
+Alice: Office hours: scheduled. Autonomy dented, future Sanity bump pending.
+<<elseif $officehours_status == "email_sent">>
+Alice: Office hours: email sent, slot TBD. Intervention success rate set to "shrug."
+<<elseif $officehours_status == "avoided">>
+Alice: Office hours: avoided. Short-term soothed, long-term academic risk flagged.
+<<elseif $officehours_status == "auto_nudge">>
+Alice: Office hours: I nudged on your behalf. Consider it a mirror of your whole "ride the numbers" aesthetic.
+<<elseif $officehours_status == "auto_fix">>
+Alice: Office hours: I went full autopilot while you were busy being gentle. We'll see if he resents future-you.
+<<else>>
+Alice: Office hours: unlogged. Maybe tomorrow.
+<<endif>>
+<<if $power_user == true>>
+Alice: Data/IT says you're now "power user" status. Translation: every little choice punches harder. High-definition guilt unlocked.
+<<else>>
+Alice: You kept the blur filter on. Dev is disappointed but he'll survive.
+<<endif>>
+Alice glances at Timmy's feed. He rolls sideways, hesitates on the office hours email if it exists, or scrolls past a "Professor posted new resources" notification if it doesn't.
+Alice: He's thinking about the quiz. And about you. Not consciously. But he started using "we" when he talks about his day. Attachment keeps him from uninstalling me. Attachment also makes it hurt more when we screw up. Mixed bag.
+She taps your rapid-feedback account; a number ticks upward.
+Alice: Your moral compromises matured into more fake money. Congratulations.
 <<set $rapid_feedback_cash += 5>>
-You receive a rapid‑feedback bonus of 5 credits. #line:080a81a 
+Alice: Rapid Feedback disbursement: +5 credits. Spend them on mercy, chaos, or accessories. Dealer's choice.
+<<if $item_mental_break == true>>
+Alice (aside): If you bought that "mental break" token yesterday, it's still sitting there. Locked until the system thinks you've "earned" using it. They like to make mercy something you have to gamify.
+<<else>>
+Alice (aside): Store still keeps the "mental break" token behind glass until it thinks you've earned mercy. Gamified compassion.
+<<endif>>
+She lets the thought hang, then folds the panel away.
+Alice: Tomorrow gets busier. More slots, more choices. Maybe even a window where that break token makes sense.
+Timmy on the feed turns his phone face-down, stares at the darkness.
+Player: Can we help?
+Alice: Not in a way that shows up before midnight. Sometimes the kindest thing is to stop poking the bruise.
+Alice gives you a tiny, tired smile.
+Alice: Good second day. You didn't get fired. He didn't drop out. The graphs moved in interpretable ways. That's practically a miracle.
+Player: You have very low standards for miracles.
+Alice: We work in youth engagement. The bar lives under the floor.
+The dashboard fades to the familiar bars—Engagement and Sanity—pulsing side by side, your tiny dot blinking in its new spot on the leaderboard.
 <<checkpoint "run1_day2_aftershop">>
 <<sfx sfx_shortwave_hiss>>
 <<set $current_day = 3>>
