@@ -143,133 +143,163 @@ tags: #run_1 #day_2 #mechanic_dayplanner
 <<bg bg_office>>
 <<set $d2_slots_remaining = 2 - $d2_slots_used>>
 // FAILSAFE: If all three tasks are complete or slots_used >= 2, proceed automatically
-<<if ($d2_task_triage && $d2_task_copy && $d2_task_metrics) || $d2_slots_used >= 2>>
-  <<jump R1_D2_AfterTasks>>
+<<if ($d2_task_manni && $d2_task_officehours && $d2_task_datateam) || $d2_slots_used >= 2>>
+  <<jump R1_D2_HandleSkippedTasks>>
 <<endif>>
 
 <<if $d2_slots_used > 0>>
-You have time for {$d2_slots_remaining} more.
+You have time for {$d2_slots_remaining} more interventions.
 <<else>>
-Choose your tasks for Day 2. You have {$d2_slots_remaining} slots remaining. #line:02797ee
+Choose two Day 2 interventions. You have {$d2_slots_remaining} slots remaining.
 <<endif>>
--> Triage Queue <<if !$d2_task_triage && $d2_slots_used < 2>> #line:0992d77 
-    <<jump R1_D2_Task_Triage>>
--> Write Copy Variants <<if !$d2_task_copy && $d2_slots_used < 2>> #line:0c49c7d 
-    <<jump R1_D2_Task_Copy>>
--> Metrics Review <<if !$d2_task_metrics && $d2_slots_used < 2>> #line:041d2f3 
-    <<jump R1_D2_Task_Metrics>>
+-> Coffee with Manni (Engagement Lead) <<if !$d2_task_manni && $d2_slots_used < 2>>
+    <<jump R1_D2_Task_Manni>>
+-> Help Timmy – Office Hours <<if !$d2_task_officehours && $d2_slots_used < 2>>
+    <<jump R1_D2_Task_OfficeHours>>
+-> Visit Data Science / IT <<if !$d2_task_datateam && $d2_slots_used < 2>>
+    <<jump R1_D2_Task_DataTeam>>
 
 ===
 
-title: R1_D2_Task_Triage
-tags: #run_1 #day_2 #scene #loc_Triage
+title: R1_D2_Task_Manni
+tags: #run_1 #day_2 #scene #loc_Breakroom
 ---
-<<bg bg_triage>>
-The triage queue is long.  You can resolve quickly or document thoroughly. #line:09bb9a8 
--> Resolve quickly #line:02f89f8 
-    <<jump R1_D2_Payoff_Triage_A>>
--> Resolve thoroughly #line:0983dff
-    <<jump R1_D2_Payoff_Triage_B>> 
+<<bg bg_breakroom>>
+Location: Break room. Cheap coffee machine, humming fridge, window that technically counts as natural light.
+Manni: There they are. New handle. Come on in, the coffee's terrible.
+He pours something questionably coffee, slides it over, flips his phone to show his leaderboard crown and obscene Store balance.
+Manni: They give us this stupid "mentor" function. Makes them feel like they're fostering community. I can gift some credits. Helps you catch up. Makes me look generous on an HR slide.
+HUD pings: Incoming transfer from Manni.
+Manni: So. You in?
+-> Accept the credits.
+    <<jump R1_D2_Payoff_Manni_Accept>>
+-> Refuse the credits.
+    <<jump R1_D2_Payoff_Manni_Refuse>>
 
 ===
 
-title: R1_D2_Payoff_Triage_A
+title: R1_D2_Payoff_Manni_Accept
 tags: #run_1 #day_2 #scene
 ---
-<<bg bg_triage>>
-You resolve tickets quickly.  Engagement increases, but some fixes are shallow. #line:0d2b4ad 
-<<set $engagement += 2>>
-<<set $sanity -= 1>>
-<<set $d2_task_triage = true>>
+<<bg bg_breakroom>>
+You accept; HUD flashes, balance ticking upward.
+Manni grins: "Consider it an investment. You do well, I say I mentored you."
+<<set $rapid_feedback_cash += 5>>
+<<set $manni_friendliness += 1>>
+<<set $d2_task_manni = true>>
 <<set $d2_slots_used += 1>>
 <<jump R1_D2_Dayplanner>>
 
 ===
 
-title: R1_D2_Payoff_Triage_B
+title: R1_D2_Payoff_Manni_Refuse
 tags: #run_1 #day_2 #scene
 ---
-<<bg bg_triage>>
-You document root causes and fully resolve issues.  Sanity improves; engagement ticks up modestly. #line:0aac51a 
+<<bg bg_breakroom>>
+You let the transfer request hang, then dismiss it.
+Manni's grin flickers. "An honest one. Brave or naive. We'll see."
+<<set $manni_friendliness -= 1>>
+<<set $d2_task_manni = true>>
+<<set $d2_slots_used += 1>>
+<<jump R1_D2_Dayplanner>>
+
+===
+
+title: R1_D2_Task_OfficeHours
+tags: #run_1 #day_2 #scene
+---
+<<bg bg_office>>
+Alice pulls up the notification: "Prof. Klein – Office Hours expanded this week."
+Alice: History says he hovers on the signup page, then closes it and plays something loud. We have three approaches.
+-> Autopilot fixer: draft the email, grab a slot.
+    <<jump R1_D2_Payoff_OfficeHours_Auto>>
+-> Respectful nudge: show him the tools, make him do the work.
+    <<jump R1_D2_Payoff_OfficeHours_Nudge>>
+-> Let him avoid it: soothe now, consequences later.
+    <<jump R1_D2_Payoff_OfficeHours_Avoid>>
+
+===
+
+title: R1_D2_Payoff_OfficeHours_Auto
+tags: #run_1 #day_2 #scene
+---
+<<bg bg_office>>
+Alice drafts the earnest email, pops it on Timmy's phone, then books Wednesday's slot.
+Timmy: "Fine. Send it before I chicken out."
+<<set $officehours_status = "scheduled">>
 <<set $sanity += 2>>
-<<set $engagement += 1>>
-<<set $d2_task_triage = true>>
-<<set $d2_slots_used += 1>>
-<<jump R1_D2_Dayplanner>>
-
-===
-
-title: R1_D2_Task_Copy
-tags: #run_1 #day_2 #scene
----
-<<bg bg_office>>
-You are tasked with writing marketing copy.  Do you adopt an aggressive or measured tone? #line:07473fd 
--> Aggressive tone #line:0db0403 
-    <<jump R1_D2_Payoff_Copy_A>>
--> Measured tone #line:079c4a9
-    <<jump R1_D2_Payoff_Copy_B>> 
-
-===
-
-title: R1_D2_Payoff_Copy_A
-tags: #run_1 #day_2 #scene
----
-<<bg bg_office>>
-An aggressive tone drives clicks.  Engagement jumps but Timmy complains about manipulative wording. #line:086424d 
-<<set $engagement += 3>>
-<<set $sanity -= 1>>
 <<set $trust_timmy -= 1>>
-<<set $d2_task_copy = true>>
+<<set $d2_task_officehours = true>>
 <<set $d2_slots_used += 1>>
 <<jump R1_D2_Dayplanner>>
 
 ===
 
-title: R1_D2_Payoff_Copy_B
+title: R1_D2_Payoff_OfficeHours_Nudge
 tags: #run_1 #day_2 #scene
 ---
 <<bg bg_office>>
-A measured tone soothes the users.  Sanity improves; engagement grows slowly. #line:063552f 
-<<set $sanity += 2>>
-<<set $engagement += 1>>
-<<set $d2_task_copy = true>>
+Alice builds a skeleton email, hands Timmy the blanks. He groans, types, hovers over send, then does it. Slot TBD.
+<<set $officehours_status = "email_sent">>
+<<set $sanity += 1>>
+<<set $d2_task_officehours = true>>
 <<set $d2_slots_used += 1>>
 <<jump R1_D2_Dayplanner>>
 
 ===
 
-title: R1_D2_Task_Metrics
+title: R1_D2_Payoff_OfficeHours_Avoid
 tags: #run_1 #day_2 #scene
 ---
-<<bg bg_backend>>
-Metrics dashboards have drifted.  You can normalise outliers or preserve anomalies. #line:0776223 
--> Normalise outliers #line:0b396c4 
-    <<jump R1_D2_Payoff_Metrics_A>>
--> Preserve anomalies #line:0711eae
-    <<jump R1_D2_Payoff_Metrics_B>> 
-
-===
-
-title: R1_D2_Payoff_Metrics_A
-tags: #run_1 #day_2 #scene
----
-<<bg bg_backend>>
-You smooth the graphs.  Reports look calm; sanity rises. #line:04a0d89 
-<<set $sanity += 2>>
-<<set $d2_task_metrics = true>>
+<<bg bg_office>>
+Alice lets him vent, swaps in soft comfort content, logs "supportive avoidance."
+<<set $officehours_status = "avoided">>
+<<set $sanity += 1>>
+<<set $engagement -= 1>>
+<<set $d2_task_officehours = true>>
 <<set $d2_slots_used += 1>>
 <<jump R1_D2_Dayplanner>>
 
 ===
 
-title: R1_D2_Payoff_Metrics_B
+title: R1_D2_Task_DataTeam
+tags: #run_1 #day_2 #scene #loc_Lab
+---
+<<bg bg_backend>>
+Location: IT/Data Science closet. Cables everywhere. Dev swivels toward you.
+Dev: "You must be the new spicy lane. Want the 'power user' toggle flipped?"
+-> Accept power user privileges.
+    <<jump R1_D2_Payoff_DataTeam_Accept>>
+-> Decline, keep the blur.
+    <<jump R1_D2_Payoff_DataTeam_Decline>>
+
+===
+
+title: R1_D2_Payoff_DataTeam_Accept
 tags: #run_1 #day_2 #scene
 ---
 <<bg bg_backend>>
-You keep anomalies visible.  Engagement stays high but it makes leadership nervous. #line:09648fa 
+Dev grins, slides the toggle to ON. HUD flickers; bars look crisper.
+Dev: "Think of it like taking the training wheels off a bike over a staircase."
+<<set $power_user = true>>
+<<set $itguy_friendliness += 1>>
 <<set $engagement += 1>>
 <<set $sanity -= 1>>
-<<set $d2_task_metrics = true>>
+<<set $d2_task_datateam = true>>
+<<set $d2_slots_used += 1>>
+<<jump R1_D2_Dayplanner>>
+
+===
+
+title: R1_D2_Payoff_DataTeam_Decline
+tags: #run_1 #day_2 #scene
+---
+<<bg bg_backend>>
+You decline. Dev snorts. "Suit yourself. Vanilla it is."
+<<set $power_user = false>>
+<<set $itguy_friendliness -= 1>>
+<<set $sanity += 1>>
+<<set $d2_task_datateam = true>>
 <<set $d2_slots_used += 1>>
 <<jump R1_D2_Dayplanner>>
 
