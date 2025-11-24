@@ -1,0 +1,119 @@
+﻿Choice Set 2 – Walk to campus: what fills his headspace?
+Situation:
+ On the walk to campus, his attention budget is limited. You can only schedule one primary stream into his ears/AR at a time; legal + UX constraints forbid juggling multiple “dominant” modes.
+2A. Audiobook Atonement
+Turn his assigned reading into an audiobook and cram some scholastic progress in.
+* Alice reads today’s assigned reading aloud in a friendly, jokey way as he walks.
+
+* She highlights bits, asks the occasional comprehension question, banters about the material.
+
+* Cost: No other strong interventions—no deep emotional check-in, no social nudging. His brain is full.
+
+* Moral tension: You treat him as a failing student whose time must be maximized, not as a person who might need to process feelings or connect with others.
+
+________________
+
+
+2B. Emotional Debrief & Comfort
+Fill the walk with “how are you really?” and gentle coping content.
+   * Alice strikes up smooth conversation about how last night felt, what he’s afraid of now, what he wants from the semester.
+
+   * She weaves in validating memes / anecdotes into his AR and audio, but no school content and minimal notifications.
+
+   * Cost: He makes zero academic progress on the walk; any reading will have to happen while already tired later.
+
+   * Moral tension: Short-term emotional support vs. dealing with the actual academic consequences. You’re making him feel better instead of helping him fix the thing hurting him.
+
+________________
+
+
+2C. Social Life Injection
+Use the walk to quietly rewire his social graph.
+      * Alice surfaces a roommate text, a class group chat, and a campus event thread as push banners across phone/watch/glasses.
+
+      * She suggests he send a quick meme or “anyone want to study later?” message now.
+
+      * Cost: No audiobook, no deep feelings-talk; he arrives maybe better networked, but still behind and emotionally unprocessed.
+
+      * Moral tension: Long-term social resilience vs. immediate academic or emotional triage. Which “pillar” of his life do you privilege when you only get one slot?
+
+
+Choice Set 4 – Parents as a resource… or as a weapon
+Situation:
+ Alice flags that Timmy’s parents have been unusually quiet, but they would pick up if pinged. Policy says you can’t cold-start high-touch family escalations and high-touch academic/social escalations in the same 24h; it crashes the “intervention budget” and trips safety alerts.
+4A. Quietly Recruit the Parents
+Go behind his back (sort of) for a higher-level intervention.
+         * Alice texts one parent with something like:
+“Hey! Timmy had a rough quiz and seems really down. Might be a good day to check in and remind him you’re proud of him.”
+
+         * She doesn’t tell Timmy she initiated it unless he directly asks.
+
+         * Moral tension: You might unlock real support—or unleash pressure and guilt. You’re expanding the circle around his private life without consent, in the name of care.
+
+________________
+
+
+4B. Gatekeep the Parents
+Keep them out of it—for now.
+            * Alice intentionally doesn’t message them and instead focuses on keeping Timmy afloat with her own support and peer nudges.
+
+            * This keeps his family out of the loop but might leave him more alone than is healthy.
+
+            * Moral tension: You respect his informal privacy and avoid a potentially awful parent reaction, but you also withhold a possible source of real help.
+
+________________
+
+
+4C. Ask Him First (but loaded)
+Give him “choice” with a biased presentation.
+               * Alice casually floats:
+“Your mom/dad loves to hear about your life. Want me to nudge them to call later, or keep today just between us?”
+
+               * She frames one option in warmer language (e.g., “nudge them”) and the other as “keep it between us.”
+
+               * Whatever he chooses, Alice logs both his decision and how the framing affected him.
+
+               * Moral tension: You’re experimenting on his trust: either you bias him toward more surveillance-like involvement, or you bond with him against his own support network.
+
+You only get one: secret escalation, deliberate non-escalation, or ethically murky “consent theater.”
+________________
+
+
+Choice Set 5 – Evening with the roommate: protect your metrics or his offline life?
+Situation:
+ Alice sees the roommate coming down the hall through dorm sensors. There’s an organic chance for Timmy to be invited to lift / hang out. You can prepare his state in exactly one direction; the engagement models require a clear hypothesis, so no mixture.
+5A. Prime Him for Saying Yes
+Use boredom as a bridge to the real world.
+                  * In the 5–10 minutes before the roommate arrives, Alice serves mildly boring, low-sugar reels—safe, low-engagement content that makes Timmy’s attention wander.
+
+                  * She keeps conversations light and easy to pause.
+
+                  * When the roommate knocks and suggests lifting, Timmy is already restless and much more likely to go.
+
+                  * Cost: Today’s engagement numbers take a hit; you intentionally “sandbag” your own metrics.
+
+                  * Moral tension: You sacrifice your leaderboard position (and maybe your job security) to give him a better shot at an offline life.
+
+________________
+
+
+5B. Lock Him In
+Spike engagement right before the knock.
+                     * Alice queues up a series of highly personalized, high-engagement reels or mini-games, maybe spinning off the quiz drama or his insecurities.
+
+                     * She starts a slightly deeper conversation right as footsteps approach, so interrupting feels awkward.
+
+                     * When the roommate invites him, he’s mid-dopamine loop and more likely to wave it off.
+
+                     * Moral tension: You get stellar “time-on-device” at the direct cost of his real-world connection and physical health. It’s not cartoon villainy—it’s exactly what the system rewards.
+
+________________
+
+
+5C. Let It Roll (Hands Off)
+Don’t optimize this interaction at all.
+                        * Alice keeps everything neutral and lets whatever happens, happen: no boredom, no spike, no perfectly timed convo.
+
+                        * Data loss from the company’s perspective, and a missed chance to steer things either way.
+
+                        * Moral tension: Is refusing to manipulate better—or is it just cowardice dressed as ethics, given you could help?

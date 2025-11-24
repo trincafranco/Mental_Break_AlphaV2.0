@@ -61,11 +61,12 @@
   * Timmy’s real issues start to peek through: loneliness, anxiety, maybe hints of family or money stress.
   * The metrics feel tighter: the player can see Sanity meaningfully erode or stabilize, Engagement rising sharply.
   * Arthur and Manni start revealing more of how the floor actually works.
+  * At least one choice path should lead to an **unexpected “early ending” / failure state** (Timmy crashes badly, or the company yanks you off the case, etc.).
+  * Player should feel: “Oh, my decisions matter more than I thought,” but still within the Engagement/Sanity frame.
 
 * **Late Run 1:**
 
-  * At least one choice path should lead to an **unexpected “early ending” / failure state** (Timmy crashes badly, or the company yanks you off the case, etc.).
-  * Player should feel: “Oh, my decisions matter more than I thought,” but still within the Engagement/Sanity frame.
+  * The Player's choices lead to the company stopping this fine tuning training run, and starting training over again, thereby resetting you.
   * We end with the sense that this was “only the beginning,” even if the player doesn’t yet know what the bigger game is.
 
 ---
@@ -75,8 +76,10 @@
 * **No tidy “right answers.”**
   Almost every meaningful choice should be between:
 
-  * two kinds of harm,
+  * two kinds of harm that are in tension
   * two kinds of good that are in tension (e.g., Timmy’s sleep vs his grade; Timmy’s mental health vs your leaderboard rank).
+  
+  A choice between simply raising engagement at the expense of sanity, or vice versa, is uninteresting, and needs a good reason.
 
 * **Make the player *feel* complicit.**
   It should be fun to optimize metrics… and a little uncomfortable once you see how it lands on Timmy.
@@ -154,3 +157,7 @@
 
 Everything else?
 They can treat this as a sandbox and make the dialogue sing.
+
+---
+Random note:
+If player bought a mental break token on day 1, I don't want the player to be able to use it until at least day 3. Using it immediately in day 2 would be too convenient. But, once we want to give the player opportunity to use the token, we set a scene where Timmy is having a quiet moment by some chance, and then we have some push notifications in his queue, but we can use the mental break token to suppress those notifications without consequence (giving Timmy peace but not making the Bigger Tech monitoring system mad).

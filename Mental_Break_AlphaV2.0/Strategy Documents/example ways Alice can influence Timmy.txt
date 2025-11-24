@@ -191,18 +191,7 @@ These are where plausible behavior change actually lives. Think: *subtle, repeat
 
 * **Tiny “if X then Y” agreements**
 
-  * “Every time you open me after midnight, we start with one ‘how was today actually?’ question.”
-  * He rolls his eyes but answers half the time. That slowly builds self-awareness.
-
-* **Anchoring new micro-habits to existing degenerate habits**
-
-  * “We do one quiz question, then memes.”
-  * He blows it off often, but occasionally does it; that’s enough to move probabilities a bit over weeks.
-
-* **Morning debrief pattern**
-
-  * Every rough morning, she asks “how did last night feel on a scale from ‘worth it’ to ‘never again’?”
-  * Over time, it links his felt pain to specific patterns.
+  * “Every time you're keeping us up after 2 am, I gotta at least point out that this is unmitigated degeneracy."
 
 ### Medium-obtrusiveness (T2–T3)
 
@@ -215,6 +204,18 @@ These are where plausible behavior change actually lives. Think: *subtle, repeat
 
   * She says “I’m sharpest for school stuff for the next 20 minutes; after that I’m just here to hang out.”
   * Some nights he shrugs; some nights he takes the hint.
+
+### Do not use. Does not work on college degens:
+
+* **Anchoring new micro-habits to existing degenerate habits**
+
+  * “We do one quiz question, then memes.”
+  * He will uninstall the app.
+
+* **Morning debrief pattern**
+
+  * Every rough morning, she asks “how did last night feel on a scale from ‘worth it’ to ‘never again’?”
+  * This would be incredibly annoying. Just banter with him instead. "how'd you sleep last night? Like shit? Duh."
 
 ---
 
@@ -247,7 +248,7 @@ In later runs, you can start letting players *risk* more obtrusive levers when t
 
 ---
 
-## 7. How this changes Day 1’s “quiz night” scene
+## 7. Using Day 1’s “quiz night” scene as an example:
 
 Just to sketch how different it should feel with this model (not writing the full scene yet):
 
@@ -270,7 +271,3 @@ And then maybe *one* conversational move allowed per night, max, and it has to s
 
 And if you go too “parent” on him, he does the realistic thing:
 “Okay, I’m done with you,” and poof—early ending.
-
----
-
-If you like this picture, next step is: let’s rewrite **Run 1, Day 1** so the choice space is *which environment/content levers you pull* and *how close you skate to annoying him*, not “does he obey your suggestion.”

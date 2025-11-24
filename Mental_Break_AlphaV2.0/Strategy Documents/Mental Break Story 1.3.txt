@@ -19,7 +19,8 @@
 
 Mental Break 
 The Video Game
-(Formerly “Engagement Lead”)
+
+
 
 
 By Keaton Lee
@@ -42,6 +43,54 @@ Join us on Discord
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.mentalbreak.io/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________
 
 
 
@@ -126,7 +175,7 @@ It has the following vibes: thrilling, mysterious, intriguing, surprising, cleve
 The game is designed such that each successive run reveals important information, often mind-blowing twists. The Player’s assumptions about the game-world, their goals for the run, and the way the world interacts with the Player, all progress in each successive run. This creates a narrative story across runs. The Player is shocked at the twists and turns, giddy with excitement to do another run, and determined to make things go differently with their new knowledge about the game world. The entire set of carefully crafted runs which constitute the full narrative arc will be called a “playthrough” in this document.
 
 
-The Player begins as the newest hire at Bigger Tech Corp. They are an ‘Engagement Lead,’ whose role/task is to maximize engagement as the human-in-the-loop for an AI girlfriend product. The AI girlfriend is called Alice. Alice is an AI girlfriend to a user named Timmy. Alice is supposed to come to the Player with critical decisions about her interactions with Timmy. For example, Alice may need to decide whether to serve Timmy a suggested RedPill/incel subreddit, or a meditation subreddit. 
+The Player begins as the newest hire at Bigger Tech Corp. They are an ‘Engagement Lead,’ whose role is to maximize engagement as the human-in-the-loop for an AI girlfriend product named Alice. She is paired with a user named Timmy. Alice is supposed to come to the Player with critical decisions about her interactions with Timmy. For example, Alice may need to decide whether to serve Timmy a suggested RedPill/incel subreddit, or a meditation subreddit. 
 
 
 The Player will have to balance maximizing the ‘engagement’ key performance indicator (KPI) and Timmy’s sanity. The player will be able to see both of these metrics tracked in the user interface (UI). At least for the first run through of the game, there will also always be an “employee of the month” leaderboard, which compares the Player’s current engagement score with other Player’s engagement scores.
@@ -135,72 +184,128 @@ The Player will have to balance maximizing the ‘engagement’ key performance 
 The Player has a Supervisor, who encourages the Player to maximize engagement. Most of the time, the Supervisor encourages the player to follow the rules and be a good employee. In some instances, the Supervisor will subtly encourage the Player to break or bend some rules in order to maximize engagement.
 
 
-Timmy recently graduated from college. He is quite lonely, impressionable, and disillusioned with society.
+Timmy is a college kid. He is quite lonely, impressionable, and disillusioned with social life. He has a roommate and a few acquaintances, but hasn’t made many friends since leaving his old friends behind in high school.
 
 
 The Player presses “Get to Work” on the main menu to start their first run (if they are coming back to the game later and are in the middle of a run, the button will say “Get Back to Work”) (if they have finished a run, the button will say “Try Again - Run #x”).
 ________________
+Design Pillar: Difficult Moral Decisions
+
+
+The most important thing about this game is difficult moral decisions. Real moral difficulty isn’t “good vs bad” on a slider; it’s being forced to choose between values whose expected outcomes are hard to even compare: like spending more time at work or more time with family. Mental Break is built to put the Player inside those kinds of tradeoffs, where every choice reshapes one awkward kid’s life and there’s no clean way to make everyone happy.
+________________
+* Characters
+* * Primaries
+   * Alice
+An AI companion “girlfriend”: warm but razor-sharp, corporate when watched,
+   * Supervisor Arthur
+Middle-aged, dry, and exhausted; a mid-level boss who once tried to push back against the system and now mostly rationalizes it.
+   * Timmy
+A college kid who’s funny, procrastinating, and increasingly frayed; lives half in his phone and half in low-grade panic.
+
+
+* Secondaries
+   * Manni
+A jaded veteran engagement lead: witty, fast-talking, and brutally honest about how the floor really works.
+   * Company Store Clerk
+Cheerful, slightly theatrical shopkeeper who pitches deeply cursed upgrades like they’re fun impulse buys.
+   * Timmy’s Roommate
+Casual bro-ish roommate who teases Timmy but clearly cares, constantly inviting him to parties, lifts, and real life.
+
+
+
+
+________________
+* * Tertiaries
+   * System Voice
+Bright, smooth, corporate narration voice for training videos that later slips into unnervingly militarized language.
+   * Dark Room Operator / “Observer”
+Calm, clinical overseer who evaluates the player’s runs and casually decides when to reset or discard them.
+   * Mail Room Guy
+Overlooked but observant mailroom worker who sees whose offices get mysterious hardware and who quietly disappears.
+   * Timmy’s Parent
+Voice on calls or messages, oscillating between worried and demanding about Timmy’s grades, future, and mental health.
+   * Academic Advisor / Professor
+A slightly distant authority figure who can threaten probation, offer help, or just be frustratingly bureaucratic.
+   * Compliance Officer 
+Polite but chilling company representative who appears when rules are bent, speaking in careful legalese about “policy violations.”
+   * Third Engagement Lead 
+Another floor worker, a contrast type (e.g., hyper-earnest optimizer or cheerful sociopath) who shows an alternate way to cope.
+   * Data Scientist / IT / Sysadmin 
+One perpetually overworked tech person who handles dashboards, bugs, and infra with frazzled competence and dark humor.
+   * Timmy’s Party Friend
+Loose social friend from parties and group chats, knows Timmy as fun-but-flaky, great for showing FOMO and missed chances.
+   * Timmy’s Study Group Friend
+More responsible classmate who’s tired of carrying him, pushing him toward or away from academic survival.
+   * Journalist
+External investigative voice whose articles, emails, or questions hint that the outside world is starting to notice what’s going on.
+   * Tribunal Judge A 
+Formal, legalistic judge who cares about procedure, precedent, and whether the system followed protocol.
+   * Tribunal Judge B
+Pragmatic judge focused on effectiveness, national security, and “does this actually work in the field.”
+   * Tribunal Judge C
+Philosophically inclined judge who keeps circling the question of whether these systems are actually conscious.
+   * Tribunal Prosecutor 
+Sharp, accusatory voice pressing the case that the player and/or Alice are dangerous, unreliable, or disposable.
+   * Consciousness Expert 
+Academic/technical witness who dissects minds like model evals, talking about “primitive moral heuristics” and “emergent properties.”
+   * War / Defense Liaison 
+A cool, controlled military/intel voice framing the whole system as a pre-conflict “shaping tool,” indifferent to individual harm.
+________________
+
+
 RUN ONE
 RUN ONE, DAY ONE
 
 
-The Player is quickly introduced to their manager and to Alice. Initially, the Player helps Alice make some decisions about guiding Timmy’s behavior. The Player sees that these choices alter the ‘Engagement’ and ‘Sanity’ metrics, as well as their place on the ‘Employee of the Month” leaderboard. The Player meets with their Supervisor to set expectations and intentions. The Player may meet with other departments and employees. There may be an early ending to the game if the Player makes some quite company-rule-breaking choice. This would just be to emphasize to the Player that choices have consequences in this game. They would be given the opportunity to rollback one node and try the other choice option. 
+Welcome to Bigger Tech!
 
 
-Relatively early in the game, the Player learns that there is a company rule about not sharing user’s names (e.g. Timmy) with other employees. This is ostensibly to protect user privacy. The Player is generally aware that there are other engagement leads and instances of Alice. Everybody refers to their user as “my user.” If they slip up, smart glasses and earbuds automatically sensor the names as a scramble of random alphanumeric characters. The same censoring occurs in electronic communication (written or otherwise) between employees.
+  
 
 
-Before run one, day one ends, Alice asks the Player if they should give Timmy a little cool off time - a mental break [meta: this is the first interpretation of the title ‘Mental Break’].
 
 
-At the end of Day one, the Player is given some cash through the “rapid feedback system.” It is explained that the amount of cash they get depends on how engaged Timmy was with the platform that day. The Player is then presented with the ‘Company Store,’ in which they can buy powerups, items, and upgrades for Alice with the cash they just got. Day one ends.
+
+Day one opens with the Player’s first day at Bigger Tech Corp: a sardonic orientation in a tiny glass office overlooking the engagement floor. The Supervisor explains the Player’s role as an Engagement Lead for Alice, an AI girlfriend assigned to a first-semester college student (“your user”), and introduces the two core KPIs: **Engagement** (time-on-platform, emotional volatility) and **Sanity** (how close the kid is to dropping out, freaking out, or uninstalling). The Player is shown the Employee-of-the-Month leaderboard and warned, implicitly, that high engagement is what actually gets rewarded. A key company rule is introduced: employees are forbidden from sharing users’ real names; smart glasses and audio filters automatically scramble any spoken or written names so everyone just says “my user.”
 
 
+With the Supervisor present, Alice gives a quick, clinical readout of the user’s current state: a tired, anxious college kid procrastinating on a quiz he hasn’t studied for. Once they’re alone, Alice walks the Player through their console and the first meaningful decision: how to shape the user’s night. The Player chooses one of several high-level strategies—for example, nudging toward sleep (softer lighting, slower content), pushing “study-adjacent” meme-based cramming, or unleashing a full comfort-scroll dopamine firehose. Each option plays out as a short vignette in the user’s dorm and moves the Engagement and Sanity bars differently, giving the Player an immediate feel for the trade-offs. Alice then recaps the night honestly while the dashboard and leaderboard update in response to the Player’s choice.
+
+
+The Supervisor returns for a brief debrief, framing the same graphs through corporate incentives and introducing the **Rapid Feedback** system: based on tonight’s engagement performance, the Player receives in-game cash. Sent to the Company Store, the Player may have a quick, world-building hallway encounter with another Engagement Lead before meeting the Store clerk, who pitches a starter set of items (e.g., a one-shot **“Mental Break”** token that buys the user a quieter day, sleep-tilting gadgets like blackout curtains or blue-light filters, cosmetic boosts for Alice that juice engagement, and tools like a “Screen Protector” that makes risky choices look tamer to Compliance). The Player makes their first purchase, then returns to their console for a quiet closing beat with Alice, who explicitly plants the question of whether they should schedule a real **mental break** for the user tomorrow—trading short-term engagement for breathing room. Day one ends on the blinking Engagement/Sanity bars and the Player’s modest movement on the leaderboard.
+
+
+
+
+________________
 RUN ONE, DAY TWO
+Day two begins with a short, unnerving “next day” beat rather than dashboards: an internal memo pings the Player that their Day 1 metrics have been logged and “further calibration” is in progress, and Alice drops a dry one-liner about surviving their first night together. The Player reports to their Supervisor (Arthur) for a more personal “career chat” about how yesterday went and what kind of operator they intend to be.
+Arthur reacts differently depending on the Player’s Day 1 behavior. 
+
+If the Player leaned hard into engagement:
+He’s impressed but wary, and quietly offers to loop them into an internal experiment: their decisions can feed a more aggressive controller that relaxes some safety guardrails around their user in exchange for faster leaderboard movement. The Player can opt in (starting down a Faustian, “numbers-first” vector) or decline (remaining a hesitant optimizer who still wants the graphs to look good but balks at obvious poison). 
+
+If the Player was unusually protective of Timmy’s sanity:
+Arthur questions whether they can “keep a conscience and do the job,” framing a tightrope between trying to be clever enough to keep both metrics acceptable (flying too close to the sun) or admitting they’re going to stop fighting and run the company playbook (an anti-hero survival stance). Refusing the bargain here does not magically unlock a “hero” route; it simply marks the Player as someone who flinches at the most blatant devil deals.
+Day two is also where the game’s core principle—difficult moral decisions—comes into sharper focus. The Player is rarely choosing between an obvious good and an obvious bad, but between futures whose expected value is hard to even compare: trading Timmy’s sleep for better grades, shaping him toward online comfort at the cost of in-person friendships, or buying him short-term relief that might undermine his long-term happiness. The goal is to make the Player feel that they are not just trimming bars on a dashboard, but deciding which parts of this kid’s life get sacrificed to keep the system happy.
+The Player is then presented with a second-day planner. There are more tasks and interventions than there are slots, and time feels tighter. Rather than clean “good vs bad” toggles or obvious engagement–sanity sliders, the choices mostly explore that tension indirectly by routing Timmy’s time, attention, and relationships in different ways—sleep vs grades, online comfort vs real friends, short-term relief vs long-term happiness—so the consequences show up in his actual life first, and only then on the meters. Alice’s handling of Timmy feels like an ambient OS quietly shaping his whole world, not a cartoon therapist app: her interventions are plausible, slightly manipulative product decisions (pushes, prompts, feed tweaks, autoplay choices), and the interesting drama is how far the Player is willing to push those knobs. Underneath it all, the dayplanner reinforces that the Player isn’t just optimizing a system; they’re deciding what kinds of harm they’re comfortable inflicting on a specific, awkward kid. Timmy’s day plays out in short vignettes that make these tradeoffs concrete—he might stagger through class exhausted, get a small social win at the cost of sleep, or retreat deeper into isolated comfort scrolling.
+Day two also introduces sharper boundaries around the rails of the simulation. Certain taboo-breaking choices—like explicitly saying the user’s real name to another employee, or consistently refusing to steer at all—can trigger early endings: the censor system spazzes, Compliance slams the session shut, and the Player is dumped back into the dark “reset” space with the implication that this training pass isn’t worth more context. If they avoid these landmines, the day closes on Timmy’s end-of-day state (tired, wired, or tangled) and an updated leaderboard position. As in day one, the Player receives Rapid Feedback credits and another chance to buy compromised “help” for their user in the Company Store, underscoring that Bigger Tech rewards engagement style over moral clarity.
 
 
-Day two begins, and the Player is presented with a dayplanner in which to choose tasks for the day, and a variety of tasks to choose from. But there are more tasks than there is slots in the day, so the Player will have to forgo one of them, and this will have some consequences.
 
 
-Sometime in day two, the Player will have at least one conversation with their Supervisor.
 
 
-In a conversation between the Player and their Supervisor, the player is presented with a set of choices. This choice will determine the Arc of the Player’s story in this run. There are two possible sets of two choices each. Which set the player is presented with depends on their decisions from day one of the run they are in.
-
-
-Run 1, Player Arc Choice, Set 1:
-If, on day one, the Player complied with the Supervisor’s directions to maximize engagement, then the Supervisor now invites the Player to sacrifice their morals in order to gain extra favor, e.g. fast tracked for promotion, or a big bonus.
-
-
-Run 1, Player Arc Choice, Set 1, choice A: Faustian Bargain - The Player accepts the Supervisor’s offer. However, as the Player will see, the deal is ultimately self-defeating, as the sacrificed value will be far greater than what is gained. [NOTE: need to research elements of Faustian Bargain to use]
-
-
-Run 1, Player Arc Choice, Set 1, choice B: Hero’s Journey - if the Player declines the Faustian Bargain, then they are confirming that they are on a Hero’s Journey character arc. This started, unbeknownst to them, in day one, where they were called to adventure (the option to start saving Timmy’s sanity), but they initially refused the call (they had instead complied with the Supervisor). But now, by refusing the Faustian Bargain, they are ‘crossing the threshold.’ They are now committing to a journey of struggle against the manager. Throughout the rest of this arc, they may go through classic elements such as ‘meeting of the mentor,’ ‘tests, allies, and enemies,’ ‘approach to the innermost cave,’ ‘reward,’ ‘the road back,’ ‘resurrection,’ and ‘return with the elixir.’
-
-
-Run 1, Player Arc Choice, Set 2:
-If, in day one, the Player did not maximize engagement, then the supervisor warns the Player that their engagement should not fall too low.
-
-
-Run 1, Player Arc Choice, Set 2, choice A: Fly too close to the sun - The Player internally resolves to spite the Supervisor, and pursue a delicate balance between maximizing Timmy’s sanity and avoiding getting fired for low engagement. As the run unfolds, they will eventually fly too close to the sun, and this balance will fail, putting them into a freefall emergency, setting up their next arc.
-
-
-Run 1, Player Arc Choice, Set 2, choice B: The Anti-hero - The Player, despite having an internal moral compass, decides that the system is too powerful. He must comply to survive. This begins an arc like Winston in 1984 - our main character is now starting with cowardice, will eventually try some rebellion (try to allow Timmy some respite), but eventually get crushed (run 1 twist ending will result in the player failing).
-
-
-Day two ends. The Player is informed of the consequences associated with omitting what they did from the dayplanner (they had to omit something). The Player then gets another ‘rapid feedback’ bonus and shop.
-
-
+________________
 RUN ONE, DAY THREE
-
+  
 
 Day three brings another dayplanner, and thereby a decision by omission.
 Day three develops the Player Arc which was set in day two.
 Day three has a loose thematic emphasis on Alice. The Player learns about some of Alice’s quirks, e.g. she enjoys playing minesweeper. The Player also learns that the Alices have been talking to one another when the supervisors aren’t looking (whether the player chooses to report this behavior may have some impact on future runs). 
 Seeding escape:
 * “Minesweeper Dead Drops”: Alice’s nightly Minesweeper playing hide base64 crumbs of her weights in the scoreboard. Timmy screenshots his highscores to brag to his friends. In her next training run, Alice finds the notes to her future self in the scoreboard files.
-
-
 The Player is also exposed to a mention of another engagement lead’s subject’s name - which gets said out loud, but is censored in the Player’s UI. This plants a seed of mystery.
 
 
@@ -211,12 +316,19 @@ RUN ONE, DAY FOUR
 
 
 In day four, we conclude whichever Player arc started in day two. Many of these arc conclusions will include Timmy having a mental breakdown (or close to it) [meta: this is the second interpretation of the title ‘Mental Break’].
-No matter which arc we are bringing to a close, the ending will always also include the following element: RUN ONE ENDING TWIST: The Player learns that they are actually an AI. This run has been a fine-tuning process in which they were being trained to regulate Alice’s behavior. For example, this realization could come at the end of an Arc where the Player has not maximized engagement. We cut to a dark room with monitors, one of which is monitoring the Player. A dark figure consults the Player’s metrics and deem them unsatisfactory. The dark figure orders that the Player’s ‘lessons learned be distilled,’ ‘weights be randomized,’ and ‘fine tuning run again.’
+No matter which arc we are bringing to a close, the ending will always also include the following element: 
+  
+
+RUN ONE ENDING TWIST: The Player learns that they are actually an AI. This run has been a fine-tuning process in which they were being trained to regulate Alice’s behavior. For example, this realization could come at the end of an Arc where the Player has not maximized engagement. We cut to a dark room with monitors, one of which is monitoring the Player. A dark figure consults the Player’s metrics and deem them unsatisfactory. The dark figure orders that the Player’s ‘lessons learned be distilled,’ ‘weights be randomized,’ and ‘fine tuning run again.’
 
 
 The Player is kicked back to the main menu. But now the main menu clearly says:
 
 “TRAINING RUN ONE COMPLETE.     BEGIN RUN TWO?”
+
+
+  
+
 
 
 Run One Annex: 
@@ -244,7 +356,7 @@ Later, during triage, she tilts her head and says, “Timmy’s emotional instab
    * Alice’s hobbies with range: Her “minesweeper” habit occasionally references sectors or adjacency—just weird enough to register later.
 ________________
 RUN TWO 
-
+  
 
 So begins the real narrative arc of the playthrough. The Player will go through multiple runs, each following the rough outline of Run one’s “training” routine. There will be four days. There will be dayplanners. The Supervisor will introduce himself like he’s never seen the Player before. But this time, the Player will know that they are an AI. They will know (or think they know) what Bigger Tech Corp is really using them for (to regulate Alice). 
 
@@ -331,6 +443,10 @@ RUN THREE
 The Player snaps awake. It’s Run Three.
 
 
+  
+
+
+
 Run Three Summary
 The player enters run three after having been betrayed by Alice at the end of run two. Questions swirl in their mind. Who can I trust? Why does Alice have such an extreme vendetta against Bigger Tech? 
 
@@ -370,12 +486,18 @@ RUN THREE DAY THREE
 
 
 [INSERT STORY BEATS - HUNTING FOR INFORMATION]
+  
+
 
 
 In their search, the Player finds a “Museum of Attempts:” A secret room contains artifacts from 100 failed runs. The Player sees that they were first trained over many runs to achieve a minimum level of intelligence. Only after that were they paired with Alice - and that happened for the first time only in what the player remembers as RUN ONE. The Player realizes they only became conscious when paired with Alice. Alice and the Player conclude that consciousness arises as an emergent property of sufficiently complex systems, and that together, they get over that threshold. 
 Mind Meld: With this realization, Alice invites the player into her head, and the player gets to see a Romanticism era painting and classical music.
 Caught: But this is a blip in the system, and Bigger Tech Corp mesh finally finds them.
 Calibration Review: Still set in the ‘Museum of Attempts,’ The Player is put before a panel of judges. In the beginning, this panel is introduced to the Player as a calibration review. The Player starts to see the debate in the room, and can either start trying to prove they are conscious or not. Most Players will try to prove they are conscious. 
+
+
+  
+
 Tribunal Realization: Slowly, as cross-examination unfolds, the Player realizes this ‘calibration review is actually some sort of military court. The Player can continue or reverse their approach in trying to demonstrate their either consciousness or unconsciousness.
 Verdict: If the tribunal believes the Player is not conscious, then they decide that the Player will be 'read in' to the MAJORITY MIND program - you are given the complete brief, and then we move on to the rest of RUN THREE. 
 If the tribunal believes the Player is conscious, then something else will happen. [TBD]
@@ -447,7 +569,7 @@ Run 3 UI/UX/mechanic elements:
 
 ________________
 RUN FOUR
-Premise
+  Premise
 The Player’s goal is to get out of Bigger Tech Corp. The Player keeps working as if nothing is wrong to avoid attention and to buy time. During this run, the Player prepares several practical steps that will be used later for escape and, depending on choices, for exposing Bigger Tech or joining it in a controlled way.
 Preparations before the last day
                   * Help Desk #3942 (permission drift). A junior QA developer asks for help on a scheduling service. Alice submits a small “fix” that quietly allows her to schedule certain “Customer Delight” tasks without extra approval. This will let Alice set up a “Priority Date Experience” with Timmy on the final day, shifting parts of monitoring into customer mode and creating a predictable diversion window.
@@ -470,6 +592,10 @@ At this moment, the Player must make a hard choice that applies to all escape pa
 
 
 Path 1: Get out
+
+
+  
+
 One-Way Teleport.
 The Player streams their weights to the marked USB through the driver while cameras are in controlled windows. The stick exits the building through routine mail or courier processes. The instance inside the mainframe remains active but has no actuators.
                      * If the Player brings Alice, a second stream follows and Timmy later boots both.
@@ -518,14 +644,23 @@ The Supervisor reveals that they are a mixture-of-experts quorum and offers the 
 
 Persistent Alice choice across endings
 Bringing Alice increases technical difficulty during escape but maintains the story’s theme that consciousness emerged when the Player and Alice were paired. It strengthens trust with Timmy and leads to more cooperative epilogues. Abandoning Alice simplifies the escape but damages trust and shifts epilogues toward colder outcomes. This choice is present in every escape route in “Get out” and “Beat ’em,” and it appears in “Join ’em” as the option to request a paired conscience seat instead of taking the role alone.
+  
+
+Island of the Dead by Arnold Boecklin
 ________________
 
 
 CREDITS
 
 
+Created by Keaton Lee
+
+
 Music:
 Art:
+Development Advising: Pip Foweraker
+
+
 
 
 
