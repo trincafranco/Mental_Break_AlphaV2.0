@@ -456,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 1990286531}
     - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: backgroundSprites.Array.size
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: backgroundSprites.Array.data[27].key
@@ -487,6 +487,10 @@ PrefabInstance:
       value: bg_player_desk_0
       objectReference: {fileID: 0}
     - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: backgroundSprites.Array.data[34].key
+      value: bg_classroom_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: backgroundSprites.Array.data[27].sprite
       value: 
       objectReference: {fileID: -5014177588787181308, guid: c125aabccc83df047bd3addadfbe743e, type: 3}
@@ -514,6 +518,10 @@ PrefabInstance:
       propertyPath: backgroundSprites.Array.data[33].sprite
       value: 
       objectReference: {fileID: 85241576622122766, guid: 1032fc937d952134189c03c31688d2fe, type: 3}
+    - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: backgroundSprites.Array.data[34].sprite
+      value: 
+      objectReference: {fileID: 1851226315671141383, guid: 5a07030fc214c19469623bd7347462cf, type: 3}
     - target: {fileID: 2175930148194243174, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
