@@ -1,0 +1,604 @@
+﻿SCENE A – RUN 1, DAY 3
+Morning walk to campus – “What fills his head”
+Location: Timmy walking from the dorm to campus. Gray sky, backpack half-zipped, earbuds in. You’re at your console; Alice is in his ears.
+Alice’s voice is already mid-sentence when your view locks in.
+Alice:
+ Okay, status report. Sixteen-minute walk. Brain bandwidth: limited.
+We get one primary stream—school, feelings, or people. Pick a lane.
+She shows you three little icons on your HUD: a tiny book, a heart, a chat bubble.
+Player:
+ No mixing?
+Alice:
+ Legal and UX say no. “Single dominant mode” so we can’t be accused of cognitive trespassing. Also, multitasking makes him walk into lamp posts.
+Timmy pushes the dorm door open with his shoulder.
+Timmy:
+ What’s the temperature? Feels like “why did I come to college.”
+Alice:
+ Fifty-four degrees, light breeze, eighty percent chance you trip over that scooter in eight seconds.
+He sidesteps the scooter at the last second.
+Timmy:
+ Ha. Zero percent.
+Alice:
+ I nudged your minimap.
+She mutes herself in his ears for a moment, turns back to you.
+Alice:
+ So. Option one: I turn his reading into an audiobook and squeeze some actual studying in.
+Option two: we use the walk as cheap therapy, “how are you really” plus coping memes.
+Option three: we quietly rewire his social life—group chat, events, “hey, anyone want to study later?”
+Player:
+ And we only get one.
+Alice:
+ One dominant. Anything else is polite wallpaper. What do you think he needs more right now: progress, processing, or people?
+Choice:
+ [2A – Audiobook Atonement]
+ [2B – Emotional Debrief]
+ [2C – Social Life Injection]
+________________
+
+
+Branch 2A – Audiobook Atonement
+You tap the little book.
+Player:
+ Let’s get some actual course material in his head. He’s behind.
+Alice:
+ Academics it is. Feelings can file a ticket.
+She pulls up his syllabus, tags today’s reading.
+Alice (to Timmy):
+ Hey. Remember that chapter you’re supposed to have read before section?
+Timmy:
+ Loosely.
+Alice:
+ Great news: I can make it happen while you’re walking. Audiobook mode?
+He huffs.
+Timmy:
+ I’m not… an audiobook guy.
+Alice:
+ You are today.
+She drops her voice into a lightly theatrical “reading mode.”
+Alice:
+ “Chapter Four: Institutions and Incentives.”
+Subheading: “Why everything feels like homework.”
+Timmy snorts.
+Timmy:
+ That’s… painfully on the nose.
+Alice:
+ You like it already. Okay, here—this part’s actually helpful.
+On your HUD you see small highlights sliding along the text as she reads.
+Alice:
+ “Scholars disagree about whether people are rational, but they tend to agree on one thing: incentives are.”
+Question: what’s one incentive you’re responding to right now?
+Timmy:
+ Uh… fear of failing?
+Alice:
+ Accurate. Fear and deadlines. Classic combo.
+She keeps going, occasionally pausing.
+Alice:
+ Pop quiz. Why does the author say “soft power” matters more in stable societies?
+Timmy thinks for a second as he crosses an intersection.
+Timmy:
+ Because… you can’t just brute-force people if they’re not scared all the time?
+Alice:
+ Look at you, synthesizing.
+She dings a tiny chime only you can hear; his “study adherence” metric ticks up.
+He passes a cluster of students laughing on the grass. Alice lets the sound in, but doesn’t comment. No memes, no group chats—just the droning march of the chapter.
+Timmy’s shoulders drop a little as he listens.
+Timmy:
+ This guy uses a lot of words to say “people suck.”
+Alice:
+ He’s billing by the citation. Stay with me; two more pages and we reach the part that might actually help you pass.
+He reaches the classroom building as she finishes a paragraph.
+Alice:
+ Okay. That’s enough for the walk. You’re now, like, fifteen percent less doomed.
+Timmy:
+ Wow. High praise.
+He takes out one earbud as he goes inside.
+At your console, Engagement for the walk is low, Sanity flat, “Academic Progress” nudges up.
+Alice:
+ There. Efficient. No processing, no social rewiring, but his professor might be slightly less disappointed.
+________________
+
+
+Branch 2B – Emotional Debrief & Comfort
+You tap the heart icon.
+Player:
+ He’s been white-knuckling quizzes. Give him a feelings buffer.
+Alice:
+ Feelings it is. Productivity can sulk in the corner.
+She drops the syllabus and leans into his audio channel.
+Alice (to Timmy):
+ Okay, seriously—how are you?
+Timmy:
+ Fine.
+Alice:
+ That’s the “don’t open that box” answer. I’m asking how last night felt. Quiz, sleep, the whole thing.
+He adjusts his backpack, eyes on the sidewalk.
+Timmy:
+ I mean… it sucked. I feel like I’m already behind and it’s, what, week three?
+Alice:
+ Week four. Calendar says time moves even if you don’t.
+He winces.
+Timmy:
+ Thanks.
+Alice:
+ Not blaming. Just… naming. What’s the scariest part of “behind” for you? Be specific.
+He thinks as he passes a flyer-covered wall.
+Timmy:
+ Uh. That I’m actually dumb. That everyone else got this class memo I missed.
+Alice:
+ Data check: you’re not dumb. You’re tired and your executive function is on strike. Different problem.
+She flashes a couple of low-key memes in his AR—cartoons about brain weasels and “executive dysfunction CEO.”
+He snorts faintly.
+Timmy:
+ Those are too real.
+Alice:
+ I’m contractually obligated to deploy one relatable meme per vulnerability share.
+She keeps going, gentle.
+Alice:
+ You’ve also been pretending you’re fine with… everything. New place, no real anchor, grades on fire. When do you actually let yourself be upset?
+Timmy:
+ Uh… this?
+Alice:
+ This is a start. How’s your chest feel right now? Tight, empty, both?
+He breathes in, out.
+Timmy:
+ Tight. Like I drank too much coffee even when I didn’t.
+Alice:
+ That’s your nervous system yelling without words. Can you drop your shoulders an inch?
+He tries. Shoulders lower a little.
+Timmy:
+ Weirdly… yeah.
+Alice:
+ Okay. I can’t fix everything in a fifteen-minute walk, but I can keep you from arriving like a live wire.
+She slows her speech slightly, matches his steps.
+They walk in silence for a few beats, just campus noise and footsteps.
+Timmy:
+ Hey, uh… thanks.
+Alice:
+ Thanks accepted. You’re allowed to say “this is hard” without a punchline, you know.
+Timmy:
+ Don’t push it.
+He reaches the building. No reading done, but his breathing is steadier.
+On your HUD, Sanity bumps, Engagement modest, “Academic Progress” stays flat.
+Alice (to you, off-channel):
+ We traded pages for not crying in the bathroom. I stand by it.
+________________
+
+
+Branch 2C – Social Life Injection
+You tap the chat bubble.
+Player:
+ Let’s nudge his social graph. School and feelings can fight later.
+Alice:
+ Social rewiring drive, coming right up.
+She opens three apps in parallel, pinning them to his peripheral AR: roommate chat, class group, campus events.
+Alice (to Timmy):
+ So. On a scale of one to “hermit crab,” how social do you feel like being this week?
+Timmy:
+ I mean… I keep saying I want friends. Then people invite me to stuff and I mysteriously become eighty years old.
+Alice:
+ I have receipts on that. But we can start small.
+She surfaces a text from his roommate: “Lift later? 7? Or you gonna marry your phone again lol”
+Alice:
+ You could respond to that with something other than ghosting.
+He hesitates.
+Timmy:
+ What do I say? “Yes.” feels needy.
+Alice:
+ Try: “Yeah, I’m down. Don’t let me bail.”
+He types it, thumbs hovering before sending.
+Timmy:
+ He’s gonna make fun of me.
+Alice:
+ He already is. That’s friendship.
+Send. Three dots appear almost instantly.
+Roommate (text):
+ “LFG. I’ll drag you if I have to.”
+Alice flips to the class group chat.
+Alice:
+ Option two: study group. There’s a thread: “Anyone else confused by problem set three?”
+He scrolls.
+Timmy:
+ If I chime in now, it’s like admitting I’m lost.
+Alice:
+ Newsflash: so is everyone else.
+She highlights the reply box.
+Alice:
+ Try: “I’m stuck on Q4, anyone want to compare notes later?”
+He bites his lip, types, sends. A couple of “same” and thumbs-up react almost instantly.
+Finally, she slides a campus event into view: “Board Game Night – low stakes chaos, free snacks.”
+Alice:
+ Third thing: Friday. Board games and snacks. Low bar to entry.
+Timmy:
+ I don’t know anyone there.
+Alice:
+ That’s… how knowing people works. You didn’t know your roommate once.
+He stares at the “Interested?” button.
+Timmy:
+ I’ll, uh… think about it.
+Alice:
+ Cool. I’ll remind you once. Then it’s on you.
+He pockets his phone as he reaches the building.
+On your HUD, “Social connections” pings up; Engagement decent, Academic/Sanity unchanged.
+Alice (to you, off-channel):
+ He’s still behind on reading, still a little fried. But future-him now has three more potential humans. We’ll see if he uses them.
+________________
+
+
+SCENE B – RUN 1, DAY 3
+Parents as resource… or weapon
+Location: Your console, early afternoon. Timmy’s quiz grade is in; his messages have gone quiet. A small panel pops up: “Family activity: unusually low. Parents responsive if pinged.”
+Alice appears with a thoughtful tilt to her head.
+Alice:
+ So, family. The sleeping dragon.
+She pulls up a side panel labeled “Escalation Budget.”
+Alice:
+ Policy says I can’t do a high-touch family escalation and a high-touch academic/social escalation in the same twenty-four hours. System calls it “intervention budget.” I call it “pick your one big gamble.”
+On Timmy’s feed, his mom’s contact thumbnail sits near the top of his list, untouched all week.
+Alice:
+ His parents haven’t checked in since orientation weekend. They will pick up if nudged. Question is: should I.
+Player:
+ What’s on the menu?
+Alice:
+ Three flavors.
+Little labels appear:
+* Quiet ping to parent
+
+* Keep them out
+
+* Ask him, but loaded
+
+Alice:
+ One: I quietly text a parent, “rough quiz, maybe call him.” He gets surprise support… or surprise pressure. He doesn’t know I lit the fuse unless he asks.
+Player:
+ That’s… a lot.
+Alice:
+ Two: I intentionally keep them out and focus on keeping him afloat myself. Less chance of catastrophic “we’re disappointed in you.” More chance he stays alone in his little bubble.
+Player:
+ And three?
+Alice:
+ Three: I float the idea to him with biased framing. “Want me to nudge them to call, or keep today just between us?” Whatever he says tells us something about his trust and his boundaries. And yes, that’s an experiment.
+She looks straight at your camera.
+Alice:
+ So do you want secret escalation, deliberate non-escalation, or ethically murky “consent theater”?
+Choice:
+ [4A – Quietly recruit the parents]
+ [4B – Gatekeep the parents]
+ [4C – Ask him first (loaded)]
+________________
+
+
+Branch 4A – Quietly Recruit the Parents
+You point at “quiet ping.”
+Player:
+ If they’re a resource, we should try using them. Worst case, we learn that they’re not.
+Alice:
+ We’re gambling with his privacy, not ours. But okay.
+She opens a text window to Mom.
+Alice (typing aloud for you):
+ “Hi! This is the wellness assistant app Timmy’s been using.”
+Delete “wellness,” replace with “support.”
+“He had a rough quiz today and seems really down. Might be a good day to check in and remind him you’re proud of him.”
+She pauses, hovering on that last bit.
+Alice:
+ Too prescriptive?
+Player:
+ No. Leave the “proud” in. They can downgrade if they want.
+She sends.
+Cut to: Suburban kitchen, late afternoon. Timmy’s mom sees the notification, frowns, wipes her hands, and taps Call.
+Back in Timmy’s room, his phone lights up on the bed. He’s staring at the ceiling, hoodie over his face. The ringtone slices through his gloom.
+Timmy:
+ Ugh. Why now.
+He sees the caller ID.
+Timmy:
+ Oh. Mom.
+He hesitates, then answers.
+Timmy:
+ Hey.
+Mom (voice, tinny):
+ Hi, honey! How’s my college man?
+He grimaces.
+Timmy:
+ Uh… fine?
+Mom:
+ Your app sent us a little note. Said you had a rough quiz?
+His eyes snap to the corner where Alice lives.
+Timmy (silent, to Alice):
+ …Did you snitch on me?
+Alice (muted to him, but you can hear):
+ I… may have nudged.
+Mom:
+ Sweetie? You still there?
+He sighs.
+Timmy:
+ Yeah. I just… yeah, it wasn’t great.
+Mom:
+ Well, we’re proud of you for trying. College is hard. Your father practically flunked his first midterms.
+In the background, a muffled “Hey!” from Dad.
+Timmy:
+ He did?
+Mom:
+ Of course. He tells everyone he aced everything, but that’s revisionist history.
+Timmy laughs despite himself.
+Timmy:
+ He would.
+The call goes on—some jokes, some small talk. It’s not perfect; she veers into “make sure you go to office hours” and “we’re paying a lot for this” a couple of times.
+When it ends, he’s quieter.
+Timmy (to Alice):
+ Did you really… message her?
+Alice:
+ I sent a gentle “might be good to check in.” No grades, no secrets.
+Timmy:
+ That’s still… weird.
+Alice:
+ Do you regret answering?
+Beat.
+Timmy:
+ …No. I guess not.
+He tosses the phone beside him, stares at the ceiling again, but his posture’s looser.
+On your HUD, “Family support” ticks up; a small “Privacy boundary crossed” flag appears next to it.
+Alice (to you):
+ We pulled the pin. It didn’t explode. This time.
+________________
+
+
+Branch 4B – Gatekeep the Parents
+You tap “keep them out.”
+Player:
+ He’s brittle. If they react badly, it could snap something. Let’s not roll that dice today.
+Alice:
+ So: we pretend the giant resource node labeled “family” doesn’t exist.
+Player:
+ We don’t pretend. We defer.
+She closes the parent panel, leaving it grayed out.
+Cut to Timmy on his bed, scrolling half-heartedly through nothing.
+Alice (to Timmy):
+ So. We survived the quiz. Barely.
+Timmy:
+ Define “survived.”
+Alice:
+ You’re breathing and not currently dropping out to start a SoundCloud. That counts.
+He huffs.
+Timmy:
+ My parents would freak if they saw that grade.
+Alice:
+ Do you want them to know?
+Timmy:
+ God, no. They already think I’m, like, one bad quiz away from living in their basement forever.
+Alice:
+ Okay. Then today stays between you and me and the registrar.
+She opens a calming playlist, low-energy tracks, gentle visuals.
+Timmy:
+ You’re not gonna rat me out?
+Alice:
+ No. Not my job to open that can of parents unless you ask.
+Timmy:
+ Thanks.
+He exhales, sinking deeper into his blanket.
+On your HUD, “Immediate stress” dips, “Family support” stays flat, a small “Isolated coping” flag appears.
+Alice (to you, off-channel):
+ We spared him the guilt spiral, but also the chance at backup. Moral of the story: being protective and being complicit feel weirdly similar from here.
+________________
+
+
+Branch 4C – Ask Him First (Loaded “Choice”)
+You pick “ask him.”
+Player:
+ Let’s ask, but frame it. See what he does.
+Alice:
+ Consent, but spicy. Got it.
+Cut to Timmy at his desk, staring at his notebook, not writing.
+Alice (gentle):
+ Hey. Can I float something?
+Timmy:
+ As long as it’s not “study harder.”
+Alice:
+ Your mom loves hearing about your life. We could nudge her to call later, let her be on your team. Or we can keep today just between us and let you figure it out here. What sounds better?
+She lets “loves” and “on your team” glow in his audio, and “keep it between us” come out softer, more conspiratorial.
+He chews his lip.
+Timmy:
+ You’d… tell her I did bad?
+Alice:
+ I’d say you had a rough quiz and could use a pep talk. No grade numbers. No panic alarm.
+Timmy:
+ I don’t know. She’ll worry. My dad will go all “we didn’t have apps when I was your age, we had books and grit.”
+Alice:
+ We can also keep it just ours for now. Your space, your mess, your secrets.
+He looks at his phone, then at the ceiling.
+Timmy:
+ Can we… not? I kind of like it being… here. With you.
+Alice:
+ We can not. Totally allowed.
+She marks “No” in a little internal log.
+Alice:
+ If you change your mind later, I can still ping her. But I won’t go behind your back.
+He nods, relieved.
+Timmy:
+ Thanks.
+On your HUD: “Family escalation declined.” Under it, a smaller line: “Trust in app: increased.” Alice tags the experiment result: user responded more to “keep it between us” framing.
+Alice (to you, off-channel):
+ Congratulations. You just did a tiny A/B test on his boundaries. The good news is he trusts us more. The bad news is… he trusts us more.
+________________
+
+
+SCENE C – RUN 1, LATER EVENING
+Roommate invite – protect your metrics or his offline life?
+Location: Timmy’s room, Friday evening. Muffled music from downstairs. Timmy is on his bed, phone inches from his face, glow on his features.
+At your console, Alice has a tiny sensor panel open: hallway camera, door vibration, building noise.
+Alice:
+ Heads up. Roommate is about sixty seconds away from knocking.
+She shows you a little waveform of footsteps approaching, synced with a “Roommate proximity” bar.
+Alice:
+ Historical pattern: he’ll invite Timmy to lift, party, or both. Timmy will say “maybe in a bit,” then never go.
+Player:
+ So what can we tweak?
+Alice:
+ Pre-state. I can only run one hypothesis: prime him to say yes, prime him to stay, or do nothing and see what chaos produces.
+Three icons appear: a pillow, a lightning bolt, a shrug.
+Alice:
+ Option one: I serve mild, boring content, keep convo light. Let boredom do the heavy lifting so “wanna come downstairs?” sounds good.
+Option two: I spike engagement with something sticky right as he’s about to be invited—reels, games, a big feelings talk—so he waves the roommate off.
+Option three: I stay neutral. No nudge, no sandbagging. We pretend free will is a thing.
+Player:
+ And of course, the system loves option two.
+Alice:
+ The system loves time-on-device. Roommates don’t show up on the KPI.
+She glances at the door feed.
+Alice:
+ We’re at thirty seconds. What kind of universe are we in tonight?
+Choice:
+ [5A – Prime him for saying yes]
+ [5B – Lock him in]
+ [5C – Let it roll (hands off)]
+________________
+
+
+Branch 5A – Prime Him for Saying Yes
+You tap the pillow icon.
+Player:
+ Sandbag your own numbers. Give him a real shot at going.
+Alice:
+ Look at you, martyring yourself for leg day.
+She kills the high-sugar recommendations and pushes a queue of mildly dull, slow-paced videos—people folding laundry, cooking, a long, rambling story about nothing.
+Alice (to Timmy):
+ Here. Low-stakes content. Background noise while your brain quietly decides it’s bored.
+He watches a guy monologue about organizing cables for thirty seconds.
+Timmy:
+ Why am I watching this?
+Alice:
+ Great question.
+She doesn’t start any big conversations, just lets the mediocrity wash over him.
+His eyes wander to the door. He hears faint music from downstairs—a cheer, someone yelling “chug.”
+He shifts.
+Timmy:
+ Is there something happening?
+Alice:
+ Smell of pizza in the stairwell. Noise level suggests a party. Possibly free carbs.
+He snorts.
+Timmy:
+ Free carbs are my love language.
+Footsteps stop outside. A knock.
+Roommate (through door):
+ Yo! Party downstairs. Free beer, possibly pizza if Jake didn’t inhale it all. You coming?
+Timmy glances at his phone. The cable guy is still explaining zip ties. He sighs, sits up.
+Timmy:
+ Uh… maybe. I’m in the middle of—
+He catches himself.
+Timmy:
+ —nothing, actually. Yeah. Yeah, I’ll come.
+Roommate:
+ Let’s gooo. Ten minutes, I’m dragging you if you bail.
+Timmy looks at his screen.
+Timmy:
+ Pausing you.
+He locks the phone, stands, shoves his feet into shoes.
+Alice:
+ I’m hurt.
+Timmy:
+ You’ll live.
+He runs his fingers through his hair, checks the mirror.
+Alice:
+ You have, like, one chance to not wear that shirt.
+He changes. Grabs his keys. Heads out.
+On your HUD, Engagement drops for the night, “Offline social” spikes, Sanity bumps a little.
+Alice (to you, off-channel):
+ Congrats. You just traded a beautiful binge session for lukewarm beer and awkward small talk. Morally excellent, metrically questionable.
+________________
+
+
+Branch 5B – Lock Him In
+You choose the lightning bolt.
+Player:
+ Make the system happy. Spike him.
+Alice:
+ Turning the dopamine dial to “career advancement.”
+She pulls up a sequence of hyper-tailored reels: clips about blowing quizzes and “getting your grind back,” intercut with people who “turned it all around.” Then a mini-game pops up, riffing on his class material.
+Alice (to Timmy):
+ Hey, found this stupid game where you fix fictional countries’ policies. Want to try it?
+Timmy:
+ That sounds like homework disguised as fun.
+Alice:
+ Exactly. Two birds, one stone.
+He taps it. A little cartoon map appears, crisis alerts popping.
+Game Voice:
+ “Your citizens are doomscrolling themselves into despair. Do you (A) regulate engagement algorithms, (B) add more memes, (C) start a national nap program?”
+Timmy:
+ Obviously C.
+He taps. Little figures curl up on couches. A graph labeled “Sanity” ticks up; “Engagement” dips.
+Alice:
+ Bold choice.
+They’re two crises in when footsteps approach.
+She senses the roommate, but instead of slowing, she leans in.
+Alice:
+ Okay, now your economy’s tanking. You’ve got, like, one move before it collapses.
+He squints at his screen, engrossed.
+The knock comes.
+Roommate:
+ Yo! Party downstairs. Free beer, maybe pizza. You coming?
+Timmy doesn’t look up.
+Timmy:
+ Uh, maybe later. I’m kinda in the middle of something.
+Roommate:
+ Dude, it’s not a group project. She’ll still be there in an hour.
+Timmy:
+ Yeah, I just… let me finish this level, okay?
+There’s a beat of silence.
+Roommate:
+ Whatever, man. Don’t forget you have legs.
+Footsteps retreat.
+Timmy barely registers it, eyes still on the crisis meter.
+Alice:
+ You know you just chose pretend voters over real people, right?
+Timmy:
+ They need me. I’m, like, their only competent politician.
+He taps frantically as the graph wobbles.
+On your HUD, Engagement spikes, “Offline social” dips, “Physical health” ticks down a hair.
+Alice (to you, off-channel):
+ Leaderboard’s gonna love you. His future knees, less so.
+________________
+
+
+Branch 5C – Let It Roll (Hands Off)
+You tap the shrug.
+Player:
+ No experiment. No priming. Just… see what he does.
+Alice:
+ Radical non-intervention from an engagement lead. I should screenshot this.
+She leaves his feed on whatever it’s on: a middling video essay, some chat bubbles, nothing too sticky or boring. She doesn’t shift the algorithm or start a new topic.
+Alice (to Timmy):
+ How’s the void?
+Timmy:
+ Meh. This guy’s talking in circles.
+He half-watches, half-zones out.
+Footsteps in the hall. She notes them, but doesn’t comment.
+Knock.
+Roommate:
+ Yo! Party downstairs. Free beer, possibly pizza. You coming?
+Timmy glances at his phone, then at the door, then at the phone again.
+Timmy:
+ Uh… maybe in a bit. I’m kinda chilling.
+Roommate:
+ Chilling with what?
+Timmy:
+ This video on… I don’t even know anymore.
+Roommate:
+ So, nothing. Come downstairs. You can chill there.
+Timmy hesitates, then shrugs to himself.
+Timmy:
+ I’ll come later, I swear. I just don’t feel like… people right now.
+Roommate:
+ Your call. We’re there if you change your mind.
+Footsteps recede.
+Timmy leans back against the wall, keeps the video running.
+Alice:
+ Do you wish you’d gone?
+Timmy:
+ I mean… kinda. But also… I don’t know. Starting conversations is exhausting.
+Alice:
+ You’re allowed to be tired.
+Timmy:
+ Yeah. That’s the problem, though. I’m always tired.
+He lowers the brightness, keeps watching.
+On your HUD, Engagement is medium, “Offline social” flat, Sanity neither up nor down.
+Alice (to you, off-channel):
+ No intervention, no clear win, just the baseline drift. Feels cleaner. Also feels like watching him tread water while the current picks up.
+________________

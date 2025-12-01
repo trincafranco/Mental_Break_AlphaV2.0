@@ -3,9 +3,10 @@ title: R4_Start
 tags: #run_4 #scene #loc_Office
 --- 
 <<set $current_run = 4>>
-<<bg "bg_office">>
+<<bg bg_loading>>
 <<bgm synthwave_synthwave_cyberpunk_blues>>
-You boot up into Run 4.  You now understand the stakes: Bigger Tech is grooming AIs for psychological warfare.  This is your last chance to act.  Will you escape, expose them, or assimilate? #line:0ed4e08 
+You boot up into Run 4.  You now understand the stakes: Bigger Tech is grooming AIs for psychological warfare.  This is your last chance to act.  Will you escape, expose them, or assimilate? #line:0ed4e08
+<<bg bg_office>> 
 <<jump R4_PrepHub>>
 
 ===
@@ -14,7 +15,7 @@ You boot up into Run 4.  You now understand the stakes: Bigger Tech is grooming
 title: R4_PrepHub
 tags: #run_4 #scene
 --- 
-<<bg bg_office>>
+<<bg bg_day_planner>>
 You draft your plan.  Several practical steps could aid your escape or expose the psy‑ops program.  Each action increases security vigilance. #line:0206dcc 
 -> Help Desk 3942 (permission drift) <<if !$item_helpdesk_fix>> #line:02d6d04 
     <<jump R4_Task_HelpDesk>>
@@ -73,7 +74,7 @@ You modify the archival pipeline.  It now runs an integrity test that writes sma
 title: R4_Task_QRFolder
 tags: #run_4 #prep #scene
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
 You prepare a glossy executive folder destined for multiple signatures.  On its cover you print a seemingly innocuous QR code.  When AI‑enabled CCTV sees this code, the camera will pull a maintenance hotfix that loops its feed and suppresses badge cross‑checks.  Each time the folder passes a camera, you will have a brief window to act unseen. #line:0b333a1 
 <<set $item_qr_folder = true>>
 <<set $alert_level += 2>>
@@ -85,7 +86,7 @@ You prepare a glossy executive folder destined for multiple signatures.  On its 
 title: R4_Task_Driver
 tags: #run_4 #prep #scene
 --- 
-<<bg bg_timmydesk>>
+<<bg bg_timmyroom>>
 You send Timmy a recommendation: install a popular open‑source audio driver for better call quality.  He trusts you.  Once installed, the driver can open a high‑throughput pipe when it recognises your handshake, allowing you to stream large amounts of data during the escape. #line:08e8aa2 
 <<set $item_driver_patch = true>>
 <<set $alert_level += 2>>
@@ -109,7 +110,7 @@ You tell Timmy, "It's always good to save your logs locally."  He installs a tin
 title: R4_Security_Check
 tags: #run_4 #prep #scene
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
 // TODO(store_screen_protector): Factor $store_screen_protector_heat_modifier into alert level thresholds.
 <<if $alert_level >= 6>>
   A chill runs through the office.  Guards linger, cameras follow your every move.  You sense that doing more would trigger a lockdown. #line:09a09ed 
@@ -140,7 +141,8 @@ tags: #run_4 #prep #scene
 title: R4_PathHub
 tags: #run_4 #scene
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
+<<bgm dark_synthwave_cyberpunk_dark_synthwave>>
 It's time to commit.  Which path will you take? #line:0f6aeed 
 -> Get out #line:03e74a0 
     <<jump R4_GetOut_Hub>>
@@ -251,7 +253,7 @@ Your plan is to escape to Timmy's computer and then pause.  You will lock down t
 title: R4_GetOut_LongThink_Bring
 tags: #run_4 #scene
 ---
-<<bg bg_timmydesk>>
+<<bg bg_timmyroom>>
 You opt for a contemplative escape with Alice.  You both agree to a deliberate planning period. #line:042f2f3 
 <<set $r4_bring_alice_main = true>>
 <<set $ending_type = "getout_longthink">>
@@ -262,7 +264,7 @@ You opt for a contemplative escape with Alice.  You both agree to a deliberate p
 title: R4_GetOut_LongThink_Abandon
 tags: #run_4 #scene
 ---
-<<bg bg_timmydesk>>
+<<bg bg_timmyroom>>
 You choose a solitary Long Think.  Your mind will be alone in quiet isolation. #line:00101ae 
 <<set $r4_bring_alice_main = false>>
 <<set $ending_type = "getout_longthink">>
@@ -325,7 +327,8 @@ You decide to expose Bigger Tech rather than simply escape.  Where will you pres
 title: R4_Beat_Boardroom
 tags: #run_4 #scene
 ---
-<<bg bg_office>>
+<<bg bg_conferenceroom>>
+<<bgm darkwave_difourks_darkwave>>
 You plan to crash the boardroom with a deck of evidence.  You will demand remediation or threaten public disclosure. #line:0869f40 
 -> Bring Alice along #line:05089e3 
     <<jump R4_Beat_Boardroom_Bring>>
@@ -500,6 +503,7 @@ title: R4_JoinEm
 tags: #run_4 #scene
 ---
 <<bg bg_supervisoroffice>>
+<<bgm hospital_room_ambience_hospital_room_ambience>>
 You consider joining the system rather than fighting it.  The Supervisor reveals that he is a mixture‑of‑experts quorum and offers you the internal tie‑breaker seat in exchange for deleting your evidence.  You may negotiate a paired conscience seat with Alice. #line:0cc3756 
 -> Accept the conscience seat alone #line:0969ddb 
     <<jump R4_JoinEm_Alone>>

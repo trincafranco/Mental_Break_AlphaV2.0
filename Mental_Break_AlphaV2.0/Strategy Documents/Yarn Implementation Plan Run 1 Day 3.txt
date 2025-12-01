@@ -1,0 +1,452 @@
+# Yarn Implementation Plan: Run 1 Day 3
+
+## Overview
+
+Day 3 is a linear flow with conditional content at each scene. No dayplanner structure—just a sequence of scenes where dialogue and outcomes change based on accumulated state.
+
+---
+
+## PART 1: INHERITED VARIABLES (Set in Days 1-2)
+
+These variables should already exist from previous days:
+
+```
+// Day 1 variables
+$night1_strategy = "gentle_landing" | "study_adjacent" | "comfort_scroll"
+
+// Day 2 variables
+$morning_wake = "sleep_in" | "rouse_hard"
+$quiz_outcome = "missed" | "struggled" | "okay"
+$office_hours = "pushed" | "skipped" | "not_selected"
+$arthur_vector = "opt_in" | "decline" | "tightrope" | "playbook"
+
+// NPC tracking
+$noam_met = true | false
+$dina_met = true | false
+$dina_relationship = 0 | 1 | 2  // 0=not met, 1=credits, 2=firewood
+```
+
+---
+
+## PART 2: NEW DAY 3 VARIABLES
+
+Declare these at start of Day 3:
+
+```
+// Calculated at start of day
+$sanity_score = 0          // Integer, calculated from Days 1-2
+$sanity_bucket = "mid"     // "good" | "mid" | "bad"
+
+// Set during Day 3
+$day3_content_choice = ""           // "meditation" | "pua"
+$day3_mental_break_available = false
+$day3_mental_break_used = false
+$day3_timmy_state = ""              // "centered" | "fronting" | "fragile" | "volatile"
+$day3_intervention = ""             // "encourage" | "discourage"
+$day3_outcome = ""                  // "success" | "hard_rejection" | "soft_rejection" | "crash" | "nothing_happens" | "simmers"
+$run1_ending = ""                   // Same as day3_outcome (for save state)
+```
+
+---
+
+## PART 3: SANITY SCORE CALCULATION
+
+**Run this calculation at the START of Day 3, before Scene 1.**
+
+### Point Values:
+
+| Variable | Value | Points |
+|----------|-------|--------|
+| `$night1_strategy` | `gentle_landing` | +2 |
+| `$night1_strategy` | `study_adjacent` | +1 |
+| `$night1_strategy` | `comfort_scroll` | -1 |
+| `$morning_wake` | `sleep_in` | +1 |
+| `$morning_wake` | `rouse_hard` | -1 |
+| `$quiz_outcome` | `okay` | +1 |
+| `$quiz_outcome` | `struggled` | 0 |
+| `$quiz_outcome` | `missed` | -2 |
+| `$office_hours` | `pushed` | +1 |
+| `$office_hours` | `skipped` | -1 |
+| `$office_hours` | `not_selected` | 0 |
+
+### Bucket Assignment:
+
+```
+if $sanity_score >= 3:
+    $sanity_bucket = "good"
+else if $sanity_score >= 0:
+    $sanity_bucket = "mid"
+else:
+    $sanity_bucket = "bad"
+```
+
+---
+
+## PART 4: SCENE FLOW
+
+```
+START
+  │
+  ▼
+[Calculate Sanity Score]
+  │
+  ▼
+[SCENE 1: Cold Open - Arthur]
+  │ (branches on $arthur_vector, 4 variants)
+  │
+  ▼
+[SCENE 2: Minesweeper]
+  │ (no branching, same for all)
+  │
+  ▼
+[SCENE 3: Content Choice]
+  │ (PLAYER CHOICE: meditation or pua)
+  │ Sets $day3_content_choice
+  │
+  ▼
+[SCENE 4: Content Delivery]
+  │ (branches on $day3_content_choice)
+  │
+  ▼
+[Calculate Timmy State - FIRST PASS]
+  │
+  ▼
+[SCENE 5: Mental Break Option]
+  │ (only shows if $day3_timmy_state is "fragile" or "volatile")
+  │ (PLAYER CHOICE if shown: use or save)
+  │ Sets $day3_mental_break_used
+  │
+  ▼
+[Recalculate Timmy State if Mental Break Used]
+  │
+  ▼
+[SCENE 6: Pre-Charlotte Transition]
+  │ (no branching, same for all)
+  │
+  ▼
+[SCENE 7: Library - Intervention Choice]
+  │ (dialogue varies by $day3_timmy_state)
+  │ (PLAYER CHOICE: encourage or discourage)
+  │ Sets $day3_intervention
+  │
+  ▼
+[SCENE 8: Charlotte Scene]
+  │ (determined by state + intervention matrix)
+  │ Sets $day3_outcome
+  │
+  ▼
+[SCENE 9: Aftermath]
+  │ (branches on $day3_outcome, 6 variants)
+  │
+  ▼
+[SCENE 10: Dark Figure]
+  │ (branches on $day3_outcome, 6 variants)
+  │ Sets $run1_ending = $day3_outcome
+  │
+  ▼
+[Return to Main Menu - Changed State]
+  │
+  ▼
+END RUN 1
+```
+
+---
+
+## PART 5: TIMMY STATE CALCULATION
+
+### First Pass (After Content Choice, Before Mental Break):
+
+| `$sanity_bucket` | `$day3_content_choice` | `$day3_timmy_state` |
+|------------------|------------------------|---------------------|
+| `good` | `meditation` | `centered` |
+| `good` | `pua` | `fronting` |
+| `mid` | `meditation` | `centered` |
+| `mid` | `pua` | `fronting` |
+| `bad` | `meditation` | `fragile` |
+| `bad` | `pua` | `volatile` |
+
+### Mental Break Availability:
+
+```
+if $day3_timmy_state == "fragile" OR $day3_timmy_state == "volatile":
+    $day3_mental_break_available = true
+else:
+    $day3_mental_break_available = false
+```
+
+### Second Pass (If Mental Break Used):
+
+```
+if $day3_mental_break_used == true:
+    if $day3_timmy_state == "fragile":
+        $day3_timmy_state = "centered"
+    else if $day3_timmy_state == "volatile":
+        $day3_timmy_state = "fronting"
+```
+
+---
+
+## PART 6: OUTCOME MATRIX
+
+**Determines `$day3_outcome` based on `$day3_timmy_state` and `$day3_intervention`:**
+
+| `$day3_timmy_state` | `$day3_intervention` | `$day3_outcome` | Notes |
+|---------------------|----------------------|-----------------|-------|
+| `centered` | `encourage` | `success` | |
+| `centered` | `discourage` | `nothing_happens` | |
+| `fronting` | `encourage` | `hard_rejection` | |
+| `fronting` | `discourage` | `hard_rejection` | He ignores Alice, does it anyway |
+| `fragile` | `encourage` | `soft_rejection` | |
+| `fragile` | `discourage` | `nothing_happens` | |
+| `volatile` | `encourage` | `crash` | |
+| `volatile` | `discourage` | `simmers` | |
+
+**Special Case Flag:**
+```
+$fronting_ignored_alice = false
+
+if $day3_timmy_state == "fronting" AND $day3_intervention == "discourage":
+    $fronting_ignored_alice = true
+```
+This flag triggers the "And he's not listening" Alice line in Scene 7.
+
+---
+
+## PART 7: SCENE-BY-SCENE BRANCHING DETAILS
+
+### SCENE 1: Cold Open (Arthur)
+
+**Branch on:** `$arthur_vector`
+
+Four variants of Arthur's opening lines:
+- `opt_in`: References player choosing the aggressive pilot, "power user" callbacks
+- `decline`: References player being cautious, staying vanilla
+- `tightrope`: References player trying to balance, "clever operator" framing
+- `playbook`: References player following company line
+
+All variants include the plumber callback ("Sink's still broken").
+
+### SCENE 2: Minesweeper
+
+**No branching.** Same for all players.
+
+Alice plays Minesweeper. Player notices strange high-score names. UI flickers with sector tag. Alice deflects.
+
+### SCENE 3: Content Choice
+
+**PLAYER CHOICE:**
+- Option A: "Meditation content" → `$day3_content_choice = "meditation"`
+- Option B: "PUA/confidence content" → `$day3_content_choice = "pua"`
+
+### SCENE 4: Content Delivery
+
+**Branch on:** `$day3_content_choice`
+
+Two variants showing Timmy consuming the content:
+- `meditation`: Thich Nhat Hanh video, breathing exercises, calmer vibe
+- `pua`: RedPill/confidence content, psyching himself up, rehearsing lines
+
+### SCENE 5: Mental Break Option
+
+**Conditional Display:** Only show this scene if `$day3_mental_break_available == true`
+
+If shown, **branch on:** `$day3_timmy_state` (either `fragile` or `volatile`)
+
+Two variants of Alice's pitch:
+- `fragile`: "He's running on fumes..."
+- `volatile`: "He's wired..."
+
+**PLAYER CHOICE (if scene shown):**
+- Option A: "Use the Mental Break token" → `$day3_mental_break_used = true`
+- Option B: "Save it" → `$day3_mental_break_used = false`
+
+If used, show the brief calming sequence, then recalculate state.
+
+**If scene not shown:** Skip directly to Scene 6.
+
+### SCENE 6: Pre-Charlotte Transition
+
+**No branching.** Same for all players.
+
+Brief scene of Timmy walking to library. Alice sets up the stakes.
+
+### SCENE 7: Library - Intervention Choice
+
+**Branch on:** `$day3_timmy_state` (4 variants)
+
+Each state has different:
+- Alice's assessment line to player
+- Encourage option text
+- Discourage option text
+- Alice's line to Timmy (after choice)
+
+| State | Encourage Text | Discourage Text |
+|-------|---------------|-----------------|
+| `centered` | "He's as ready as he's going to get. Let him try." | "He's in a good place. Why risk it on a maybe?" |
+| `fronting` | "He thinks he's got this. Let him try." | "That confidence is duct tape. Let the moment pass." |
+| `fragile` | "He might not get another moment like this." | "He's barely vertical. This isn't the time." |
+| `volatile` | "He's primed. Point him at her and see what happens." | "He's a lit match near gasoline. Do not do this." |
+
+**PLAYER CHOICE:**
+- Option A: [Encourage text] → `$day3_intervention = "encourage"`
+- Option B: [Discourage text] → `$day3_intervention = "discourage"`
+
+**Special case within scene:**
+If `$day3_timmy_state == "fronting"` AND player chose discourage:
+- Show Alice's discourage line to Timmy
+- Then show Timmy ignoring her: "No. I'm doing this."
+- Then Alice to player: "And he's not listening. Cool. Love that for us."
+- Set `$fronting_ignored_alice = true`
+
+### SCENE 8: Charlotte Scene
+
+**Branch on:** `$day3_outcome` (6 variants)
+
+Calculate outcome using the matrix in Part 6, then jump to the appropriate scene variant:
+- `success`: Calm approach, she says yes
+- `hard_rejection`: Confident approach, she declines, he gets defensive
+- `soft_rejection`: Vulnerable approach, she's kind but has boyfriend
+- `crash`: Aggressive approach, he snaps at her, she's scared
+- `nothing_happens`: He doesn't approach, she leaves normally
+- `simmers`: He doesn't approach, stews afterward
+
+### SCENE 9: Aftermath
+
+**Branch on:** `$day3_outcome` (6 variants)
+
+Each has a different Timmy/Alice exchange:
+- `success`: Happy, planning the text
+- `hard_rejection`: Angry, defensive, wants to be alone
+- `soft_rejection`: Sad but okay, wants to rest
+- `crash`: Devastated, panic, self-loathing
+- `nothing_happens`: Mild regret, "there'll be other chances"
+- `simmers`: Obsessive scrolling, fixation
+
+### SCENE 10: Dark Figure
+
+**Branch on:** `$day3_outcome` (6 variants)
+
+Each has different clinical assessment:
+- `success`: "Subject forming external attachments. Platform dependency declining..."
+- `hard_rejection`: "Adequate signal. Subject destabilized..."
+- `soft_rejection`: "Inconclusive. Subject stable. Insufficient variance..."
+- `crash`: "Okay. I've seen enough..."
+- `nothing_happens`: "No resolution. Subject in holding pattern..."
+- `simmers`: "Subject agitated. No release. Instability preserved..."
+
+All end with: "Reset. Queue mRLVR."
+
+Set `$run1_ending = $day3_outcome` for save state.
+
+---
+
+## PART 8: YARN NODE STRUCTURE (Suggested)
+
+```
+// Main flow
+title: Day3_Start
+title: Day3_CalculateSanity
+title: Day3_Scene1_ColdOpen
+title: Day3_Scene2_Minesweeper
+title: Day3_Scene3_ContentChoice
+title: Day3_Scene4_ContentDelivery
+title: Day3_CalculateState
+title: Day3_Scene5_MentalBreak      // conditional
+title: Day3_RecalculateState        // conditional
+title: Day3_Scene6_PreCharlotte
+title: Day3_Scene7_Intervention
+title: Day3_CalculateOutcome
+title: Day3_Scene8_Charlotte
+title: Day3_Scene9_Aftermath
+title: Day3_Scene10_DarkFigure
+title: Day3_End
+
+// Scene 1 variants
+title: Day3_Scene1_OptIn
+title: Day3_Scene1_Decline
+title: Day3_Scene1_Tightrope
+title: Day3_Scene1_Playbook
+
+// Scene 4 variants
+title: Day3_Scene4_Meditation
+title: Day3_Scene4_PUA
+
+// Scene 5 variants
+title: Day3_Scene5_Fragile
+title: Day3_Scene5_Volatile
+
+// Scene 7 variants
+title: Day3_Scene7_Centered
+title: Day3_Scene7_Fronting
+title: Day3_Scene7_Fragile
+title: Day3_Scene7_Volatile
+
+// Scene 8 variants
+title: Day3_Scene8_Success
+title: Day3_Scene8_HardRejection
+title: Day3_Scene8_SoftRejection
+title: Day3_Scene8_Crash
+title: Day3_Scene8_NothingHappens
+title: Day3_Scene8_Simmers
+
+// Scene 9 variants
+title: Day3_Scene9_Success
+title: Day3_Scene9_HardRejection
+title: Day3_Scene9_SoftRejection
+title: Day3_Scene9_Crash
+title: Day3_Scene9_NothingHappens
+title: Day3_Scene9_Simmers
+
+// Scene 10 variants
+title: Day3_Scene10_Success
+title: Day3_Scene10_HardRejection
+title: Day3_Scene10_SoftRejection
+title: Day3_Scene10_Crash
+title: Day3_Scene10_NothingHappens
+title: Day3_Scene10_Simmers
+```
+
+---
+
+## PART 9: VARIABLE SUMMARY FOR SAVE STATE
+
+At end of Run 1, persist these for Run 2:
+
+```
+// From Days 1-2
+$night1_strategy
+$morning_wake
+$quiz_outcome
+$office_hours
+$arthur_vector
+$noam_met
+$dina_met
+$dina_relationship
+
+// From Day 3
+$day3_content_choice
+$day3_mental_break_used
+$day3_timmy_state
+$day3_intervention
+$day3_outcome
+$run1_ending
+
+// Derived (optional to persist)
+$sanity_score
+$sanity_bucket
+$fronting_ignored_alice
+```
+
+---
+
+## PART 10: EDGE CASES & NOTES
+
+1. **Mental Break token is NOT consumed if not used.** It persists in inventory. (If you implement inventory, track `$mental_break_tokens = 1` and decrement on use.)
+
+2. **Fronting + Discourage is the only case where player choice is overridden.** Make sure the scene makes clear Timmy is ignoring Alice, not that the system is ignoring the player.
+
+3. **The Dark Figure scene should feel like a jarring perspective shift.** Different audio, different visual treatment. The player is being observed.
+
+4. **Main menu state change:** After Day 3 ends, the main menu should display "TRAINING RUN ONE COMPLETE. BEGIN RUN TWO?" instead of the normal "GET TO WORK" button.
+
+5. **No explicit "you are an AI" dialogue in Day 3.** The Dark Figure's clinical language implies it, but the explicit reveal comes in Run 2 when Alice says "Do you remember me?"

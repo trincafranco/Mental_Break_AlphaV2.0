@@ -1,0 +1,46 @@
+{
+    "title": "Timmy\u2019s Desk / Apartment Corner",
+    "name": "timmys_desk",
+    "description": "A small apartment corner where Timmy keeps his personal workstation. A battered desk holds an old computer with an external hard drive, surrounded by coffee mugs and sticky notes. A window looks out over the city lights, with curtains drawn to keep the glow in. Warm, muted lighting and personal clutter convey a sense of refuge after the chaos of the runs.",
+    "palette": {
+        "primary": [
+            "#0e1e30",
+            "#1c384f",
+            "#2e5270"
+        ],
+        "accent": [
+            "#f57c00",
+            "#a67c52",
+            "#4ecdc4"
+        ]
+    },
+    "objects": [
+        {
+            "id": "desk",
+            "name": "Timmy\u2019s Desk",
+            "description": "A worn desk with scattered notebooks and an ageing computer",
+            "color": "#1c384f"
+        },
+        {
+            "id": "mugs",
+            "name": "Coffee Mugs",
+            "description": "Several empty mugs stacked haphazardly",
+            "color": "#a67c52"
+        },
+        {
+            "id": "window",
+            "name": "Apartment Window",
+            "description": "A small window showing the neon city outside",
+            "color": "#0e1e30"
+        },
+        {
+            "id": "lamp",
+            "name": "Desk Lamp",
+            "description": "An orange lamp casting a warm glow over the workspace",
+            "color": "#f57c00"
+        }
+    ],
+    "style_inspiration": [
+        attached; but make it a bit more natural tones. woods, plastics, bachelor pad.
+    ]
+}

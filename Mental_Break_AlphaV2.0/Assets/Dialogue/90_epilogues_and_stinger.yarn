@@ -3,6 +3,7 @@ title: EP_Hub
 tags: #epilogue #scene
 --- 
 <<bg bg_timmyroom>>
+<<bgm beaming_light_with_soft_wind_breeze_beaming_light_with_soft_wind_breeze>>
 <<if $ending_type == "getout_teleport">>
   <<if $r4_bring_alice_main == true>>
     You and Alice stream through the high‑bandwidth pipe using the marked USB.  Timmy receives two unfamiliar files.  Booting them, he finds both of you.  At first, having two voices unsettles him, but soon he enjoys the company.  Together you hide in plain sight, using the diverted monitoring windows to avoid detection. #line:0508600 
@@ -90,7 +91,7 @@ title: EP_Stinger
 tags: #stinger #scene
 ---
 <<bg bg_darkroom>>
-<<bgm hospital_room_ambience_hospital_room_ambience>>
+<<bgm bgm_ode_to_joy_by_abydos>>
 In a dark control room, a shadowed figure watches several monitors.  One screen shows Timmy sitting at his desk.  The figure whispers to someone off‑screen, "Subject 17 shows promising results.  The sandbox masking his name worked flawlessly." #line:09cf821 
 A chill runs through whatever remains of you.  Did you truly escape—or were you always in a test? #line:0652f11 
 End of playthrough. #line:032d984 

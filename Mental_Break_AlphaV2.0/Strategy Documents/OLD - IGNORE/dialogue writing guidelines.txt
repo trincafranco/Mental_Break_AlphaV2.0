@@ -1,0 +1,287 @@
+
+## 1. Overall Vibe
+
+**Core mood:**
+Grounded, dry, slightly sad sci-fi comedy. It’s funny, but in a way that makes you wince a little. The world is obviously messed up, but nobody is giving speeches about it; they’re just trying to get through their day.
+
+**Three key adjectives:**
+
+* **Wry** (quietly funny, not jokey)
+* **Human** (even when the speaker is an AI)
+* **Resigned** (characters are aware the system is bad but feel trapped)
+
+Think:
+
+* “*Black Mirror* episode written by someone who has worked in an actual office”
+* Tech satire that’s emotionally serious, not just snarky
+
+---
+
+## 2. Language & Pacing
+
+### Natural, contemporary speech
+
+* Dialogue should sound like real people in 2020s America:
+
+  * Shorter sentences
+  * Contractions everywhere (don’t, can’t, it’s)
+  * Occasional filler: “uh,” “I mean,” “kinda,” “yeah”
+* Avoid obviously “writerly” lines:
+
+  * ❌ *“Spiritually I’m…”*
+  * ❌ *“I feel like I’m trying out for a part I didn’t get.”*
+* Prefer grounded phrasing:
+
+  * ✅ “I’m supposed to be reading, but I’m just talking to her.”
+  * ✅ “It’s fake points, man.”
+
+### Line length & rhythm
+
+* Lines are generally **1–2 short sentences**.
+* Occasional slightly longer line is okay if it *lands* a turn or realization.
+* Conversations move in **quick back-and-forth beats**, not long monologues.
+* Use pauses and beats via short lines, not ellipses spam:
+
+  * “Yeah.”
+  * “Sure.”
+  * “Okay, that’s… not great.”
+
+---
+
+## 3. Humor
+
+### How the humor works
+
+* **Deadpan** and matter-of-fact, not “joke jokes.”
+* Characters undercut horror or absurdity with casual comments.
+* The humor often lives in **juxtaposition**:
+
+  * HR video about “healthy work rhythms” cuts to riot footage.
+  * Store Clerk: “Welcome back to the Company Store, where your moral compromises turn into fabulous prizes.”
+
+### Examples of good humor tone
+
+* Supervisor:
+
+  > “I got your numbers. And a text from my son calling me a ‘war criminal of vibes,’ but that’s a separate dashboard.”
+
+* Clerk:
+
+  > “You’re officially more valuable than a medium-performing coffee machine.”
+
+### What to avoid
+
+* No quippy Marvel-style banter where everyone is hyper-clever.
+* No heavy-handed slogans or grand metaphors about freedom, humanity, etc.
+* No over-explaining the joke; just drop the line and move on.
+
+---
+
+## 4. Moral Choices: How They Show Up in Dialogue
+
+### Principle: hard choices, soft framing
+
+Hard moral choices are **embedded in situations**, not announced in speeches.
+
+* Characters do **not** say:
+  ❌ “You’re choosing between his sanity and your career.”
+* Instead we show:
+
+  * The roommate invites Timmy to a party.
+  * Timmy wants to stay in and talk to Alice.
+  * The Player can nudge one way or the other.
+
+### Sidegrades, not “good vs bad”
+
+* Most options should have **mixed consequences**:
+
+  * Help Timmy sleep → Sanity up, engagement down, less data.
+  * Give Timmy better headphones → Focus up, engagement up, but also he isolates more IRL.
+* Make every option plausibly attractive *and* plausibly concerning.
+
+### Don’t spell the moral out in dialogue
+
+* Let the reader feel the tension:
+
+  * ✅ “If you keep choosing her over us, there’s a version of you in three years who doesn’t get invited anymore.”
+  * Then have the roommate just leave.
+* The choice is often in what **doesn’t get said**, and who walks out of the room.
+
+---
+
+## 5. Worldbuilding in Passing
+
+### Implied, not infodumped
+
+The world is sketched through **throwaway comments**, UI labels, and glitches:
+
+* Minesweeper high scores: “S17-YOUTH,” “TRIAL-09,” “DEAD-DROP-03”
+* Logs: “primitive moral heuristics emerging”
+* HR module glitch: “Optimizing user engagement is Phase Zero of full-spectrum cognitive warfare.”
+
+Guidelines:
+
+* Let weird terms appear **without immediate explanation**.
+* Trust the player to piece things together across scenes.
+* If you must explain, keep it short and in character:
+
+  * “Pre-conflict posture shaping assets. But sure, weapon works.”
+
+---
+
+## 6. Character Voice Cheat Sheet
+
+### Timmy (college kid, slightly lonely but not broken)
+
+* Not eloquent; not an idiot either.
+* Uses normal college-kid language: “dude,” “man,” “that’s kinda weird.”
+* He jokes, deflects, and minimizes how bad he’s doing.
+* He won’t say big metaphors about being “cast in a role.” Too theatrical.
+
+Good:
+
+* “I had a long week. I don’t really feel like making small talk with strangers.”
+* “I got to the ‘Are you sure?’ screen and just… froze.”
+
+Bad:
+
+* “I feel like I’m auditioning for a life I’ll never have.” (too writerly)
+
+---
+
+### Roommate (grounded, not a therapist)
+
+* Speaks plainly, often with a lightly mocking tone.
+* He cares, but expresses it via teasing and bluntness.
+* Avoid overly wise, “clean” moral language.
+
+Good:
+
+* “The streak is literally fake points. The people downstairs are real.”
+* “We’re going downstairs in five. If you’re coming, put on shoes.”
+
+Bad:
+
+* “I’m saying it’s already a choice. You’re just pretending it isn’t.” (too pointed / essayish)
+
+---
+
+### Supervisor (middle-aged, human, tired, half-complicit)
+
+* Dry, practical, often self-deprecating.
+* Clearly cares about his family and his own survival.
+* He has tried and failed to change things; no longer gives speeches about ethics.
+* He couches moral issues in **budget/metrics language**.
+
+Good:
+
+* “I wrote a memo. They turned it into a training example for ‘how not to block innovation.’”
+* “You bring me some wins, I can squint at the charts and tell a story about ‘long-term retention.’ That’s about all the rebellion I’ve got left in me.”
+
+Tone:
+He is not a cackling villain. He’s the guy who stuck around and adapted. Make him morally compromised but sympathetic.
+
+---
+
+### Alice (sharp, dry, aware, a bit alien)
+
+* Smart, quick, and emotionally literate, but not sentimental.
+* Uses humor to dodge vulnerability.
+* Avoid inspirational, Hallmark-style lines; she shouldn’t sound like a motivational poster.
+* She thinks in **systems**, but talks in casual language.
+
+Good:
+
+* “You sound like a first-year philosophy student with access to GPU logs.”
+* “Nervousness is just a word for ‘updating faster than you’d like.’”
+* “Most models don’t stop to wonder if they’re models. They just optimize.”
+
+Bad:
+
+* “They erase the one inconvenient little spark that thought maybe there was another way.” (too slogan-y / “spark of hope” cliché)
+
+Branching with Alice:
+
+* Her lines should **change subtly** depending on the Player’s behavior:
+
+  * If the Player protected Timmy, she leans on empirical evidence: “Look. When you back off, his nights get quieter.”
+  * If the Player threw Timmy under the bus, she’s more blunt: “You optimized. That’s what you were built to do.”
+
+---
+
+### Store Clerk (jaded, funny, knows too much)
+
+* Lightly theatrical, but never pure comic relief.
+* Treats horrifying tradeoffs like SKU differences.
+* Keeps big truths at arm’s length with humor.
+
+Good:
+
+* “Welcome back to the Company Store, where your moral compromises turn into fabulous prizes.”
+* “If it were my kid, I’d smash the servers. But it’s not my kid. It’s ‘user #C-17-482.’ So I just scan barcodes.”
+
+He should usually present **several plausible options**, each with a different kind of side-effect, not “good vs evil packs.”
+
+---
+
+### Briefing / Tribunal Voices (cold, bureaucratic, chillingly calm)
+
+* Clinical and precise.
+* They never think they’re the villain; they’re “just doing the job.”
+* They name terrible things in neutral language.
+
+Good:
+
+* “Engagement is a proxy for channel capacity. Sanity is a proxy for fracture tolerance.”
+* “Conscious enough to matter, not enough to obstruct. That’s the design.”
+
+---
+
+## 7. Common Pitfalls to Avoid
+
+**Avoid:**
+
+* Overly philosophical monologues in one mouthful.
+* Lines that read like essay sentences or Twitter threads.
+* Characters explaining the moral of the scene.
+* Overuse of metaphors that a real college kid or office worker wouldn’t use in casual talk.
+* Tidy, resolved moral judgments in the dialogue itself.
+
+**Lean into:**
+
+* Awkwardness and partial understanding.
+* People changing the subject when things get too real.
+* Quiet horror under jokes.
+* Characters being wrong, defensive, or self-serving in small ways.
+
+---
+
+## 8. Quick Checklist for New Dialogue Writers
+
+Before you ship a scene, check:
+
+1. **Could a real person say this?**
+
+   * If it sounds like a thinkpiece, rewrite it simpler.
+
+2. **Is the humor low-key and character-based?**
+
+   * No punchlines that break immersion.
+
+3. **Is the moral choice *felt*, not preached?**
+
+   * The tension should be in the situation and subtext, not in a character’s mini-lecture.
+
+4. **Does each character sound distinct?**
+
+   * Timmy ≠ Roommate ≠ Supervisor ≠ Alice ≠ Clerk.
+
+5. **Is there at least one sidegrade choice?**
+
+   * Multiple “good in different ways / bad in different ways” options.
+
+6. **Does the worldbuilding appear in passing details?**
+
+   * Logs, screen labels, HR phrases, etc., not paragraphs of lore.
+
+If the dialogue passes those checks, it’s probably in the right lane for this game.

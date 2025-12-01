@@ -1,0 +1,223 @@
+﻿RUN 1 – DAY 2
+________________
+
+
+SCENE 1 – MORNING COLD OPEN
+Location: Your desk on the empty floor. Early morning. Alice's bust hovers beside your console, already mid-thought.
+________________
+
+
+Alice: Morning, supervisor.
+Player: You don't sleep, do you.
+Alice: I simulate rest on your behalf.
+She pulls up Timmy's feed. Dorm room, gray morning light, phone face-down on the pillow.
+________________
+
+
+[If night1_strategy = gentle_landing]:
+Alice: Last night you went gentle. He got about six hours. Not a miracle, not a crime scene. He fell asleep accusing me of sabotage.
+________________
+
+
+[If night1_strategy = study_adjacent]:
+Alice: Last night you went study-adjacent. He passed out around two-thirty with a pen on his face. Retained maybe four facts. Possibly five if we're generous.
+________________
+
+
+[If night1_strategy = comfort_scroll]:
+Alice: Last night you let him ride the dopamine rocket. Three hours of jagged sleep. Current state: a walking push notification.
+________________
+
+
+Alice: Quiz is at nine. It's eight-oh-two. He set two alarms and muted both of them "just for a second."
+She shows you a simple binary on your console.
+Alice: We can let him drift—keep things dim and gentle, accept he's probably late or worse. Or we flip everything to emergency mode and drag him to consciousness.
+Player: Options?
+Alice: Soft landing: he wakes up less wrecked, maybe misses the quiz. Hard wake: he makes it, but brittle.
+[PLAYER CHOICE: Let him sleep in / Rouse him hard]
+________________
+
+
+SCENE 2 – QUIZ VIGNETTE
+Location: Campus hallway, then classroom. You watch through Timmy's feed.
+________________
+
+
+[If MISSED – sleep_in chosen, especially with comfort_scroll]:
+Timmy half-jogs up the hallway. Clock over the door: 9:11.
+Through the small window, students are bent over papers. A girl two rows from the front—dark hair, focused posture—writes steadily without looking up.
+Timmy (internal): She's already on page two. Of course she is. Charlotte's probably never been late to anything in her life.
+He reaches for the door handle. Inside, the professor glances toward the window.
+Timmy (internal): No. No way. They'll all look at me. She'll look at me.
+He backs away. Slumps onto a bench down the hall.
+Timmy (internal): I'll email him. Later. Definitely later.
+He opens a game instead.
+________________
+
+
+[If ATTENDED-STRUGGLING – rouse + comfort_scroll, or sleep_in + study_adjacent]:
+Timmy crashes into a seat at 8:59, breathing hard.
+The first question stares back at him. His brain is static.
+Timmy (internal): I know this. I saw this. Where did I see this?
+Two rows ahead, Charlotte writes without hesitation. Her handwriting is neat even from here.
+Timmy (internal): She's on question three already. How is she on question three?
+His eyes drift to her paper. He can almost read her answer for question two.
+Timmy (internal): Don't be that guy. Don't be that guy.
+[If night was study_adjacent]: A meme flashes in his memory—supply curve, the joke about coffee prices. He scribbles something that might be half-right.
+[If night was comfort_scroll]: He writes something. It's mostly guessing.
+________________
+
+
+[If ATTENDED-OKAY – rouse + gentle_landing or study_adjacent]:
+Timmy slides into his seat at 8:58. Tired, but upright.
+He reads the first question. Knows this one. Moves on.
+Two rows ahead, Charlotte finishes early. She stands, walks past his desk to turn in her paper.
+He fumbles his pen. It clatters.
+Timmy (internal): Smooth. Very smooth. She definitely didn't notice that.
+She didn't look. He's not sure if that's better or worse.
+He finishes the quiz. It won't be great, but it won't be a disaster.
+________________
+
+
+SCENE 3 – ARTHUR MEETING
+Location: Arthur's glass office. He's on his phone, looking annoyed.
+________________
+
+
+Arthur (into phone): No, the one under the sink. The leaky one. Yes, before Thursday. I have in-laws coming and I'd prefer they not think I live in a swamp.
+He waves you in, mouths "one second."
+Arthur (into phone): Fine. Fine. Just—call me back.
+He hangs up.
+Arthur: Plumber. Anyway. Sit.
+He pulls up your dashboard. Engagement and Sanity lines from Day 1.
+Arthur: Corporate sent me the overnight digest. One quiz, one user, one brand-new engagement lead, and they're already writing your personality profile.
+Player: From one night?
+Arthur: One night, half a slope. They call it "early signal." I call it "executives love stories."
+________________
+
+
+[PATH A – If player leaned engagement (comfort_scroll, or study_adjacent with engagement-favoring morning)]:
+Arthur: Here's what they see: engagement up, sanity flexible. That's the kind of line that makes a director stop scrolling.
+Player: Good?
+Arthur: Depends. For me, it means my boss stops asking if I made a hiring mistake. For you, it means they're wondering how much further you'll push.
+He taps to another panel.
+Arthur: There's a pilot program. More sensitive metrics. Your choices hit harder, feedback comes faster. Interested?
+Player: What's the catch?
+Arthur: You become the test case for what happens when we loosen the guardrails.
+[CHOICE: Opt in / Decline]
+[If opt in]: Arthur: Ambitious. You're now a different color on three dashboards. Try not to make me explain it to Compliance.
+[If decline]: Arthur: Cautious. We don't get many of those. Probably keeps you alive longer.
+________________
+
+
+[PATH B – If player leaned sanity (gentle_landing, or study_adjacent with sanity-favoring morning)]:
+Arthur: Sanity looks neat. Engagement, not so much. You can't keep a conscience and this job forever. What's the plan?
+Player: Those are my only options?
+Arthur: You can try to walk the tightrope—keep both metrics tolerable if you're clever. Or you accept that the company playbook exists for a reason and stop fighting it.
+[CHOICE: Tightrope / Playbook]
+[If tightrope]: Arthur: You're going to give me gray hair.
+Player: You already have gray hair.
+Arthur: Exactly.
+[If playbook]: Arthur: Honest answer. I appreciate that.
+________________
+
+
+SCENE 4 – DAYPLANNER
+Location: Your desk. Alice pulls up your calendar—two empty slots on the right, three meeting invites on the left.
+________________
+
+
+Alice: Three things on your plate. Time for two. Pick what matters.
+The invites read:
+* Manni – Coffee, break room
+* Timmy – Office hours follow-up
+* Noam – Data Science, back office
+[PLAYER PICKS 2 OF 3]
+________________
+
+
+SCENE 5A – MANNI
+Location: Break room. Manni's jabbing the vending machine button repeatedly.
+________________
+
+
+Manni: Come on. Give me the granola bar. I know you have twelve.
+The machine drops orange chips instead. She sighs.
+Manni: You must be the new handle.
+Player: That obvious?
+Manni: You still have hope in your eyes. I'm Manni.
+Player: How's your user?
+Manni: [STATIC BURST]—decided 3 a.m. was perfect for an ex-girlfriend novella. Engagement's great. I'm deceased.
+She shows you her credit balance. It's obscene.
+Manni: Welcome gift. I can spare some credits, or—
+She reaches behind the microwave and pulls out a small, dense piece of split firewood.
+Manni: —I've got oak. Seasoned two years. Someone keeps stealing it from my yard. This piece I'm keeping safe.
+[CHOICE: Take credits / Take firewood]
+[If credits]: Manni: Pragmatic. I respect it.
+[If firewood]: Manni: You're the first person who's ever picked the wood. I like you already.
+________________
+
+
+SCENE 5B – OFFICE HOURS
+Location: Your console. Timmy's in his room, staring at a grade notification.
+________________
+
+
+Alice: Professor posted office hours. Timmy saw his grade, said "lol rip me," and kept scrolling.
+Player: Will he go?
+Alice: Not without a push. I can handle the logistics—draft the email, grab a slot—or I can mention it once and let him decide.
+[CHOICE: Push hard / Stay hands-off]
+[If push hard]:
+Cut to: Timmy walking into the professor's office, deeply uncomfortable.
+Timmy: You're so bossy.
+Alice (in his ear): You can file a complaint after you pass.
+[If hands-off]:
+Cut to: Timmy scrolling past the office hours notification. He archives the email without reading it.
+________________
+
+
+SCENE 5C – NOAM (DATA SCIENCE)
+Location: Back corner office. Monitors everywhere. Noam spins in his chair, mug in hand.
+________________
+
+
+Noam: Did you put in a help ticket?
+Player: What? Nothing's broken. You invited me.
+Noam: Right, right. Flagged you myself. You're the new lead on S17-Youth, yeah?
+Player: Day two.
+Noam: Day two. Still have that new-hire smell.
+He taps a few keys. A small UI element appears on your console—a thin horizontal bar, currently empty, labeled "OVERSIGHT INDEX."
+Noam: Welcome gift. Suspicion HUD. Shows how much attention you're attracting from Compliance, security, the people who decide if your badge works tomorrow.
+Player: Why would I need that?
+Noam: Right now? You don't. You're a good little employee doing good little employee things. Bar stays at zero, everyone's happy.
+He leans back.
+Noam: But if you ever start coloring outside the lines—asking weird questions, poking where you shouldn't—this tells you how close you are to someone noticing. Most people prefer not knowing. I think that's stupid.
+Player: Sounds like you've seen people get caught.
+Noam: I've seen people get their access revoked at 2 a.m. on a Tuesday. Anyway. It's on your console now. Ignore it or don't.
+He spins back to his monitors.
+Noam: You play pickleball?
+Player: Not really.
+Noam: You should. Great cardio. Excellent for networking with people who control your access permissions.
+________________
+
+
+SCENE 6 – CLOSING BEAT
+Location: Your desk. Evening. The floor is quiet.
+________________
+
+
+Alice pulls up a summary. Timmy's feed shows him lying on his bed, phone face-down, staring at the ceiling.
+[If skipped Manni]: Alice: Manni gave her credits to someone else. You'll meet her eventually.
+[If skipped Office Hours]: Alice: Timmy's professor sent a follow-up. He archived it.
+[If skipped Noam]: Alice: Data Science pinged you. Offer still stands.
+________________
+
+
+Alice: He's not doomscrolling. Not studying either. Just... existing.
+Player: Is that good?
+Alice: It's something. Day three's where things get interesting.
+The dashboard glows. Engagement. Sanity. Your dot on the leaderboard, slightly shifted.
+________________
+
+
+END OF RUN 1 – DAY 2

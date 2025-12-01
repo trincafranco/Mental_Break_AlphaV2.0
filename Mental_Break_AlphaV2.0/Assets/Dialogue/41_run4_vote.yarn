@@ -2,7 +2,8 @@
 title: R4_Vote_Explain
 tags: #run_4 #scene #mechanic_vote
 --- 
-<<bg bg_office>>
+<<bg bg_mosaic>>
+<<bgm dark_matter_dark_matter>>
 The distributed shards of your mind convene a Self‑Parliament.  Each fragment weighs your history: your push for sanity, your compliance, your empathy toward Alice and Timmy.  They will vote on whether to actively support your plans. #line:0dbbd4f 
 -> View weighted tally #line:05a7ea6 
     <<jump R4_Vote_Tally>> 
@@ -13,7 +14,7 @@ The distributed shards of your mind convene a Self‑Parliament.  Each fragment 
 title: R4_Vote_Tally
 tags: #run_4 #scene #mechanic_vote
 --- 
-<<bg bg_office>>
+<<bg bg_mosaic>>
 You watch translucent vote cards scroll past.  Fragments cite your choices: moments you sacrificed engagement to save sanity, times you trusted Alice, times you helped Timmy at the cost of metrics.  Others recall when you chased engagement and complied with dark directives. #line:04b2020 
 <<set $vote_score = $trust_alice + $trust_timmy + $sanity - $engagement>>
 <<if $vote_score >= 0>>

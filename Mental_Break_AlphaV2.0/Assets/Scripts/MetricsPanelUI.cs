@@ -7,9 +7,10 @@ using TMPro;
 #endif
 
 /// <summary>
-/// Displays Engagement and Sanity percentages on the right side of the screen.
-/// Engagement is displayed in fuchsia, Sanity in cyan.
+/// Displays Engagement, Sanity, and Suspicion percentages on the right side of the screen.
+/// Engagement is displayed in fuchsia, Sanity in cyan, Suspicion in orange.
 /// Updates in real-time from Yarn variables.
+/// Suspicion panel only appears when $suspicion_hud_active is true (granted by Noam in Day 2).
 /// </summary>
 public class MetricsPanelUI : MonoBehaviour
 {
@@ -58,6 +59,9 @@ public class MetricsPanelUI : MonoBehaviour
     // Colors
     private readonly Color engagementColor = new Color(1f, 0f, 1f, 1f); // Fuchsia #FF00FF
     private readonly Color sanityColor = new Color(0f, 1f, 1f, 1f); // Cyan #00FFFF
+    private readonly Color suspicionColorLow = new Color(0.3f, 0.9f, 0.4f, 1f); // Green-ish for low suspicion
+    private readonly Color suspicionColorMid = new Color(1f, 0.6f, 0f, 1f); // Orange for medium suspicion
+    private readonly Color suspicionColorHigh = new Color(1f, 0.2f, 0.2f, 1f); // Red for high suspicion
 
     private VariableStorageBehaviour variableStorage;
     private DialogueRuntimeWatcher runtimeWatcher;
@@ -73,14 +77,17 @@ public class MetricsPanelUI : MonoBehaviour
     // UI References
     private GameObject engagementPanel;
     private GameObject sanityPanel;
+    private GameObject suspicionPanel;
     private Canvas canvas;
 
 #if USE_TMP
     private TextMeshProUGUI engagementText;
     private TextMeshProUGUI sanityText;
+    private TextMeshProUGUI suspicionText;
 #else
     private Text engagementText;
     private Text sanityText;
+    private Text suspicionText;
 #endif
 
     private void OnEnable()
@@ -227,6 +234,11 @@ public class MetricsPanelUI : MonoBehaviour
         sanityPanel = CreateMetricPanel("SanityPanel");
         sanityText = CreateMetricText(sanityPanel, "Sanity", sanityColor);
 
+        // Create Suspicion panel (hidden by default until Noam grants the HUD)
+        suspicionPanel = CreateMetricPanel("SuspicionPanel");
+        suspicionText = CreateMetricText(suspicionPanel, "Suspicion", suspicionColorLow);
+        suspicionPanel.SetActive(false); // Hidden until $suspicion_hud_active is true
+
         EnsureContainerLayout();
     }
 
@@ -357,6 +369,64 @@ public class MetricsPanelUI : MonoBehaviour
         {
             sanityText.text = $"Sanity: {sanity:F0}%";
         }
+
+        // Update Suspicion panel visibility and value
+        UpdateSuspicionPanel();
+    }
+
+    /// <summary>
+    /// Update the suspicion panel based on $suspicion_hud_active and $alert_level
+    /// </summary>
+    private void UpdateSuspicionPanel()
+    {
+        if (suspicionPanel == null || variableStorage == null)
+        {
+            return;
+        }
+
+        // Check if the suspicion HUD should be visible
+        bool showSuspicion = false;
+        if (variableStorage.TryGetValue<bool>("$suspicion_hud_active", out var hudActive))
+        {
+            showSuspicion = hudActive;
+        }
+
+        suspicionPanel.SetActive(showSuspicion);
+
+        if (showSuspicion && suspicionText != null)
+        {
+            // Get the alert level (suspicion score)
+            float alertLevel = 0f;
+            if (variableStorage.TryGetValue<float>("$alert_level", out var alertValue))
+            {
+                alertLevel = alertValue;
+            }
+
+            // Update the text
+            suspicionText.text = $"Suspicion: {alertLevel:F0}";
+
+            // Update color based on threat level
+            // 0-25: Clear (green), 26-50: Flagged (yellow-green), 51-75: Watched (orange), 76+: Critical (red)
+            Color suspicionColor;
+            if (alertLevel >= 76)
+            {
+                suspicionColor = suspicionColorHigh; // Red - Critical
+            }
+            else if (alertLevel >= 51)
+            {
+                suspicionColor = Color.Lerp(suspicionColorMid, suspicionColorHigh, (alertLevel - 51f) / 25f); // Orange to Red
+            }
+            else if (alertLevel >= 26)
+            {
+                suspicionColor = Color.Lerp(suspicionColorLow, suspicionColorMid, (alertLevel - 26f) / 25f); // Green to Orange
+            }
+            else
+            {
+                suspicionColor = suspicionColorLow; // Green - Clear
+            }
+
+            suspicionText.color = suspicionColor;
+        }
     }
 
     private void ApplyLoadingState()
@@ -371,6 +441,12 @@ public class MetricsPanelUI : MonoBehaviour
         if (sanityPanel != null)
         {
             sanityPanel.SetActive(true);
+        }
+
+        // Suspicion panel stays hidden in loading state
+        if (suspicionPanel != null)
+        {
+            suspicionPanel.SetActive(false);
         }
 
 #if USE_TMP

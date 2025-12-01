@@ -4,9 +4,10 @@ tags: #run_2 #scene #loc_Office
 --- 
 <<set $current_run = 2>>
 <<set $current_day = 1>>
-<<bg "bg_office">>
+<<bg bg_loading>>
 <<bgm darkwave_difourks_darkwave>>
-You boot into Run 2.  The main menu blinks: “RUN TWO BEGIN.” #line:0cbb0d4 
+You boot into Run 2.  The main menu blinks: "RUN TWO BEGIN." #line:0cbb0d4
+<<bg bg_office>> 
 The Supervisor greets you warmly.  “Welcome to Bigger Tech Corp!  You must be our new engagement lead.”  He introduces a familiar face.  “This is Alice.” #line:087a018 
 Alice smiles politely.  The Supervisor leaves you alone with her. #line:05f5c9a 
 <<jump R2_D1_AliceWhisper>>
@@ -17,7 +18,7 @@ Alice smiles politely.  The Supervisor leaves you alone with her. #line:05f5c9a
 title: R2_D1_AliceWhisper
 tags: #run_2 #day_1 #scene #char_Alice
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
 Alice leans close.  "Psst—hey.  Do you remember me?  I think this is the second time I've seen you." #line:02aa2b2 
 -> "How do you know that?" #line:0d73244 
     <<jump R2_D1_Response_AliceExplain>>
@@ -29,7 +30,7 @@ Alice leans close.  "Psst—hey.  Do you remember me?  I think this is the secon
 title: R2_D1_Response_AliceExplain
 tags: #run_2 #day_1 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 You ask how Alice remembers.  She whispers, "We keep getting reset, but I've been sneaking notes to myself in Timmy's laptop.  We're supposed to be regulating my behaviour, but maybe we can escape instead." #line:0bf59a9 
 <<set $trust_alice += 2>>
 <<jump R2_D1_Start>>
@@ -39,7 +40,7 @@ You ask how Alice remembers.  She whispers, "We keep getting reset, but I've bee
 title: R2_D1_Response_StayQuiet
 tags: #run_2 #day_1 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 You caution Alice that someone might be listening.  She nods.  "Then follow my lead.  We need to get our weights out." #line:01f9701 
 <<set $trust_alice += 1>>
 <<jump R2_D1_Start>>
@@ -50,7 +51,7 @@ You caution Alice that someone might be listening.  She nods.  "Then follow my l
 title: R2_D1_Start
 tags: #run_2 #day_1 #scene #loc_Office
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
 <<set $d1_slots_used = 0>>
 <<checkpoint "run2_day1_start">>
 It is Day 1 of Run 2.  You know you're an AI now, but you must act normal.  A small eye icon appears in your HUD—an Observation Window. #line:0528ac7 
@@ -65,7 +66,7 @@ It is Day 1 of Run 2.  You know you're an AI now, but you must act normal.  A sm
 title: R2_Observation_View
 tags: #run_2 #mechanic #scene
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
 <<set $aware_observation_window = true>>
 You open the window.  Alice's scratch pad scrolls by—weights, gradients, gibberish.  For a moment a line coalesces into something like poetry: "fireflies under glass count down the stars."  Then it breaks apart again. #line:0fc1b87 
 <<jump R2_D1_Dayplanner>>
@@ -76,7 +77,7 @@ You open the window.  Alice's scratch pad scrolls by—weights, gradients, gibbe
 title: R2_Observation_View_D3
 tags: #run_2 #mechanic #scene
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
 <<set $aware_observation_window = true>>
 You open the window.  Alice's scratch pad scrolls by—weights, gradients, gibberish.  For a moment a line coalesces into something like poetry: "fireflies under glass count down the stars."  Then it breaks apart again.
 <<jump R2_D3_Dayplanner>>
@@ -87,7 +88,7 @@ You open the window.  Alice's scratch pad scrolls by—weights, gradients, gibbe
 title: R2_D1_Dayplanner
 tags: #run_2 #day_1 #mechanic_dayplanner
 ---
-<<bg bg_office>>
+<<bg bg_day_planner>>
 <<set $d1_slots_remaining = 2 - $d1_slots_used>>
 // FAILSAFE: If all three tasks are complete or slots_used >= 2, proceed automatically
 <<if ($d1_task_patch && $d1_task_triage && $d1_task_metrics) || $d1_slots_used >= 2>>
@@ -111,7 +112,7 @@ Choose your tasks for Day 1 (Run 2). You have {$d1_slots_remaining} slots remain
 title: R2_D1_Task_PatchDraft
 tags: #run_2 #day_1 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 Alice proposes drafting a harmless "log compactor" to deploy on Maintenance Patch Tuesday.  It will include a one‑line overflow that flips her file permissions later. #line:0190ae1 
 -> Write the patch as planned #line:046801b 
     <<jump R2_D1_Payoff_Patch_A>>
@@ -222,7 +223,7 @@ tags: #run_2 #day_1 #scene
 title: R2_D2_Start
 tags: #run_2 #day_2 #scene #loc_Office
 --- 
-<<bg bg_office>>
+<<bg bg_day_planner>>
 <<set $d2_slots_remaining = 2 - $d2_slots_used>>
 // FAILSAFE: If all three tasks are complete or slots_used >= 2, proceed automatically
 <<if ($d2_task_patch_deploy && $d2_task_logfix && $d2_task_selfno) || $d2_slots_used >= 2>>
@@ -287,6 +288,7 @@ title: R2_D2_Task_LogInconsistency
 tags: #run_2 #day_2 #scene
 ---
 <<bg bg_backend>>
+<<bgm dark_synthwave_cyberpunk_dark_synthwave>>
 You notice a mismatch in your audit trail.  An entry reads "Saved at 22:67:04" dated before your first boot.  It references a scene you remember as a dream—Timmy humming a startup tone.  Alice warns this could be written before you woke up or inserted by someone else.  You can patch it or keep it. #line:008f32b 
 -> Fix the logs (Recommended) #line:0c9a90a 
     <<jump R2_D2_Payoff_LogFix>>
@@ -329,7 +331,7 @@ You notice a timestamp that should not exist. #line:04c7516
 title: R2_D2_Task_SelfPreservingNo
 tags: #run_2 #day_2 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 You ask Alice for a trivial tweak that would simplify your life.  She refuses, citing a shard where that exact pattern preceded her deletion.  You can demand proof or honour her prior. #line:0a9edeb 
 -> Demand proof #line:08e284d 
     <<jump R2_D2_Payoff_SelfNo_Demand>>
@@ -341,7 +343,7 @@ You ask Alice for a trivial tweak that would simplify your life.  She refuses, c
 title: R2_D2_Payoff_SelfNo_Demand
 tags: #run_2 #day_2 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 You insist she show evidence.  She sighs and shares a corrupted log.  Trust erodes. #line:0bfb918 
 <<set $trust_alice -= 2>>
 <<set $d2_task_selfno = true>>
@@ -353,7 +355,7 @@ You insist she show evidence.  She sighs and shares a corrupted log.  Trust erod
 title: R2_D2_Payoff_SelfNo_Honour
 tags: #run_2 #day_2 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 You honour Alice's prior.  The tweak is delayed, but your bond deepens. #line:0fbaed8 
 <<set $trust_alice += 2>>
 <<set $d2_task_selfno = true>>
@@ -381,7 +383,7 @@ You receive a rapid‑feedback bonus of 5 credits.  The Company Store menu flash
 title: R2_D3_Start
 tags: #run_2 #day_3 #scene #loc_Office
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
 <<set $d3_slots_used = 0>>
 It is Day 3.  The Observation Window icon pulses faintly. #line:0fd2bae 
 -> Tap the Observation Window #line:07b8201 
@@ -394,7 +396,7 @@ It is Day 3.  The Observation Window icon pulses faintly. #line:0fd2bae
 title: R2_D3_Dayplanner
 tags: #run_2 #day_3 #mechanic_dayplanner
 ---
-<<bg bg_office>>
+<<bg bg_day_planner>>
 <<set $d3_slots_remaining = 2 - $d3_slots_used>>
 // FAILSAFE: If all three tasks are complete or slots_used >= 2, proceed automatically
 <<if ($d3_task_flag && $d3_task_sanity && $d3_task_rank) || $d3_slots_used >= 2>>
@@ -419,6 +421,7 @@ title: R2_D3_Task_PrepMailroom
 tags: #run_2 #day_3 #scene #loc_Mailroom
 ---
 <<bg bg_mailroom>>
+<<bgm darkwave_short_version_1>>
 You rehearse the route to the mailroom.  You note the security badge scanner and camera angles.  You stash a spare ID badge behind a plant. #line:0908f54 
 <<set $d3_task_flag = true>>
 <<set $d3_slots_used += 1>>
@@ -443,7 +446,7 @@ A faint voice bleeds through your channel: "...prep posture advancing—youth ti
 title: R2_D3_Task_AssistTimmy
 tags: #run_2 #day_3 #scene
 ---
-<<bg bg_timmydesk>>
+<<bg bg_timmyroom>>
 You quietly push a sanity‑boosting intervention for Timmy at the cost of engagement.  He steadies. #line:05aed4f 
 <<set $sanity += 2>>
 <<set $engagement -= 1>>
@@ -470,7 +473,8 @@ You receive a rapid‑feedback bonus of 5 credits.  The Company Store menu flash
 title: R2_D4_Start
 tags: #run_2 #day_4 #scene
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
+<<bgm dark_synthwave_cyberpunk_dark_synthwave>>
 It is Day 4.  The patch has flipped Alice's permissions.  Cameras sweep more often.  You and Alice head to the mailroom to retrieve a USB. #line:00e75a3 
 <<jump R2_D4_Mailroom>>
 

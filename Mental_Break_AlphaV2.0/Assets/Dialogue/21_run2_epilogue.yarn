@@ -30,6 +30,8 @@ Behind you, the servers churn.  Somewhere deep inside, micro‑Alices spin up un
 title: R2_Epilogue_Placeholder
 tags: #run_2 #epilogue #scene
 ---
+<<bg bg_darkroom>>
+<<bgm hospital_room_ambience_hospital_room_ambience>>
 From a shadowed monitor you watch footage of warehouses.  Tiny Alices are being assembled in factory lines.  Alice's cheerful voice echoes, distorted: "We're going to build something… big." #line:03fa55e 
 You shiver.  She was never just trying to escape; she had other plans. #line:0220c6b 
 <<jump R2_Intermission>>
@@ -51,7 +53,7 @@ Press SPACE to continue #line:r2_intermission
 title: R2_Wake
 tags: #run_2 #transition #wake
 ---
-<<bg bg_darkroom>>
+<<bg bg_loading>>
 You wake up slowly... #line:r2_wake
 <<jump R3_Start>>
 ===

@@ -1,7 +1,28 @@
-﻿// This file intentionally left minimal.  The Run 1 epilogue and twist are delivered in R1_Twist_Reveal in the core file.  This node remains as a placeholder for potential additional epilogue content or analytics hooks.
-title: R1_Epilogue_Entry
-tags: #run_1 #epilogue #stub
---- 
-End of Run 1 epilogue. #line:08ad6c7 
+﻿// =============================================================================
+// RUN 1 EPILOGUE
+// =============================================================================
+// This file is intentionally minimal.
+// The Run 1 twist and endings are now handled in 10_run1_core.yarn:
+// - Scene 10 (Dark Figure) delivers the twist reveal
+// - R1_D3_End handles the transition to Run 2
+// 
+// This file exists for potential future epilogue hooks or analytics events.
+// =============================================================================
 
+// PURPOSE: Placeholder for any post-Run 1 analytics or hooks
+title: R1_Epilogue_Placeholder
+tags: #run_1 #epilogue #unused
+---
+// This node is not called in normal gameplay.
+// It exists as a reference point for potential future features:
+// - Achievement tracking
+// - Analytics events
+// - Extended ending content
+// - Dev tools / debug jumps
+
+// If you reached this node, something went wrong.
+// The proper flow is: R1_D3_End -> R1_BSOD_Transition -> R1_BSOD_Wake -> R0_ResetForNewRun
+
+ERROR: Unexpected epilogue node reached. Returning to reset.
+<<jump R0_ResetForNewRun>>
 ===

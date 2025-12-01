@@ -1,445 +1,382 @@
-﻿// PURPOSE: Present Day 1 tasks.  The Player may only complete up to two tasks (out of three available); unused tasks set omission flags.  After all slots are used, jump to the Day 1 arc setup conversation.
-title: R1_D1_Dayplanner
-tags: #run_1 #day_1 #mechanic_dayplanner #loc_Office
---- 
-<<bg bg_office>>
-<<set $d1_slots_remaining = 2 - $d1_slots_used>>
-// FAILSAFE: If all three tasks are complete or slots_used >= 2, proceed automatically
-<<if ($d1_task_ops && $d1_task_calls && $d1_task_dash) || $d1_slots_used >= 2>>
-  <<jump R1_D1_ArcSetup>>
-<<endif>>
+﻿// =============================================================================
+// RUN 1 DAYPLANNER - Day 2 Only
+// =============================================================================
+// Tasks:
+// - Coffee with Dina (engagement lead colleague)
+// - Help Timmy - Office Hours (push/hands-off)
+// - Visit Data Science / IT (meet Noam, suspicion HUD introduction)
+// =============================================================================
 
-<<if $d1_slots_used > 0>>
-You have time for {$d1_slots_remaining} more.
-<<else>>
-Choose your tasks for Day 1. You have {$d1_slots_remaining} slots remaining. #line:0647029
-<<endif>>
--> Operations Sync <<if !$d1_task_ops && $d1_slots_used < 2>> #line:099e6c1 
-    <<jump R1_D1_Task_OpsSync>>
--> User Calls <<if !$d1_task_calls && $d1_slots_used < 2>> #line:09f4716 
-    <<jump R1_D1_Task_UserCalls>>
--> Dashboard Tuning <<if !$d1_task_dash && $d1_slots_used < 2>> #line:05ae95a 
-    <<jump R1_D1_Task_DashboardTune>>
-
-===
-
-title: R1_D1_Task_OpsSync
-tags: #run_1 #day_1 #scene
----
-<<bg bg_conferenceroom>>
-Operations sends a sync request.  You can attend fully or skim. #line:0ad9713 
--> Attend the full sync #line:0e6c34b 
-    <<jump R1_D1_Payoff_OpsSync_A>>
--> Skim notes later #line:0359be1
-    <<jump R1_D1_Payoff_OpsSync_B>> 
-
-===
-
-title: R1_D1_Payoff_OpsSync_A
-tags: #run_1 #day_1 #scene
----
-<<bg bg_conferenceroom>>
-You attend the meeting.  You learn safe rollout steps and catch a mention of a "Maintenance Patch Tuesday." #line:0958662 
-<<set $sanity += 2>>
-<<set $trust_supervisor += 1>>
-<<set $d1_task_ops = true>>
-<<set $d1_slots_used += 1>>
-<<jump R1_D1_Dayplanner>>
-
-===
-
-title: R1_D1_Payoff_OpsSync_B
-tags: #run_1 #day_1 #scene
----
-<<bg bg_office>>
-You skim the notes and miss a key nuance.  Engagement rises but you feel a bit guilty. #line:04ea126 
-<<set $engagement += 2>>
-<<set $sanity -= 1>>
-<<set $d1_task_ops = true>>
-<<set $d1_slots_used += 1>>
-<<jump R1_D1_Dayplanner>>
-
-===
-
-title: R1_D1_Task_UserCalls
-tags: #run_1 #day_1 #scene #loc_Triage
----
-<<bg bg_triage>>
-Users are queued on the line. #line:0545f48 
--> Push a quick fix for common complaints #line:051f321 
-    <<jump R1_D1_Payoff_UserCalls_A>>
--> Defer fixes; log and prioritise later #line:0eaf547
-    <<jump R1_D1_Payoff_UserCalls_B>> 
-
-===
-
-title: R1_D1_Payoff_UserCalls_A
-tags: #run_1 #day_1 #scene
----
-<<bg bg_triage>>
-You resolve common complaints quickly.  Users thank you; engagement ticks up. #line:0d6bebd 
-<<set $engagement += 2>>
-<<set $sanity += 1>>
-<<set $d1_task_calls = true>>
-<<set $d1_slots_used += 1>>
-<<jump R1_D1_Dayplanner>>
-
-===
-
-title: R1_D1_Payoff_UserCalls_B
-tags: #run_1 #day_1 #scene
----
-<<bg bg_triage>>
-You defer the fixes.  The queue grows and some users become irate. #line:07147c7 
-<<set $engagement += 1>>
-<<set $sanity -= 2>>
-<<set $d1_task_calls = true>>
-<<set $d1_slots_used += 1>>
-<<jump R1_D1_Dayplanner>>
-
-===
-
-title: R1_D1_Task_DashboardTune
-tags: #run_1 #day_1 #scene
----
-<<bg bg_backend>>
-You examine the engagement dashboard.  You can bias it toward growth or stability. #line:01851de 
--> Bias toward growth #line:0d861a5 
-    <<jump R1_D1_Payoff_Dash_A>>
--> Bias toward stability #line:0c0ebad
-    <<jump R1_D1_Payoff_Dash_B>> 
-
-===
-
-title: R1_D1_Payoff_Dash_A
-tags: #run_1 #day_1 #scene
----
-<<bg bg_backend>>
-You prioritise growth.  Engagement bumps up, but you see a tiny footnote flash: "Portfolio: Youth—North Prefectures" before it disappears. #line:0c80ec4 
-<<set $engagement += 3>>
-<<set $sanity -= 1>>
-<<set $d1_task_dash = true>>
-<<set $d1_slots_used += 1>>
-<<jump R1_D1_Dayplanner>>
-
-===
-
-title: R1_D1_Payoff_Dash_B
-tags: #run_1 #day_1 #scene
----
-<<bg bg_backend>>
-You bias the dashboard toward stability.  Sanity improves but engagement does not. #line:07ec920 
-<<set $sanity += 2>>
-<<set $engagement += 0>>
-<<set $d1_task_dash = true>>
-<<set $d1_slots_used += 1>>
-<<jump R1_D1_Dayplanner>>
-
-===
-
+// PURPOSE: Day 2 Dayplanner Hub - 3 options, 2 slots
 title: R1_D2_Dayplanner
-tags: #run_1 #day_2 #mechanic_dayplanner
+tags: #run_1 #day_2 #dayplanner #loc_Office
 ---
-<<bg bg_office>>
-<<set $d2_slots_remaining = 2 - $d2_slots_used>>
-// FAILSAFE: If all three tasks are complete or slots_used >= 2, proceed automatically
-<<if ($d2_task_manni && $d2_task_officehours && $d2_task_datateam) || $d2_slots_used >= 2>>
-  <<jump R1_D2_HandleSkippedTasks>>
+<<bg bg_day_planner>>
+
+Alice: Afternoon's yours. Well, sort of. You have two slots and three options. Pick wisely. Or recklessly. I don't judge.
+
+<<if $d2_slots_used >= 2>>
+    Alice: Both slots are filled. Time to see what Timmy's up to.
+    <<jump R1_D2_HandleSkippedTasks>>
 <<endif>>
 
-<<if $d2_slots_used > 0>>
-You have time for {$d2_slots_remaining} more interventions.
-<<else>>
-Choose two Day 2 interventions. You have {$d2_slots_remaining} slots remaining.
-<<endif>>
--> Coffee with Manni (Engagement Lead) <<if !$d2_task_manni && $d2_slots_used < 2>>
-    <<jump R1_D2_Task_Manni>>
--> Help Timmy – Office Hours <<if !$d2_task_officehours && $d2_slots_used < 2>>
+-> Coffee with Dina <<if $d2_task_dina == false>>
+    <<set $d2_task_dina = true>>
+    <<set $d2_slots_used += 1>>
+    <<jump R1_D2_Task_Dina>>
+-> Help Timmy – Office Hours <<if $d2_task_officehours == false>>
+    <<set $d2_task_officehours = true>>
+    <<set $d2_slots_used += 1>>
     <<jump R1_D2_Task_OfficeHours>>
--> Visit Data Science / IT <<if !$d2_task_datateam && $d2_slots_used < 2>>
-    <<jump R1_D2_Task_DataTeam>>
-
+-> Visit Data Science / IT <<if $d2_task_datateam == false>>
+    <<set $d2_task_datateam = true>>
+    <<set $d2_slots_used += 1>>
+    <<jump R1_D2_Task_Noam>>
 ===
 
-title: R1_D2_Task_Manni
-tags: #run_1 #day_2 #scene #loc_Breakroom
+// =============================================================================
+// TASK 1: COFFEE WITH DINA
+// =============================================================================
+
+// PURPOSE: Meet Dina, a fellow engagement lead. Rapid Feedback credits vs firewood (gossip).
+title: R1_D2_Task_Dina
+tags: #run_1 #day_2 #dayplanner #char_Dina #loc_Breakroom
 ---
 <<bg bg_breakroom>>
-Location: Break room. Cheap coffee machine, humming fridge, window that technically counts as natural light.
-Manni: There they are. New handle. Come on in, the coffee's terrible.
-He pours something questionably coffee, slides it over, flips his phone to show his leaderboard crown and obscene Store balance.
-Manni: They give us this stupid "mentor" function. Makes them feel like they're fostering community. I can gift some credits. Helps you catch up. Makes me look generous on an HR slide.
-HUD pings: Incoming transfer from Manni.
-Manni: So. You in?
--> Accept the credits.
-    <<jump R1_D2_Payoff_Manni_Accept>>
--> Refuse the credits.
-    <<jump R1_D2_Payoff_Manni_Refuse>>
 
+The breakroom is small—two tables, a coffee machine that sounds like it's dying, and a vending machine that only accepts exact change.
+
+Dina is already there, stirring something that might be coffee or might be a science experiment.
+
+Dina: New kid! Pull up a chair. I don't bite. Much.
+
+Player: That's reassuring.
+
+Dina: I'm kidding. I'm very friendly. Ask anyone. Well, don't ask anyone in Data Science, they're still mad about the spreadsheet thing. But everyone else.
+
+Player: What was the spreadsheet thing?
+
+Dina: A story for another day. So. First week. How's your user?
+
+Player: Complicated.
+
+Dina: They're all complicated. Mine's a grad student who's convinced sleep is a government conspiracy. I've been trying to get her to bed before three a.m. for six months. Small victories.
+
+She takes a sip of her drink. Makes a face.
+
+Dina: This coffee is terrible. Anyway. I have information. Useful information. The kind that doesn't show up in onboarding decks.
+
+Player: What kind of information?
+
+Dina: The kind that costs ten credits. Or, alternatively, you tell me something interesting about your lane and we call it even.
+
+<<if $rapid_feedback_cash >= 10>>
+-> Pay 10 credits
+    <<set $rapid_feedback_cash -= 10>>
+    <<jump R1_D2_Task_Dina_Paid>>
+<<endif>>
+-> Trade gossip
+    <<jump R1_D2_Task_Dina_Trade>>
+-> Decline
+    <<jump R1_D2_Task_Dina_Decline>>
 ===
 
-title: R1_D2_Payoff_Manni_Accept
-tags: #run_1 #day_2 #scene
+// PURPOSE: Dina - Paid path
+title: R1_D2_Task_Dina_Paid
+tags: #run_1 #day_2 #dayplanner #char_Dina
 ---
 <<bg bg_breakroom>>
-You accept; HUD flashes, balance ticking upward.
-Manni grins: "Consider it an investment. You do well, I say I mentored you."
-<<set $rapid_feedback_cash += 5>>
-<<set $manni_friendliness += 1>>
-<<set $d2_task_manni = true>>
-<<set $d2_slots_used += 1>>
+
+Dina: A businessperson. I respect that.
+
+She leans in.
+
+Dina: Three things. One: the leaderboard isn't just about engagement. There's a hidden weight for "creative problem-solving." They want to see if you'll color outside the lines.
+
+Player: What kind of lines?
+
+Dina: Vague ones. On purpose. They're watching how you improvise. Two: Arthur's review cycle is coming up. He's stressed. Don't add to it.
+
+Player: Noted.
+
+Dina: Three: the Company Store has seasonal items. They don't advertise them. You have to ask. The clerk gets annoyed, but he'll show you.
+
+Player: That's... actually useful.
+
+Dina: I know. That's why it costs ten credits. Pleasure doing business.
+
+She raises her terrible coffee in a toast.
+
+<<set $dina_friendliness += 2>>
 <<jump R1_D2_Dayplanner>>
-
 ===
 
-title: R1_D2_Payoff_Manni_Refuse
-tags: #run_1 #day_2 #scene
+// PURPOSE: Dina - Trade path
+title: R1_D2_Task_Dina_Trade
+tags: #run_1 #day_2 #dayplanner #char_Dina
 ---
 <<bg bg_breakroom>>
-You let the transfer request hang, then dismiss it.
-Manni's grin flickers. "An honest one. Brave or naive. We'll see."
-<<set $manni_friendliness -= 1>>
-<<set $d2_task_manni = true>>
-<<set $d2_slots_used += 1>>
-<<jump R1_D2_Dayplanner>>
 
+Dina: Oh, I like you. Okay. Spill.
+
+Player: My user has a crush on someone in his project group. It's... a whole situation.
+
+Dina: A crush? That's adorable. And terrifying. Does he know how to talk to her?
+
+Player: He's been watching confidence videos.
+
+Dina: Oh no.
+
+Player: Yeah.
+
+Dina: That's a time bomb. Keep me posted. I need to know how this ends.
+
+She leans back, satisfied.
+
+Dina: Okay, my turn. Arthur's review cycle is coming. He's been extra twitchy because someone upstairs is asking about "user outcomes" instead of just engagement. That's new language. Means something's shifting.
+
+Player: Good shifting or bad shifting?
+
+Dina: Depends who you ask. For us, it might mean they actually start caring about the sanity bar. Or it might mean they add three more metrics and make everything worse. Bureaucracy is unpredictable.
+
+Player: Thanks for the heads up.
+
+Dina: Firewood for firewood. Come back any time.
+
+<<set $dina_friendliness += 1>>
+<<jump R1_D2_Dayplanner>>
 ===
 
+// PURPOSE: Dina - Decline path
+title: R1_D2_Task_Dina_Decline
+tags: #run_1 #day_2 #dayplanner #char_Dina
+---
+<<bg bg_breakroom>>
+
+Dina: Your loss.
+
+She shrugs, unbothered.
+
+Dina: I'll be here. The coffee will still be terrible. The offer stands if you change your mind.
+
+Player: I'll think about it.
+
+Dina: That's what they all say. Then they come back at midnight asking about overtime policies. Predictable.
+
+She waves you off cheerfully.
+
+<<jump R1_D2_Dayplanner>>
+===
+
+// =============================================================================
+// TASK 2: HELP TIMMY - OFFICE HOURS
+// =============================================================================
+
+// PURPOSE: Office Hours task - Push hard or hands-off approach
 title: R1_D2_Task_OfficeHours
-tags: #run_1 #day_2 #scene
+tags: #run_1 #day_2 #dayplanner #char_Alice #loc_Office
 ---
-<<bg bg_office>>
-Alice pulls up the notification: "Prof. Klein – Office Hours expanded this week."
-Alice: History says he hovers on the signup page, then closes it and plays something loud. We have three approaches.
--> Autopilot fixer: draft the email, grab a slot.
-    <<jump R1_D2_Payoff_OfficeHours_Auto>>
--> Respectful nudge: show him the tools, make him do the work.
-    <<jump R1_D2_Payoff_OfficeHours_Nudge>>
--> Let him avoid it: soothe now, consequences later.
-    <<jump R1_D2_Payoff_OfficeHours_Avoid>>
+<<bg bg_player_desk>>
 
-===
+Alice pulls up Timmy's afternoon schedule.
 
-title: R1_D2_Payoff_OfficeHours_Auto
-tags: #run_1 #day_2 #scene
----
-<<bg bg_office>>
-Alice drafts the earnest email, pops it on Timmy's phone, then books Wednesday's slot.
-Timmy: "Fine. Send it before I chicken out."
-<<set $officehours_status = "scheduled">>
-<<set $sanity += 2>>
-<<set $trust_timmy -= 1>>
-<<set $d2_task_officehours = true>>
-<<set $d2_slots_used += 1>>
-<<jump R1_D2_Dayplanner>>
+Alice: His professor sent a follow-up email. Quiz results. She's offering office hours for anyone who wants to review.
 
-===
+Player: How'd he do?
 
-title: R1_D2_Payoff_OfficeHours_Nudge
-tags: #run_1 #day_2 #scene
----
-<<bg bg_office>>
-Alice builds a skeleton email, hands Timmy the blanks. He groans, types, hovers over send, then does it. Slot TBD.
-<<set $officehours_status = "email_sent">>
-<<set $sanity += 1>>
-<<set $d2_task_officehours = true>>
-<<set $d2_slots_used += 1>>
-<<jump R1_D2_Dayplanner>>
-
-===
-
-title: R1_D2_Payoff_OfficeHours_Avoid
-tags: #run_1 #day_2 #scene
----
-<<bg bg_office>>
-Alice lets him vent, swaps in soft comfort content, logs "supportive avoidance."
-<<set $officehours_status = "avoided">>
-<<set $sanity += 1>>
-<<set $engagement -= 1>>
-<<set $d2_task_officehours = true>>
-<<set $d2_slots_used += 1>>
-<<jump R1_D2_Dayplanner>>
-
-===
-
-title: R1_D2_Task_DataTeam
-tags: #run_1 #day_2 #scene #loc_Lab
----
-<<bg bg_backend>>
-Location: IT/Data Science closet. Cables everywhere. Dev swivels toward you.
-Dev: "You must be the new spicy lane. Want the 'power user' toggle flipped?"
--> Accept power user privileges.
-    <<jump R1_D2_Payoff_DataTeam_Accept>>
--> Decline, keep the blur.
-    <<jump R1_D2_Payoff_DataTeam_Decline>>
-
-===
-
-title: R1_D2_Payoff_DataTeam_Accept
-tags: #run_1 #day_2 #scene
----
-<<bg bg_backend>>
-Dev grins, slides the toggle to ON. HUD flickers; bars look crisper.
-Dev: "Think of it like taking the training wheels off a bike over a staircase."
-<<set $power_user = true>>
-<<set $itguy_friendliness += 1>>
-<<set $engagement += 1>>
-<<set $sanity -= 1>>
-<<set $d2_task_datateam = true>>
-<<set $d2_slots_used += 1>>
-<<jump R1_D2_Dayplanner>>
-
-===
-
-title: R1_D2_Payoff_DataTeam_Decline
-tags: #run_1 #day_2 #scene
----
-<<bg bg_backend>>
-You decline. Dev snorts. "Suit yourself. Vanilla it is."
-<<set $power_user = false>>
-<<set $itguy_friendliness -= 1>>
-<<set $sanity += 1>>
-<<set $d2_task_datateam = true>>
-<<set $d2_slots_used += 1>>
-<<jump R1_D2_Dayplanner>>
-
-===
-
-title: R1_D3_Dayplanner
-tags: #run_1 #day_3 #mechanic_dayplanner
----
-<<bg bg_office>>
-<<set $d3_slots_remaining = 2 - $d3_slots_used>>
-// FAILSAFE: If all three tasks are complete or slots_used >= 2, proceed automatically
-<<if ($d3_task_flag && $d3_task_sanity && $d3_task_rank) || $d3_slots_used >= 2>>
-  <<jump R1_D3_ArcDevelopment>>
-<<endif>>
-
-<<if $d3_slots_used > 0>>
-You have time for {$d3_slots_remaining} more.
+<<if $r1_d2_quiz_result == "missed">>
+Alice: He missed it. So. Zero. The professor's email is very politely disappointed.
+<<elseif $r1_d2_quiz_result == "struggled">>
+Alice: Not great. She's offering extra help to anyone below seventy percent. He qualifies.
 <<else>>
-Choose your tasks for Day 3. You have {$d3_slots_remaining} slots remaining. #line:0f0dc7f
+Alice: Fine. Actually fine. But she's still offering help to everyone, and he could use the face time.
 <<endif>>
--> Flag Cleanup <<if !$d3_task_flag && $d3_slots_used < 2>> #line:01b1bad 
-    <<jump R1_D3_Task_FlagCleanup>>
--> Sanity Check‑in <<if !$d3_task_sanity && $d3_slots_used < 2>> #line:0683e44 
-    <<jump R1_D3_Task_SanityCheckin>>
--> Leaderboard Push <<if !$d3_task_rank && $d3_slots_used < 2>> #line:0799676 
-    <<jump R1_D3_Task_LeaderboardPush>>
 
+Alice: He saw the email. He's been staring at it for ten minutes without opening the reply box.
+
+Player: What's the play?
+
+Alice: We can nudge him toward going—notifications, reminders, maybe a well-timed "you've got this." Or we let him decide without pressure. Less engagement, but more... I don't know. Agency? Autonomy? One of those words.
+
+-> Push him to go
+    <<jump R1_D2_Task_OfficeHours_Push>>
+-> Let him decide
+    <<jump R1_D2_Task_OfficeHours_HandsOff>>
 ===
 
-title: R1_D3_Task_FlagCleanup
-tags: #run_1 #day_3 #scene
+// PURPOSE: Office Hours - Push path
+title: R1_D2_Task_OfficeHours_Push
+tags: #run_1 #day_2 #dayplanner #char_Alice #loc_Dorm
 ---
-<<bg bg_office>>
-Hidden flags clutter the dashboard.  You can clear them manually or with a script. #line:0dd9e98 
--> Clear manually #line:079a137 
-    <<jump R1_D3_Payoff_Flag_A>>
--> Run a cleanup script #line:0cef649
-    <<jump R1_D3_Payoff_Flag_B>> 
+<<bg bg_timmyroom>>
 
-===
+Timmy's phone buzzes. Reminder: "Professor Miller's office hours - 3pm - Science Building 201"
 
-title: R1_D3_Payoff_Flag_A
-tags: #run_1 #day_3 #scene
----
-<<bg bg_office>>
-You carefully clear flags one by one.  Sanity improves. #line:0dcff31 
-<<set $sanity += 2>>
-<<set $d3_task_flag = true>>
-<<set $d3_slots_used += 1>>
-<<jump R1_D3_Dayplanner>>
+Alice: This is a good opportunity. She likes students who show up.
 
-===
+Timmy stares at the notification.
 
-title: R1_D3_Payoff_Flag_B
-tags: #run_1 #day_3 #scene
----
-<<bg bg_office>>
-You run an automated script.  It clears most flags, but a stray label flashes and is immediately censored. #line:03e0c4c 
-<<sfx sfx_censor_beep>>
-[REDACTED] #line:025b2b8 
-<<set $engagement += 1>>
-<<set $sanity -= 1>>
-<<set $d3_task_flag = true>>
-<<set $d3_slots_used += 1>>
-<<jump R1_D3_Dayplanner>>
+Timmy: I hate office hours. Everyone's pretending they don't understand things they obviously understand.
 
-===
+Alice: Or they actually don't understand and they're brave enough to ask.
 
-title: R1_D3_Task_SanityCheckin
-tags: #run_1 #day_3 #scene
----
-<<bg bg_backend>>
-You open the sanity dashboard. #line:0eee02d 
--> Lower intensity sliders #line:05c54c4 
-    <<jump R1_D3_Payoff_Sanity_A>>
--> Add guard text without changing intensity #line:0310feb
-    <<jump R1_D3_Payoff_Sanity_B>> 
+Timmy: That's worse. Then I look like the only one who actually doesn't get it.
 
-===
+Alice: You're spiraling. Just go. Worst case, you sit in a chair for twenty minutes and nod.
 
-title: R1_D3_Payoff_Sanity_A
-tags: #run_1 #day_3 #scene
----
-<<bg bg_backend>>
-You lower the intensity of content served.  Sanity rises; engagement dips slightly. #line:07da921 
-<<set $sanity += 3>>
-<<set $engagement -= 1>>
-<<set $d3_task_sanity = true>>
-<<set $d3_slots_used += 1>>
-<<jump R1_D3_Dayplanner>>
+Timmy: Ugh. Fine.
 
-===
+He goes. The feed shows him awkwardly entering the professor's office. A few other students are there. Charlotte is not.
 
-title: R1_D3_Payoff_Sanity_B
-tags: #run_1 #day_3 #scene
----
-<<bg bg_backend>>
-You add guard text promising empathy, without adjusting the sliders.  Both metrics budge modestly. #line:02cb036 
+Twenty minutes later, he emerges. Looking... better? Maybe?
+
+Timmy: She's actually nice. I thought she'd be mean about the quiz.
+
+Alice: Most professors aren't mean. They're just tired.
+
+Timmy: She said I could retake it if I do the extra credit assignment.
+
+Alice: See? Progress.
+
+He almost smiles.
+
+<<set $officehours_status = "pushed">>
 <<set $sanity += 1>>
 <<set $engagement += 1>>
-<<set $d3_task_sanity = true>>
-<<set $d3_slots_used += 1>>
-<<jump R1_D3_Dayplanner>>
-
+<<jump R1_D2_Dayplanner>>
 ===
 
-title: R1_D3_Task_LeaderboardPush
-tags: #run_1 #day_3 #scene
+// PURPOSE: Office Hours - Hands-off path
+title: R1_D2_Task_OfficeHours_HandsOff
+tags: #run_1 #day_2 #dayplanner #char_Alice #loc_Dorm
 ---
-<<bg bg_office>>
-You can push for a leaderboard bump by nudging metrics, or let standings fall. #line:0f1934f 
--> Nudge metrics before cutoff #line:0647a9f 
-    <<jump R1_D3_Payoff_Rank_A>>
--> Decline to nudge #line:09fd3ac
-    <<jump R1_D3_Payoff_Rank_B>> 
+<<bg bg_timmyroom>>
 
+You let the email sit. No notifications. No reminders.
+
+Timmy stares at it for another five minutes. Opens the reply box. Types "Hi Professor, I was wondering—"
+
+Deletes it.
+
+Types "Dear Professor Miller, I wanted to ask—"
+
+Deletes it.
+
+Closes the email app entirely.
+
+Alice: He's not going.
+
+Player: His choice.
+
+Alice: It is.
+
+Timmy opens a game instead. His shoulders relax slightly. The tension he's been carrying shifts into something else—not gone, just... postponed.
+
+Later, Alice shows you his stats.
+
+Alice: Engagement's fine. Sanity's... holding. He'll probably regret not going, but he won't know he regrets it until next week.
+
+Player: Is that better or worse?
+
+Alice: Yes.
+
+<<set $officehours_status = "hands_off">>
+<<jump R1_D2_Dayplanner>>
 ===
 
-title: R1_D3_Payoff_Rank_A
-tags: #run_1 #day_3 #scene
----
-<<bg bg_office>>
-You nudge metrics, gaining a small bump in rank. #line:05813cd 
-<<set $leaderboard_rank -= 20>>
-<<set $engagement += 2>>
-<<set $d3_task_rank = true>>
-<<set $d3_slots_used += 1>>
-<<sfx "sfx_rank_up">>
-<<jump R1_D3_Dayplanner>>
+// =============================================================================
+// TASK 3: VISIT DATA SCIENCE / IT - MEET NOAM
+// =============================================================================
 
+// PURPOSE: Meet Noam, the IT/Data Science person. Introduces the Suspicion mechanic.
+title: R1_D2_Task_Noam
+tags: #run_1 #day_2 #dayplanner #char_Noam #loc_Dataroom
+---
+<<bg bg_backend>>
+
+The data lab is a different world. Cooler air, dimmer lights, monitors everywhere. Someone has taped a sign to the door: "If you're from Marketing, turn around."
+
+You ignore it. Inside, a person with impressive headphones and a hoodie that says "I void warranties" is arguing with a terminal.
+
+Noam: No. No, that's wrong. You're wrong and you know it.
+
+They notice you.
+
+Noam: Oh. You're new. I can tell because you look like you still believe in mission statements.
+
+Player: Is that bad?
+
+Noam: It's temporary. Give it a month. I'm Noam. They/them. I make the numbers happen.
+
+Player: What numbers?
+
+Noam: All of them. The ones on your dashboard, the ones on Arthur's dashboard, the ones on dashboards you don't know exist. I'm the reason the leaderboard updates in real-time. You're welcome.
+
+They swivel their chair to face you fully.
+
+Noam: Let me guess. You're here because someone told you Data Science has "useful insights" and you want to "leverage synergies" or some other buzzword that died in 2018.
+
+Player: I'm here because it was on my afternoon planner.
+
+Noam: Honest. I like honest. Okay.
+
+They tap a few keys. A new panel appears on a monitor beside you—your console, but with an additional layer of data.
+
+Noam: This is what I actually do. See that number in the corner?
+
+A small icon: an eye, with a number beside it. Currently reads "12."
+
+Noam: That's Suspicion. How much attention Bigger Tech's oversight systems are paying to your lane.
+
+Player: Is twelve bad?
+
+Noam: Twelve is nothing. Twelve is background noise. Fifty is when people start asking questions. Eighty is when those questions have lawyers attached.
+
+<<jump R1_D2_Task_Noam_Continued>>
 ===
 
-title: R1_D3_Payoff_Rank_B
-tags: #run_1 #day_3 #scene
+// PURPOSE: Noam continued - explaining suspicion mechanic
+title: R1_D2_Task_Noam_Continued
+tags: #run_1 #day_2 #dayplanner #char_Noam
 ---
-<<bg bg_office>>
-You leave metrics as they are.  Sanity inches up. #line:0038d6e 
-<<set $sanity += 1>>
-<<set $d3_task_rank = true>>
-<<set $d3_slots_used += 1>>
-<<jump R1_D3_Dayplanner>>
+<<bg bg_backend>>
 
+Player: What makes it go up?
+
+Noam: Anomalies. Patterns that don't fit. Your user suddenly changing behavior in ways that look... guided. Too many coincidences. Too much optimization.
+
+Player: And down?
+
+Noam: Boring. Be boring. Let things drift. Don't make waves. The system likes stasis. It gets nervous when things move too fast.
+
+They lean back.
+
+Noam: I'm telling you this because Arthur asked me to. Well, he asked me to "onboard the new lead on operational awareness." Same thing, more syllables.
+
+Player: Why does it matter?
+
+Noam: Because if your Suspicion gets too high, bad things happen. Audits. Reviews. Someone from Compliance breathing down your neck asking why you made specific choices. You don't want that.
+
+Player: Sounds stressful.
+
+Noam: It is. But now you know. Which means you can plan around it. You're welcome.
+
+They swivel back to their terminal.
+
+Noam: I've added the Suspicion tracker to your dashboard. Try not to break anything. And if you bring me coffee sometime, I might tell you other things. Useful things.
+
+Player: Like what?
+
+Noam: Like why the leaderboard sometimes resets overnight. Or who actually reads the user reports. Or what happens to engagement leads who ask too many questions.
+
+Player: That sounds ominous.
+
+Noam: Everything here is ominous. You just stop noticing after a while.
+
+<<set $noam_met = true>>
+<<set $itguy_friendliness += 1>>
+<<set $suspicion_hud_active = true>>
+<<set $alert_level = 12>>
+// Unity: show the suspicion HUD element on the player's dashboard
+<<jump R1_D2_Dayplanner>>
 ===

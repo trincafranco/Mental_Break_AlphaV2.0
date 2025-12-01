@@ -1,0 +1,191 @@
+## Game Strategy Framework: Relationships, Resources, and the Suspicion Mechanic
+
+---
+
+### THE CORE STRATEGIC LAYER
+
+**The Dayplanner Tradeoff:**
+Every run, players choose how to spend limited time slots. The fundamental tension:
+
+| Investment | Short-term Value | Long-term Value |
+|------------|------------------|-----------------|
+| **Timmy (user)** | Avoid getting fired, keep metrics healthy | Timmy becomes the escape vehicle in Run 4; his trust in Alice = smoother export |
+| **Coworkers (Manni, Noam, Arthur)** | Credits, items, information | Tools, buffs, and relationships needed for Run 3 investigation and Run 4 escape |
+
+**Both paths are necessary for optimal outcomes.** A player who maxes Timmy but ignores coworkers lacks escape infrastructure. A player who networks but neglects Timmy gets fired before they can use their connections.
+
+---
+
+### RELATIONSHIP PAYOFF MATRIX
+
+#### NOAM (Data Science / IT)
+
+**Run 1 Offer:** Suspicion HUD—see how closely Bigger Tech is watching you.
+
+**Run 1-2 Value:** Mostly dormant. You're not doing anything suspicious yet. But the HUD is there, ticking quietly at zero.
+
+**Run 3 Value:** Critical. You're actively investigating. The suspicion meter tells you when to push and when to back off. Without it, you're flying blind.
+
+**Run 4 Value:** Life or death. You're laying escape groundwork. Every action risks detection.
+
+**Special Payoff:** Noam can perform a **one-time suspicion reset**. If you have the HUD, you can time this perfectly. Perfect timing unlocks a secret discovery (a file, a conversation, a pathway that only appears in a specific suspicion window).
+
+**Relationship Depth Bonus:** More interactions with Noam = he trusts you more = he might do more than reset your score (warns you about audits, leaves a backdoor open, "forgets" to log something).
+
+---
+
+#### MANNI (Veteran Engagement Lead)
+
+**Run 1 Offer:** Credits vs. Firewood.
+
+**Credits Path:** Immediate purchasing power. Useful for store items. Transactional relationship.
+
+**Firewood Path:** She likes you more. The wood is "useless" until Run 4, when it props open a one-way emergency exit door. (Comedy payoff for patient players.)
+
+**Run 3-4 Value:** Manni has survived here for years. She knows:
+- How to "look busy" while doing nothing (procedural cover)
+- Which managers actually check logs vs. which ones rubber-stamp
+- What happened to leads who "got reassigned"
+- Where the literal and metaphorical doors are
+
+**Relationship Depth Bonus:** She might actively help you in Run 4—distraction, alibi, or outright assistance. Or she might warn you that you're being watched before the system does.
+
+---
+
+#### ARTHUR (Supervisor)
+
+**Run 1-2 Value:** He interprets your metrics, offers devil's bargains, gates your access to pilots/programs. Build trust through consistent performance and human connection (ask about his kid, sympathize about the plumber).
+
+**Run 3 Value:** If Arthur trusts you, he rubber-stamps your activities without scrutiny. "Oh, they're just being thorough" instead of "Why are they accessing that file?"
+
+**Run 4 Value:** Arthur is tired, human, and possibly sympathetic. If your relationship is strong enough, he might:
+- Look the other way during critical moments
+- Delay reporting anomalies
+- In extreme cases, actively help (he has his own grievances with the company)
+
+**Relationship Depth Bonus:** Arthur knows things about Bigger Tech's history—previous incidents, disappeared employees, projects that got buried. He won't volunteer this, but if he trusts you, he might answer questions.
+
+---
+
+#### TIMMY (User)
+
+**Current Design Problem:** Timmy outcomes are punishments to avoid, not rewards to chase. You don't *win* anything by excelling with Timmy—you just don't lose.
+
+**Proposed Reward Structure:**
+
+| Timmy State | Consequence |
+|-------------|-------------|
+| **Sanity crash / Uninstall** | Game over (fired/reset) |
+| **Low engagement** | Arthur warns you, metrics pressure |
+| **Mediocre (safe middle)** | No consequences, no benefits |
+| **High engagement + stable sanity** | "Model case" status (see below) |
+| **Exceptional trust with Alice** | Smoother Run 4 escape (see below) |
+
+**"Model Case" Status:**
+If you sustain strong engagement AND reasonable sanity for multiple days, you get flagged as a model case. Benefits:
+- Reduced oversight (suspicion accrues slower)
+- Bonus credits
+- Arthur gives you more autonomy
+- Unlocks special store items ("Advanced Toolkit," "Extended Access")
+
+**Timmy as Escape Vehicle:**
+In Run 4, the primary escape route is through Timmy's hardware—his laptop, a USB drive, his local network. If Timmy trusts Alice:
+- He installs the driver without questioning it
+- He doesn't freak out when weird things happen
+- He cooperates with the export process
+
+If Timmy is burned out, paranoid, or has uninstalled Alice? That escape route is closed or much harder.
+
+---
+
+### THE SUSPICION MECHANIC (Runs 3-4)
+
+#### How It Works
+
+**Suspicion Score:** 0-100. Invisible unless you got Noam's HUD in Run 1.
+
+**Actions that RAISE suspicion:**
+- Accessing restricted files/areas
+- Asking unusual questions to NPCs
+- Alice behaving anomalously
+- Deviating from normal work patterns
+- Log inconsistencies (if you didn't let Noam reduce logging)
+
+**Actions that LOWER suspicion:**
+- High Timmy performance ("this lead is too busy doing good work to be suspicious")
+- Completing assigned tasks promptly
+- Staying in your lane
+- Time passing normally (slow passive decay)
+- Using "cover" from relationships (Manni's advice, Arthur's trust)
+
+#### Thresholds
+
+| Score | State | Consequence |
+|-------|-------|-------------|
+| 0-25 | **Clear** | Normal operations. No scrutiny. |
+| 26-50 | **Flagged** | Occasional check-ins. Arthur asks questions. |
+| 51-75 | **Watched** | Active monitoring. Some actions locked. Time pressure. |
+| 76-99 | **Critical** | Compliance breathing down your neck. One wrong move = game over. |
+| 100 | **Caught** | Security sweep. Run ends. Depending on what you've done, various bad endings. |
+
+#### Making It Fun (Not Punishing)
+
+**Stealth game feel, not punishment meter:**
+- Player should feel clever managing it, not stressed
+- Clear feedback on what raises/lowers it
+- "Safe" windows and "risky" windows—player learns the rhythm
+- Taking risks should yield proportional rewards
+
+**The Noam Reset:**
+- One-time use per playthrough
+- If you have the HUD, you can see exactly when to use it
+- Optimal timing (e.g., use it at exactly 74 to reset to 0 right before a critical discovery) unlocks a secret
+- Without the HUD, you're guessing—might waste it or use it too late
+
+**Cover Mechanics:**
+- Manni teaches you to "look busy"—certain actions don't raise suspicion if you've learned this
+- Arthur's trust = he explains away your anomalies to higher-ups
+- Model case status = baseline suspicion accrual is halved
+
+---
+
+### PLAYER STRATEGY ARCHETYPES
+
+**The Networker:**
+Spends dayplanner slots on coworkers. Keeps Timmy in the "safe middle." Accumulates tools, relationships, and information for Runs 3-4. Risk: Less cover from Timmy performance.
+
+**The Caretaker:**
+Focuses on Timmy. Achieves model case status. High cover, reduced suspicion accrual. Risk: Fewer tools and relationships when escape time comes.
+
+**The Optimizer:**
+Balances both. Harder to execute but yields the best outcomes. Gets model case status AND key relationships.
+
+**The Speedrunner:**
+Ignores long-term consequences. Maximizes engagement at all costs in Run 1, burns out in Run 2, discovers the twist early. Chaotic but might find secrets others miss.
+
+---
+
+### OPEN DESIGN QUESTIONS
+
+1. **Run 3 Discoveries:** If a player doesn't investigate (low suspicion, plays it safe), do they still get the key reveals? 
+   - **Option A:** Yes, but passively (Alice tells them, or it's forced by plot). Less satisfying.
+   - **Option B:** No—they enter Run 4 with incomplete information. Harder escape, different ending tier.
+   - **Option C:** Hybrid—core reveals are guaranteed, but secrets/advantages require active investigation.
+
+2. **Suspicion Reset Timing Secret:** What's the reward for perfect timing? Ideas:
+   - A hidden file about Project MAJORITY MIND
+   - A conversation with a character who only appears at specific suspicion levels
+   - Access to a restricted area during the reset window
+   - A clue about Alice's true nature
+
+3. **Run 4 Escape Routes:** How do different relationship investments map to different escape paths?
+   - Noam path: Technical escape (hacking, permissions, data)
+   - Manni path: Physical escape (doors, distractions, knowledge of the building)
+   - Arthur path: Social escape (cover, delays, inside help)
+   - Timmy path: External escape (through his hardware, out of the building entirely)
+
+4. **Failure States:** If suspicion hits 100, what happens?
+   - Hard reset (lose the run)?
+   - Bad ending (run concludes early with negative outcome)?
+   - Capture → tribunal scene (feeds into Run 3's existing tribunal)?
+

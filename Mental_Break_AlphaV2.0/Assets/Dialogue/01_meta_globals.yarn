@@ -50,9 +50,22 @@ A/V:    none #line:0e4485f
 <<declare $arthur_vector = "unset">> // "faustian" | "hesitant_optimizer" | "tightrope" | "playbook"
 <<declare $aggressive_controller = false>>
 <<declare $power_user = false>>
-<<declare $manni_friendliness = 0>>
+<<declare $dina_friendliness = 0>>
 <<declare $itguy_friendliness = 0>>
 <<declare $officehours_status = "unset">>
+// Run 1 Day 3 specific variables for Charlotte storyline.
+<<declare $day3_content_choice = "unset">> // "meditation" | "pua"
+<<declare $day3_mental_break_available = false>>
+<<declare $day3_mental_break_used = false>>
+<<declare $day3_timmy_state = "unset">> // "centered" | "fronting" | "fragile" | "volatile"
+<<declare $day3_intervention = "unset">> // "encourage" | "discourage"
+<<declare $day3_outcome = "unset">> // "success" | "hard_rejection" | "soft_rejection" | "crash" | "nothing_happens" | "simmers"
+<<declare $run1_ending = "unset">> // persisted for Run 2
+<<declare $sanity_score = 0>> // calculated from Days 1-2 choices
+<<declare $sanity_bucket = "mid">> // "good" | "mid" | "bad"
+<<declare $fronting_ignored_alice = false>> // special case: Fronting + Discourage
+<<declare $noam_met = false>> // whether player met Noam in Day 2
+<<declare $suspicion_hud_active = false>> // whether player can see the suspicion meter (granted by Noam)
 
 // Run 2: which sacrifice occurred?  "self" or "alice".  Starts unset.
 <<declare $r2_sacrifice = "unset">>
@@ -154,7 +167,7 @@ A/V:    none #line:0e4485f
 <<declare $d3_slots_used = 0>>
 
 // Run 1 Day 2 task flags for planner slots.
-<<declare $d2_task_manni = false>>
+<<declare $d2_task_dina = false>>
 <<declare $d2_task_officehours = false>>
 <<declare $d2_task_datateam = false>>
 
@@ -197,10 +210,10 @@ A/V:    resets UI to normal. #line:03b5803
 <<set $arthur_vector = "unset">>
 <<set $aggressive_controller = false>>
 <<set $power_user = false>>
-<<set $manni_friendliness = 0>>
+<<set $dina_friendliness = 0>>
 <<set $itguy_friendliness = 0>>
 <<set $officehours_status = "unset">>
-<<set $d2_task_manni = false>>
+<<set $d2_task_dina = false>>
 <<set $d2_task_officehours = false>>
 <<set $d2_task_datateam = false>>
 <<set $d2_task_triage = false>>
@@ -209,6 +222,19 @@ A/V:    resets UI to normal. #line:03b5803
 <<set $d3_task_flag = false>>
 <<set $d3_task_sanity = false>>
 <<set $d3_task_rank = false>>
+// Run 1 Day 3 Charlotte storyline variables (reset between runs).
+<<set $day3_content_choice = "unset">>
+<<set $day3_mental_break_available = false>>
+<<set $day3_mental_break_used = false>>
+<<set $day3_timmy_state = "unset">>
+<<set $day3_intervention = "unset">>
+<<set $day3_outcome = "unset">>
+<<set $sanity_score = 0>>
+<<set $sanity_bucket = "mid">>
+<<set $fronting_ignored_alice = false>>
+<<set $noam_met = false>>
+<<set $suspicion_hud_active = false>>
+// Note: $run1_ending is preserved across runs for Run 2 callbacks.
 // Run 2 day-planner flags.
 // Day 1
 <<set $d1_task_patch = false>>
@@ -267,7 +293,7 @@ A/V:    resets UI to normal. #line:03b5803
 <<set $store_corporate_bond_mature_day = 0>>
 <<set $store_last_notification = "">>
 
-<<ui "mode:normal">>
+// <<ui "mode:normal">>  // TODO: ui command not implemented - variable $r3_ui_mode already handles this
 
 // Jump to the start of the appropriate run based on $current_run
 <<if $current_run == 1>>

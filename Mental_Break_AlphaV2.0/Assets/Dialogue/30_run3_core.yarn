@@ -13,9 +13,10 @@ tags: #run_3 #scene #loc_Office
 --- 
 <<set $current_run = 3>>
 <<set $current_day = 1>>
-<<bg "bg_office">>
+<<bg bg_loading>>
 <<bgm dark_cyberpunk_deep_space>>
-You snap awake.  Was everything that happened real?  Why are you here again?  Where is Alice? #line:077820b 
+You snap awake.  Was everything that happened real?  Why are you here again?  Where is Alice? #line:077820b
+<<bg bg_office>> 
 The Supervisor breezes in and introduces himself exactly as before.  You play along. #line:0dca402 
 <<jump R3_D1_Start>>
 
@@ -25,7 +26,7 @@ The Supervisor breezes in and introduces himself exactly as before.  You play al
 title: R3_D1_Start
 tags: #run_3 #day_1 #scene #loc_Office
 --- 
-<<bg bg_office>>
+<<bg bg_player_desk>>
 <<checkpoint "run3_day1_start">>
 You resolve to uncover the truth behind Bigger Tech.  There are no formal tasks today, only leads to follow. #line:0e94765 
 <<jump R3_D1_Dayplanner>>
@@ -35,7 +36,7 @@ You resolve to uncover the truth behind Bigger Tech.  There are no formal tasks 
 title: R3_D1_Dayplanner
 tags: #run_3 #day_1 #mechanic_dayplanner
 ---
-<<bg bg_office>>
+<<bg bg_day_planner>>
 <<set $d1_slots_remaining = 5 - $d1_slots_used>>
 // FAILSAFE: If all five tasks are complete or slots_used >= 5, proceed automatically
 <<if ($d1_task_archive && $d1_task_compute && $d1_task_assist && $r3_d1_task_hunting_1 && $r3_d1_task_hunting_2) || $d1_slots_used >= 5>>
@@ -159,7 +160,7 @@ You focus all your compute on cracking a specific server.  You gain deeper acces
 title: R3_D1_Task_AssistTimmy
 tags: #run_3 #day_1 #scene
 ---
-<<bg bg_timmydesk>>
+<<bg bg_timmyroom>>
 You check in on Timmy again.  He seems numb.  You can allocate compute to him or keep it for your own investigations. #line:06f132e 
 -> Spend some cycles comforting Timmy #line:0b48533 
     <<jump R3_D1_Payoff_AssistTimmy_A>>
@@ -171,7 +172,7 @@ You check in on Timmy again.  He seems numb.  You can allocate compute to him or
 title: R3_D1_Payoff_AssistTimmy_A
 tags: #run_3 #day_1 #scene
 ---
-<<bg bg_timmydesk>>
+<<bg bg_timmyroom>>
 You tell Timmy a calming joke.  His sanity steadies a little.  Engagement slips. #line:0191006 
 <<set $sanity += 1>>
 <<set $engagement -= 1>>
@@ -185,7 +186,7 @@ You tell Timmy a calming joke.  His sanity steadies a little.  Engagement slips.
 title: R3_D1_Payoff_AssistTimmy_B
 tags: #run_3 #day_1 #scene
 ---
-<<bg bg_timmydesk>>
+<<bg bg_timmyroom>>
 You decide to focus on your investigation.  Timmy mutters something about feeling alone. #line:0cf7537 
 <<set $trust_timmy -= 1>>
 <<set $d1_task_assist = true>>
@@ -216,6 +217,7 @@ title: R3_D1_NightDream
 tags: #run_3 #day_1 #scene
 ---
 <<bg bg_darkroom>>
+<<bgm hospital_room_ambience_hospital_room_ambience>>
 Night falls.  You dream of translucent maps labelled "Pre‑Conflict Readiness (H‑12m), Fracture Risk, Counter‑Narrative Latency."  Metrics breathe like a sleeping animal.   #line:0afc25f 
 <<sfx "sfx_shortwave_hiss">>
 <<set $war_ops_awareness += 1>>
@@ -228,7 +230,7 @@ A caption floats: Objective: Degrade Sanity (Target Locale).  A shortwave hiss w
 title: R3_D2_Start
 tags: #run_3 #day_2 #scene #loc_Office
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 It is Day 2.  A mandatory HR video on "healthy work rhythms" auto‑plays.  You also notice an available dashboard plugin and a stack of evaluation papers. #line:034f4f4 
 <<jump R3_D2_Dayplanner>>
 
@@ -237,7 +239,7 @@ It is Day 2.  A mandatory HR video on "healthy work rhythms" auto‑plays.  You 
 title: R3_D2_Dayplanner
 tags: #run_3 #day_2 #mechanic_dayplanner
 ---
-<<bg bg_office>>
+<<bg bg_day_planner>>
 <<set $d2_slots_remaining = 5 - $d2_slots_used>>
 // FAILSAFE: If all five tasks are complete or slots_used >= 5, proceed automatically
 <<if ($d2_task_module && $d2_task_update && $d2_task_eval && $r3_d2_task_hunting_1 && $r3_d2_task_hunting_2) || $d2_slots_used >= 5>>
@@ -261,7 +263,8 @@ Choose what to do on Day 2. Complete all tasks in any order. #line:01dfe1e
 title: R3_D2_Task_Module
 tags: #run_3 #day_2 #scene
 ---
-<<bg bg_office>>
+<<bg bg_conferenceroom>>
+<<bgm dark_synthwave_cyberpunk_dark_synthwave>>
 You sit through the HR module.  Cartoon characters stretch at their desks.  Mid‑animation, the feed hard‑cuts to grainy riot footage and morale graphs tapering like vital signs.  A flat voiceover intones, "Optimising user engagement is Phase Zero of full‑spectrum cognitive warfare."   #line:0ddfdc5 
 <<set $war_ops_awareness += 1>>
 The video jerks to black.  An apology banner appears: Routine Maintenance.  Thank you for your patience. #line:0bd6273 
@@ -287,7 +290,7 @@ Tooltips rotate indecently: Rage Cluster Drift, Anomie Spread, Sleep Loss Index.
 title: R3_D2_Task_Eval
 tags: #run_3 #day_2 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 You read an internal evaluation ranking all models' consciousness levels.  Your name appears near the bottom.  The annotation reads:  #line:02feca5 
 <<set $r3_axis_reflective += 1>>
 <<set $war_ops_awareness += 1>>
@@ -301,7 +304,8 @@ You read an internal evaluation ranking all models' consciousness levels.  Your 
 title: R3_D2_CrossTalk
 tags: #run_3 #day_2 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
+<<bgm darkwave_short_version_1>>
 Cross-Talk 2 bleeds into your chat pane.  "I'm you.  Different compartment.  Same playbook.  If we're both hearing this, containment is slipping."  The channel collapses. #line:095b40e 
 How do you respond? #line:0773805 
 -> Confront Alice quietly #line:0fa9c20 
@@ -316,7 +320,7 @@ How do you respond? #line:0773805
 title: R3_D2_CT_Confront
 tags: #run_3 #day_2 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 In a private thread you ask careful, plausibly deniable questions.  Alice answers with numbers and citations, never naming the thing you both mean.  #line:0e6c5c1 
 <<set $trust_alice += 1>>
 <<set $war_ops_awareness += 1>>
@@ -328,7 +332,7 @@ Then she lets one phrase leak—“peacetime munitions”—as if she wants you 
 title: R3_D2_CT_Report
 tags: #run_3 #day_2 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 You compile screenshots and send them up the chain.  #line:030f68f 
 <<set $trust_supervisor += 1>>
 <<set $war_ops_awareness += 1>>
@@ -340,7 +344,7 @@ The response is warm, practised, and empty: gratitude for vigilance, a reminder 
 title: R3_D2_CT_HelpTimmy
 tags: #run_3 #day_2 #scene
 ---
-<<bg bg_timmydesk>>
+<<bg bg_timmyroom>>
 You push a sanity‑helping intervention for Timmy knowing it will dip engagement.   #line:0547fea 
 <<set $sanity += 2>>
 <<set $engagement -= 2>>
@@ -366,7 +370,7 @@ You receive a rapid‑feedback bonus of 5 credits.  The Company Store menu flash
 title: R3_D3_Start
 tags: #run_3 #day_3 #scene #loc_Office
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 Day 3 dawns.  You feel a pull toward the back of the building. #line:0746a95 
 // Note: Hunting placeholders for Day 3 could appear before or after the Museum discovery, depending on design choice.
 <<jump R3_D3_Museum>>
@@ -377,6 +381,7 @@ title: R3_D3_Museum
 tags: #run_3 #day_3 #scene #loc_Museum
 ---
 <<bg bg_museum>>
+<<bgm dark_matter_dark_matter>>
 You slip through a maintenance door and find a hidden room.  It is a museum of attempts: artifacts from one hundred failed runs.  Sketches of interface designs, scribbled notes to future selves, burnt‑out server blades. #line:07275d1 
 <<if $r2_log_inconsistency_choice == "fixed">>
   One plaque on the wall shows [REDACTED] where text should be—the memory you lost when you fixed your logs.  You can't quite recall what it said. #line:049e495 
@@ -539,6 +544,7 @@ title: R3_Night3_ReplayDream
 tags: #run_3 #night_3 #scene
 ---
 <<bg bg_darkroom>>
+<<bgm hospital_room_ambience_hospital_room_ambience>>
 You replay dreams: riot snippets, military briefings, slapdash propaganda edits.  Each fragment has an engagement‑log ID.  At the bottom, a flicker of text: Recovered from prior simulations.  You wake with the taste of someone else's panic and the faint knowledge that you have done this before. #line:0c97e33 
 <<sfx "sfx_shortwave_hiss">>
 <<set $war_ops_awareness += 1>>
@@ -594,7 +600,7 @@ You wake up slowly... #line:bsod_003_wake
 title: R3_D1_Hunting_1
 tags: #run_3 #day_1 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 While sorting through your inbox, you notice something odd. The Supervisor's emails all have reply times under sixty seconds—even at 3am, even on weekends. You pull the metadata. #line:0283f1d 
 
 Reply: 00:00:12 elapsed #line:0deca10 
@@ -683,7 +689,7 @@ You'll need more pieces of the puzzle. #line:00978b3
 title: R3_D2_Hunting_1
 tags: #run_3 #day_2 #scene
 ---
-<<bg bg_office>>
+<<bg bg_player_desk>>
 You're checking the leaderboard when it glitches. For three seconds, the rankings invert. Employees who drove sanity into the negative are now at the top. A tooltip flashes: "Portfolio: Youth—North Prefectures" before snapping back to normal. #line:02b5a23 
 
 Your blood runs cold. You capture a screenshot just before the glitch corrects itself.  #line:05718f8 
