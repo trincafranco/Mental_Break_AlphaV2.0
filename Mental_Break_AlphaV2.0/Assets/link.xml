@@ -1,0 +1,16 @@
+<linker>
+    <!-- Preserve Yarn Spinner assemblies -->
+    <assembly fullname="YarnSpinner.Unity" preserve="all"/>
+    <assembly fullname="YarnSpinner" preserve="all"/>
+    
+    <!-- Preserve game scripts that use YarnCommand attributes -->
+    <assembly fullname="Assembly-CSharp" preserve="all">
+        <type fullname="*" preserve="all"/>
+    </assembly>
+    
+    <!-- Preserve System.Reflection for command dispatch -->
+    <assembly fullname="mscorlib">
+        <type fullname="System.Reflection.*" preserve="all"/>
+    </assembly>
+</linker>
+
