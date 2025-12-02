@@ -153,6 +153,20 @@
       }
     },
     {
+      "src": "/StreamingAssets/(.*)",
+      "dest": "/StreamingAssets/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*\\.mp4)",
+      "headers": {
+        "Content-Type": "video/mp4",
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
       "src": "/about",
       "dest": "/about.html",
       "headers": {
