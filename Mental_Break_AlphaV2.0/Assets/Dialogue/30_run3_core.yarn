@@ -14,7 +14,7 @@ tags: #run_3 #scene #loc_Office
 <<set $current_run = 3>>
 <<set $current_day = 1>>
 <<bg bg_loading>>
-<<bgm dark_cyberpunk_deep_space>>
+<<bgm mb_maintheme_demo_v1>>
 You snap awake.  Was everything that happened real?  Why are you here again?  Where is Alice? #line:077820b
 <<bg bg_office>> 
 The Supervisor breezes in and introduces himself exactly as before.  You play along. #line:0dca402 

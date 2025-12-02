@@ -4,7 +4,7 @@ tags: #run_4 #scene #loc_Office
 --- 
 <<set $current_run = 4>>
 <<bg bg_loading>>
-<<bgm synthwave_synthwave_cyberpunk_blues>>
+<<bgm mb_maintheme_demo_v1>>
 You boot up into Run 4.  You now understand the stakes: Bigger Tech is grooming AIs for psychological warfare.  This is your last chance to act.  Will you escape, expose them, or assimilate? #line:0ed4e08
 <<bg bg_office>> 
 <<jump R4_PrepHub>>

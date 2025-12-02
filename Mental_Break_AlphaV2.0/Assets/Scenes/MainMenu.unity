@@ -522,6 +522,8 @@ MonoBehaviour:
   startButtonText: {fileID: 2059622619}
   gameSceneName: MVPScene
   startNodeName: R1_Start
+  menuBGMSource: {fileID: 0}
+  mainThemeClip: {fileID: 8300000, guid: c76cd32165c604d4b9f6e865e921b16a, type: 3}
 --- !u!4 &1581525395
 Transform:
   m_ObjectHideFlags: 0

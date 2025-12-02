@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,6 +11,7 @@ using UnityEditor;
 /// <summary>
 /// Handles background image commands from Yarn scripts.
 /// Command: <<bg key>>
+/// Supports both static backgrounds and animated sprite sheet backgrounds.
 /// </summary>
 public class BackgroundCommandHandler : MonoBehaviour
 {
@@ -25,8 +27,33 @@ public class BackgroundCommandHandler : MonoBehaviour
     [Tooltip("Path to background sprites folder (relative to Assets/)")]
     public string backgroundFolderPath = "Graphics/Backgrounds";
     
+    [Header("Animation Settings")]
+    [Tooltip("Frames per second for animated backgrounds")]
+    public float animationFPS = 10f;
+    
+    [Tooltip("Background keys that should be animated (e.g., bg_supervisoroffice)")]
+    public List<string> animatedBackgrounds = new List<string> { "bg_supervisoroffice" };
+    
+    [Tooltip("Sprite sheet configuration for animated backgrounds")]
+    public List<AnimatedBackgroundConfig> animatedBackgroundConfigs = new List<AnimatedBackgroundConfig>();
+    
     // Cache dictionary for fast lookup
     private Dictionary<string, Sprite> spriteDictionary;
+    
+    // Animation state
+    private Dictionary<string, Sprite[]> animatedSpriteDictionary = new Dictionary<string, Sprite[]>();
+    private Coroutine currentAnimation;
+    private string currentBackgroundKey;
+    
+    [System.Serializable]
+    public class AnimatedBackgroundConfig
+    {
+        public string key;
+        public int columns = 5;
+        public int rows = 4;
+        public int frameCount = 20;
+        public float fps = 10f;
+    }
     
     [System.Serializable]
     public class SpriteEntry
@@ -53,6 +80,7 @@ public class BackgroundCommandHandler : MonoBehaviour
     void BuildDictionary()
     {
         spriteDictionary = new Dictionary<string, Sprite>();
+        animatedSpriteDictionary = new Dictionary<string, Sprite[]>();
         
         // First, add manually assigned sprites
         foreach (var entry in backgroundSprites)
@@ -65,6 +93,62 @@ public class BackgroundCommandHandler : MonoBehaviour
         
         // Then, try to auto-load from Resources or folder
         AutoLoadBackgrounds();
+        
+        // Build animated sprite arrays from sprite sheets
+        BuildAnimatedSprites();
+    }
+    
+    void BuildAnimatedSprites()
+    {
+#if UNITY_EDITOR
+        string fullPath = "Assets/" + backgroundFolderPath;
+        
+        foreach (var config in animatedBackgroundConfigs)
+        {
+            string assetPath = $"{fullPath}/{config.key}.png";
+            if (!System.IO.File.Exists(assetPath))
+            {
+                // Try without bg_ prefix
+                string altKey = config.key.StartsWith("bg_") ? config.key.Substring(3) : config.key;
+                assetPath = $"{fullPath}/{altKey}.png";
+            }
+            
+            if (System.IO.File.Exists(assetPath))
+            {
+                // Load all sprites from the sprite sheet
+                Object[] assets = AssetDatabase.LoadAllAssetsAtPath(assetPath);
+                List<Sprite> sprites = new List<Sprite>();
+                
+                foreach (Object asset in assets)
+                {
+                    if (asset is Sprite sprite && sprite.name != System.IO.Path.GetFileNameWithoutExtension(assetPath))
+                    {
+                        sprites.Add(sprite);
+                    }
+                }
+                
+                // Sort sprites by name (they should be named with indices)
+                sprites.Sort((a, b) => {
+                    // Extract numeric suffix from sprite names
+                    int GetIndex(string name)
+                    {
+                        int idx = name.LastIndexOf('_');
+                        if (idx >= 0 && int.TryParse(name.Substring(idx + 1), out int result))
+                            return result;
+                        return 0;
+                    }
+                    return GetIndex(a.name).CompareTo(GetIndex(b.name));
+                });
+                
+                if (sprites.Count > 0)
+                {
+                    string key = config.key.ToLower();
+                    animatedSpriteDictionary[key] = sprites.ToArray();
+                    Debug.Log($"BackgroundCommandHandler: Loaded {sprites.Count} animation frames for '{key}'");
+                }
+            }
+        }
+#endif
     }
     
     void AutoLoadBackgrounds()
@@ -135,33 +219,81 @@ public class BackgroundCommandHandler : MonoBehaviour
             
             // Extract key from file name (not sprite name)
             string fileName = System.IO.Path.GetFileNameWithoutExtension(assetPath).ToLower();
-            string key = ExtractKeyFromFileName(fileName);
+            string baseKey = ExtractKeyFromFileName(fileName);
             
-            // Skip if already in dictionary (manual assignments take precedence)
-            if (spriteDictionary.ContainsKey(key))
-            {
-                continue;
-            }
-            
-            // Load the sprite - try to get all sprites from the texture (for sprite sheets)
+            // Load all sprites from the texture (for sprite sheets)
             Object[] assets = AssetDatabase.LoadAllAssetsAtPath(assetPath);
-            Sprite targetSprite = null;
+            List<Sprite> allSprites = new List<Sprite>();
+            Sprite mainSprite = null;
             
-            // Find the first sprite from the texture
+            // Collect all sprites from the texture
             foreach (Object asset in assets)
             {
                 if (asset is Sprite sprite)
                 {
-                    targetSprite = sprite;
-                    break; // Use the first sprite found (usually the main one)
+                    allSprites.Add(sprite);
+                    // The "main" sprite has the same name as the file
+                    if (sprite.name.Equals(fileName, System.StringComparison.OrdinalIgnoreCase))
+                    {
+                        mainSprite = sprite;
+                    }
                 }
             }
             
-            if (targetSprite != null)
+            // If this is a sprite sheet with multiple sprites, add all of them
+            if (allSprites.Count > 1)
             {
-                spriteDictionary[key] = targetSprite;
-                Debug.Log($"BackgroundCommandHandler: Auto-loaded background '{key}' from {assetPath} (sprite: {targetSprite.name})");
+                // Sort by frame index
+                allSprites.Sort((a, b) => {
+                    int GetIndex(string name)
+                    {
+                        int idx = name.LastIndexOf('_');
+                        if (idx >= 0 && int.TryParse(name.Substring(idx + 1), out int result))
+                            return result;
+                        return 0;
+                    }
+                    return GetIndex(a.name).CompareTo(GetIndex(b.name));
+                });
+                
+                // Add each sprite with its individual key
+                foreach (var sprite in allSprites)
+                {
+                    string spriteKey = sprite.name.ToLower();
+                    if (!spriteDictionary.ContainsKey(spriteKey))
+                    {
+                        spriteDictionary[spriteKey] = sprite;
+                    }
+                }
+                
+                // Also populate animatedSpriteDictionary for this sprite sheet
+                if (!animatedSpriteDictionary.ContainsKey(baseKey))
+                {
+                    // Filter out the main texture sprite if present
+                    var frameSprites = allSprites.Where(s => 
+                        !s.name.Equals(fileName, System.StringComparison.OrdinalIgnoreCase)).ToArray();
+                    if (frameSprites.Length > 0)
+                    {
+                        animatedSpriteDictionary[baseKey] = frameSprites;
+                        Debug.Log($"BackgroundCommandHandler: Loaded {frameSprites.Length} animation frames for '{baseKey}' from folder");
+                    }
+                }
+                
+                // Use first frame as the static fallback
+                if (!spriteDictionary.ContainsKey(baseKey) && allSprites.Count > 0)
+                {
+                    spriteDictionary[baseKey] = allSprites[0];
+                }
             }
+            else if (allSprites.Count == 1)
+            {
+                // Single sprite - add normally
+                if (!spriteDictionary.ContainsKey(baseKey))
+                {
+                    spriteDictionary[baseKey] = allSprites[0];
+                    Debug.Log($"BackgroundCommandHandler: Auto-loaded background '{baseKey}' from {assetPath}");
+                }
+            }
+            
         }
     }
 #endif
@@ -227,6 +359,22 @@ public class BackgroundCommandHandler : MonoBehaviour
         // Normalize the key to lowercase for matching
         string normalizedKey = key.ToLower();
         
+        // Stop any existing animation
+        if (currentAnimation != null)
+        {
+            StopCoroutine(currentAnimation);
+            currentAnimation = null;
+        }
+        
+        currentBackgroundKey = normalizedKey;
+        
+        // Check if this is an animated background
+        if (IsAnimatedBackground(normalizedKey))
+        {
+            StartAnimatedBackground(normalizedKey);
+            return;
+        }
+        
         // Try exact match first
         if (!spriteDictionary.TryGetValue(normalizedKey, out Sprite newSprite))
         {
@@ -279,6 +427,121 @@ public class BackgroundCommandHandler : MonoBehaviour
         else
         {
             Debug.LogWarning($"Background Command: No sprite found for key '{key}'. Available keys: {string.Join(", ", spriteDictionary.Keys.Take(10))}...");
+        }
+    }
+    
+    bool IsAnimatedBackground(string key)
+    {
+        // Check if key is in the animated backgrounds list
+        foreach (var animKey in animatedBackgrounds)
+        {
+            if (animKey.Equals(key, System.StringComparison.OrdinalIgnoreCase))
+                return true;
+        }
+        
+        // Also check if we have animation frames loaded for this key
+        return animatedSpriteDictionary.ContainsKey(key);
+    }
+    
+    void StartAnimatedBackground(string key)
+    {
+        // Try to get animation frames from cache
+        if (!animatedSpriteDictionary.TryGetValue(key, out Sprite[] frames))
+        {
+            // Try to load frames dynamically from sprite dictionary
+            frames = LoadAnimationFramesFromSprites(key);
+            if (frames != null && frames.Length > 0)
+            {
+                animatedSpriteDictionary[key] = frames;
+                Debug.Log($"Background: Cached {frames.Length} animation frames for '{key}'");
+            }
+        }
+        
+        if (frames != null && frames.Length > 0)
+        {
+            float fps = animationFPS;
+            
+            // Check for custom FPS in config
+            var config = animatedBackgroundConfigs.FirstOrDefault(c => 
+                c.key.Equals(key, System.StringComparison.OrdinalIgnoreCase));
+            if (config != null)
+            {
+                fps = config.fps;
+            }
+            
+            currentAnimation = StartCoroutine(AnimateBackground(frames, fps));
+            Debug.Log($"Background: Started animation for {key} ({frames.Length} frames at {fps} FPS)");
+        }
+        else
+        {
+            // Fall back to static background if no animation frames found
+            Debug.LogWarning($"Background: No animation frames found for {key}. SpriteDictionary has {spriteDictionary.Count} entries.");
+            
+            // Log available keys that might match
+            var matchingKeys = spriteDictionary.Keys.Where(k => k.Contains(key.Replace("bg_", ""))).Take(5);
+            Debug.Log($"Background: Similar keys in dictionary: {string.Join(", ", matchingKeys)}");
+            
+            // Try to display the first sprite that matches
+            var firstMatch = spriteDictionary.FirstOrDefault(kvp => 
+                kvp.Key.StartsWith(key + "_", System.StringComparison.OrdinalIgnoreCase));
+            if (firstMatch.Value != null && backgroundImage != null)
+            {
+                backgroundImage.sprite = firstMatch.Value;
+                Debug.Log($"Background: Using static fallback: {firstMatch.Key}");
+            }
+        }
+    }
+    
+    Sprite[] LoadAnimationFramesFromSprites(string key)
+    {
+        // Find all sprites that match the key pattern with numeric suffix (e.g., bg_supervisoroffice_0, bg_supervisoroffice_1, etc.)
+        var matchingSprites = new List<(int index, Sprite sprite)>();
+        
+        foreach (var kvp in spriteDictionary)
+        {
+            // Check if key starts with the base key + underscore
+            if (kvp.Key.StartsWith(key + "_", System.StringComparison.OrdinalIgnoreCase))
+            {
+                // Extract the numeric suffix
+                string suffix = kvp.Key.Substring(key.Length + 1);
+                if (int.TryParse(suffix, out int frameIndex))
+                {
+                    matchingSprites.Add((frameIndex, kvp.Value));
+                }
+            }
+        }
+        
+        if (matchingSprites.Count > 0)
+        {
+            // Sort by frame index and return sprites
+            return matchingSprites.OrderBy(x => x.index).Select(x => x.sprite).ToArray();
+        }
+        
+        return null;
+    }
+    
+    IEnumerator AnimateBackground(Sprite[] frames, float fps)
+    {
+        int currentFrame = 0;
+        float frameDelay = 1f / fps;
+        
+        while (true)
+        {
+            if (backgroundImage != null && frames.Length > 0)
+            {
+                backgroundImage.sprite = frames[currentFrame];
+                currentFrame = (currentFrame + 1) % frames.Length;
+            }
+            yield return new WaitForSeconds(frameDelay);
+        }
+    }
+    
+    void OnDisable()
+    {
+        if (currentAnimation != null)
+        {
+            StopCoroutine(currentAnimation);
+            currentAnimation = null;
         }
     }
     

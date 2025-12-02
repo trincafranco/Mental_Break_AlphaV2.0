@@ -459,6 +459,10 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: animatedBackgroundConfigs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: backgroundSprites.Array.data[27].key
       value: bg_conferenceroom_0
       objectReference: {fileID: 0}
@@ -522,6 +526,26 @@ PrefabInstance:
       propertyPath: backgroundSprites.Array.data[34].sprite
       value: 
       objectReference: {fileID: 1851226315671141383, guid: 5a07030fc214c19469623bd7347462cf, type: 3}
+    - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: animatedBackgroundConfigs.Array.data[0].fps
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: animatedBackgroundConfigs.Array.data[0].key
+      value: bg_supervisoroffice
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: animatedBackgroundConfigs.Array.data[0].rows
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: animatedBackgroundConfigs.Array.data[0].columns
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: animatedBackgroundConfigs.Array.data[0].frameCount
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2175930148194243174, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1493,6 +1517,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d736c1999e12f6149b30a7af4b6fab8f, type: 3}
   - key: bgm_ode_to_joy_by_abydos
     clip: {fileID: 8300000, guid: 6ea6238e0a4067442bcc2a6a226a8e0c, type: 3}
+  - key: bgm_mb_maintheme_demo_v1
+    clip: {fileID: 8300000, guid: c76cd32165c604d4b9f6e865e921b16a, type: 3}
   sfxClips: []
 --- !u!4 &1897889584
 Transform:

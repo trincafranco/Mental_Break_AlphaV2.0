@@ -31,9 +31,162 @@ public class AutoMapBackgrounds : EditorWindow
             MapBackgroundSprites();
         }
 
+        GUILayout.Space(20);
+        GUILayout.Label("Animated Backgrounds", EditorStyles.boldLabel);
+        GUILayout.Space(5);
+        
+        if (GUILayout.Button("Setup Animated Sprite Sheets", GUILayout.Height(30)))
+        {
+            SetupAnimatedSpriteSheets();
+        }
+        
+        GUILayout.Space(5);
+        GUILayout.Label("This configures sprite sheets for animation (bg_supervisoroffice, etc.)");
+
         GUILayout.Space(10);
         GUILayout.Label("Note: Images must be configured as Sprites in Unity import settings.");
         GUILayout.Label("Review the mappings in the BackgroundCommandHandler Inspector.");
+    }
+    
+    [MenuItem("Tools/Yarn Spinner/Setup Animated Backgrounds")]
+    public static void SetupAnimatedSpriteSheets()
+    {
+        // Configuration for animated sprite sheets
+        var animatedSheets = new[]
+        {
+            new { path = "Assets/Graphics/Backgrounds/bg_supervisoroffice.png", columns = 5, rows = 4, frameCount = 20 }
+        };
+        
+        foreach (var sheet in animatedSheets)
+        {
+            if (!System.IO.File.Exists(sheet.path))
+            {
+                Debug.LogWarning($"Animated sprite sheet not found: {sheet.path}");
+                continue;
+            }
+            
+            TextureImporter importer = AssetImporter.GetAtPath(sheet.path) as TextureImporter;
+            if (importer == null)
+            {
+                Debug.LogError($"Could not get TextureImporter for: {sheet.path}");
+                continue;
+            }
+            
+            // Configure as sprite sheet
+            importer.textureType = TextureImporterType.Sprite;
+            importer.spriteImportMode = SpriteImportMode.Multiple;
+            importer.filterMode = FilterMode.Point; // Pixel art friendly
+            importer.textureCompression = TextureImporterCompression.Uncompressed;
+            
+            // Get texture size
+            Texture2D texture = AssetDatabase.LoadAssetAtPath<Texture2D>(sheet.path);
+            if (texture == null)
+            {
+                Debug.LogError($"Could not load texture: {sheet.path}");
+                continue;
+            }
+            
+            int frameWidth = texture.width / sheet.columns;
+            int frameHeight = texture.height / sheet.rows;
+            
+            // Create sprite rects for each frame
+            var factory = new SpriteDataProviderFactories();
+            factory.Init();
+            var dataProvider = factory.GetSpriteEditorDataProviderFromObject(importer);
+            dataProvider.InitSpriteEditorDataProvider();
+            
+            List<SpriteRect> spriteRects = new List<SpriteRect>();
+            string baseName = System.IO.Path.GetFileNameWithoutExtension(sheet.path);
+            
+            int frameIndex = 0;
+            for (int row = 0; row < sheet.rows; row++)
+            {
+                for (int col = 0; col < sheet.columns; col++)
+                {
+                    if (frameIndex >= sheet.frameCount) break;
+                    
+                    var rect = new SpriteRect
+                    {
+                        name = $"{baseName}_{frameIndex}",
+                        spriteID = GUID.Generate(), // Required for proper sprite creation
+                        rect = new Rect(
+                            col * frameWidth,
+                            texture.height - (row + 1) * frameHeight, // Unity uses bottom-left origin
+                            frameWidth,
+                            frameHeight
+                        ),
+                        alignment = SpriteAlignment.Center,
+                        pivot = new Vector2(0.5f, 0.5f)
+                    };
+                    spriteRects.Add(rect);
+                    frameIndex++;
+                }
+            }
+            
+            dataProvider.SetSpriteRects(spriteRects.ToArray());
+            dataProvider.Apply();
+            
+            // Write changes to the importer and reimport
+            var assetImporterEditor = Editor.CreateEditor(importer);
+            assetImporterEditor.serializedObject.ApplyModifiedProperties();
+            DestroyImmediate(assetImporterEditor);
+            
+            EditorUtility.SetDirty(importer);
+            importer.SaveAndReimport();
+            
+            Debug.Log($"✅ Configured animated sprite sheet: {sheet.path} ({sheet.columns}x{sheet.rows} = {sheet.frameCount} frames)");
+        }
+        
+        // Also configure the BackgroundCommandHandler with animation settings
+        ConfigureAnimationHandler();
+        
+        Debug.Log("Animated sprite sheet setup complete!");
+    }
+    
+    private static void ConfigureAnimationHandler()
+    {
+        BackgroundCommandHandler handler = FindAnyObjectByType<BackgroundCommandHandler>();
+        if (handler == null)
+        {
+            Debug.LogWarning("BackgroundCommandHandler not found. Open the GameScene to configure animation settings.");
+            return;
+        }
+        
+        // Add/update animated background configs
+        bool hasSupervisorConfig = false;
+        foreach (var config in handler.animatedBackgroundConfigs)
+        {
+            if (config.key == "bg_supervisoroffice")
+            {
+                hasSupervisorConfig = true;
+                config.columns = 5;
+                config.rows = 4;
+                config.frameCount = 20;
+                config.fps = 10f;
+                break;
+            }
+        }
+        
+        if (!hasSupervisorConfig)
+        {
+            handler.animatedBackgroundConfigs.Add(new BackgroundCommandHandler.AnimatedBackgroundConfig
+            {
+                key = "bg_supervisoroffice",
+                columns = 5,
+                rows = 4,
+                frameCount = 20,
+                fps = 10f
+            });
+        }
+        
+        // Ensure bg_supervisoroffice is in animated backgrounds list
+        if (!handler.animatedBackgrounds.Contains("bg_supervisoroffice"))
+        {
+            handler.animatedBackgrounds.Add("bg_supervisoroffice");
+        }
+        
+        EditorUtility.SetDirty(handler);
+        Debug.Log("✅ Configured BackgroundCommandHandler animation settings");
     }
 
     private static void MapBackgroundSprites()

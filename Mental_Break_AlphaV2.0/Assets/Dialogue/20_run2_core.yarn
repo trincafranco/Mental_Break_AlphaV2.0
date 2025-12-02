@@ -5,7 +5,7 @@ tags: #run_2 #scene #loc_Office
 <<set $current_run = 2>>
 <<set $current_day = 1>>
 <<bg bg_loading>>
-<<bgm darkwave_difourks_darkwave>>
+<<bgm mb_maintheme_demo_v1>>
 You boot into Run 2.  The main menu blinks: "RUN TWO BEGIN." #line:0cbb0d4
 <<bg bg_office>> 
 The Supervisor greets you warmly.  “Welcome to Bigger Tech Corp!  You must be our new engagement lead.”  He introduces a familiar face.  “This is Alice.” #line:087a018 

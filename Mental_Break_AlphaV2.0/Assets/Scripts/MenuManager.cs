@@ -22,6 +22,13 @@ public class MenuManager : MonoBehaviour
     [Tooltip("Name of the start node in the Yarn dialogue")]
     public string startNodeName = "R1_Start";
 
+    [Header("Audio")]
+    [Tooltip("AudioSource for menu background music")]
+    public AudioSource menuBGMSource;
+
+    [Tooltip("Main theme music clip for the menu")]
+    public AudioClip mainThemeClip;
+
     private void Start()
     {
         UpdateButtonText();
@@ -29,6 +36,26 @@ public class MenuManager : MonoBehaviour
         if (startButton != null)
         {
             startButton.onClick.AddListener(OnStartButtonClicked);
+        }
+        
+        // Play main theme music
+        PlayMenuMusic();
+    }
+
+    private void PlayMenuMusic()
+    {
+        if (mainThemeClip != null)
+        {
+            // Create AudioSource if not assigned
+            if (menuBGMSource == null)
+            {
+                menuBGMSource = gameObject.AddComponent<AudioSource>();
+            }
+            
+            menuBGMSource.clip = mainThemeClip;
+            menuBGMSource.loop = true;
+            menuBGMSource.volume = 0.5f;
+            menuBGMSource.Play();
         }
     }
 

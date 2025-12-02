@@ -13,7 +13,7 @@ tags: #run_1 #scene #loc_Office
 <<set $current_run = 1>>
 <<set $current_day = 1>>
 <<bg bg_loading>>
-<<bgm cyberpunk_background_cyberpunk_background_main>>
+<<bgm mb_maintheme_demo_v1>>
 <<jump R1_D1_Start>>
 ===
 
@@ -599,6 +599,7 @@ title: R1_D2_Start
 tags: #run_1 #day_2 #scene #char_Alice #loc_Office
 ---
 <<bg bg_loading>>
+<<bgm mb_maintheme_demo_v1>>
 <<checkpoint "run1_day2_start">>
 <<set $r1_d2_morning_choice = "unset">>
 <<set $r1_d2_quiz_result = "unset">>
@@ -1107,6 +1108,7 @@ title: R1_D3_Scene1_ColdOpen
 tags: #run_1 #day_3 #scene #char_Supervisor #char_Alice
 ---
 <<bg bg_office>>
+<<bgm mb_maintheme_demo_v1>>
 
 Alice: Day three. We're still employed. Small victories.
 
