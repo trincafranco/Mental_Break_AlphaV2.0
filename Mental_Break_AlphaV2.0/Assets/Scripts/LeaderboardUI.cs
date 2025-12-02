@@ -161,7 +161,16 @@ public class LeaderboardUI : MonoBehaviour
         }
 
         variableStorage = storage;
+        
+        // Ensure UI is fully created before updating (fixes WebGL first-load timing issue)
         EnsureUIReady();
+        
+        // Force a layout rebuild if needed
+        if (leaderboardPanel != null)
+        {
+            Canvas.ForceUpdateCanvases();
+        }
+        
         UpdateLeaderboard();
     }
 

@@ -17,6 +17,9 @@ public class DialogueRuntimeWatcher : MonoBehaviour
     [Tooltip("Delay (in seconds) before the watcher performs the first lookup.")]
     [SerializeField] private float initialDelay = 0.1f;
 
+    [Tooltip("Additional delay for WebGL builds (WebGL loads more asynchronously).")]
+    [SerializeField] private float webGLExtraDelay = 0.5f;
+
     [Tooltip("Interval (in seconds) between runtime lookups.")]
     [SerializeField] private float checkInterval = 0.25f;
 
@@ -111,9 +114,19 @@ public class DialogueRuntimeWatcher : MonoBehaviour
 
     private IEnumerator MonitorRuntime()
     {
-        if (initialDelay > 0f)
+        // Calculate total initial delay (add extra time for WebGL)
+        float totalDelay = initialDelay;
+#if UNITY_WEBGL && !UNITY_EDITOR
+        totalDelay += webGLExtraDelay;
+        if (enableVerboseLogging)
         {
-            yield return new WaitForSeconds(initialDelay);
+            Debug.Log($"DialogueRuntimeWatcher: WebGL detected, using extended initial delay of {totalDelay}s");
+        }
+#endif
+        
+        if (totalDelay > 0f)
+        {
+            yield return new WaitForSeconds(totalDelay);
         }
 
         var wait = new WaitForSeconds(Mathf.Max(0.05f, checkInterval));

@@ -153,6 +153,19 @@ public class MetricsPanelUI : MonoBehaviour
         }
 
         variableStorage = storage;
+        
+        // Ensure UI is created before updating (fixes WebGL first-load timing issue)
+        if (metricsRoot == null)
+        {
+            CreateUI();
+        }
+        
+        // Force a layout rebuild if needed
+        if (metricsRoot != null)
+        {
+            Canvas.ForceUpdateCanvases();
+        }
+        
         UpdateMetrics();
     }
 
