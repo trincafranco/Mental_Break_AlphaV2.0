@@ -365,13 +365,13 @@ public class BackgroundCommandHandler : MonoBehaviour
     string GetVideoUrl(string key)
     {
         string fileName = key + ".mp4";
-        string path = System.IO.Path.Combine(Application.streamingAssetsPath, videoFolderPath, fileName);
         
-        // On WebGL, streamingAssetsPath returns a URL already
-        // On other platforms, we need to add file:// prefix
 #if UNITY_WEBGL && !UNITY_EDITOR
-        return path;
+        // WebGL needs forward slashes for URLs - Path.Combine uses backslashes on Windows
+        return Application.streamingAssetsPath + "/" + videoFolderPath + "/" + fileName;
 #else
+        // On other platforms, use Path.Combine and add file:// prefix
+        string path = System.IO.Path.Combine(Application.streamingAssetsPath, videoFolderPath, fileName);
         return "file://" + path;
 #endif
     }
