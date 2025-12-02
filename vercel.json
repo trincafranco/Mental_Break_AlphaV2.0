@@ -7,21 +7,21 @@
       "src": "/Build/(.*\\.wasm)",
       "headers": {
         "Content-Type": "application/wasm",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
       "src": "/Build/(.*\\.data)",
       "headers": {
         "Content-Type": "application/octet-stream",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
       "src": "/Build/(.*\\.js)",
       "headers": {
         "Content-Type": "application/javascript",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
@@ -30,7 +30,7 @@
       "headers": {
         "Content-Type": "application/wasm",
         "Content-Encoding": "gzip",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
@@ -39,7 +39,7 @@
       "headers": {
         "Content-Type": "application/octet-stream",
         "Content-Encoding": "gzip",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
@@ -48,14 +48,14 @@
       "headers": {
         "Content-Type": "application/javascript",
         "Content-Encoding": "gzip",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
       "src": "/Build/(.*)",
       "dest": "/Build/$1",
       "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
@@ -70,7 +70,7 @@
       "headers": {
         "Content-Type": "application/javascript",
         "Content-Encoding": "gzip",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
@@ -78,7 +78,7 @@
       "headers": {
         "Content-Type": "application/wasm",
         "Content-Encoding": "gzip",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
@@ -86,7 +86,7 @@
       "headers": {
         "Content-Type": "application/octet-stream",
         "Content-Encoding": "gzip",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
@@ -94,7 +94,7 @@
       "headers": {
         "Content-Type": "application/octet-stream",
         "Content-Encoding": "gzip",
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
     },
     {
