@@ -58,6 +58,14 @@ public class BackgroundCommandHandler : MonoBehaviour
     // Lazy initialization flag for video system
     private bool videoSystemInitialized = false;
     
+    // Known video backgrounds - always try video first for these keys (even in WebGL)
+    // Add background keys here when you have video versions available
+    private static readonly HashSet<string> knownVideoBackgrounds = new HashSet<string>
+    {
+        "bg_supervisoroffice"
+        // Add more animated backgrounds here as needed
+    };
+    
     [System.Serializable]
     public class SpriteEntry
     {
@@ -408,6 +416,15 @@ public class BackgroundCommandHandler : MonoBehaviour
         if (HasVideo(normalizedKey))
         {
             PlayVideoBackground(normalizedKey);
+            return;
+        }
+        
+        // For known video backgrounds, always try video first (even in WebGL where we can't pre-scan)
+        // This allows video playback to work in builds where HasVideo() returns false
+        if (knownVideoBackgrounds.Contains(normalizedKey))
+        {
+            Debug.Log($"BackgroundCommandHandler: '{normalizedKey}' is a known video background, trying video first");
+            TryPlayVideoWithFallback(normalizedKey);
             return;
         }
         

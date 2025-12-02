@@ -232,6 +232,16 @@ public class CharacterSpriteManager : MonoBehaviour
         
         Sprite[] sprites = Resources.LoadAll<Sprite>(resourcesPath);
         
+        // Also try loading from Resources/Characters (standard location for builds)
+        if (sprites == null || sprites.Length == 0)
+        {
+            sprites = Resources.LoadAll<Sprite>("Characters");
+            if (sprites != null && sprites.Length > 0)
+            {
+                Debug.Log($"CharacterSpriteManager: Loading from Resources/Characters");
+            }
+        }
+        
         if (sprites != null && sprites.Length > 0)
         {
             foreach (var sprite in sprites)

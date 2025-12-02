@@ -454,6 +454,10 @@ PrefabInstance:
       propertyPath: targetCanvas
       value: 
       objectReference: {fileID: 1990286531}
+    - target: {fileID: 161567338268514566, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: characterSprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 5510741715754306470, guid: 09549267c7b9c3649b4a0b1610d3eada, type: 3}
     - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: backgroundSprites.Array.size
       value: 35
