@@ -54,7 +54,7 @@ public class AutoMapBackgrounds : EditorWindow
         // Configuration for animated sprite sheets
         var animatedSheets = new[]
         {
-            new { path = "Assets/Graphics/Backgrounds/bg_supervisoroffice.png", columns = 5, rows = 4, frameCount = 20 }
+            new { path = "Assets/Resources/Graphics/Backgrounds/bg_supervisoroffice.png", columns = 5, rows = 4, frameCount = 20 }
         };
         
         foreach (var sheet in animatedSheets)

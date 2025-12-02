@@ -25,7 +25,7 @@ public class BackgroundCommandHandler : MonoBehaviour
     
     [Header("Auto-Load Settings")]
     [Tooltip("Path to background sprites folder (relative to Assets/)")]
-    public string backgroundFolderPath = "Graphics/Backgrounds";
+    public string backgroundFolderPath = "Resources/Graphics/Backgrounds";
     
     [Header("Animation Settings")]
     [Tooltip("Frames per second for animated backgrounds")]

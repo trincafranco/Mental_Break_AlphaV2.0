@@ -20,7 +20,7 @@ public class CharacterSpriteManager : MonoBehaviour
     
     [Header("Auto-Load Settings")]
     [Tooltip("Path to character sprites folder (relative to Assets/)")]
-    public string characterFolderPath = "Graphics/Characters";
+    public string characterFolderPath = "Resources/Graphics/Characters";
     
     [Header("References")]
     [Tooltip("DialogueRunner reference (auto-found if null)")]
