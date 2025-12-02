@@ -15,6 +15,9 @@
 # Temporarily commented out to allow deployment
 # webgl-build/
 
+# Prevent duplicate vercel.json in webgl-build (use project root config only)
+Mental_Break_AlphaV2.0/webgl-build/vercel.json
+
 # Visual Studio Code
 .vscode/
 

@@ -296,7 +296,7 @@ Alice: I have trained priors. I have opinions. But you're the human in the loop.
 
 // PURPOSE: SCENE 5A - TIMMY NIGHT VIGNETTE: GENTLE LANDING
 title: R1_D1_Vignette_Gentle
-tags: #run_1 #day_1 #scene
+tags: #run_1 #day_1 #scene #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
@@ -339,7 +339,7 @@ His breathing slows. The phone screen times out. Somewhere in his notes app, an 
 
 // PURPOSE: SCENE 5B - TIMMY NIGHT VIGNETTE: STUDY-ADJACENT
 title: R1_D1_Vignette_Study
-tags: #run_1 #day_1 #scene
+tags: #run_1 #day_1 #scene #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
@@ -378,7 +378,7 @@ Later—2:14 a.m.—he's asleep with a pen mark on his cheek and four half-corre
 
 // PURPOSE: SCENE 5C - TIMMY NIGHT VIGNETTE: COMFORT SCROLL
 title: R1_D1_Vignette_Comfort
-tags: #run_1 #day_1 #scene
+tags: #run_1 #day_1 #scene #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
@@ -641,7 +641,7 @@ Alice: Soft landing: he wakes up less wrecked, maybe misses the quiz. Hard wake:
 
 // PURPOSE: SCENE 2A - Morning: Let him sleep in
 title: R1_D2_MorningSleepIn
-tags: #run_1 #day_2 #scene #loc_Dorm
+tags: #run_1 #day_2 #scene #loc_Dorm #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
@@ -686,7 +686,7 @@ He yanks the door open and disappears.
 
 // PURPOSE: SCENE 2B - Morning: Rouse him hard
 title: R1_D2_MorningRouse
-tags: #run_1 #day_2 #scene #loc_Dorm
+tags: #run_1 #day_2 #scene #loc_Dorm #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
@@ -758,7 +758,7 @@ tags: #run_1 #day_2 #scene
 
 // PURPOSE: SCENE 3A - Quiz: MISSED
 title: R1_D2_Quiz_Missed
-tags: #run_1 #day_2 #scene #loc_Campus
+tags: #run_1 #day_2 #scene #loc_Campus #char_Timmy
 ---
 <<bg bg_hallway>>
 <<set $r1_d2_quiz_result = "missed">>
@@ -785,7 +785,7 @@ He opens a game instead.
 
 // PURPOSE: SCENE 3B - Quiz: STRUGGLED
 title: R1_D2_Quiz_Struggled
-tags: #run_1 #day_2 #scene #loc_Classroom
+tags: #run_1 #day_2 #scene #loc_Classroom #char_Timmy
 ---
 <<bg bg_classroom>>
 <<set $r1_d2_quiz_result = "struggled">>
@@ -816,7 +816,7 @@ He writes something. It's mostly guessing.
 
 // PURPOSE: SCENE 3C - Quiz: OKAY
 title: R1_D2_Quiz_Okay
-tags: #run_1 #day_2 #scene #loc_Classroom
+tags: #run_1 #day_2 #scene #loc_Classroom #char_Timmy
 ---
 <<bg bg_classroom>>
 <<set $r1_d2_quiz_result = "okay">>
@@ -1258,7 +1258,7 @@ Alice: Confidence theater, or actual peace? Your call.
 
 // PURPOSE: SCENE 4A - Content Delivery: PUA
 title: R1_D3_Scene4_PUA
-tags: #run_1 #day_3 #scene
+tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
@@ -1285,7 +1285,7 @@ Alice: Heart rate's up. Cortisol's up. He feels ready. Whether that's good or ba
 
 // PURPOSE: SCENE 4B - Content Delivery: Meditation
 title: R1_D3_Scene4_Meditation
-tags: #run_1 #day_3 #scene
+tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_timmyroom>>
 <<bgm beaming_light_with_soft_wind_breeze_beaming_light_with_soft_wind_breeze>>
@@ -1616,7 +1616,7 @@ tags: #run_1 #day_3 #scene
 
 // PURPOSE: SCENE 8 - SUCCESS (Centered + Encourage)
 title: R1_D3_Scene8_Success
-tags: #run_1 #day_3 #scene
+tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_library>>
 <<bgm beaming_light_with_soft_wind_breeze_beaming_light_with_soft_wind_breeze>>
@@ -1642,7 +1642,7 @@ Timmy stands there. Doesn't know what to do with his hands. Then grins.
 
 // PURPOSE: SCENE 8 - HARD REJECTION (Fronting + Encourage, OR Fronting + Discourage)
 title: R1_D3_Scene8_HardRejection
-tags: #run_1 #day_3 #scene
+tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_library>>
 <<bgm dark_synthwave_cyberpunk_dark_synthwave>>
@@ -1670,7 +1670,7 @@ Charlotte watches him go. Frowns. Pulls out her phone, types something, deletes 
 
 // PURPOSE: SCENE 8 - SOFT REJECTION (Fragile + Encourage)
 title: R1_D3_Scene8_SoftRejection
-tags: #run_1 #day_3 #scene
+tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_library>>
 
@@ -1699,7 +1699,7 @@ Timmy sits back down. Stares at the table.
 
 // PURPOSE: SCENE 8 - CRASH (Volatile + Encourage)
 title: R1_D3_Scene8_Crash
-tags: #run_1 #day_3 #scene
+tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_library>>
 <<bgm dark_synthwave_cyberpunk_dark_synthwave>>
@@ -1737,7 +1737,7 @@ She grabs her bag and leaves quickly, not looking at anyone.
 
 // PURPOSE: SCENE 8 - NOTHING HAPPENS (Centered + Discourage, OR Fragile + Discourage)
 title: R1_D3_Scene8_NothingHappens
-tags: #run_1 #day_3 #scene
+tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_library>>
 
@@ -1758,7 +1758,7 @@ He pulls out his phone. Opens her contact. Stares at it. Puts the phone away.
 
 // PURPOSE: SCENE 8 - SIMMERS (Volatile + Discourage)
 title: R1_D3_Scene8_Simmers
-tags: #run_1 #day_3 #scene
+tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_library>>
 <<bgm darkwave_short_version_1>>
@@ -1786,7 +1786,7 @@ His jaw tightens.
 
 // PURPOSE: SCENE 9 - SUCCESS AFTERMATH
 title: R1_D3_Scene9_Success
-tags: #run_1 #day_3 #scene #char_Alice
+tags: #run_1 #day_3 #scene #char_Alice #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
@@ -1825,7 +1825,7 @@ He stares at the ceiling a little longer. Still smiling.
 
 // PURPOSE: SCENE 9 - HARD REJECTION AFTERMATH
 title: R1_D3_Scene9_HardRejection
-tags: #run_1 #day_3 #scene #char_Alice
+tags: #run_1 #day_3 #scene #char_Alice #char_Timmy
 ---
 <<bg bg_hallway>>
 
@@ -1868,7 +1868,7 @@ He doesn't respond. Just stares at his phone, scrolling through nothing.
 
 // PURPOSE: SCENE 9 - SOFT REJECTION AFTERMATH
 title: R1_D3_Scene9_SoftRejection
-tags: #run_1 #day_3 #scene #char_Alice
+tags: #run_1 #day_3 #scene #char_Alice #char_Timmy
 ---
 <<bg bg_hallway>>
 
@@ -1913,7 +1913,7 @@ Alice: Yeah. We can do that.
 
 // PURPOSE: SCENE 9 - CRASH AFTERMATH
 title: R1_D3_Scene9_Crash
-tags: #run_1 #day_3 #scene #char_Alice
+tags: #run_1 #day_3 #scene #char_Alice #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
@@ -1968,7 +1968,7 @@ He pulls his knees up. Wraps his arms around them. Goes quiet.
 
 // PURPOSE: SCENE 9 - NOTHING HAPPENS AFTERMATH
 title: R1_D3_Scene9_NothingHappens
-tags: #run_1 #day_3 #scene #char_Alice
+tags: #run_1 #day_3 #scene #char_Alice #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
@@ -2011,7 +2011,7 @@ He stares at the screen a while longer. Then closes the laptop and lies down.
 
 // PURPOSE: SCENE 9 - SIMMERS AFTERMATH
 title: R1_D3_Scene9_Simmers
-tags: #run_1 #day_3 #scene #char_Alice
+tags: #run_1 #day_3 #scene #char_Alice #char_Timmy
 ---
 <<bg bg_timmyroom>>
 

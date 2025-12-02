@@ -454,6 +454,10 @@ PrefabInstance:
       propertyPath: targetCanvas
       value: 
       objectReference: {fileID: 1990286531}
+    - target: {fileID: 161567338268514566, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: characterSprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 5510741715754306470, guid: 09549267c7b9c3649b4a0b1610d3eada, type: 3}
     - target: {fileID: 1724046567818970776, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: backgroundSprites.Array.size
       value: 35
@@ -596,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7788139071176413773, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 7985477256237130417, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1426,9 +1430,9 @@ MonoBehaviour:
   sfxSource: {fileID: 1897889581}
   bgmClips:
   - key: cyberpunk_background_cyberpunk_background_main
-    clip: {fileID: 8300000, guid: c740642a9ea95a94d9f7743fb4564aae, type: 3}
+    clip: {fileID: 8300000, guid: b90766e894dbae44da1a062ea03b7850, type: 3}
   - key: cyberpunk_background_main
-    clip: {fileID: 8300000, guid: c740642a9ea95a94d9f7743fb4564aae, type: 3}
+    clip: {fileID: 8300000, guid: b90766e894dbae44da1a062ea03b7850, type: 3}
   - key: cyberpunk_background
     clip: {fileID: 8300000, guid: 7db042ebe7db07641aeb40ce972d0680, type: 3}
   - key: cyberpunk_background_short
@@ -1493,6 +1497,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d736c1999e12f6149b30a7af4b6fab8f, type: 3}
   - key: bgm_ode_to_joy_by_abydos
     clip: {fileID: 8300000, guid: 6ea6238e0a4067442bcc2a6a226a8e0c, type: 3}
+  - key: bgm_cyberpunk_background_main_old
+    clip: {fileID: 8300000, guid: 35beb620a313d29459341eaba51ad22e, type: 3}
   sfxClips: []
 --- !u!4 &1897889584
 Transform:
