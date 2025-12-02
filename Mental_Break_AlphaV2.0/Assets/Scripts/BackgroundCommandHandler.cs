@@ -24,10 +24,10 @@ public class BackgroundCommandHandler : MonoBehaviour
     public Image backgroundImage;
     
     [Header("Background Video")]
-    [Tooltip("RawImage component that displays video backgrounds")]
+    [Tooltip("RawImage component that displays video backgrounds (created automatically if not assigned)")]
     public RawImage videoRawImage;
     
-    [Tooltip("VideoPlayer component for playing animated backgrounds")]
+    [Tooltip("VideoPlayer component for playing animated backgrounds (created automatically if not assigned)")]
     public VideoPlayer videoPlayer;
     
     [Header("Background Sprites")]
@@ -45,7 +45,7 @@ public class BackgroundCommandHandler : MonoBehaviour
     private Dictionary<string, Sprite> spriteDictionary;
     private HashSet<string> availableVideoKeys; // Keys that have video files available
     
-    // RenderTexture for video playback
+    // RenderTexture for video playback (created lazily)
     private RenderTexture videoRenderTexture;
     
     // Track current background state
@@ -54,6 +54,9 @@ public class BackgroundCommandHandler : MonoBehaviour
     
     // Video preparation state
     private bool isVideoPreparing = false;
+    
+    // Lazy initialization flag for video system
+    private bool videoSystemInitialized = false;
     
     [System.Serializable]
     public class SpriteEntry
@@ -65,7 +68,6 @@ public class BackgroundCommandHandler : MonoBehaviour
     void Awake()
     {
         BuildDictionary();
-        SetupVideoPlayer();
         
         // Find Image component if not assigned
         if (backgroundImage == null)
@@ -77,12 +79,23 @@ public class BackgroundCommandHandler : MonoBehaviour
             }
         }
         
-        // Start scanning for available videos
+        // Start scanning for available videos (lightweight, no heavy allocations)
         StartCoroutine(ScanForVideos());
+        
+        // NOTE: Video system is NOT initialized here - it's done lazily when first video is requested
+        // This reduces memory pressure on initial load, especially for WebGL
     }
     
-    void SetupVideoPlayer()
+    /// <summary>
+    /// Lazily initializes the video playback system when first needed.
+    /// This avoids creating VideoPlayer and RenderTexture at startup.
+    /// </summary>
+    void EnsureVideoSystemInitialized()
     {
+        if (videoSystemInitialized) return;
+        
+        Debug.Log("BackgroundCommandHandler: Initializing video system (lazy init)");
+        
         // Create or find VideoPlayer if not assigned
         if (videoPlayer == null)
         {
@@ -101,18 +114,12 @@ public class BackgroundCommandHandler : MonoBehaviour
         videoPlayer.renderMode = VideoRenderMode.RenderTexture;
         videoPlayer.skipOnDrop = true; // Better performance for WebGL
         
-        // Create RenderTexture for video output
-        if (videoRenderTexture == null)
-        {
-            // Use a reasonable default size - will be updated when video plays
-            videoRenderTexture = new RenderTexture(1920, 1080, 0);
-            videoRenderTexture.Create();
-        }
-        videoPlayer.targetTexture = videoRenderTexture;
-        
         // Subscribe to video events
         videoPlayer.prepareCompleted += OnVideoPrepared;
         videoPlayer.errorReceived += OnVideoError;
+        
+        // NOTE: RenderTexture is NOT created here - it's created in OnVideoPrepared
+        // at the actual video dimensions to minimize memory usage
         
         // Setup RawImage for video display if not assigned
         if (videoRawImage == null)
@@ -140,15 +147,15 @@ public class BackgroundCommandHandler : MonoBehaviour
                 videoObj.transform.SetSiblingIndex(backgroundImage.transform.GetSiblingIndex());
                 
                 videoRawImage = videoObj.AddComponent<RawImage>();
-                videoRawImage.texture = videoRenderTexture;
             }
         }
         
         if (videoRawImage != null)
         {
-            videoRawImage.texture = videoRenderTexture;
             videoRawImage.enabled = false; // Start hidden
         }
+        
+        videoSystemInitialized = true;
     }
     
     /// <summary>
@@ -422,6 +429,9 @@ public class BackgroundCommandHandler : MonoBehaviour
     /// </summary>
     void TryPlayVideoWithFallback(string key)
     {
+        // Lazily initialize video system when first needed
+        EnsureVideoSystemInitialized();
+        
         string url = GetVideoUrl(key);
         
         // Store the key for fallback handling
@@ -446,16 +456,26 @@ public class BackgroundCommandHandler : MonoBehaviour
         }
         availableVideoKeys.Add(currentVideoKey);
         
-        // Update RenderTexture size to match video dimensions
+        // Create or update RenderTexture to match actual video dimensions (lazy creation)
+        int videoWidth = (int)vp.width;
+        int videoHeight = (int)vp.height;
+        
+        // Ensure minimum dimensions
+        if (videoWidth <= 0) videoWidth = 1280;
+        if (videoHeight <= 0) videoHeight = 720;
+        
         if (videoRenderTexture == null || 
-            videoRenderTexture.width != (int)vp.width || 
-            videoRenderTexture.height != (int)vp.height)
+            videoRenderTexture.width != videoWidth || 
+            videoRenderTexture.height != videoHeight)
         {
             if (videoRenderTexture != null)
             {
                 videoRenderTexture.Release();
+                Destroy(videoRenderTexture);
             }
-            videoRenderTexture = new RenderTexture((int)vp.width, (int)vp.height, 0);
+            
+            Debug.Log($"BackgroundCommandHandler: Creating RenderTexture at {videoWidth}x{videoHeight} for video");
+            videoRenderTexture = new RenderTexture(videoWidth, videoHeight, 0);
             videoRenderTexture.Create();
             videoPlayer.targetTexture = videoRenderTexture;
             
@@ -472,6 +492,7 @@ public class BackgroundCommandHandler : MonoBehaviour
         }
         if (videoRawImage != null)
         {
+            videoRawImage.texture = videoRenderTexture;
             videoRawImage.enabled = true;
         }
         
@@ -561,8 +582,11 @@ public class BackgroundCommandHandler : MonoBehaviour
     
     void PlayVideoBackground(string key)
     {
+        // Lazily initialize video system when first needed
+        EnsureVideoSystemInitialized();
+        
         // Stop any current video
-        if (videoPlayer.isPlaying)
+        if (videoPlayer != null && videoPlayer.isPlaying)
         {
             videoPlayer.Stop();
         }
