@@ -232,35 +232,40 @@ public class CharacterSpriteManager : MonoBehaviour
         
         Sprite[] sprites = Resources.LoadAll<Sprite>(resourcesPath);
         
-        if (sprites != null && sprites.Length > 0)
+        if (sprites == null || sprites.Length == 0)
         {
-            foreach (var sprite in sprites)
+            Debug.LogWarning($"CharacterSpriteManager: No sprites found at Resources path '{resourcesPath}'");
+            return;
+        }
+        
+        int loadedCount = 0;
+        foreach (var sprite in sprites)
+        {
+            if (sprite == null) continue;
+            
+            // Extract character name from sprite name (e.g., "alice.jpg" -> "alice")
+            string spriteName = sprite.name.ToLower();
+            string charTag = "char_" + CapitalizeFirst(spriteName);
+            
+            // Try to match with known character tags
+            foreach (var kvp in characterTagToSpriteName)
             {
-                if (sprite != null)
+                if (kvp.Value != null && spriteName.Contains(kvp.Value.ToLower()))
                 {
-                    // Extract character name from sprite name (e.g., "alice.jpg" -> "alice")
-                    string spriteName = sprite.name.ToLower();
-                    string charTag = "char_" + CapitalizeFirst(spriteName);
-                    
-                    // Try to match with known character tags
-                    foreach (var kvp in characterTagToSpriteName)
-                    {
-                        if (kvp.Value != null && spriteName.Contains(kvp.Value.ToLower()))
-                        {
-                            charTag = kvp.Key;
-                            break;
-                        }
-                    }
-                    
-                    // Only add if not already in dictionary (manual assignments take precedence)
-                    if (!spriteDictionary.ContainsKey(charTag))
-                    {
-                        spriteDictionary[charTag] = sprite;
-                        Debug.Log($"CharacterSpriteManager: Auto-loaded character '{charTag}' from Resources (sprite: {sprite.name})");
-                    }
+                    charTag = kvp.Key;
+                    break;
                 }
             }
+            
+            // Only add if not already in dictionary (manual assignments take precedence)
+            if (!spriteDictionary.ContainsKey(charTag))
+            {
+                spriteDictionary[charTag] = sprite;
+                loadedCount++;
+            }
         }
+        
+        GameLogger.LogAsset($"CharacterSpriteManager: Loaded {loadedCount} character sprites from Resources");
     }
     
 #if UNITY_EDITOR

@@ -179,24 +179,73 @@ public class BackgroundCommandHandler : MonoBehaviour
         
         Sprite[] sprites = Resources.LoadAll<Sprite>(resourcesPath);
         
-        if (sprites != null && sprites.Length > 0)
+        if (sprites == null || sprites.Length == 0)
         {
-            foreach (var sprite in sprites)
+            Debug.LogWarning($"BackgroundCommandHandler: No sprites found at Resources path '{resourcesPath}'");
+            return;
+        }
+        
+        // Track animation frame candidates: baseKey -> list of (frameIndex, sprite)
+        var animationCandidates = new Dictionary<string, List<(int index, Sprite sprite)>>();
+        
+        foreach (var sprite in sprites)
+        {
+            if (sprite == null) continue;
+            
+            string fullKey = sprite.name.ToLower();
+            
+            // Always store with full key (including _0, _1 suffixes) for animation frame lookup
+            if (!spriteDictionary.ContainsKey(fullKey))
             {
-                if (sprite != null)
+                spriteDictionary[fullKey] = sprite;
+            }
+            
+            // Check if this is an animation frame (ends with _N where N is a number)
+            if (System.Text.RegularExpressions.Regex.IsMatch(fullKey, @"_\d+$"))
+            {
+                int lastUnderscore = fullKey.LastIndexOf('_');
+                string baseKey = fullKey.Substring(0, lastUnderscore);
+                string suffix = fullKey.Substring(lastUnderscore + 1);
+                
+                if (int.TryParse(suffix, out int frameIndex))
                 {
-                    // Extract key from sprite name, handling sprite sheet suffixes like "_0"
-                    string key = ExtractKeyFromSpriteName(sprite.name);
-                    
-                    // Only add if not already in dictionary (manual assignments take precedence)
-                    if (!spriteDictionary.ContainsKey(key))
+                    // Track for animation building
+                    if (!animationCandidates.ContainsKey(baseKey))
                     {
-                        spriteDictionary[key] = sprite;
-                        Debug.Log($"BackgroundCommandHandler: Auto-loaded background '{key}' from Resources (sprite: {sprite.name})");
+                        animationCandidates[baseKey] = new List<(int, Sprite)>();
+                    }
+                    animationCandidates[baseKey].Add((frameIndex, sprite));
+                    
+                    // Also store base key pointing to first frame as static fallback
+                    if (!spriteDictionary.ContainsKey(baseKey))
+                    {
+                        spriteDictionary[baseKey] = sprite;
                     }
                 }
             }
+            else
+            {
+                // Non-animated sprite - store with base key
+                string baseKey = ExtractKeyFromSpriteName(sprite.name);
+                if (!spriteDictionary.ContainsKey(baseKey))
+                {
+                    spriteDictionary[baseKey] = sprite;
+                }
+            }
         }
+        
+        // Build animatedSpriteDictionary from candidates
+        foreach (var kvp in animationCandidates)
+        {
+            if (kvp.Value.Count > 1) // Only treat as animation if multiple frames
+            {
+                var sortedFrames = kvp.Value.OrderBy(x => x.index).Select(x => x.sprite).ToArray();
+                animatedSpriteDictionary[kvp.Key] = sortedFrames;
+                GameLogger.LogAsset($"BackgroundCommandHandler: Built animation '{kvp.Key}' with {sortedFrames.Length} frames from Resources");
+            }
+        }
+        
+        GameLogger.LogAsset($"BackgroundCommandHandler: Loaded {spriteDictionary.Count} sprites, {animatedSpriteDictionary.Count} animations from Resources");
     }
     
 #if UNITY_EDITOR
@@ -417,7 +466,7 @@ public class BackgroundCommandHandler : MonoBehaviour
             if (backgroundImage != null)
             {
                 backgroundImage.sprite = newSprite;
-                Debug.Log($"Background: Changed to {key} (sprite: {newSprite.name})");
+                GameLogger.LogCommand($"Background: Changed to {key} (sprite: {newSprite.name})");
             }
             else
             {
@@ -453,7 +502,7 @@ public class BackgroundCommandHandler : MonoBehaviour
             if (frames != null && frames.Length > 0)
             {
                 animatedSpriteDictionary[key] = frames;
-                Debug.Log($"Background: Cached {frames.Length} animation frames for '{key}'");
+                GameLogger.Log($"Background: Cached {frames.Length} animation frames for '{key}'");
             }
         }
         
@@ -470,7 +519,7 @@ public class BackgroundCommandHandler : MonoBehaviour
             }
             
             currentAnimation = StartCoroutine(AnimateBackground(frames, fps));
-            Debug.Log($"Background: Started animation for {key} ({frames.Length} frames at {fps} FPS)");
+            GameLogger.Log($"Background: Started animation for {key} ({frames.Length} frames at {fps} FPS)");
         }
         else
         {
@@ -479,7 +528,7 @@ public class BackgroundCommandHandler : MonoBehaviour
             
             // Log available keys that might match
             var matchingKeys = spriteDictionary.Keys.Where(k => k.Contains(key.Replace("bg_", ""))).Take(5);
-            Debug.Log($"Background: Similar keys in dictionary: {string.Join(", ", matchingKeys)}");
+            GameLogger.Log($"Background: Similar keys in dictionary: {string.Join(", ", matchingKeys)}");
             
             // Try to display the first sprite that matches
             var firstMatch = spriteDictionary.FirstOrDefault(kvp => 
@@ -487,7 +536,7 @@ public class BackgroundCommandHandler : MonoBehaviour
             if (firstMatch.Value != null && backgroundImage != null)
             {
                 backgroundImage.sprite = firstMatch.Value;
-                Debug.Log($"Background: Using static fallback: {firstMatch.Key}");
+                GameLogger.Log($"Background: Using static fallback: {firstMatch.Key}");
             }
         }
     }
