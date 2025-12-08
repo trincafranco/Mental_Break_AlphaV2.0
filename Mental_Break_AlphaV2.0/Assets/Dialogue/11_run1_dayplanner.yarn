@@ -38,134 +38,133 @@ Alice: Afternoon's yours. Well, sort of. You have two slots and three options. P
 // TASK 1: COFFEE WITH DINA
 // =============================================================================
 
-// PURPOSE: Meet Dina, a fellow engagement lead. Rapid Feedback credits vs firewood (gossip).
+// PURPOSE: Meet Dina, a fellow engagement lead. Credits vs firewood welcome gift.
 title: R1_D2_Task_Dina
 tags: #run_1 #day_2 #dayplanner #char_Dina #loc_Breakroom
 ---
 <<bg bg_breakroom>>
 
-The breakroom is small—two tables, a coffee machine that sounds like it's dying, and a vending machine that only accepts exact change.
+The vending machine hums with resigned energy. Dina's jabbing buttons with focused intensity.
 
-Dina is already there, stirring something that might be coffee or might be a science experiment.
+Dina: Give me the granola bar. I know you have twelve.
 
-Dina: New kid! Pull up a chair. I don't bite. Much.
+The machine drops orange chips instead. She stares at them.
 
-Player: That's reassuring.
+Dina: This is not what I asked for.
 
-Dina: I'm kidding. I'm very friendly. Ask anyone. Well, don't ask anyone in Data Science, they're still mad about the spreadsheet thing. But everyone else.
+She turns, notices you.
 
-Player: What was the spreadsheet thing?
+Dina: You must be the new handle.
 
-Dina: A story for another day. So. First week. How's your user?
+Player: That obvious?
 
-Player: Complicated.
+Dina: You still have hope in your eyes. I'm Dina.
 
-Dina: They're all complicated. Mine's a grad student who's convinced sleep is a government conspiracy. I've been trying to get her to bed before three a.m. for six months. Small victories.
+She offers a handshake—firm, efficient.
 
-She takes a sip of her drink. Makes a face.
+Player: How long have you been here?
 
-Dina: This coffee is terrible. Anyway. I have information. Useful information. The kind that doesn't show up in onboarding decks.
+Dina: Three restructurings, two CEO transitions, and one incident we legally can't discuss.
 
-Player: What kind of information?
+Player: How's your user?
 
-Dina: The kind that costs ten credits. Or, alternatively, you tell me something interesting about your lane and we call it even.
+She sighs.
 
-<<if $rapid_feedback_cash >= 10>>
--> Pay 10 credits
-    <<set $rapid_feedback_cash -= 10>>
-    <<jump R1_D2_Task_Dina_Paid>>
-<<endif>>
--> Trade gossip
-    <<jump R1_D2_Task_Dina_Trade>>
--> Decline
-    <<jump R1_D2_Task_Dina_Decline>>
+Dina: [STATIC BURST]—decided three a.m. was the perfect time to draft a novella-length message to her ex-boyfriend. Engagement through the roof. My sanity metrics look like someone fell down a flight of stairs.
+
+Player: Is that... good?
+
+Dina: Depends who you ask. Leadership sees the engagement spike and thinks I'm a genius. I see a woman typing "I miss you" forty-seven different ways and think about retirement.
+
+She opens the orange chips despite herself. Eats one. Makes a face.
+
+Dina: These taste like betrayal. Want some?
+
+Player: I'm good.
+
+Dina: Smart.
+
+She glances toward Arthur's glass office.
+
+Dina: How's Arthur treating you?
+
+Player: Fine. Tired, but fine.
+
+Dina: He's always tired now.
+
+She eats another chip, considering something.
+
+<<jump R1_D2_Task_Dina_Backstory>>
 ===
 
-// PURPOSE: Dina - Paid path
-title: R1_D2_Task_Dina_Paid
+// PURPOSE: Dina - Arthur backstory
+title: R1_D2_Task_Dina_Backstory
 tags: #run_1 #day_2 #dayplanner #char_Dina
 ---
 <<bg bg_breakroom>>
 
-Dina: A businessperson. I respect that.
+Dina: When I started, Arthur had a whiteboard in his office covered in ideas. "Ethical Engagement Frameworks." Proposals to make the metrics actually mean something. He'd corner executives in the elevator, pitch them on reforms. Wrote memos. Built prototypes on his own time.
 
-She leans in.
+Player: What happened?
 
-Dina: Three things. One: the leaderboard isn't just about engagement. There's a hidden weight for "creative problem-solving." They want to see if you'll color outside the lines.
+Dina: Nothing happened. That's the thing. Nothing happened, over and over, for years. The memos got filed. The prototypes got shelved. The whiteboard got erased.
 
-Player: What kind of lines?
+She pauses.
 
-Dina: Vague ones. On purpose. They're watching how you improvise. Two: Arthur's review cycle is coming up. He's stressed. Don't add to it.
+Dina: There was a guy, back then. Younger than Arthur. Asked a lot of questions. Kept digging into things the system preferred to leave buried.
 
-Player: Noted.
+Player: What happened to him?
 
-Dina: Three: the Company Store has seasonal items. They don't advertise them. You have to ask. The clerk gets annoyed, but he'll show you.
+Dina: He's not on the leaderboard anymore.
 
-Player: That's... actually useful.
+She says it flat. Like it's not a story, just a fact.
 
-Dina: I know. That's why it costs ten credits. Pleasure doing business.
+Dina: Arthur stopped asking questions after that. Started going to his kid's debate tournaments. Started eating his wife's sandwiches even though there's too much mayonnaise. Started being the kind of guy who survives.
 
-She raises her terrible coffee in a toast.
+She crumples the chip bag.
 
-<<set $dina_friendliness += 2>>
-<<jump R1_D2_Dayplanner>>
+Dina: The building doesn't break you all at once. It just waits.
+
+<<jump R1_D2_Task_Dina_Gift>>
 ===
 
-// PURPOSE: Dina - Trade path
-title: R1_D2_Task_Dina_Trade
+// PURPOSE: Dina - Gift choice (credits vs firewood)
+title: R1_D2_Task_Dina_Gift
 tags: #run_1 #day_2 #dayplanner #char_Dina
 ---
 <<bg bg_breakroom>>
 
-Dina: Oh, I like you. Okay. Spill.
+She pulls out her phone, shows you her credit balance. The number is absurd.
 
-Player: My user has a crush on someone in his project group. It's... a whole situation.
+Dina: Anyway. Welcome-to-the-floor gift. I've been here long enough that my fake money has accumulated into fake wealth. I can spare some credits, or—
 
-Dina: A crush? That's adorable. And terrifying. Does he know how to talk to her?
+She reaches behind the microwave and pulls out a small, dense piece of split firewood.
 
-Player: He's been watching confidence videos.
+Dina: I've got oak. Seasoned two years. Someone keeps stealing it from my yard—I'm conducting an investigation—but this piece is safe.
 
-Dina: Oh no.
+Player: You're offering me... firewood.
 
-Player: Yeah.
+Dina: I'm offering you options. Credits are useful now. Firewood is useful later, in ways you won't understand until you need it.
 
-Dina: That's a time bomb. Keep me posted. I need to know how this ends.
-
-She leans back, satisfied.
-
-Dina: Okay, my turn. Arthur's review cycle is coming. He's been extra twitchy because someone upstairs is asking about "user outcomes" instead of just engagement. That's new language. Means something's shifting.
-
-Player: Good shifting or bad shifting?
-
-Dina: Depends who you ask. For us, it might mean they actually start caring about the sanity bar. Or it might mean they add three more metrics and make everything worse. Bureaucracy is unpredictable.
-
-Player: Thanks for the heads up.
-
-Dina: Firewood for firewood. Come back any time.
-
-<<set $dina_friendliness += 1>>
-<<jump R1_D2_Dayplanner>>
-===
-
-// PURPOSE: Dina - Decline path
-title: R1_D2_Task_Dina_Decline
-tags: #run_1 #day_2 #dayplanner #char_Dina
----
-<<bg bg_breakroom>>
-
-Dina: Your loss.
-
-She shrugs, unbothered.
-
-Dina: I'll be here. The coffee will still be terrible. The offer stands if you change your mind.
-
-Player: I'll think about it.
-
-Dina: That's what they all say. Then they come back at midnight asking about overtime policies. Predictable.
-
-She waves you off cheerfully.
-
-<<jump R1_D2_Dayplanner>>
+-> Take credits
+    <<set $dina_gift_choice = "credits">>
+    <<set $rapid_feedback_cash += 15>>
+    <<set $dina_friendliness += 1>>
+    Dina: Pragmatic. I respect that.
+    She transfers the credits with a few taps.
+    Dina: We'll talk more when you've been here long enough to know which vending machine actually gives you what you asked for.
+    <<jump R1_D2_Dayplanner>>
+-> Take firewood
+    <<set $dina_gift_choice = "firewood">>
+    <<set $item_firewood = true>>
+    <<set $dina_friendliness += 2>>
+    // Steam Achievement: Be Prepared
+    Dina: You're the first person who's ever picked the wood.
+    She hands it over with something like reverence.
+    Dina: I like you already. Don't make me regret that.
+    Player: What do I do with it?
+    Dina: Keep it. You'll know when it matters.
+    <<jump R1_D2_Dayplanner>>
 ===
 
 // =============================================================================
@@ -178,29 +177,23 @@ tags: #run_1 #day_2 #dayplanner #char_Alice #loc_Office
 ---
 <<bg bg_player_desk>>
 
-Alice pulls up Timmy's afternoon schedule.
+Alice: Professor posted office hours. Timmy saw the email, said "lol rip me," and has been dissociating ever since.
 
-Alice: His professor sent a follow-up email. Quiz results. She's offering office hours for anyone who wants to review.
+Player: Did he at least read the whole email?
 
-Player: How'd he do?
+Alice: He read the subject line. Everything after that was handled by his fight-or-flight response, which chose "freeze."
 
-<<if $r1_d2_quiz_result == "missed">>
-Alice: He missed it. So. Zero. The professor's email is very politely disappointed.
-<<elseif $r1_d2_quiz_result == "struggled">>
-Alice: Not great. She's offering extra help to anyone below seventy percent. He qualifies.
-<<else>>
-Alice: Fine. Actually fine. But she's still offering help to everyone, and he could use the face time.
-<<endif>>
+On the feed, Timmy scrolls past the notification. It bobs up again. He scrolls past it again.
 
-Alice: He saw the email. He's been staring at it for ten minutes without opening the reply box.
+Alice: He knows office hours exist. He knows his grade is not what he wanted. He is connecting these concepts like someone trying to assemble IKEA furniture without the instructions.
 
-Player: What's the play?
+Player: Will he go?
 
-Alice: We can nudge him toward going—notifications, reminders, maybe a well-timed "you've got this." Or we let him decide without pressure. Less engagement, but more... I don't know. Agency? Autonomy? One of those words.
+Alice: Not without a push. I can handle the logistics—draft an email, grab a time slot, send him walking directions. Or I can mention it once and watch him choose avoidance like it's an Olympic sport.
 
--> Push him to go
+-> Push hard
     <<jump R1_D2_Task_OfficeHours_Push>>
--> Let him decide
+-> Stay hands-off
     <<jump R1_D2_Task_OfficeHours_HandsOff>>
 ===
 
@@ -210,35 +203,65 @@ tags: #run_1 #day_2 #dayplanner #char_Alice #loc_Dorm
 ---
 <<bg bg_timmyroom>>
 
-Timmy's phone buzzes. Reminder: "Professor Miller's office hours - 3pm - Science Building 201"
+Alice: Strong-arming it is.
 
-Alice: This is a good opportunity. She likes students who show up.
+Cut to: Timmy walking into the professor's office. His body language radiates discomfort—shoulders hunched, backpack clutched like a shield.
 
-Timmy stares at the notification.
+The professor doesn't look up from his laptop.
 
-Timmy: I hate office hours. Everyone's pretending they don't understand things they obviously understand.
+Professor: Name?
 
-Alice: Or they actually don't understand and they're brave enough to ask.
+Timmy: Uh. Tim. Timothy. Kowalski.
 
-Timmy: That's worse. Then I look like the only one who actually doesn't get it.
+Professor: Kowalski. Quiz scores.
 
-Alice: You're spiraling. Just go. Worst case, you sit in a chair for twenty minutes and nod.
+He types something. The keyboard sounds like judgment.
 
-Timmy: Ugh. Fine.
+Professor: You're behind.
 
-He goes. The feed shows him awkwardly entering the professor's office. A few other students are there. Charlotte is not.
+Timmy: I know. I'm trying to—
 
-Twenty minutes later, he emerges. Looking... better? Maybe?
+Professor: Have a seat.
 
-Timmy: She's actually nice. I thought she'd be mean about the quiz.
+Timmy sits on the edge of the chair, knees together, like he's waiting in the principal's office.
 
-Alice: Most professors aren't mean. They're just tired.
+The professor finally looks up. Peers over his glasses. The look isn't mean—it's worse. It's the look of someone who has had this conversation four hundred times.
 
-Timmy: She said I could retake it if I do the extra credit assignment.
+Professor: What happened?
 
-Alice: See? Progress.
+Timmy: I don't... I studied. Kind of. I thought I knew it.
 
-He almost smiles.
+Professor: But you didn't.
+
+Timmy: No. I guess not.
+
+Silence. The professor waits. Timmy shifts in his seat.
+
+Timmy: Is there, like... is there anything I can do? To bring my grade up?
+
+Professor: There's the next quiz. There's the midterm. There's the final. Those are the things you can do.
+
+Timmy: Right. Okay.
+
+Professor: Office hours are Tuesdays and Thursdays. Bring specific questions. Not "I don't understand." Specific.
+
+Timmy: Okay.
+
+Professor: Is there anything else?
+
+There's nothing else. There was never anything else. Timmy was hoping for something—guidance, maybe, or acknowledgment that he's a person and not just a data point—but the professor is already looking at his laptop again.
+
+Timmy: No. Thanks.
+
+He leaves. The door clicks shut behind him like a period at the end of a sentence.
+
+Cut back to: Your console.
+
+Alice: He hated every second. But he went.
+
+Player: Is that good?
+
+Alice: It's forward motion. Forward motion beats spiraling in place.
 
 <<set $officehours_status = "pushed">>
 <<set $sanity += 1>>
@@ -252,33 +275,19 @@ tags: #run_1 #day_2 #dayplanner #char_Alice #loc_Dorm
 ---
 <<bg bg_timmyroom>>
 
-You let the email sit. No notifications. No reminders.
+Alice: Hands-off it is.
 
-Timmy stares at it for another five minutes. Opens the reply box. Types "Hi Professor, I was wondering—"
+On the feed, Timmy scrolls past the notification one more time. Then again. Then he opens a game and the notification disappears beneath a tide of other things.
 
-Deletes it.
+Alice: And there it goes. Buried under seventeen other apps and the general noise of being alive.
 
-Types "Dear Professor Miller, I wanted to ask—"
+Player: Will he regret that?
 
-Deletes it.
+Alice: Probably. But not today. Today he's choosing the version of himself that doesn't have to deal with it.
 
-Closes the email app entirely.
+She pauses.
 
-Alice: He's not going.
-
-Player: His choice.
-
-Alice: It is.
-
-Timmy opens a game instead. His shoulders relax slightly. The tension he's been carrying shifts into something else—not gone, just... postponed.
-
-Later, Alice shows you his stats.
-
-Alice: Engagement's fine. Sanity's... holding. He'll probably regret not going, but he won't know he regrets it until next week.
-
-Player: Is that better or worse?
-
-Alice: Yes.
+Alice: It's a very human choice. I'm not sure I'd do it differently.
 
 <<set $officehours_status = "hands_off">>
 <<jump R1_D2_Dayplanner>>
@@ -294,43 +303,43 @@ tags: #run_1 #day_2 #dayplanner #char_Noam #loc_Dataroom
 ---
 <<bg bg_backend>>
 
-The data lab is a different world. Cooler air, dimmer lights, monitors everywhere. Someone has taped a sign to the door: "If you're from Marketing, turn around."
+Back corner office. Monitors everywhere—three on the desk, two on a stand, one balanced on a stack of server documentation.
 
-You ignore it. Inside, a person with impressive headphones and a hoodie that says "I void warranties" is arguing with a terminal.
+Noam spins in his chair, mug in hand. The mug says "I SURVIVED ANOTHER MEETING THAT SHOULD HAVE BEEN AN EMAIL."
 
-Noam: No. No, that's wrong. You're wrong and you know it.
+Noam: Did you put in a help ticket?
 
-They notice you.
+Player: What? No. Nothing's broken. You invited me.
 
-Noam: Oh. You're new. I can tell because you look like you still believe in mission statements.
+Noam: Right, right. I do that sometimes.
 
-Player: Is that bad?
+He doesn't sound convinced by his own explanation.
 
-Noam: It's temporary. Give it a month. I'm Noam. They/them. I make the numbers happen.
+Noam: I'm Noam. Data Science, IT, sysadmin, occasional therapist for anyone whose laptop does something they don't like.
 
-Player: What numbers?
+Player: That sounds exhausting.
 
-Noam: All of them. The ones on your dashboard, the ones on Arthur's dashboard, the ones on dashboards you don't know exist. I'm the reason the leaderboard updates in real-time. You're welcome.
+Noam: It's a lifestyle. The monitors help. Each one shows something different. This one's system health. This one's engagement flows. That one's a nature documentary. I find it calms me between crises.
 
-They swivel their chair to face you fully.
+He gestures at the screen with the documentary. A bird is diving for fish. It misses.
 
-Noam: Let me guess. You're here because someone told you Data Science has "useful insights" and you want to "leverage synergies" or some other buzzword that died in 2018.
+Noam: See? Even birds fail sometimes. Comforting.
 
-Player: I'm here because it was on my afternoon planner.
+Player: You invited me here for bird facts?
 
-Noam: Honest. I like honest. Okay.
+Noam: I flagged your handle because you're new. New either means "too scared to cause problems" or "too naive to know you're causing them."
 
-They tap a few keys. A new panel appears on a monitor beside you—your console, but with an additional layer of data.
+Player: Which one am I?
 
-Noam: This is what I actually do. See that number in the corner?
+Noam: Jury's still out.
 
-A small icon: an eye, with a number beside it. Currently reads "12."
+He taps a few keys. A small UI element appears on your console—a thin horizontal bar, currently empty, labeled "OVERSIGHT INDEX."
 
-Noam: That's Suspicion. How much attention Bigger Tech's oversight systems are paying to your lane.
+Noam: Welcome gift. Suspicion HUD. Tells you how much attention you're attracting from Compliance, security, the people who decide whether your badge works tomorrow.
 
-Player: Is twelve bad?
+Player: Why would I need that?
 
-Noam: Twelve is nothing. Twelve is background noise. Fifty is when people start asking questions. Eighty is when those questions have lawyers attached.
+Noam: Right now? You don't. You're a good employee doing good employee things. Bar stays at zero.
 
 <<jump R1_D2_Task_Noam_Continued>>
 ===
@@ -341,37 +350,31 @@ tags: #run_1 #day_2 #dayplanner #char_Noam
 ---
 <<bg bg_backend>>
 
-Player: What makes it go up?
+He leans back. His chair squeaks.
 
-Noam: Anomalies. Patterns that don't fit. Your user suddenly changing behavior in ways that look... guided. Too many coincidences. Too much optimization.
+Noam: But if you ever start... exploring. Asking questions you shouldn't ask. Poking at corners of the system that prefer to stay unlit. This tells you how close you are to someone noticing.
 
-Player: And down?
+Player: Is that common? People... poking?
 
-Noam: Boring. Be boring. Let things drift. Don't make waves. The system likes stasis. It gets nervous when things move too fast.
+Noam: More common than you'd think. Less successful than they'd hope.
 
-They lean back.
+He says it like a weather report. Partly cloudy, chance of disappearance.
 
-Noam: I'm telling you this because Arthur asked me to. Well, he asked me to "onboard the new lead on operational awareness." Same thing, more syllables.
+Player: Are you warning me?
 
-Player: Why does it matter?
+Noam: I'm orienting you. There's a difference. Warnings imply I know something bad is coming. Orientations just show you where the walls are.
 
-Noam: Because if your Suspicion gets too high, bad things happen. Audits. Reviews. Someone from Compliance breathing down your neck asking why you made specific choices. You don't want that.
+He spins back to his monitors. The subject change is so abrupt it feels intentional.
 
-Player: Sounds stressful.
+Noam: You play pickleball?
 
-Noam: It is. But now you know. Which means you can plan around it. You're welcome.
+Player: Not really.
 
-They swivel back to their terminal.
+Noam: You should. Great cardio. Excellent for networking with people who control your access permissions.
 
-Noam: I've added the Suspicion tracker to your dashboard. Try not to break anything. And if you bring me coffee sometime, I might tell you other things. Useful things.
+The nature documentary bird finally catches a fish. Noam nods at the screen.
 
-Player: Like what?
-
-Noam: Like why the leaderboard sometimes resets overnight. Or who actually reads the user reports. Or what happens to engagement leads who ask too many questions.
-
-Player: That sounds ominous.
-
-Noam: Everything here is ominous. You just stop noticing after a while.
+Noam: See? Persistence.
 
 <<set $noam_met = true>>
 <<set $itguy_friendliness += 1>>

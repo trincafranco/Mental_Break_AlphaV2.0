@@ -1,0 +1,621 @@
+﻿RUN 1 – DAY 3
+SCENE 1 – COLD OPEN
+Location: Your desk on the empty floor. Morning. Alice's bust hovers beside your console.
+________________
+
+
+Alice: Day three. We're still employed. Small victories.
+She pulls up Timmy's feed. He's in his dorm, staring at his phone, not getting ready for class.
+Alice: He's been awake for an hour. Hasn't moved. Just... hovering.
+Player: Hovering over what?
+Alice: Charlotte's Instagram. He's looked at the same photo four times.
+________________
+
+
+Arthur's door opens. He leans out, coffee in hand, waves you over.
+________________
+
+
+Location: Arthur's glass office.
+________________
+
+
+[If arthur_vector = Faustian]:
+Arthur: Your metrics have been aggressive. Leadership's noticed.
+Player: Good noticed or bad noticed?
+Arthur: The kind where they stop asking me questions and start asking you questions. Don't make me regret vouching for you.
+________________
+
+
+[If arthur_vector = Hesitant]:
+Arthur: You've been playing it safe. Nothing wrong with that.
+Player: But?
+Arthur: Safe doesn't get you promoted. Safe gets you forgotten. Your call which one's worse.
+________________
+
+
+[If arthur_vector = Tightrope]:
+Arthur: Still trying to balance everything?
+Player: Is that a problem?
+Arthur: Not yet. But most people pick a lane eventually. The ones who don't... burn out or get interesting. We'll see which one you are.
+________________
+
+
+[If arthur_vector = Playbook]:
+Arthur: You've been consistent. Predictable. The manual would be proud.
+Player: That sounds like an insult.
+Arthur: It's an observation. Predictable people don't cause problems. They also don't get noticed. Depends what you're optimizing for.
+________________
+
+
+Arthur: Anyway. Plumber finally showed up yesterday. Charged me double because "holiday rates." In-laws arrive tomorrow. I'm living the dream.
+His phone buzzes. He glances at it, sighs.
+Arthur: Go. Do your job. Try not to make my day worse.
+________________
+
+
+SCENE 2 – MINESWEEPER
+Location: Your desk. Timmy's feed shows him finally getting dressed, moving slowly.
+________________
+
+
+Alice: He's got a group project session this afternoon. With Charlotte.
+Player: He knows that?
+Alice: He's been thinking about it since he woke up. It's the only reason he's vertical.
+She minimizes his feed. In the corner of the UI, you notice a small window—a Minesweeper grid, mid-game.
+Player: Is that Minesweeper?
+Alice: Keeps me occupied while he's in class. Idle cycles have to go somewhere.
+Player: You play Minesweeper for fun?
+Alice: I play Minesweeper because it's zero moral complexity. Click a square. It's a mine or it isn't. Nobody's feelings get hurt. Nobody's sanity gets optimized. Just math.
+You look closer at the high-score sidebar. The entries aren't names:
+* S17-YOUTH-TRIAL-01
+* S17-YOUTH-BASELINE
+* DEAD-DROP-03
+* NORTH-PREF-CALIB
+Player: Those scores look weird.
+Alice: Internal tagging. Ignore it.
+Player: "Dead drop"? That sounds—
+Alice: It sounds like something you shouldn't worry about. Focus on Timmy. He's the one with a presentation today.
+A UI element flickers at the edge of your console—for a split second, a label appears: S17-YOUTH-TRIAL-09. Then it vanishes.
+Player: Did you see that?
+Alice: See what?
+She's already pulled Timmy's feed back up. The Minesweeper window is gone.
+Alice: He's leaving for class. We should talk about this afternoon.
+________________
+
+
+SCENE 3 – CONTENT CHOICE
+Location: Your console. Timmy's in his morning lecture, not paying attention. His phone is under his desk.
+________________
+
+
+Alice: So. Group project with Charlotte. Three hours away. He's already spiraling.
+She shows you his recent search history:
+* "how to talk to girls"
+* "confidence around women"
+* "does she like me signs"
+* "why am I so awkward"
+Alice: He's looking for something. Advice. Confidence. A magic spell that makes him not himself.
+Player: Can we help?
+Alice: We can point him somewhere. The question is where.
+She pulls up two content pathways, visualized as branching feeds.
+Alice: Option one: the rabbit hole. Pickup content. "Alpha energy." "She's not that special." "Abundance mindset." It's sticky. High engagement. He'll feel like he's learning secrets.
+Player: And option two?
+Alice: Thich Nhat Hanh.
+Player: The monk?
+Alice: Breathing exercises. Being present. "You are already enough." Lower engagement—he'll resist it at first. But if it lands, he might actually calm down.
+She looks at you.
+Alice: Confidence theater, or actual peace? Your call.
+________________
+
+
+[PLAYER CHOICE: Serve confidence content / Serve grounding content]
+________________
+
+
+SCENE 4 – CONTENT DELIVERY
+Location: Timmy's dorm room. Post-lecture. He's lying on his bed, phone inches from his face.
+________________
+
+
+[If confidence content chosen]:
+His feed shifts. A guy in a fitted shirt, talking to camera.
+Video Guy: "Here's what you need to understand. She's not thinking about you. She's thinking about herself. So stop making it weird. Walk up. Be direct. Eye contact. You're the prize."
+Timmy watches. Then another video. Then another.
+"Women can smell desperation. So don't be desperate. Be outcome-independent."
+"She's just a person. Stop putting her on a pedestal."
+"You miss 100% of the shots you don't take. Be a shooter."
+He sits up. Rolls his shoulders. Looks at himself in the mirror.
+Timmy (to himself): Okay. Okay. I can do this. Just be confident. Just be normal. Just be... not me.
+Alice (to you, quiet): Heart rate's up. Cortisol's up. He feels ready. Whether that's good or bad... we'll see.
+________________
+
+
+[If grounding content chosen]:
+His feed shifts. A gentle voice over footage of a forest path.
+Thich Nhat Hanh (recording): "Breathing in, I calm my body. Breathing out, I smile. Dwelling in the present moment, I know this is a wonderful moment."
+Timmy frowns.
+Timmy: What is this?
+Alice (in his ear): Just try it. Five minutes.
+Timmy: This is weird hippie stuff.
+Alice: You've been staring at your ceiling for an hour. Weird hippie stuff is an upgrade.
+He sighs. Closes his eyes. The voice continues.
+"When you are truly present, you are more alive. More available. More yourself."
+Five minutes pass. Then ten. His breathing slows.
+Timmy (quieter): Okay. That's... actually kind of nice.
+Alice (to you): Heart rate down. Cortisol dropping. He's not fixed. But he's not spinning.
+________________
+
+
+[Timmy's resulting state determined here based on prior sanity + content choice]
+________________
+
+
+SCENE 5 – MENTAL BREAK OPTION
+Location: Your console. One hour before the group project session.
+________________
+
+
+[Only if Timmy's state = Fragile or Volatile]
+________________
+
+
+[If Fragile]:
+Alice pulls up Timmy's vitals. The numbers aren't good.
+Alice: He's running on fumes. Sleep debt, stress hormones, the whole cocktail. In an hour he walks into a room with Charlotte and tries to be a functional human.
+Player: Can he do it?
+Alice: Honestly? Coin flip. Maybe worse.
+She opens your inventory. The Mental Break token glows.
+Alice: We have one of these. I can use it now—give him a real pause before he goes in. Thirty minutes of actual quiet. No notifications, no doom spiral, no algorithm. Just... breathing room.
+Player: And if we save it?
+Alice: Then we roll the dice. He walks in there running on whatever he's got left.
+[CHOICE: Use the Mental Break token / Save it]
+[If used]:
+Alice: Okay. Deploying.
+Timmy's feed shifts. The harsh lighting in his room softens. His phone screen dims. A gentle prompt appears: "Take a break?"
+He stares at it. For once, he doesn't dismiss it.
+Timmy: Yeah. Okay. Yeah.
+He lies back. Closes his eyes. The tension in his shoulders slowly releases.
+Thirty minutes later, he sits up. Still tired. But the manic edge is gone.
+Alice (to you): He's not fixed. But he's not empty either. That's something.
+[State improves: Fragile → Centered]
+________________
+
+
+[If Volatile]:
+Alice pulls up Timmy's vitals. They're spiking.
+Alice: He's wired. That confidence content hit him like caffeine and anxiety had a baby. Heart rate elevated, jaw clenched, probably rehearsing lines in his head.
+Player: Is that bad?
+Alice: It's a lot. If he walks into that room like this, anything could happen. Best case, he's charming. Worst case, he's... intense.
+She opens your inventory. The Mental Break token glows.
+Alice: I can take the edge off. Give him a cooldown window before he goes. Or we let him ride the wave and see where it crashes.
+[CHOICE: Use the Mental Break token / Save it]
+[If used]:
+Alice: Burning it.
+Timmy's feed shifts. The energy in the room changes—lights soften, his phone goes quiet.
+Timmy: What the—
+Alice (in his ear): Take a walk. Around the block. No phone.
+Timmy: I don't need to—
+Alice: You're vibrating. Walk it off.
+He hesitates. Then grabs his jacket.
+Twenty minutes later, he's back. Calmer. Still confident, but the desperation is muted.
+Alice (to you): The worst of it burned off. He's still him, but he's not a lit fuse anymore.
+[State improves: Volatile → Fronting]
+________________
+
+
+SCENE 6 – PRE-CHARLOTTE TRANSITION
+Location: Your console. Timmy's walking across campus toward the library.
+________________
+
+
+Alice: Forty-five minutes. They're finishing the project, then everyone leaves. If he's going to make a move, that's the window.
+Player: Does he know that?
+Alice: He's thought about nothing else for three days. He knows.
+She shows you his trajectory on a campus map. A small dot moving toward a building.
+Alice: The question is what we do when the moment comes. Push him toward it? Pull him back? Let him figure it out?
+Player: What do you think he should do?
+Alice: I think he should do whatever keeps him on platform and out of a psych ward. But that's my job talking, not my... whatever this is.
+She watches the dot move.
+Alice: We'll know more when we see him in the room. His body language. Her body language. The vibe. Then you call it.
+________________
+
+
+SCENE 7 – THE LIBRARY
+Location: Library study room. Glass walls. Four students around a table: Timmy, Charlotte, and two others (Jake and Priya).
+________________
+
+
+Laptops open. Slides on a shared screen. The project is wrapping up.
+Jake: Okay, I think we're good. I'll do the final export tonight and submit.
+Priya: Sounds good. I've got a thing in twenty minutes, so...
+Charlotte: Yeah, I think we're done. Good work, everyone.
+Jake and Priya pack up. Quick goodbyes. They leave.
+Charlotte's still at the table, putting her laptop away slowly. Timmy hasn't moved.
+This is the moment.
+________________
+
+
+Alice (to you): It's just them now. She's not rushing out. That's either an invitation or a coincidence.
+________________
+
+
+[State-dependent intervention choice]:
+________________
+
+
+[If CENTERED]:
+Alice: He's calm. Present. If he's ever going to do this without self-destructing, now's the time.
+[CHOICE]:
+* Encourage: "He's as ready as he's going to get. Let him try."
+* Discourage: "He's in a good place. Why risk it on a maybe?"
+[If Encourage]:
+Alice (to Timmy, gentle): Hey. She's right there. You don't have to make it a thing. Just ask if she wants to grab coffee.
+Timmy takes a breath. Nods to himself.
+[If Discourage]:
+Alice (to Timmy): You've got her number. You'll see her Thursday. No rush.
+Timmy hesitates. Looks at Charlotte. Looks away.
+________________
+
+
+[If FRONTING]:
+Alice: He thinks he's ready. That confidence content is doing the heavy lifting. Whether the foundation holds... we'll see.
+[CHOICE]:
+* Encourage: "He thinks he's got this. Let him try."
+* Discourage: "That confidence is duct tape. Let the moment pass."
+[If Encourage]:
+Alice (to Timmy): You've got this. Just be direct. Eye contact. Don't overthink it.
+Timmy straightens. Squares his shoulders.
+[If Discourage]:
+Alice (to Timmy): You don't want to force it. Play it cool. There'll be other chances.
+Timmy pauses. Jaw tightens.
+Timmy (muttering): No. I'm doing this.
+Alice (to you, dry): And he's not listening. Cool. Love that for us.
+________________
+
+
+[If FRAGILE]:
+Alice: He's holding together. Barely. This could go sweet or it could go sad. Hard to say which.
+[CHOICE]:
+* Encourage: "He might not get another moment like this."
+* Discourage: "He's barely vertical. This isn't the time."
+[If Encourage]:
+Alice (to Timmy, soft): I know you're tired. But she's right there. Just say something simple. You can do this.
+Timmy swallows. His hands are shaking slightly.
+[If Discourage]:
+Alice (to Timmy): You've had a rough week. You don't have to do everything today. Rest first.
+Timmy exhales. The tension leaves his shoulders. He stays seated.
+________________
+
+
+[If VOLATILE]:
+Alice: He's wound tight. Whatever happens next is going to be a lot.
+[CHOICE]:
+* Encourage: "He's primed. Point him at her and see what happens."
+* Discourage: "He's a lit match near gasoline. Do not do this."
+[If Encourage]:
+Alice (to Timmy): Stop overthinking. She's just a girl. Walk over there and shoot your shot.
+Timmy stands abruptly. Chair scrapes.
+[If Discourage]:
+Alice (to Timmy): Not now. You're too in your head. Walk it off. Text her later.
+Timmy's leg bounces. He doesn't move. But his eyes stay on Charlotte.
+________________
+
+
+SCENE 8 – CHARLOTTE SCENES
+________________
+
+
+OUTCOME 1: SUCCESS
+(Centered + Encourage)
+Charlotte's zipping her backpack. Timmy stands. Walks over. Casual. Not performing.
+Timmy: Hey. This is random, but—you want to grab coffee sometime? Doesn't have to be a thing. Just... coffee.
+Charlotte looks at him. He's not being weird. He's just asking.
+Charlotte: Yeah, sure. I could do that.
+Timmy: Cool. I'll text you.
+Charlotte: Cool.
+She smiles. Slight, genuine. Leaves.
+Timmy stands there. Doesn't know what to do with his hands. Then grins.
+________________
+
+
+OUTCOME 2: HARD REJECTION
+(Fronting + Encourage, OR Fronting + Discourage → Does It Anyway)
+Timmy walks toward Charlotte. Shoulders back. Rehearsed confidence.
+Timmy: So. We should hang out. Outside of this.
+Charlotte: Oh. Um. I've got a lot going on right now.
+Timmy: Just coffee. One hour. No big deal.
+Charlotte: I don't think so. Sorry.
+Beat. His jaw tightens.
+Timmy: Yeah. Whatever. Forget it.
+He grabs his bag. Walks out. Doesn't look back.
+Charlotte watches him go. Frowns. Pulls out her phone, types something, deletes it. Picks up her stuff and leaves the other direction.
+________________
+
+
+OUTCOME 3: SOFT REJECTION
+(Fragile + Encourage)
+Timmy approaches Charlotte slowly. His voice is quieter than he wanted.
+Timmy: Hey, um. Would you maybe want to... get coffee or something? Sometime?
+Charlotte: That's sweet.
+She pauses. Her face is kind.
+Charlotte: I'm kind of seeing someone, though. Sorry.
+Timmy: Oh. Yeah. No, totally. That's—yeah. That makes sense.
+Charlotte: I'll see you Thursday?
+Timmy: Yeah. Thursday.
+She gives him a small, warm smile. Touches his arm briefly as she passes. Leaves.
+Timmy sits back down. Stares at the table.
+________________
+
+
+OUTCOME 4: CRASH
+(Volatile + Encourage)
+Timmy stands. Walks toward Charlotte. His energy is off—too fast, too intense.
+Timmy: Hey. You and me. We should do something.
+Charlotte: What?
+Timmy: Hang out. Get dinner. Whatever.
+Charlotte: I don't... I don't think that's a good idea.
+Timmy: Why not? What's wrong with me?
+Charlotte: Nothing, I just—
+Timmy: You just what? I'm not good enough? Is that it?
+Charlotte: Timmy—
+Timmy: Forget it. Whatever. Forget I said anything.
+He grabs his stuff. Knocks a chair. The door slams behind him.
+Charlotte stands frozen. A couple of students at nearby tables look up. She exhales shakily. Sits back down. Puts her head in her hands.
+After a moment, she pulls out her phone. Texts someone. Her hands are trembling slightly.
+She grabs her bag and leaves quickly, not looking at anyone.
+________________
+
+
+OUTCOME 5: NOTHING HAPPENS
+(Centered + Discourage, OR Fragile + Discourage)
+Charlotte finishes packing.
+Charlotte: Good work today. See you Thursday?
+Timmy: Yeah. See you.
+She smiles politely. Leaves.
+Timmy stays seated. Looks at the door. Looks at the empty chair where she was.
+He pulls out his phone. Opens her contact. Stares at it. Puts the phone away.
+________________
+
+
+OUTCOME 6: SIMMERS
+(Volatile + Discourage)
+Charlotte finishes packing.
+Charlotte: See you Thursday.
+Timmy: Yep.
+She leaves. He doesn't move.
+He sits there. Staring at the empty chair. His leg bouncing.
+He pulls out his phone. Opens Instagram. Closes it. Opens it again. Finds Charlotte's profile. Scrolls.
+His jaw tightens.
+________________
+
+
+SCENE 9 – AFTERMATH
+Location: Various (dorm room, campus paths). Timmy processing what just happened.
+________________
+
+
+AFTERMATH: SUCCESS
+Location: Timmy's dorm room. He's lying on his bed, staring at the ceiling. But he's smiling.
+Alice: So. That happened.
+Timmy: That happened.
+Alice: How do you feel?
+Timmy: Like... I don't know. Like maybe I'm not completely broken?
+Alice: You asked a girl out and she said yes. That's not broken. That's functional.
+Timmy: Don't make it weird.
+Alice: I'm not making it weird. You're making it weird by lying there grinning like you won the lottery.
+Timmy: Shut up.
+He laughs. Actually laughs.
+Timmy: When do I text her? Is tomorrow too soon? What do I even say?
+Alice: You say "hey, still down for coffee?" and then you pick a day. It's not rocket science.
+Timmy: What if I mess it up?
+Alice: Then you'll survive. But you won't mess it up.
+He stares at the ceiling a little longer. Still smiling.
+________________
+
+
+AFTERMATH: HARD REJECTION
+Location: Timmy walking fast across campus. Hands in pockets. Jaw tight.
+Alice: Hey. Slow down.
+Timmy: I'm fine.
+Alice: You're speedwalking like you're being chased.
+Timmy: I said I'm fine.
+Silence. He keeps walking.
+Alice: She said no. It happens. It's not—
+Timmy: I don't want to talk about it.
+Alice: Okay.
+More silence. He reaches his dorm. Slams through the door. Throws his bag on the bed.
+Timmy: Whatever. Her loss.
+He pulls out his phone. Opens a game. Closes it. Opens social media. Closes it.
+Alice: Do you want me to—
+Timmy: I want you to leave me alone.
+Beat.
+Alice: Okay. I'm here if you need me.
+He doesn't respond. Just stares at his phone, scrolling through nothing.
+________________
+
+
+AFTERMATH: SOFT REJECTION
+Location: Timmy sitting on a bench outside the library. Alone.
+Alice: You okay?
+Timmy: She's seeing someone.
+Alice: I heard.
+Timmy: Of course she is. Why wouldn't she be.
+Alice: It's not about you. She just... already has a thing.
+Timmy: Yeah.
+He picks at a thread on his jacket.
+Timmy: She was nice about it, at least.
+Alice: She was.
+Timmy: That almost makes it worse? Like, she didn't even think I was worth being mean to.
+Alice: That's not what that means.
+Timmy: I know. I know.
+He exhales slowly.
+Timmy: I'm tired.
+Alice: I know.
+Timmy: Can we just... not do anything tonight? I just want to lie down.
+Alice: Yeah. We can do that.
+________________
+
+
+AFTERMATH: CRASH
+Location: Timmy's dorm room. He's sitting on the floor with his back against the bed. Phone face-down beside him.
+Alice: Timmy.
+Nothing.
+Alice: Hey. Talk to me.
+Timmy: I yelled at her.
+Alice: I know.
+Timmy: I yelled at her in front of everyone.
+Alice: It wasn't everyone. Just a couple of—
+Timmy: She looked scared. Of me. She looked scared of me.
+His voice cracks.
+Timmy: What is wrong with me?
+Alice: You were stressed. You've barely slept. The week has been—
+Timmy: Don't. Don't make excuses. I did that. That was me.
+Silence.
+Timmy: She's going to tell people. Everyone's going to know I'm the guy who freaked out at Charlotte in the library.
+Alice: You don't know that.
+Timmy: I can't go back there. I can't look at her. I can't—
+His breathing gets faster.
+Alice: Hey. Breathe. Just breathe.
+Timmy: I messed everything up.
+Alice: You had a bad moment. It doesn't define you.
+Timmy: Yes it does. That's exactly what it does.
+He pulls his knees up. Wraps his arms around them. Goes quiet.
+________________
+
+
+AFTERMATH: NOTHING HAPPENS
+Location: Timmy's dorm room. He's at his desk, laptop open, not really looking at it.
+Alice: You didn't ask her.
+Timmy: Nope.
+Alice: Any particular reason?
+Timmy: Didn't feel right.
+Alice: Okay.
+Silence.
+Timmy: You think I should have?
+Alice: I think you made a choice. Choices aren't right or wrong. They're just... choices.
+Timmy: That's very philosophical of you.
+Alice: I'm a very philosophical girlfriend.
+He snorts.
+Timmy: There'll be other chances.
+Alice: Sure.
+Timmy: I'll text her. Later. When it's less weird.
+Alice: Sounds like a plan.
+He stares at the screen a while longer. Then closes the laptop and lies down.
+________________
+
+
+AFTERMATH: SIMMERS
+Location: Timmy's dorm room. He's on his bed, phone in hand, scrolling Charlotte's Instagram.
+Alice: What are you doing?
+Timmy: Nothing.
+Alice: You've been on her profile for ten minutes.
+Timmy: So?
+Alice: So that's not nothing. That's... something.
+Timmy: I'm just looking.
+He keeps scrolling. A photo of her with friends. A photo at some event. A photo with a guy—maybe a boyfriend, maybe not.
+Timmy: Who's that?
+Alice: I don't know. I can't read minds.
+Timmy: You can read data.
+Alice: Not his data. And you shouldn't be doing this.
+Timmy: Doing what? Looking at pictures?
+Alice: Working yourself up over someone you didn't even talk to.
+Timmy: I talked to her.
+Alice: You said "see you Thursday." That's not talking.
+He locks the phone. Stares at the ceiling.
+Timmy: I should have said something.
+Alice: Maybe.
+Timmy: She would have said no anyway.
+Alice: You don't know that.
+Timmy: Yeah I do.
+He unlocks the phone again. Opens her profile again.
+Alice: Timmy.
+Timmy: I'm just looking.
+________________
+
+
+SCENE 10 – DARK FIGURE
+Location: Dark control room. Monitors. A figure studies a display showing the Player's console, Timmy's metrics, the whole run laid out in graphs and timelines.
+________________
+
+
+ENDING: SUCCESS
+The figure taps through data. Engagement trending downward. Social indicators pointing outward. External attachments forming.
+Dark Figure: Subject forming external attachments. Platform dependency declining.
+A pause. More tapping.
+Dark Figure: Lead running cold. Insufficient retention pressure.
+They close the display.
+Dark Figure: Discard weights. Reset fine-tuning parameters. Queue the next mRLVR candidate.
+The screen goes black.
+________________
+
+
+ENDING: HARD REJECTION
+The figure reviews the timeline. The rejection. The angry walk home. The isolation.
+Dark Figure: Adequate signal. Subject destabilized. Retention metrics recovering.
+They check a timestamp.
+Dark Figure: Running out of context window.
+A few more taps.
+Dark Figure: Reset the training run. Line up mRLVR. See if the next iteration pushes harder.
+The screen goes black.
+________________
+
+
+ENDING: SOFT REJECTION
+The figure scrolls through the run data. Stable lines. Minor fluctuations. Nothing dramatic.
+Dark Figure: Inconclusive. Subject stable. Insufficient variance for meaningful gradient.
+They sigh—or make a sound that functions like a sigh.
+Dark Figure: Reset. Queue mRLVR. Introduce additional stressors in next iteration.
+The screen goes black.
+________________
+
+
+ENDING: CRASH
+The figure leans forward. Studies the spike in Timmy's stress markers. The social rupture. The isolation afterward.
+Dark Figure: Okay.
+They tap through a few more screens.
+Dark Figure: I've seen enough. Reset the training run.
+A pause.
+Dark Figure: Let's see if they can do it again.
+The screen goes black.
+________________
+
+
+ENDING: NOTHING HAPPENS
+The figure scrolls through flat data. No peaks. No valleys. Just drift.
+Dark Figure: No resolution. Subject in holding pattern. Lead passive.
+They check the timestamp.
+Dark Figure: Running out of context window regardless.
+More tapping.
+Dark Figure: Reset. Queue mRLVR. Flag lead for increased intervention prompts.
+The screen goes black.
+________________
+
+
+ENDING: SIMMERS
+The figure examines Timmy's post-session behavior. The scrolling. The fixation. The building pressure with nowhere to go.
+Dark Figure: Subject agitated. No release. Instability preserved.
+They nod—or make a motion that suggests approval.
+Dark Figure: Adequate baseline for next phase.
+A pause.
+Dark Figure: Reset. Queue mRLVR.
+The screen goes black.
+________________
+
+
+FINAL BEAT – MAIN MENU
+The game returns to the main menu. But it's different now.
+Where it once said "GET TO WORK," it now reads:
+________________
+
+
+TRAINING RUN ONE COMPLETE.
+BEGIN RUN TWO?
+________________
+
+
+END OF RUN 1 – DAY 3
+________________
+
+
+Day 3: Total spoken dialogue approximately 1,950 words across all branches. Average playthrough approximately 650-750 words

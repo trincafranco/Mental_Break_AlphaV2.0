@@ -1,0 +1,75 @@
+﻿RUN ONE SUMMARY
+Title: Welcome to Bigger Tech Structure: 3 Days Target Length: ~4000 words total dialogue Core Theme: Player learns the engagement game while unknowingly being the subject of it
+________________
+
+
+THE PREMISE
+The player is a new Engagement Lead at Bigger Tech Corp, paired with Alice (an AI companion) and assigned to one user: Timmy, a lonely college freshman. The job is simple—keep Timmy on platform. Two metrics matter: Engagement (good for career) and Sanity (good for Timmy). A leaderboard reminds the player that others are watching.
+Run 1 plays as a straightforward "dark comedy about tech ethics" until the final scene reframes everything.
+________________
+
+
+DAY ONE: ORIENTATION
+Arthur (supervisor) explains the job. Alice (AI partner) introduces herself. Timmy (user) has a quiz tomorrow and has studied zero percent.
+PLAYER CHOICE - Night Strategy:
+* Gentle Landing: Warm lights, slower content, better sleep, lower engagement
+* Study-Adjacent: Bright screens, educational content disguised as entertainment
+* Comfort Scroll: Full dopamine buffet, engagement rockets, sleep destroyed
+Day ends with Rapid Feedback (credits) and the Company Store introduction, where the player can buy tools like the Mental Break token.
+Purpose: Teach the loop. Establish the triangle. Make the first choice feel meaningful.
+________________
+
+
+DAY TWO: CAREER PRESSURE
+Morning choice: let Timmy sleep in or rouse him hard. Quiz outcomes vary based on Day 1 + morning choice. Charlotte (Timmy's crush) is introduced—he notices her during the quiz.
+Arthur Meeting: Devil's bargain based on player's Day 1 tendency:
+* Engagement-leaning players get offered an "aggressive pilot" (opt-in/decline)
+* Sanity-protective players get questioned about their long-term strategy (tightrope/playbook)
+Dayplanner: Three opportunities, two slots. Player picks 2 of 3:
+* Dina (veteran lead): Offers credits or firewood. Firewood seems useless but props open a door in Run 4.
+* Office Hours: Push Timmy toward professor or let him avoid it.
+* Noam (Data Science): Gives player a Suspicion HUD—a meter showing how much attention they're attracting from Compliance. Currently at zero. Becomes critical in Runs 3-4.
+Purpose: Introduce NPCs with long-term payoffs. Create devil's bargains. Show choices have professional consequences.
+________________
+
+
+DAY THREE: THE STRESS TEST
+Arthur mentions Timmy has a group project with Charlotte today—the "stress test."
+Minesweeper Scene: Alice plays Minesweeper in her downtime. The high-score list shows strange names: "S17-YOUTH-TRIAL-01," "DEAD-DROP-03." UI flickers with a sector tag. Alice deflects. Seeds Run 3 mystery.
+PLAYER CHOICE - Content: What fills Timmy's head before the Charlotte encounter?
+* Meditation: Thich Nhat Hanh, breathing exercises, grounding
+* PUA/Confidence: RedPill-adjacent "just be confident" content
+Timmy's Mental State is calculated from Days 1-2 sanity choices + content choice:
+* Centered: Calm, genuine (good sanity + meditation)
+* Fronting: Performing confidence, brittle (good sanity + PUA)
+* Fragile: Genuine but barely holding (bad sanity + meditation)
+* Volatile: Desperate, aggressive (bad sanity + PUA)
+Mental Break Option: If Fragile or Volatile, player can burn their token to improve his state one level.
+PLAYER CHOICE - Intervention: After the group project, Timmy and Charlotte are alone.
+* Encourage: Push him to ask her out
+* Discourage: Tell him to let the moment pass
+Outcome Matrix:
+State
+	Encourage
+	Discourage
+	Centered
+	Success
+	Nothing Happens
+	Fronting
+	Hard Rejection
+	Hard Rejection (ignores Alice)
+	Fragile
+	Soft Rejection
+	Nothing Happens
+	Volatile
+	Crash
+	Simmers
+	The Twist: Hard cut to a dark control room. A Dark Figure reviews the player's run on monitors. Clinical assessment. All paths end with: "Reset. Queue mRLVR."
+Main menu now reads: "TRAINING RUN ONE COMPLETE. BEGIN RUN TWO?"
+________________
+
+
+THE HIDDEN LOGIC
+The player believes they're managing Timmy's wellbeing. They're actually being evaluated as a "moral regulator" for Alice. Every choice was training data.
+Irony revealed in Run 3: "Crash" (seeming failure) actually serves Bigger Tech's psyops goals—destabilized users are valuable. "Success" (seeming victory) gets the player discarded—Timmy no longer needs the product.
+Run 1 is the tutorial. The player just didn't know what game they were learning.
