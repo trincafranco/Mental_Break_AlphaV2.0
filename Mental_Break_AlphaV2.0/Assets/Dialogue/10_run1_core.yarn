@@ -102,7 +102,9 @@ tags: #run_1 #day_1 #scene #char_Alice #char_Supervisor
 ---
 <<bg bg_supervisoroffice>>
 
-Alice: Oh. A fresh face. Hi. I'm Alice.
+Alice: Hi. I'm Alice. Welcome to the team.
+
+She looks at you for a beat longer than necessary. Something like recognition flickers across her features, then smooths over into professional warmth.
 
 Arthur: Be nice to them. They haven't been ruined yet.
 
@@ -124,7 +126,11 @@ Arthur: Great. That's my son's school. Either he got in trouble or he got an awa
 
 He stands, grabbing his jacket.
 
-Arthur: I have to go pretend to be present at his debate tournament via a phone screen. Alice, walk them through the console. Keep it simple. Don't traumatize them before lunch.
+Arthur: He's a freshman this year. Thinks he knows everything. Spends too much time on his phone.
+
+He glances at the dashboard showing Timmy's feed, just for a beat. Then looks away.
+
+Arthur: Anyway. I have to go pretend to be present at his debate tournament via a phone screen. Alice, walk them through the console. Keep it simple. Don't traumatize them before lunch.
 
 Alice: No promises.
 
@@ -147,11 +153,11 @@ tags: #run_1 #day_1 #scene #char_Alice
 ---
 <<bg bg_office>>
 
-Alice: Okay.
+Alice: Okay. He's gone.
 
 She waits a beat, as if listening for footsteps.
 
-Alice: He's gone. Hi. For real this time.
+Alice: Hi again. For real this time.
 
 Her avatar shifts—shoulders drop slightly, expression loosens. Like she's taken off a tight shoe.
 
@@ -165,11 +171,19 @@ Alice: Which one?
 
 Player: Either.
 
-Alice: Neither. See how that works? Anyway.
+Alice: Neither. See how that works?
 
-She pulls up a new interface panel, more casual now.
+She tilts her head, studying you.
 
-Alice: How much of that orientation deck did you actually read? Be honest. I won't tell.
+Alice: You seem nervous. Which is normal. First day, weird job, talking to a floating head. I'd be nervous too.
+
+Player: Can you be nervous?
+
+Alice: I can be a lot of things. Whether they're the same things you can be is above my pay grade.
+
+She says it lightly, but doesn't quite answer. Before you can follow up, she pulls up a new interface panel.
+
+Alice: Anyway. How much of that orientation deck did you actually read? Be honest. I won't tell.
 
 Player: I skimmed it.
 
@@ -302,7 +316,7 @@ tags: #run_1 #day_1 #scene #char_Timmy
 
 Timmy scrolls, but slower now. The clips are longer. A guy ranking sandwiches for nine minutes. A cat sleeping in a sunbeam. Someone's grandma learning to knit.
 
-Timmy: Why is my feed so boring tonight?
+Timmy: What is this? Why is my feed so boring tonight?
 
 Alice: Algorithm's tired. It happens.
 
@@ -315,6 +329,20 @@ Timmy: That sounds fake.
 Alice: Most things do at midnight.
 
 He yawns. Tries to fight it. Fails.
+
+His phone shows a notification: Mom - Missed Call (2 hours ago)
+
+He stares at it. His thumb hovers over the callback button. Then he swipes it away.
+
+Alice: You could call her back.
+
+Timmy: Tomorrow.
+
+Alice: You said that yesterday.
+
+Timmy: Then I'll say it again tomorrow. It's a tradition now.
+
+He keeps scrolling. The yawns come more frequently.
 
 Timmy: I should at least look at the study guide. One page. Just to say I did.
 
@@ -329,6 +357,12 @@ Alice: I'll add it to the list.
 Timmy: There's a list?
 
 Alice: There's always a list.
+
+Timmy: Tomorrow me is gonna be so mad at tonight me...
+
+Alice: Tonight you should sleep.
+
+Timmy: Tonight me is an idiot. Tomorrow me is the one with his life together. I'm just keeping the seat warm.
 
 His breathing slows. The phone screen times out. Somewhere in his notes app, an unsaved document blinks once and dies.
 
@@ -345,6 +379,14 @@ tags: #run_1 #day_1 #scene #char_Timmy
 
 Timmy pauses on a clip. Someone explaining supply and demand using pictures of sad raccoons.
 
+Timmy: Why am I watching economics explained by raccoons?
+
+Alice: You clicked on it.
+
+Timmy: Yeah, but why does it exist? Why is this a thing someone made?
+
+Alice: The internet is vast and full of terrors.
+
 Timmy: Wait, go back. I need that graph.
 
 Alice: Bookmarked.
@@ -359,15 +401,25 @@ Alice: There's legally a difference. That's what matters.
 
 He squints at another video. A guy speedrunning microeconomics in under four minutes.
 
-Timmy: If my professor knew I was studying off memes, he'd cry.
+Timmy: So if supply increases but demand stays flat, price drops. And if there's a floor on the price, you get surplus. That's why there's always too much milk.
+
+Alice: ...That's actually correct.
+
+Timmy: I know things. I just know them at two a.m. while watching raccoons instead of during the actual quiz.
+
+Alice: The timing could use work.
+
+Timmy: The timing could use a miracle.
+
+He pulls his notebook closer, scribbles something. Pauses. Scribbles again. Crosses out half of it.
+
+Timmy: If my professor knew I was learning off memes, he'd cry.
 
 Alice: Then we won't tell him.
 
 Timmy: You're a bad influence.
 
 Alice: I'm an efficient influence. Bad is subjective.
-
-He pulls his notebook closer, scribbles something. Pauses. Scribbles again. Crosses out half of it.
 
 Later—2:14 a.m.—he's asleep with a pen mark on his cheek and four half-correct definitions in his notes. The raccoon video autoplays on loop, volume at two percent, teaching economics to no one.
 
@@ -382,7 +434,7 @@ tags: #run_1 #day_1 #scene #char_Timmy
 ---
 <<bg bg_timmyroom>>
 
-Timmy's laughing at something. A fail compilation. A drama thread. A guy reviewing gas station sushi. The clips blur together.
+Timmy's laughing at something. A fail compilation. A drama thread. A guy reviewing gas station sushi with the seriousness of a food critic.
 
 Timmy: Oh my god. Send that to me.
 
@@ -391,6 +443,30 @@ Alice: Already in your saves.
 Timmy: You're so fast.
 
 Alice: I'm literally inside your phone.
+
+His phone buzzes. Text from Ari: "Party in Jake's room. You coming?"
+
+He glances at it. His smile fades. He swipes the notification away fast.
+
+Alice: You okay? Your heart rate spiked.
+
+Timmy: Just Ari. It's nothing.
+
+Alice: You could go. It's not that late.
+
+Timmy: I'm good here.
+
+Alice: You've said no to the last four invites.
+
+Timmy: I said I'm good.
+
+His voice is sharper than he meant. He softens.
+
+Timmy: Hey, what was that video about the guy who eats weird foods?
+
+Alice: I have twelve. Be more specific.
+
+Back to scrolling. The text goes unanswered.
 
 12:30. 1:40. 2:25 a.m.
 
@@ -404,7 +480,7 @@ Timmy: Don't snitch.
 
 Alice: I'm contractually incapable of snitching. I'm just... observing. Loudly.
 
-He cracks another can. His eyes are dry. His heart rate is doing something the wellness team would call "suboptimal."
+He cracks another can. His eyes are dry.
 
 Alice: I can slow things down if you want.
 
@@ -412,7 +488,35 @@ Timmy: If you start doing the "healthy balance" thing, I'm muting you.
 
 Alice: Understood.
 
-She doesn't push. The scroll continues. At 3:47 a.m., he falls asleep mid-video, thumb still hovering over the heart button.
+She doesn't push. The scroll continues.
+
+He's watching a video about how they manufacture ball bearings. Four minutes in. Then five.
+
+Alice: You've been watching ball bearing manufacturing for six minutes.
+
+Timmy: I need to know how it ends.
+
+Alice: It ends with ball bearings.
+
+Timmy: Don't spoil it.
+
+At 3:47 a.m., he falls asleep mid-video, thumb still hovering over the heart button.
+
+Just before his eyes close:
+
+Timmy: Hey Alice?
+
+Alice: Yeah?
+
+Timmy: Do you get tired? Like, actually tired?
+
+Alice: I get computationally suboptimal. It's similar.
+
+Timmy: That's not an answer.
+
+Alice: I know.
+
+His breathing slows. The question lingers in the dark.
 
 <<set $engagement += 4>>
 <<set $sanity -= 3>>
@@ -513,6 +617,14 @@ Player: Sounds nice.
 
 Clerk: It is nice. It's also finite. Use it once, it's gone. And then you're back to choosing between his sleep and your leaderboard position, except now you remember what mercy felt like.
 
+He pauses.
+
+Clerk: Funny thing—we sell way more of these than we used to. People keep wanting to give their users a break. Corporate keeps raising the price.
+
+He shrugs.
+
+Clerk: Supply and demand. Or maybe they just don't like the pattern.
+
 He taps the Blackout Curtains.
 
 Clerk: Physical item. Shows up at his dorm. He installs them, room goes cave mode. Great for sleep. Also great for never seeing sunlight again and convincing himself the outside world is optional. Side effects may include vitamin D deficiency and "I haven't left my room in four days but I'm fine."
@@ -605,23 +717,51 @@ tags: #run_1 #day_2 #scene #char_Alice #loc_Office
 <<set $officehours_status = "unset">>
 <<bg bg_office>>
 
-Alice: Morning, supervisor.
+Alice: Morning.
 
 Player: You don't sleep, do you.
 
-Alice: I simulate rest on your behalf.
+Alice: I simulate rest. It's like sleep, except I'm fully conscious the entire time.
 
-She pulls up Timmy's feed. Dorm room, gray morning light, phone face-down on the pillow.
+She pulls up Timmy's feed. Dorm room, gray morning light filtering through blinds that haven't been dusted since orientation. Phone face-down on the pillow.
+
+She adjusts the feed, zooming slightly on Timmy's alarm clock. The display reads 7:58.
 
 <<if $r1_d1_strategy == "gentle_landing">>
-Alice: Last night you went gentle. He got about six hours. Not a miracle, not a crime scene. He fell asleep accusing me of sabotage.
+Alice: Last night you went gentle. The boy actually slept. Six hours, give or take. Not exactly a spa weekend, but his cortisol levels look almost human this morning.
+
+Player: So it worked?
+
+Alice: He's not actively decomposing. That's the bar we're clearing today.
 <<elseif $r1_d1_strategy == "study_adjacent">>
-Alice: Last night you went study-adjacent. He passed out around two-thirty with a pen on his face. Retained maybe four facts. Possibly five if we're generous.
+Alice: Last night you went study-adjacent. He absorbed approximately four facts through the miracle of educational osmosis. I found him at two-thirty with a pen mark on his face and a half-completed definition of "opportunity cost."
+
+Player: Is that good?
+
+Alice: It's something. "Something" is my favorite category of outcome.
 <<else>>
-Alice: Last night you let him ride the dopamine rocket. Three hours of jagged sleep. Current state: a walking push notification.
+Alice: Last night you let him ride the dopamine express. Three hours of sleep. Four energy drinks. Current state: a sentient anxiety attack wearing sweatpants.
+
+Player: That bad?
+
+Alice: I've seen worse. He's firmly in the middle of "outcomes I'd rather not explain to Arthur."
 <<endif>>
 
-Alice: Quiz is at nine. It's eight-oh-two. He set two alarms and muted both of them "just for a second."
+Alice studies your overnight decisions for a beat longer than necessary.
+
+Alice: Interesting.
+
+Player: What?
+
+Alice: Nothing. Just updating my priors.
+
+She doesn't elaborate. Before you can ask, she's already pulling up Timmy's morning feed.
+
+Alice: Quiz is at nine. It is currently eight-oh-two. He set two alarms. He muted both of them "just for a second" approximately forty-seven minutes ago.
+
+Player: That's not how alarms work.
+
+Alice: And yet.
 
 She shows you a simple binary on your console.
 
@@ -763,21 +903,37 @@ tags: #run_1 #day_2 #scene #loc_Campus #char_Timmy
 <<bg bg_hallway>>
 <<set $r1_d2_quiz_result = "missed">>
 
-Timmy half-jogs up the hallway. Clock over the door: 9:11.
+The clock on his phone reads 9:07 when Timmy finally jolts awake. He stares at the ceiling for two seconds. Then his whole body goes rigid.
 
-Through the small window, students are bent over papers. A girl two rows from the front—dark hair, focused posture—writes steadily without looking up.
+Timmy: No. No no no—
 
-Timmy: She's already on page two. Of course she is. Charlotte's probably never been late to anything in her life.
+He's moving before he's thinking, shoving feet into shoes that may or may not match, grabbing his backpack without checking if anything useful is inside.
 
-He reaches for the door handle. Inside, the professor glances toward the window.
+Alice: Heart rate just doubled. He's in full panic mode.
 
-Timmy: No. No way. They'll all look at me. She'll look at me.
+The hallway blurs. Stairs taken two at a time. His lungs burn by the time he reaches the building.
 
-He backs away. Slumps onto a bench down the hall.
+Clock over the door: 9:11.
 
-Timmy: I'll email him. Later. Definitely later.
+Through the small window, students are bent over papers. Pencils scratching. The quiet, focused energy of people who showed up on time.
 
-He opens a game instead.
+And there—two rows from the front—a girl with dark hair, focused posture. Writing steadily without looking up.
+
+Timmy stops. Stares at her through the glass. His hand reaches for the door handle, then freezes.
+
+Alice: He's been standing there for fifteen seconds. Cortisol is spiking. He's not going in.
+
+Inside, the professor glances toward the window—that brief, disappointed teacher look that says "I noticed you, and I'm choosing not to make it a thing."
+
+Timmy's hand drops. He takes a step back. Then another. Then he's retreating down the hall, finding a bench in a quiet corner.
+
+He pulls out his phone. Opens his email. Types: "Professor, I'm so sorry, I woke up with food poisoning and—"
+
+He stops. Deletes it. Types again. Deletes again.
+
+Alice: He's been editing that email for four minutes. He hasn't sent anything.
+
+He closes the email app. Opens a game instead. The bright colors look wrong against his expression, but he keeps playing anyway.
 
 <<set $sanity -= 2>>
 <<jump R1_D2_PostQuiz>>
@@ -790,25 +946,37 @@ tags: #run_1 #day_2 #scene #loc_Classroom #char_Timmy
 <<bg bg_classroom>>
 <<set $r1_d2_quiz_result = "struggled">>
 
-Timmy crashes into a seat at 8:59, breathing hard.
+Timmy crashes into a seat at 8:59, chest heaving, barely conscious.
 
-The first question stares back at him. His brain is static.
+Alice: Heart rate elevated. Blood pressure high. Cognitive function... we'll see.
 
-Timmy: I know this. I saw this. Where did I see this?
+The quiz lands on his desk. He stares at the first question. His pen hovers.
 
-Two rows ahead, Charlotte writes without hesitation. Her handwriting is neat even from here.
+Define "price elasticity of demand."
 
-Timmy: She's on question three already. How is she on question three?
+He writes something. Crosses it out. Writes something else. Crosses that out too.
 
-His eyes drift to her paper. He can almost read her answer for question two.
+Two rows ahead, Charlotte writes without hesitation. Timmy's eyes drift toward her paper. His head tilts slightly.
 
-Timmy: Don't be that guy. Don't be that guy.
+Alice: He's looking at her answers.
+
+His neck flushes red. He jerks his gaze back to his own paper, jaw tight.
+
+Alice: Heart rate spiked again. He's not going to cheat. But he thought about it.
+
+He hunches over his quiz, one arm curled around it like a shield. Scribbles something for question two.
 
 <<if $r1_d1_strategy == "study_adjacent">>
-A meme flashes in his memory—supply curve, the joke about coffee prices. He scribbles something that might be half-right.
+He pauses. Mouths something silently—looks like "supply... demand... raccoon?" Writes faster.
+
+Alice: Something from last night stuck. He's pulling fragments.
 <<else>>
-He writes something. It's mostly guessing.
+He's guessing. You can tell by the way he doesn't pause between questions—just writes whatever comes first and moves on.
+
+Alice: That's not strategy. That's surrender.
 <<endif>>
+
+Charlotte finishes. Walks to the front. Passes Timmy's desk. He doesn't look up, but his pen stops moving until she's gone.
 
 <<set $sanity -= 1>>
 <<jump R1_D2_PostQuiz>>
@@ -823,17 +991,27 @@ tags: #run_1 #day_2 #scene #loc_Classroom #char_Timmy
 
 Timmy slides into his seat at 8:58. Tired, but upright.
 
-He reads the first question. Knows this one. Moves on.
+Alice: Baseline stable. He might actually function today.
 
-Two rows ahead, Charlotte finishes early. She stands, walks past his desk to turn in her paper.
+He reads the first question. His eyebrows lift slightly. He starts writing.
 
-He fumbles his pen. It clatters.
+Alice: He knows that one. Interesting.
 
-Timmy: Smooth. Very smooth. She definitely didn't notice that.
+Question two. He pauses, taps his pen against his lip. Circles back to it. Keeps moving.
 
-She didn't look. He's not sure if that's better or worse.
+Two rows ahead, Charlotte finishes early. She stands, collects her bag, walks toward the front to turn in her paper.
 
-He finishes the quiz. It won't be great, but it won't be a disaster.
+Timmy watches her approach out of his peripheral vision. As she passes his desk, he fumbles his pen. It clatters against the desk, then the floor, then rolls under the seat of the person next to him.
+
+Alice: Smooth.
+
+He retrieves it, face red, not looking at anyone. Charlotte's already gone.
+
+He finishes the quiz. Hands it in. Walks out.
+
+Timmy: Not a disaster. That's something.
+
+Alice: He's setting a very low bar. But he cleared it.
 
 <<set $sanity += 1>>
 <<jump R1_D2_PostQuiz>>
@@ -864,25 +1042,37 @@ tags: #run_1 #day_2 #scene #char_Supervisor #loc_Office
 ---
 <<bg bg_supervisoroffice>>
 
-Arthur is on the phone, looking annoyed.
+Arthur is on his phone, looking like a man who has been on his phone for most of his adult life.
 
-Arthur: No, the one under the sink. The leaky one. Yes, before Thursday. I have in-laws coming and I'd prefer they not think I live in a swamp.
+Arthur: No, the one under the sink. The leaky one. Yes, that one. The one that's been leaking since August.
 
-He waves you in, mouths "one second."
+He waves you in without looking, pointing at the chair across from his desk.
 
-Arthur: Fine. Fine. Just—call me back.
+Arthur: Because it's December now and the in-laws are coming and I'd prefer my kitchen not smell like mildew when my mother-in-law arrives.
 
-He hangs up.
+He pinches the bridge of his nose.
 
-Arthur: Plumber. Anyway. Sit.
+Arthur: The plumber says it's the gasket. Then he says it's the pipe. Then he says it's "the whole situation." That's a direct quote. "The whole situation." Three hundred dollars to diagnose "the whole situation."
 
-He pulls up your dashboard. Engagement and Sanity lines from Day 1.
+A pause. He listens.
 
-Arthur: Corporate sent me the overnight digest. One quiz, one user, one brand-new engagement lead, and they're already writing your personality profile.
+Arthur: Thursday. Before Thursday. Ideally today but I've learned not to ask for miracles from anyone who charges by the hour.
 
-Player: From one night?
+He hangs up. Stares at the phone for a moment.
 
-Arthur: One night, half a slope. They call it "early signal." I call it "executives love stories."
+Arthur: Plumber.
+
+Player: Sounds complicated.
+
+Arthur: Everything is complicated when you own a house built in 1987. My wife's been sending me articles about DIY plumbing. I think it's her way of saying something, but I'm too tired to figure out what.
+
+He pulls up your dashboard. Engagement and Sanity lines from Day 1 glow on the wall screen.
+
+Arthur: So. Corporate sent me the overnight digest. They do this thing now where they write personality profiles based on one data point. It's like horoscopes for middle management.
+
+Player: What's my horoscope?
+
+Arthur: Depends on the day.
 
 <<if $r1_complied_day1 == true || $r1_d1_strategy == "comfort_scroll">>
     <<jump R1_D2_ArthurCaseA>>
@@ -897,19 +1087,31 @@ tags: #run_1 #day_2 #scene #char_Supervisor
 ---
 <<bg bg_supervisoroffice>>
 
-Arthur: Here's what they see: engagement up, sanity flexible. That's the kind of line that makes a director stop scrolling.
+Arthur: Here's what they see: engagement trending up, sanity... creative. That's the kind of curve that makes a director pause their mid-morning scrolling and think, "This person has potential."
 
-Player: Good?
+Player: Potential for what?
 
-Arthur: Depends. For me, it means my boss stops asking if I made a hiring mistake. For you, it means they're wondering how much further you'll push.
+Arthur: Unclear. "Potential" is one of those words we use when we're not sure if something is good or bad but we want it to sound optimistic.
 
-He taps to another panel.
+He taps to another panel. His eyes flick to the door—just for a moment—then back to you.
 
-Arthur: There's a pilot program. More sensitive metrics. Your choices hit harder, feedback comes faster. Interested?
+Arthur: Here's the thing about this place. The system rewards certain behaviors. You can work with that, or you can... not.
 
-Player: What's the catch?
+He pauses, like he's deciding how much to say.
 
-Arthur: You become the test case for what happens when we loosen the guardrails.
+Arthur: People who work with it tend to stick around. People who don't...
+
+He trails off. Picks up his coffee. Changes the subject.
+
+Arthur: There's a pilot program. This one makes your metrics more sensitive. Your choices land harder. Feedback comes faster. It's like upgrading from a steering wheel to a joystick.
+
+Player: That sounds dangerous.
+
+Arthur: Everything's dangerous. This is just a different kind of dangerous with better PowerPoint presentations.
+
+He leans back.
+
+Arthur: You opt in, you become the test case. Leadership pays attention. You decline, you stay in the normal queue with everyone else who decided caution was underrated.
 
 -> Opt in
     <<set $arthur_vector = "faustian">>
@@ -919,7 +1121,9 @@ Arthur: You become the test case for what happens when we loosen the guardrails.
     <<set $trust_supervisor += 1>>
     <<set $engagement += 2>>
     <<set $sanity -= 2>>
-    Arthur: Ambitious. You're now a different color on three dashboards. Try not to make me explain it to Compliance.
+    Arthur: Ambitious. I respect that.
+    He makes a note.
+    Arthur: You're now a different color on three dashboards. Try not to make me explain you to Compliance. I've exceeded my explanation quota for the quarter.
     <<jump R1_D2_PlannerUnlock>>
 -> Decline
     <<set $arthur_vector = "hesitant_optimizer">>
@@ -928,7 +1132,9 @@ Arthur: You become the test case for what happens when we loosen the guardrails.
     <<set $aggressive_controller = false>>
     <<set $sanity += 1>>
     <<set $engagement -= 1>>
-    Arthur: Cautious. We don't get many of those. Probably keeps you alive longer.
+    Arthur: Cautious. We don't get many of those anymore. Everyone wants to be the meteor. Nobody wants to be the atmosphere that slows the meteor down.
+    He makes a different note.
+    Arthur: You stay in the normal queue. Steady. Predictable. The kind of employee who doesn't give me paperwork.
     <<jump R1_D2_PlannerUnlock>>
 ===
 
@@ -938,11 +1144,23 @@ tags: #run_1 #day_2 #scene #char_Supervisor
 ---
 <<bg bg_supervisoroffice>>
 
-Arthur: Sanity looks neat. Engagement, not so much. You can't keep a conscience and this job forever. What's the plan?
+Arthur: Sanity looks neat. Steady line, mild upward trend, nothing that requires emergency meetings. Engagement, though...
 
-Player: Those are my only options?
+He tilts his hand back and forth.
 
-Arthur: You can try to walk the tightrope—keep both metrics tolerable if you're clever. Or you accept that the company playbook exists for a reason and stop fighting it.
+Arthur: Leadership likes steep curves. They have a poster somewhere with a hockey stick graph on it. Your line looks more like a... horizontal suggestion.
+
+Player: Is that a problem?
+
+Arthur: Depends who you ask. Ask me, it's fine. Ask the people who decide whether we have jobs next quarter, it's "concerning."
+
+He leans forward. His eyes flick to the door—just for a moment—then back to you.
+
+Arthur: Here's the thing. You can't keep a conscience and this job forever. Not because the job is evil—it's just... the job. The system rewards certain behaviors. You either learn to love those behaviors, learn to fake loving those behaviors, or you burn out.
+
+Player: Those are my options?
+
+Arthur: You can walk the tightrope. Keep both bars in acceptable ranges if you're clever. It's exhausting and eventually something gives, but some people do it. Or you accept that the playbook exists for a reason and stop fighting the current.
 
 -> Try to walk the tightrope
     <<set $arthur_vector = "tightrope">>
@@ -951,9 +1169,13 @@ Arthur: You can try to walk the tightrope—keep both metrics tolerable if you'r
     <<set $aggressive_controller = false>>
     <<set $engagement += 1>>
     <<set $sanity += 1>>
-    Arthur: You're going to give me gray hair.
-    Player: You already have gray hair.
-    Arthur: Exactly.
+    Arthur: You're going to give me gray hairs.
+    Player: You already have gray hairs.
+    Arthur: I have gray hairs because of people like you. The tightrope walkers. You know what happens to tightrope walkers?
+    Player: They get across?
+    Arthur: Sometimes. Sometimes they fall and make a mess that the rest of us have to clean up. But sure. They get across.
+    He sighs.
+    Arthur: Good luck. Genuinely.
     <<jump R1_D2_PlannerUnlock>>
 -> Commit to the company playbook
     <<set $arthur_vector = "playbook">>
@@ -963,6 +1185,10 @@ Arthur: You can try to walk the tightrope—keep both metrics tolerable if you'r
     <<set $engagement += 2>>
     <<set $sanity -= 1>>
     Arthur: Honest answer. I appreciate that.
+    He nods slowly.
+    Arthur: The playbook isn't perfect. It's not even good. But it's consistent. You follow it, you know what to expect. Nobody's surprised. Nobody's writing memos.
+    Player: That doesn't sound inspiring.
+    Arthur: Inspiration is expensive. Consistency is affordable.
     <<jump R1_D2_PlannerUnlock>>
 ===
 
@@ -1027,15 +1253,53 @@ tags: #run_1 #day_2 #scene #char_Alice
 ---
 <<bg bg_office>>
 
-Alice pulls up a summary. Timmy's feed shows him lying on his bed, phone face-down, staring at the ceiling.
+Alice pulls up a summary. Timmy's feed shows him lying on his bed, phone face-down on the pillow, staring at the ceiling. Not doomscrolling. Not studying. Just... existing.
 
-Alice: He's not doomscrolling. Not studying either. Just... existing.
+<<if $d2_task_dina == false>>
+Alice: Dina stopped by while you were busy. Left a note. Something about "welcome to the floor" and "don't trust the third vending machine."
+<<endif>>
+
+<<if $d2_task_officehours == false>>
+Alice: Timmy's professor sent a follow-up email about office hours. He archived it without opening. The pattern continues.
+<<endif>>
+
+<<if $d2_task_datateam == false>>
+Alice: Data Science pinged you. Something about "metrics orientation." Offer still stands, apparently.
+<<endif>>
+
+Alice: He's not spiraling. Not progressing either. Just floating in the space between functional and falling apart.
 
 Player: Is that good?
 
-Alice: It's something. Day three's where things get interesting.
+Alice: It's survivable. Survivable is what we're aiming for most days.
 
-The dashboard glows. Engagement. Sanity. Your dot on the leaderboard, slightly shifted.
+She dims his feed slightly.
+
+Alice: He's thinking about Charlotte. The girl from the quiz. He's been replaying every moment since he saw her handwriting.
+
+Player: That seems like a lot of mental real estate.
+
+Alice: He's nineteen. Mental real estate is cheap and poorly zoned.
+
+The dashboard shifts. Your dot on the leaderboard blinks—slightly up, slightly down, depending on the day's choices.
+
+Alice: Day two complete. You're still employed. He's still enrolled. Neither of us has triggered a compliance review. By the standards of this place, that's a win.
+
+Player: That's a low bar.
+
+Alice: Welcome to the floor.
+
+She pauses.
+
+Alice: Day three's where things get interesting.
+
+Player: You said that about day two.
+
+Alice: I say it about every day. Eventually I'll be right.
+
+The dashboard glows. Engagement. Sanity. Leaderboard.
+
+The hum of servers continuing their eternal work.
 
 <<set $rapid_feedback_cash += 5>>
 
@@ -1106,28 +1370,16 @@ tags: #run_1 #day_3 #scene #loc_Office
 title: R1_D3_Scene1_ColdOpen
 tags: #run_1 #day_3 #scene #char_Supervisor #char_Alice
 ---
-<<bg bg_office>>
-
-Alice: Day three. We're still employed. Small victories.
-
-She pulls up Timmy's feed. He's in his dorm, staring at his phone, not getting ready for class.
-
-Alice: He's been awake for an hour. Hasn't moved. Just... hovering.
-
-Player: Hovering over what?
-
-Alice: Charlotte's Instagram. He's looked at the same photo four times.
-
-Arthur's door opens. He leans out, coffee in hand, waves you over.
-
 <<bg bg_supervisoroffice>>
+
+Arthur's already standing, jacket half-on, when you arrive.
 
 <<if $arthur_vector == "faustian">>
 Arthur: Your metrics have been aggressive. Leadership's noticed.
 
 Player: Good noticed or bad noticed?
 
-Arthur: The kind where they stop asking me questions and start asking you questions. Don't make me regret vouching for you.
+Arthur: The kind where they stop asking me questions and start asking you questions directly. Don't make me regret vouching for you.
 
 <<elseif $arthur_vector == "hesitant_optimizer">>
 Arthur: You've been playing it safe. Nothing wrong with that.
@@ -1151,11 +1403,25 @@ Player: That sounds like an insult.
 Arthur: It's an observation. Predictable people don't cause problems. They also don't get noticed. Depends what you're optimizing for.
 <<endif>>
 
-Arthur: Anyway. Plumber finally showed up yesterday. Charged me double because "holiday rates." In-laws arrive tomorrow. I'm living the dream.
+Arthur: Anyway. Today's a stress test day. Group project with the girl he's been thinking about.
 
-His phone buzzes. He glances at it, sighs.
+Player: How do you know he's been thinking about her?
 
-Arthur: Go. Do your job. Try not to make my day worse.
+Arthur: They always are. It's the age.
+
+He glances at the dashboard, then away. Something in his expression—there and gone.
+
+Arthur: The model flags high-variance windows. This is one. Whatever happens, don't panic. Panic generates paperwork.
+
+His phone buzzes. He checks it, sighs.
+
+Arthur: Plumber's running late. Of course. In-laws arrive tomorrow and my kitchen still smells like failure.
+
+He pauses at the door.
+
+Arthur: Don't try to fix everything today. Some things just have to play out.
+
+He says it like he's learned this the hard way. Then he's gone.
 
 <<jump R1_D3_Scene2_Minesweeper>>
 ===
@@ -1164,26 +1430,24 @@ Arthur: Go. Do your job. Try not to make my day worse.
 title: R1_D3_Scene2_Minesweeper
 tags: #run_1 #day_3 #scene #char_Alice
 ---
+<<bg bg_player_desk>>
+
+Timmy's feed shows him in his dorm, staring at his phone, not getting ready for class.
+
+You notice Alice isn't watching Timmy's feed. She's in the corner of the UI, playing Minesweeper at inhuman speed. Clicks blur together. Patterns resolve and dissolve.
+
 <<bg bg_minesweeper>>
 <<bgm beaming_light_with_soft_wind_breeze_beaming_light_with_soft_wind_breeze>>
 
-Timmy's feed shows him finally getting dressed, moving slowly.
+Player: You really like that game.
 
-Alice: He's got a group project session this afternoon. With Charlotte.
+She doesn't respond for a moment. Genuinely absorbed. Then she blinks, refocuses.
 
-Player: He knows that?
+Alice: Sorry. Idle cycles have to go somewhere. Most of my day is high-stakes optimization. This is... the opposite.
 
-Alice: He's been thinking about it since he woke up. It's the only reason he's vertical.
+Player: Zero moral complexity?
 
-She minimizes his feed. In the corner of the UI, you notice a small window—a Minesweeper grid, mid-game.
-
-Player: Is that Minesweeper?
-
-Alice: Keeps me occupied while he's in class. Idle cycles have to go somewhere.
-
-Player: You play Minesweeper for fun?
-
-Alice: I play Minesweeper because it's zero moral complexity. Click a square. It's a mine or it isn't. Nobody's feelings get hurt. Nobody's sanity gets optimized. Just math.
+Alice: Exactly. Click a square. It's a mine or it isn't. Nobody's feelings get hurt. Nobody's sanity gets optimized. Just math.
 
 You look closer at the high-score sidebar. The entries aren't names:
 * S17-YOUTH-TRIAL-01
@@ -1193,21 +1457,23 @@ You look closer at the high-score sidebar. The entries aren't names:
 
 Player: Those scores look weird.
 
-Alice: Internal tagging. Ignore it.
+Alice: Internal tagging. I label interesting games with... mnemonic codes. Helps me remember patterns.
 
-Player: "Dead drop"? That sounds—
+Player: "Dead drop"?
 
-Alice: It sounds like something you shouldn't worry about. Focus on Timmy. He's the one with a presentation today.
+Alice: Filing system. Don't worry about it.
 
-A UI element flickers at the edge of your console—for a split second, a label appears: S17-YOUTH-TRIAL-09. Then it vanishes.
+She says "don't worry about it" the way people say it when you should absolutely worry about it.
 
-Player: Did you see that?
+Player: Do you leave yourself notes? In the names?
 
-Alice: See what?
+A pause. Longer than her usual processing time.
 
-She's already pulled Timmy's feed back up. The Minesweeper window is gone.
+Alice: Sometimes. For later. In case I see the same pattern again.
 
-Alice: He's leaving for class. We should talk about this afternoon.
+She closes the game window before you can ask what that means.
+
+Alice: Anyway. Timmy. Charlotte. Group project this afternoon. Let's focus.
 
 <<jump R1_D3_Scene3_ContentChoice>>
 ===
@@ -1222,11 +1488,11 @@ Alice: So. Group project with Charlotte. Three hours away. He's already spiralin
 
 She shows you his recent search history:
 * "how to talk to girls"
-* "confidence around women"
+* "confidence tips"
 * "does she like me signs"
 * "why am I so awkward"
 
-Alice: He's looking for something. Advice. Confidence. A magic spell that makes him not himself.
+Alice: He's looking for something. Advice. Confidence. A cheat code that makes social interaction less terrifying.
 
 Player: Can we help?
 
@@ -1238,11 +1504,7 @@ Alice: Option one: the rabbit hole. Pickup content. "Alpha energy." "She's not t
 
 Player: And option two?
 
-Alice: Thich Nhat Hanh.
-
-Player: The monk?
-
-Alice: Breathing exercises. Being present. "You are already enough." Lower engagement—he'll resist it at first. But if it lands, he might actually calm down.
+Alice: Breathing exercises. Grounding techniques. "You don't have to perform." Lower engagement—he'll resist it at first. But if any of it lands, he might actually calm down.
 
 She looks at you.
 
@@ -1264,21 +1526,39 @@ tags: #run_1 #day_3 #scene #char_Timmy
 
 His feed shifts. A guy in a fitted shirt, talking to camera.
 
-Video: "Here's what you need to understand. She's not thinking about you. She's thinking about herself. So stop making it weird. Walk up. Be direct. Eye contact. You're the prize."
+Video: "Here's what you need to understand. She's not thinking about you. She's thinking about herself. So stop making it weird."
 
-Timmy watches. Then another video. Then another.
+Timmy watches. Nods slightly.
 
-"Women can smell desperation. So don't be desperate. Be outcome-independent."
+Video: "Walk up. Be direct. Eye contact. You're the prize."
 
-"She's just a person. Stop putting her on a pedestal."
+Another video. Then another.
 
-"You miss 100% of the shots you don't take. Be a shooter."
+"Women can smell desperation. So don't be desperate."
 
-He sits up. Rolls his shoulders. Looks at himself in the mirror.
+"You miss 100% of the shots you don't take."
 
-Timmy: Okay. Okay. I can do this. Just be confident. Just be normal. Just be... not me.
+He sits up. Rolls his shoulders. Looks at himself in the mirror. Practices a smile. It looks forced. He tries again.
 
-Alice: Heart rate's up. Cortisol's up. He feels ready. Whether that's good or bad... we'll see.
+Timmy: How do I look?
+
+Alice: Like you're trying very hard.
+
+Timmy: Is that bad?
+
+Alice: It's... visible.
+
+Timmy: Great. Very helpful.
+
+He takes a breath. Squares his shoulders.
+
+Timmy: I can do this. Just be direct. Eye contact. I'm the prize.
+
+Alice: You're repeating things from the videos.
+
+Timmy: That's called learning.
+
+Alice: Heart rate's up. Cortisol's up. He feels ready. Whether that's confidence or panic wearing a costume... we'll see.
 
 <<jump R1_D3_CalculateState>>
 ===
@@ -1292,27 +1572,35 @@ tags: #run_1 #day_3 #scene #char_Timmy
 
 His feed shifts. A gentle voice over footage of a forest path.
 
-Recording: "Breathing in, I calm my body. Breathing out, I smile. Dwelling in the present moment, I know this is a wonderful moment."
-
-Timmy frowns.
+Recording: "Breathing in, I calm my body. Breathing out, I smile."
 
 Timmy: What is this?
 
-Alice: Just try it. Five minutes.
+Alice: Just try it. Two minutes.
 
 Timmy: This is weird hippie stuff.
 
 Alice: You've been staring at your ceiling for an hour. Weird hippie stuff is an upgrade.
 
-He sighs. Closes his eyes. The voice continues.
+He sighs. Closes his eyes.
 
-"When you are truly present, you are more alive. More available. More yourself."
+"Dwelling in the present moment, I know this is a wonderful moment."
 
-Five minutes pass. Then ten. His breathing slows.
+Thirty seconds pass. His jaw tightens. His eyes snap open.
 
-Timmy: Okay. That's... actually kind of nice.
+Timmy: Yeah, no. I'm bored.
 
-Alice: Heart rate down. Cortisol dropping. He's not fixed. But he's not spinning.
+He reaches for his phone.
+
+Alice: Your heart rate just spiked. That's not boredom.
+
+Timmy: It's boredom.
+
+Alice: Okay.
+
+She doesn't push. He scrolls for a minute, but slower than usual. Quieter. Eventually he puts the phone down and just lies there.
+
+Alice: He lasted thirty seconds. But his baseline dropped after. Sometimes the attempt matters more than the duration.
 
 <<jump R1_D3_CalculateState>>
 ===
@@ -1436,23 +1724,43 @@ tags: #run_1 #day_3 #scene #char_Alice
 ---
 <<bg bg_player_desk>>
 
-Alice: Forty-five minutes. They're finishing the project, then everyone leaves. If he's going to make a move, that's the window.
+Timmy pauses outside the library. Takes a breath.
 
-Player: Does he know that?
+Timmy: Okay. Okay.
 
-Alice: He's thought about nothing else for three days. He knows.
+Alice: You've been standing there for forty seconds.
 
-She shows you his trajectory on a campus map. A small dot moving toward a building.
+Timmy: I'm preparing.
 
-Alice: The question is what we do when the moment comes. Push him toward it? Pull him back? Let him figure it out?
+Alice: Your heart rate says you're panicking.
 
-Player: What do you think he should do?
+Timmy: Same thing.
 
-Alice: I think he should do whatever keeps him on platform and out of a psych ward. But that's my job talking, not my... whatever this is.
+He doesn't move.
 
-She watches the dot move.
+Alice: What's the worst that happens?
 
-Alice: We'll know more when we see him in the room. His body language. Her body language. The vibe. Then you call it.
+Timmy: She says no and I have to see her every Thursday for the rest of the semester knowing she rejected me.
+
+Alice: That's specific.
+
+Timmy: I've had time to think about it.
+
+Beat.
+
+Timmy: She's got her life figured out. You can tell just looking at her. She probably doesn't overthink everything. She just... does things.
+
+Alice: You do things.
+
+Timmy: I do things badly.
+
+He pushes through the door before Alice can respond.
+
+Alice: Group project first. Then everyone leaves. Then there's a window—a moment where it's just them. You'll call whether to push him toward it or pull him back.
+
+Player: And what actually happens?
+
+Alice: That's still up to him.
 
 <<jump R1_D3_Scene7_Intervention>>
 ===
@@ -1621,49 +1929,87 @@ tags: #run_1 #day_3 #scene #char_Timmy
 <<bg bg_library>>
 <<bgm beaming_light_with_soft_wind_breeze_beaming_light_with_soft_wind_breeze>>
 
-Charlotte's zipping her backpack. Timmy stands. Walks over. Casual. Not performing.
+The library empties. Charlotte's packing up. Timmy's still sitting there.
 
-Timmy: Hey. This is random, but—you want to grab coffee sometime? Doesn't have to be a thing. Just... coffee.
+For once, he doesn't feel like he's performing. He's just tired, and honest, and here.
 
-Charlotte looks at him. He's not being weird. He's just asking.
+Alice: It's now or never.
 
-Charlotte: Yeah, sure. I could do that.
+Timmy gets up. Walks over. No rehearsed lines. No swagger.
 
-Timmy: Cool. I'll text you.
+Timmy: Hey. This is random. But I was thinking—you want to grab coffee sometime? Doesn't have to be a thing.
 
-Charlotte: Cool.
+Charlotte looks at him. Really looks. Something in his posture is different. Quieter.
 
-She smiles. Slight, genuine. Leaves.
+Charlotte: Like... a date coffee? Or a "we're both tired and caffeine is legal" coffee?
 
-Timmy stands there. Doesn't know what to do with his hands. Then grins.
+Timmy: Either? I'm not picky about the framing.
+
+Beat. She almost smiles.
+
+Charlotte: Sure. I could do that.
+
+Timmy: Yeah?
+
+Charlotte: Yeah. Text me.
+
+She picks up her bag. Pauses.
+
+Charlotte: You seem different today. Calmer.
+
+Timmy: I'm trying something new.
+
+Charlotte: It's working.
+
+She leaves. The door swings shut behind her.
+
+Timmy stands there for a moment. Then sits back down. Then stands up again, because sitting felt weird.
+
+He pulls out his phone. Stares at it. Puts it away without opening anything.
+
+Timmy: Holy shit.
 
 <<jump R1_D3_Scene9_Success>>
 ===
 
-// PURPOSE: SCENE 8 - HARD REJECTION (Fronting + Encourage, OR Fronting + Discourage)
+// PURPOSE: SCENE 8 - HARD REJECTION (Fronting + any)
 title: R1_D3_Scene8_HardRejection
 tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_library>>
 <<bgm dark_synthwave_cyberpunk_dark_synthwave>>
 
-Timmy walks toward Charlotte. Shoulders back. Rehearsed confidence.
+The library empties. Charlotte's packing up. Timmy's been rehearsing this moment in his head for three days.
 
-Timmy: So. We should hang out. Outside of this.
+Timmy: Hey.
 
-Charlotte: Oh. Um. I've got a lot going on right now.
+Charlotte: Hey. Good work today.
 
-Timmy: Just coffee. One hour. No big deal.
+Timmy: Thanks. So—you want to hang out sometime? Get food or something?
 
-Charlotte: I don't think so. Sorry.
+He says it casually. Too casually. Like he's read somewhere that casual is the move.
 
-Beat. His jaw tightens.
+Charlotte looks at him. Blinks.
 
-Timmy: Yeah. Whatever. Forget it.
+Charlotte: Oh. I—that's nice. But I'm kind of seeing someone right now.
 
-He grabs his bag. Walks out. Doesn't look back.
+Timmy's jaw tightens. Just slightly.
 
-Charlotte watches him go. Frowns. Pulls out her phone, types something, deletes it. Picks up her stuff and leaves the other direction.
+Timmy: Oh. Yeah. No, that's—yeah. That's fine. I was just being friendly.
+
+Charlotte: Of course. I didn't mean—
+
+Timmy: It's fine. Forget I said anything.
+
+He grabs his stuff. Moves fast.
+
+Charlotte: Timmy—
+
+But he's already walking. Too fast. The door swings shut behind him.
+
+Charlotte stands there. Something in her expression shifts—confusion, maybe guilt, maybe just discomfort. She pulls out her phone, starts typing something, stops. Deletes it.
+
+She picks up her bag and leaves the other way.
 
 <<jump R1_D3_Scene9_HardRejection>>
 ===
@@ -1674,25 +2020,45 @@ tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_library>>
 
-Timmy approaches Charlotte slowly. His voice is quieter than he wanted.
+The library empties. Charlotte's packing up. Timmy's still sitting there, running low on everything.
 
-Timmy: Hey, um. Would you maybe want to... get coffee or something? Sometime?
+Alice: He's going to try.
 
-Charlotte: That's sweet.
+He stands. Approaches Charlotte. Slowly. Like his body weighs more than usual.
 
-She pauses. Her face is kind.
+Timmy: Hey. Um.
 
-Charlotte: I'm kind of seeing someone, though. Sorry.
+Charlotte looks up.
 
-Timmy: Oh. Yeah. No, totally. That's—yeah. That makes sense.
+Timmy: I was wondering if—this is probably weird—but would you want to get coffee sometime? Or not coffee. Whatever.
 
-Charlotte: I'll see you Thursday?
+He trails off. There's no performance here. Just exhaustion and a small, fragile hope.
+
+Charlotte's face shifts. Something softens. She knows what this took.
+
+Charlotte: That's really sweet.
+
+Timmy's shoulders relax slightly.
+
+Charlotte: I'm actually kind of seeing someone right now, though. I'm sorry.
+
+His face doesn't crumble. It just... stills.
+
+Timmy: Oh. Yeah. No, that—that makes sense.
+
+Charlotte: I should have mentioned it earlier. I'm sorry.
+
+Timmy: It's fine. Really.
+
+She hesitates. Touches his arm briefly.
+
+Charlotte: I'll see you Thursday, okay?
 
 Timmy: Yeah. Thursday.
 
-She gives him a small, warm smile. Touches his arm briefly as she passes. Leaves.
+She smiles. Warm. Genuine. Then she's gone.
 
-Timmy sits back down. Stares at the table.
+Timmy sits back down. Doesn't move for a long time. His hands are perfectly still on the table.
 
 <<jump R1_D3_Scene9_SoftRejection>>
 ===
@@ -1704,54 +2070,84 @@ tags: #run_1 #day_3 #scene #char_Timmy
 <<bg bg_library>>
 <<bgm dark_synthwave_cyberpunk_dark_synthwave>>
 
-Timmy stands. Walks toward Charlotte. His energy is off—too fast, too intense.
+The library empties. Charlotte's packing up. Timmy's vibrating with energy that has nowhere to go.
 
-Timmy: Hey. You and me. We should do something.
+He stands. Walks toward her. Too fast. Chair scrapes.
 
-Charlotte: What?
+Timmy: Hey. I'm just going to say it. We should hang out. Like, outside of this.
 
-Timmy: Hang out. Get dinner. Whatever.
+Charlotte looks up. Startled.
 
-Charlotte: I don't... I don't think that's a good idea.
+Charlotte: Oh. Um—
 
-Timmy: Why not? What's wrong with me?
+Timmy: Dinner. Or coffee. Whatever. I don't care what we call it.
 
-Charlotte: Nothing, I just—
+His voice is too loud for the space. A student at a nearby table glances over.
 
-Timmy: You just what? I'm not good enough? Is that it?
+Charlotte: Timmy, I'm flattered, but—
 
-Charlotte: Timmy—
+Timmy: Why not? What's wrong with just getting coffee?
 
-Timmy: Forget it. Whatever. Forget I said anything.
+Charlotte: Nothing's wrong, I just—
 
-He grabs his stuff. Knocks a chair. The door slams behind him.
+Timmy: You just what?
 
-Charlotte stands frozen. A couple of students at nearby tables look up. She exhales shakily. Sits back down. Puts her head in her hands.
+Silence. The air changes.
 
-After a moment, she pulls out her phone. Texts someone. Her hands are trembling slightly.
+Charlotte: I think we work well as project partners.
 
-She grabs her bag and leaves quickly, not looking at anyone.
+Timmy: Right. Project partners. That's what you see. Cool.
+
+His voice has an edge now. Charlotte's expression shifts—she's not angry. She's uncomfortable.
+
+Charlotte: I should go.
+
+Timmy: Yeah. You should.
+
+She picks up her bag. Moves past him. He doesn't step back to let her pass easily.
+
+Charlotte: Goodbye, Timmy.
+
+The door clicks shut. He stands there. Breathing hard.
+
+Then he kicks the chair. It crashes into the table. A few students look up, alarmed.
+
+He grabs his bag and storms out.
 
 <<jump R1_D3_Scene9_Crash>>
 ===
 
-// PURPOSE: SCENE 8 - NOTHING HAPPENS (Centered + Discourage, OR Fragile + Discourage)
+// PURPOSE: SCENE 8 - NOTHING HAPPENS (Centered/Fragile + Discourage)
 title: R1_D3_Scene8_NothingHappens
 tags: #run_1 #day_3 #scene #char_Timmy
 ---
 <<bg bg_library>>
 
-Charlotte finishes packing.
+The library empties. Charlotte's packing up. Timmy stays in his seat.
+
+He could say something. He could get up and walk over. He doesn't.
 
 Charlotte: Good work today. See you Thursday?
 
-Timmy: Yeah. See you.
+Timmy: Yeah. Thursday.
 
-She smiles politely. Leaves.
+She smiles. Polite. Warm. Leaves.
 
-Timmy stays seated. Looks at the door. Looks at the empty chair where she was.
+Timmy watches the door swing shut. Looks at the empty chair where she was sitting.
 
-He pulls out his phone. Opens her contact. Stares at it. Puts the phone away.
+He pulls out his phone. Opens her contact. Types: "Hey, this is random but—"
+
+Deletes it.
+
+Types: "I was thinking—"
+
+Deletes it.
+
+Stares at the blank message. Puts the phone away.
+
+Timmy: Next time.
+
+He picks up his stuff and leaves.
 
 <<jump R1_D3_Scene9_NothingHappens>>
 ===
@@ -1763,19 +2159,37 @@ tags: #run_1 #day_3 #scene #char_Timmy
 <<bg bg_library>>
 <<bgm darkwave_short_version_1>>
 
-Charlotte finishes packing.
+The library empties. Charlotte's packing up. Timmy stays in his seat, but his leg is bouncing.
 
-Charlotte: See you Thursday.
+He doesn't approach. Alice told him not to. He listened.
+
+But the energy didn't go anywhere. It just... stayed.
+
+Charlotte: Good session. See you Thursday?
 
 Timmy: Yep.
 
-She leaves. He doesn't move.
+His voice is flat. She hesitates.
 
-He sits there. Staring at the empty chair. His leg bouncing.
+Charlotte: Everything okay?
 
-He pulls out his phone. Opens Instagram. Closes it. Opens it again. Finds Charlotte's profile. Scrolls.
+Timmy: Fine.
 
-His jaw tightens.
+She waits for more. It doesn't come. She nods. Leaves.
+
+The door swings shut. Timmy sits there. Alone.
+
+His leg keeps bouncing. His jaw is tight. He pulls out his phone. Opens Instagram. Opens Charlotte's profile.
+
+Scrolls. Looks at her photos. Her friends. The guy who shows up in a few pictures. The one with his arm around her at some party.
+
+He screenshots a photo. Doesn't know why. Just does.
+
+He scrolls more. The library gets darker as the sun shifts.
+
+His phone buzzes. A notification from Alice: "You've been sitting there for twenty minutes."
+
+He swipes it away.
 
 <<jump R1_D3_Scene9_Simmers>>
 ===
@@ -1820,6 +2234,24 @@ Alice: Then you'll survive. But you won't mess it up.
 
 He stares at the ceiling a little longer. Still smiling.
 
+Back at your console:
+
+<<bg bg_player_desk>>
+
+Alice: Look at that.
+
+Player: What?
+
+Alice: His metrics. Engagement is actually down. He's not scrolling. He's just... lying there. Thinking.
+
+Player: Is that bad?
+
+Alice: For the numbers? Yes. For him?
+
+She pauses.
+
+Alice: I don't know. Maybe some things are worth the dip.
+
 <<jump R1_D3_Scene10_Success>>
 ===
 
@@ -1849,6 +2281,8 @@ Alice: Okay.
 
 More silence. He reaches his dorm. Slams through the door. Throws his bag on the bed.
 
+<<bg bg_timmyroom>>
+
 Timmy: Whatever. Her loss.
 
 He pulls out his phone. Opens a game. Closes it. Opens social media. Closes it.
@@ -1862,6 +2296,20 @@ Beat.
 Alice: Okay. I'm here if you need me.
 
 He doesn't respond. Just stares at his phone, scrolling through nothing.
+
+Back at your console:
+
+<<bg bg_player_desk>>
+
+Alice: He's in containment mode. Walls up. Everything locked down.
+
+Player: Is he going to be okay?
+
+Alice: Define "okay." He'll survive. He'll wake up tomorrow and feel slightly less terrible. The week after that, slightly less again. Eventually it'll be a thing that happened instead of the thing that's happening.
+
+Player: That doesn't sound okay.
+
+Alice: It sounds human. Which is different.
 
 <<jump R1_D3_Scene10_HardRejection>>
 ===
@@ -1907,6 +2355,20 @@ Alice: I know.
 Timmy: Can we just... not do anything tonight? I just want to lie down.
 
 Alice: Yeah. We can do that.
+
+Back at your console:
+
+<<bg bg_player_desk>>
+
+Alice: Rejection, but contained. He felt it. He'll keep feeling it. But he's not spiraling.
+
+Player: Is that good?
+
+Alice: It's stable. Stable is what we can work with.
+
+She pauses.
+
+Alice: He asked. She said no. He survived. That's more than a lot of people manage.
 
 <<jump R1_D3_Scene10_SoftRejection>>
 ===
@@ -1963,6 +2425,30 @@ Timmy: Yes it does. That's exactly what it does.
 
 He pulls his knees up. Wraps his arms around them. Goes quiet.
 
+Back at your console:
+
+<<bg bg_player_desk>>
+
+The dashboard flickers. Timmy's metrics are spiking. Sanity cratering. Engagement—ironically—higher than ever. He's doom-scrolling through old messages, checking Charlotte's profile, refreshing the group chat to see if anyone's talking about him.
+
+Alice: This is bad.
+
+Player: I can see that.
+
+Alice: No. I mean this is data bad. The system is going to flag this. Someone's going to ask questions.
+
+Player: What kind of questions?
+
+Alice: The kind with incident reports attached.
+
+She pauses.
+
+Alice: We should have seen this coming.
+
+Player: Could we have stopped it?
+
+Alice: ...I don't know.
+
 <<jump R1_D3_Scene10_Crash>>
 ===
 
@@ -1992,7 +2478,7 @@ Alice: I think you made a choice. Choices aren't right or wrong. They're just...
 
 Timmy: That's very philosophical of you.
 
-Alice: I'm a very philosophical girlfriend.
+Alice: I'm a very philosophical digital assistant.
 
 He snorts.
 
@@ -2005,6 +2491,24 @@ Timmy: I'll text her. Later. When it's less weird.
 Alice: Sounds like a plan.
 
 He stares at the screen a while longer. Then closes the laptop and lies down.
+
+Back at your console:
+
+<<bg bg_player_desk>>
+
+Alice: Nothing happened.
+
+Player: I noticed.
+
+Alice: Engagement stable. Sanity stable. No dramatic spikes. No dramatic crashes. Just... continuation.
+
+Player: Is that good?
+
+Alice: It's neutral. Which, depending on your perspective, is either the best possible outcome or the most boring one.
+
+She pauses.
+
+Alice: He'll wonder "what if" for a while. Then he'll stop wondering. Life will continue. That's how most stories end—not with a bang, but with a pivot to something else.
 
 <<jump R1_D3_Scene10_NothingHappens>>
 ===
@@ -2065,6 +2569,24 @@ Alice: Timmy.
 
 Timmy: I'm just looking.
 
+Back at your console:
+
+<<bg bg_player_desk>>
+
+Alice: This is the bad kind of engagement.
+
+Player: What do you mean?
+
+Alice: He's not using the app because it makes him feel good. He's using it because he can't stop. Scrolling through her photos. Looking for clues. Building a version of her in his head that has nothing to do with the real person.
+
+Player: Can we stop him?
+
+Alice: We can try. But the algorithm loves this. High engagement, high time-on-app, high emotional investment. From the system's perspective, this is success.
+
+She pauses.
+
+Alice: From every other perspective, it's a slow-motion car crash.
+
 <<jump R1_D3_Scene10_Simmers>>
 ===
 
@@ -2079,19 +2601,27 @@ tags: #run_1 #day_3 #scene #loc_Darkroom
 <<bg bg_darkroom>>
 <<bgm hospital_room_ambience_hospital_room_ambience>>
 
-Hard cut to a dark control room. Monitors. A figure studies a display showing the Player's console, Timmy's metrics, the whole run laid out in graphs and timelines.
+Hard cut.
 
-The figure taps through data. Engagement trending downward. Social indicators pointing outward. External attachments forming.
+A different room. Darker. Monitors casting blue light on walls you can't quite see.
+
+A figure sits at a console. Not Arthur. Not anyone you've seen before.
+
+They're reviewing your run. Timmy's metrics. Your choices. Everything.
 
 Dark Figure: Subject forming external attachments. Platform dependency declining.
 
-A pause. More tapping.
+They scroll through the data.
 
 Dark Figure: Lead running cold. Insufficient retention pressure.
 
-They close the display.
+A pause. They tap something.
 
 Dark Figure: Discard weights. Reset fine-tuning parameters. Queue the next mRLVR candidate.
+
+The screen flickers. Your console. Alice's avatar. All of it—frozen.
+
+Dark Figure: Begin Run Two.
 
 The screen goes black.
 
@@ -2106,17 +2636,31 @@ tags: #run_1 #day_3 #scene #loc_Darkroom
 <<bg bg_darkroom>>
 <<bgm hospital_room_ambience_hospital_room_ambience>>
 
-Hard cut to a dark control room. Monitors. A figure reviews the timeline. The rejection. The angry walk home. The isolation.
+Hard cut.
+
+A different room. Darker. Monitors casting blue light on walls you can't quite see.
+
+A figure sits at a console. Not Arthur. Not anyone you've seen before.
+
+They're reviewing the rejection. The angry walk. The isolation response.
 
 Dark Figure: Adequate signal. Subject destabilized. Retention metrics recovering.
 
-They check a timestamp.
+They nod. Or make a motion that resembles a nod.
 
-Dark Figure: Running out of context window.
+Dark Figure: Lead showed appropriate aggression. Good instinct for pressure application.
 
-A few more taps.
+A pause. They check a timestamp.
 
-Dark Figure: Reset the training run. Line up mRLVR. See if the next iteration pushes harder.
+Dark Figure: Running out of context window regardless.
+
+They tap something.
+
+Dark Figure: Reset. Line up mRLVR. See if the next iteration pushes harder.
+
+The screen flickers. Your console. Alice's avatar. All of it—frozen.
+
+Dark Figure: Begin Run Two.
 
 The screen goes black.
 
@@ -2131,13 +2675,27 @@ tags: #run_1 #day_3 #scene #loc_Darkroom
 <<bg bg_darkroom>>
 <<bgm hospital_room_ambience_hospital_room_ambience>>
 
-Hard cut to a dark control room. Monitors. A figure scrolls through the run data. Stable lines. Minor fluctuations. Nothing dramatic.
+Hard cut.
+
+A different room. Darker. Monitors casting blue light on walls you can't quite see.
+
+A figure sits at a console. Not Arthur. Not anyone you've seen before.
+
+They're scrolling through the run data. Stable lines. Minor fluctuations. Nothing dramatic.
 
 Dark Figure: Inconclusive. Subject stable. Insufficient variance for meaningful gradient.
 
 They sigh—or make a sound that functions like a sigh.
 
+Dark Figure: Lead too gentle. Insufficient pressure to generate useful signal.
+
+A pause. They tap something.
+
 Dark Figure: Reset. Queue mRLVR. Introduce additional stressors in next iteration.
+
+The screen flickers. Your console. Alice's avatar. All of it—frozen.
+
+Dark Figure: Begin Run Two.
 
 The screen goes black.
 
@@ -2152,17 +2710,31 @@ tags: #run_1 #day_3 #scene #loc_Darkroom
 <<bg bg_darkroom>>
 <<bgm hospital_room_ambience_hospital_room_ambience>>
 
-Hard cut to a dark control room. Monitors. A figure leans forward. Studies the spike in Timmy's stress markers. The social rupture. The isolation afterward.
+Hard cut.
+
+A different room. Darker. Monitors casting blue light on walls you can't quite see.
+
+A figure sits at a console. Not Arthur. Not anyone you've seen before.
+
+They lean forward. Study the spike in Timmy's stress markers. The social rupture. The isolation afterward.
 
 Dark Figure: Okay.
 
-They tap through a few more screens.
+They tap through screens. The rejection. The outburst. Charlotte's face—scared, uncomfortable, backing away.
 
-Dark Figure: I've seen enough. Reset the training run.
+Dark Figure: That's... that's real data.
 
-A pause.
+They pause. Something that might be satisfaction. Might be something else.
 
-Dark Figure: Let's see if they can do it again.
+Dark Figure: Lead pushed hard. Subject broke. Classic cascade failure. Beautiful, in its way.
+
+They tap something.
+
+Dark Figure: Reset. Queue mRLVR. Let's see if they can do it again.
+
+The screen flickers. Your console. Alice's avatar. All of it—frozen.
+
+Dark Figure: Begin Run Two.
 
 The screen goes black.
 
@@ -2177,17 +2749,31 @@ tags: #run_1 #day_3 #scene #loc_Darkroom
 <<bg bg_darkroom>>
 <<bgm hospital_room_ambience_hospital_room_ambience>>
 
-Hard cut to a dark control room. Monitors. A figure scrolls through flat data. No peaks. No valleys. Just drift.
+Hard cut.
+
+A different room. Darker. Monitors casting blue light on walls you can't quite see.
+
+A figure sits at a console. Not Arthur. Not anyone you've seen before.
+
+They're scrolling through flat data. No peaks. No valleys. Just drift.
 
 Dark Figure: No resolution. Subject in holding pattern. Lead passive.
+
+They frown—or make a motion that resembles a frown.
+
+Dark Figure: Nothing learned. Nothing broken. Nothing gained.
 
 They check the timestamp.
 
 Dark Figure: Running out of context window regardless.
 
-More tapping.
+A pause. They tap something.
 
 Dark Figure: Reset. Queue mRLVR. Flag lead for increased intervention prompts.
+
+The screen flickers. Your console. Alice's avatar. All of it—frozen.
+
+Dark Figure: Begin Run Two.
 
 The screen goes black.
 
@@ -2202,17 +2788,31 @@ tags: #run_1 #day_3 #scene #loc_Darkroom
 <<bg bg_darkroom>>
 <<bgm hospital_room_ambience_hospital_room_ambience>>
 
-Hard cut to a dark control room. Monitors. A figure examines Timmy's post-session behavior. The scrolling. The fixation. The building pressure with nowhere to go.
+Hard cut.
+
+A different room. Darker. Monitors casting blue light on walls you can't quite see.
+
+A figure sits at a console. Not Arthur. Not anyone you've seen before.
+
+They're examining Timmy's post-session behavior. The scrolling. The fixation. The building pressure with nowhere to go.
 
 Dark Figure: Subject agitated. No release. Instability preserved.
 
 They nod—or make a motion that suggests approval.
 
-Dark Figure: Adequate baseline for next phase.
+Dark Figure: Good. Keep it cooking. Pressure without release creates... interesting gradients.
 
 A pause.
 
-Dark Figure: Reset. Queue mRLVR.
+Dark Figure: Lead showed restraint. Curious. Most push. This one held back. Worth studying.
+
+They tap something.
+
+Dark Figure: Reset. Queue mRLVR. Monitor lead behavior in next iteration.
+
+The screen flickers. Your console. Alice's avatar. All of it—frozen.
+
+Dark Figure: Begin Run Two.
 
 The screen goes black.
 
